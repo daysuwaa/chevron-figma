@@ -13,7 +13,7 @@ import Sidebar from './components/Sidebar';
 function App() {
   return (
     <Router basename='/'>
-    <Sidebar/>
+     <Sidebar/>
       <Routes>
         <Route path="*" element={<Dashboard/>} />
         <Route path="/chevron/payment" element={<Payment />} />
