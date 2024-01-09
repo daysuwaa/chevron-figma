@@ -8,10 +8,12 @@ import Approvals from './components/Approvals';
 import Users from './components/Users';
 import Analytics from './components/Analytics'
 import Settings from './components/Settings'
+import Sidebar from './components/Sidebar';
 
 function App() {
   return (
     <Router basename='/'>
+    <Sidebar/>
       <Routes>
         <Route path="*" element={<Dashboard/>} />
         <Route path="/chevron/payment" element={<Payment />} />
