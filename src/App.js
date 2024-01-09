@@ -13,17 +13,22 @@ import Sidebar from './components/Sidebar';
 function App() {
   return (
     <Router basename='/'>
-     <Sidebar/>
-      <Routes>
-        <Route path="*" element={<Dashboard/>} />
-        <Route path="/chevron/payment" element={<Payment />} />
-        <Route path="/chevron/schedules" element={ <Schedules/>} />
-        <Route path="/chevron/beneficiaries" element={<Beneficiaries />} />
-        <Route path="/chevron/approvals" element={<Approvals />} />
-        <Route path="/chevron/users" element={<Users />} />
-        <Route path="/chevron/analytics" element={<Analytics />} />
-        <Route path="/chevron/settings" element={<Settings />} />
-       </Routes>
+      {/* to make the side bar at the , yk ,side, lol */}
+      <div className="app flex">
+        <Sidebar/>
+        <div style={{flexGrow: 1}}>
+          <Routes>
+            <Route path="*" element={<Dashboard/>} />
+            <Route path="/chevron/payment" element={<Payment />} />
+            <Route path="/chevron/schedules" element={ <Schedules/>} />
+            <Route path="/chevron/beneficiaries" element={<Beneficiaries />} />
+            <Route path="/chevron/approvals" element={<Approvals />} />
+            <Route path="/chevron/users" element={<Users />} />
+            <Route path="/chevron/analytics" element={<Analytics />} />
+            <Route path="/chevron/settings" element={<Settings />} />
+          </Routes>
+        </div>
+      </div>
     </Router>
   );
 }
