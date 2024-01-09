@@ -8,6 +8,7 @@ import Approvals from './components/Approvals';
 import Users from './components/Users';
 import Analytics from './components/Analytics'
 import Settings from './components/Settings'
+// import Navigation from './components/Navigation';
 import Sidebar from './components/Sidebar';
 
 function App() {
@@ -23,6 +24,7 @@ function App() {
         <Route path="/chevron/users" element={<Users />} />
         <Route path="/chevron/analytics" element={<Analytics />} />
         <Route path="/chevron/settings" element={<Settings />} />
+        {/* <Route path="/chevron/navigation" element={<Navigation />} /> */}
        </Routes>
     </Router>
   );

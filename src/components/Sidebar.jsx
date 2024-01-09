@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import chevron from '../assets/chevron logo.png';
 import dashboard from '../assets/IoSpeedometerOutline.png';
 import approvals from '../assets/FiCheckCircle.png';
@@ -8,8 +8,29 @@ import users from '../assets/FiUsers.png';
 import beneficiary from '../assets/IoWalletOutline.png';
 import schedules from '../assets/BsClock-2.png';
 import settings from '../assets/BsGear.png';
+import { Link } from 'react-router-dom';
 
 const Sidebar = () => {
+  const [activeLink, setActiveLink] = useState('');
+
+  const handleLinkClick = (link) => {
+    setActiveLink(link);
+  };
+
+  const renderLink = (link, text, imgSrc) => {
+    return (
+      <div className=" items-center space-x-12" onClick={() => handleLinkClick(link)}>
+          {/* when the link is active, the bg, radius and border changes */}
+        <div className={`flex ${activeLink === link ? 'pl-5 ' : 'ml-[30px]'  } w-[226px] h-[44px]`} style={{ marginLeft: activeLink === link ? '10px' : '', borderRadius: activeLink === link ? '4px' : '', border: activeLink === link ? '1px solid rgba(255, 255, 255, 0.22)' : '', background: activeLink === link ? '#42257E' : '' }}>
+          <img src={imgSrc} alt='icon' className='w-[18px] h-[18px] mt-3' />
+          <Link to={link}>
+            <p className="text-white font-thin tracking-wider px-3 mt-2" style={{ fontSize: '14px', lineHeight: '24px' }}>{text}</p>
+          </Link>
+        </div>
+      </div>
+    );
+  };
+
   return (
     <div className="h-[1024px] w-[250px] py-4" style={{ backgroundColor: "var(--Color-Base-Text-Color, #1C065A)" }}>
 
@@ -22,74 +43,18 @@ const Sidebar = () => {
 
       <div className="w-[250px] h-[0.4px] bg-gray-400"></div>
 
-      {/* dashboard */}
-      <div className='pt-3'>
-
-  <div className='px-[10px] py-[18px] items-center space-x-12'>
-    <div className='flex pl-5 py-2  w-[226px] h-[44px]' style={{ borderRadius: '4px', border: '1px solid rgba(255, 255, 255, 0.22)', background: '#42257E ' }}>
-      <img src={dashboard} alt='dash' className='w-[18px] h-[18px]' />
-      <p className="text-white font-semibold tracking-wider px-3" style={{ fontSize: '14px', lineHeight: '24px' }}>Dashboard</p>
-    </div>
-    </div>
-    
-    <div className='px-[10px] py-[10px] items-center space-x-12'>
-    <div className='flex ml-[20px]  w-[226px] h-[44px]'>
-      <img src={payments} alt='dash' className='w-[18px] h-[18px]' />
-      <p className="text-white font-thin tracking-wider px-3" style={{ fontSize: '14px', lineHeight: '24px' }}>Dashboard</p>
-    </div>
-    </div>
-
-    <div className='px-[10px] py-[10px] items-center space-x-12'>
-    <div className='flex ml-[20px]  w-[226px] h-[44px]'>
-      <img src={schedules} alt='dash' className='w-[18px] h-[18px]' />
-      <p className="text-white font-thin  tracking-wider px-3" style={{ fontSize: '14px', lineHeight: '24px' }}>Dashboard</p>
-    </div>
-    </div>
-
-    <div className='px-[10px] py-[10px] items-center space-x-12'>
-    <div className='flex ml-[20px]  w-[226px] h-[44px]'>
-      <img src={beneficiary} alt='dash' className='w-[18px] h-[18px]' />
-      <p className="text-white font-thin  tracking-wider px-3" style={{ fontSize: '14px', lineHeight: '24px' }}>Dashboard</p>
-    </div>
-    </div>
-
-    <div className='px-[10px] py-[10px] items-center space-x-12'>
-    <div className='flex ml-[20px]  w-[226px] h-[44px]'>
-      <img src={approvals} alt='dash' className='w-[18px] h-[18px]' />
-      <p className="text-white font-thin  tracking-wider px-3" style={{ fontSize: '14px', lineHeight: '24px' }}>Dashboard</p>
-    </div>
-    </div>
-
-    <div className='px-[10px] py-[10px] items-center space-x-12'>
-    <div className='flex ml-[20px]  w-[226px] h-[44px]'>
-      <img src={users} alt='dash' className='w-[18px] h-[18px]' />
-      <p className="text-white font-thin  tracking-wider px-3" style={{ fontSize: '14px', lineHeight: '24px' }}>Dashboard</p>
-    </div>
-    </div>
-
-    <div className='px-[10px] py-[10px] items-center space-x-12'>
-    <div className='flex ml-[20px]  w-[226px] h-[44px]'>
-      <img src={analytics} alt='dash' className='w-[18px] h-[18px]' />
-      <p className="text-white font-thin  tracking-wider px-3" style={{ fontSize: '14px', lineHeight: '24px' }}>Dashboard</p>
-    </div>
-    </div>
-
-    <div className='px-[10px] py-[10px] items-center space-x-12'>
-    <div className='flex ml-[20px]  w-[226px] h-[44px]'>
-      <img src={settings} alt='dash' className='w-[18px] h-[18px]' />
-      <p className="text-white font-thin  tracking-wider px-3" style={{ fontSize: '14px', lineHeight: '24px' }}>Dashboard</p>
-    </div>
-    </div>
-
-
-   
-
-   
-
-
-</div>
-
-
+      {/* Render Links */}
+      <div className='pt-7'>
+       {/* passed in three arguments - shown above */}
+        {renderLink("/*", "Dashboard", dashboard)}
+        {renderLink("/chevron/payment", "Payments", payments)}
+        {renderLink("/chevron/schedules", "Schedules", schedules)}
+        {renderLink("/chevron/beneficiaries", "Beneficiaries", beneficiary)}
+        {renderLink("/chevron/approvals", "Approvals", approvals)}
+        {renderLink("/chevron/users", "Users", users)}
+        {renderLink("/chevron/analytics", "Analytics", analytics)}
+        {renderLink("/chevron/settings", "Settings", settings)}
+      </div>
       {/* End of Sidebar */}
     </div>
   );
