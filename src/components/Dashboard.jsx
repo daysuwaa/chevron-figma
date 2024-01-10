@@ -1,6 +1,5 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
-// import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend } from 'recharts';
 import Barchat from '../components/Barchart';
 import man from '../assets/image 1.png'
 import arrowdown from '../assets/FiChevronDown.svg'
@@ -88,7 +87,7 @@ const Dashboard = () => {
     </div>
 
     {/* the borderrrr */}
-    <div style={{ display:'flex',  alignItems:'flex-end',borderRadius:'4px', border:'1px solid var(--Color-Gray-Gray-40, #CBD5E0)', margin:'1.2rem 1.2rem 0 1.2rem' ,height:'248px'}} >
+    <div style={{ display:'flex',  alignItems:'flex-end',borderRadius:'4px', border:'1px solid var(--Color-Gray-Gray-40, #CBD5E0)', margin:'1.2rem 1.2rem 0 1.2rem' ,height:'300px'}} >
     <Barchat/>
       
       {/* the purple graph thingy */}
