@@ -14,9 +14,9 @@ function App() {
   return (
     <Router basename='/'>
       {/* to make the side bar at the , yk ,side, lol */}
-      <div className="app flex">
+      <div className="app flex h-screen">
         <Sidebar/>
-        <div style={{flexGrow: 1}}>
+        <div style={{flex: 1}}className='max-h-full'>
           <Routes>
             <Route path="*" element={<Dashboard/>} />
             <Route path="/chevron/payment" element={<Payment />} />

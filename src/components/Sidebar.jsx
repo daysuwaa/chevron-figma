@@ -32,7 +32,7 @@ const Sidebar = () => {
   };
 
   return (
-    <div className="h-[1024px] w-[250px] py-4" style={{ backgroundColor: "var(--Color-Base-Text-Color, #1C065A)" }}>
+    <div className="h-full w-[250px] py-4 " style={{ backgroundColor: "var(--Color-Base-Text-Color, #1C065A)" }}>
 
       {/* Image and Title */}
       <div className="flex justify-center items-center space-x-2 py-6">
