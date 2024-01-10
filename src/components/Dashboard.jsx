@@ -7,6 +7,7 @@ import arrowright from '../assets/FiChevronRight-2.png'
 import users from '../assets/FiUsers.png';
 import payments from '../assets/FiCreditCard.png';
 import clock from '../assets/BsClock.png';
+import circle from '../assets/Group 2.png';
 
 const Dashboard = () => {
   return (
@@ -128,7 +129,7 @@ const Dashboard = () => {
 
   {/* second graph */}
   <div className='w-[352px] h-[380px] py-6 mx-[12rem]' style={{borderRadius:'4px', background:'#FFF', boxShadow: '0px 4px 6px 0px rgba(197, 197, 197, 0.25)'}}>
-   kjblj
+  <p className='mx-5' style={{color:'var(--Color-Gray-Gray-70, #4A5568', fontSize:'14px', lineHeight:'24px'}}>Cash Overflow</p>
   </div>
   {/* end of 2nd */}
 </div>
