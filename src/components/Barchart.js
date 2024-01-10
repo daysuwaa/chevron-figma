@@ -63,18 +63,33 @@ const Barchart = () => {
         
     ]
 
+    const barWidth = 11;
+
     
    
 
   return (
-    <div>
-  <BarChart width={739} height={280} data={data}>
-  <XAxis dataKey="name" className='font-light' style={{color: 'var(--Color-Gray-Gray-60, #718096)', fontSize:'10px'}} />
-  {/* <YAxis /> */}
-  <Tooltip />
-  {/* <Legend /> */}
-  <Bar dataKey="pv" fill="#844CFC" barSize={11} bar/>
-</BarChart>
+//     <div>
+//   <BarChart width={739} height={280} data={data}  barCategoryGap={2} barGap={2}>
+//   <XAxis dataKey="name" className='font-light' style={{color: 'var(--Color-Gray-Gray-60, #718096)', fontSize:'10px'}} />
+  
+//   {/* <YAxis /> */}
+//   <Tooltip />
+//   {/* <Legend /> */}
+//   <Bar dataKey="pv" fill="#844CFC" barSize={11} bar/>
+// </BarChart>
+//     </div>
+
+<div>
+      <BarChart width={data.length * barWidth} height={280} data={data}>
+        <XAxis
+          dataKey="name"
+          className='font-light'
+          style={{ color: 'var(--Color-Gray-Gray-60, #718096)', fontSize: '10px' }}
+        />
+        <Tooltip />
+        <Bar dataKey="pv" fill="#844CFC" barSize={barWidth} />
+      </BarChart>
     </div>
   )
 }

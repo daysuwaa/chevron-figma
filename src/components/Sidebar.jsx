@@ -1,13 +1,13 @@
 import React, { useState } from 'react';
 import chevron from '../assets/chevron logo.png';
-import dashboard from '../assets/IoSpeedometerOutline.png';
-import approvals from '../assets/FiCheckCircle.png';
-import payments from '../assets/FiCreditCard.png';
-import analytics from '../assets/FiPieChart.png';
-import users from '../assets/FiUsers.png';
-import beneficiary from '../assets/IoWalletOutline.png';
-import schedules from '../assets/BsClock-2.png';
-import settings from '../assets/BsGear.png';
+import dashboard from '../assets/IoSpeedometerOutline.svg';
+import approvals from '../assets/FiCheckCircle.svg';
+import payments from '../assets/FiCreditCard.svg';
+import analytics from '../assets/FiPieChart.svg';
+import users from '../assets/FiUsers.svg';
+import beneficiary from '../assets/IoWalletOutline.svg';
+import schedules from '../assets/BsClock-2.svg';
+import settings from '../assets/BsGear.svg';
 import { Link } from 'react-router-dom';
 
 const Sidebar = () => {
