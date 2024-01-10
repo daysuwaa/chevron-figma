@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
 import man from '../assets/image 1.png'
 import arrowdown from '../assets/FiChevronDown.png'
 import arrowright2 from '../assets/FiChevronRight.png'
@@ -11,8 +12,8 @@ const Dashboard = () => {
   return (
     <div style={{backgroundColor:'#F6F6F6'}} className="w-full">
       {/* nav- dashbord side */}
-    <div className='flex px-[18px] py-[32px] justify-between' style={{background:'#fff'}}>
-      <p>Dashboard</p>
+    <div className='flex px-[32px] py-[18px] justify-between h-[60px]' style={{background:'#fff'}}>
+      <p className='font-semibold tracking-wide '>Dashboard</p>
       <div className='flex items-center'>
         <img src={man} alt='arrow' className='w-[24px] h-[24px] mr-3' />
         <img src={arrowdown} alt='man' className='w-[14px] h-[14px]' />
@@ -32,7 +33,9 @@ const Dashboard = () => {
         </div>
         <p className='font-bold' style={{color:'#FFF', fontSize:'32px'}}>N953.20K</p>
         <div className='flex items-center'>
-        <p className='underline' style={{color:'#FFF', fontSize:'12px'}}>View payouts</p>
+        <Link to =" " className='underline' style={{color:'#FFF', fontSize:'12px'}}>
+            View payouts
+           </Link>
         <img src={arrowright} alt='arrowright' className='w-[12px] h-[12px] ml-1' />
         </div>
       </div>
@@ -45,7 +48,9 @@ const Dashboard = () => {
         </div>
         <p className='font-bold' style={{color:'#FFF', fontSize:'32px'}}>N1.25m</p>
         <div className='flex items-center'>
-        <p className='underline' style={{color:'#FFF', fontSize:'12px'}}>View payments</p>
+          <Link to =" " className='underline' style={{color:'#FFF', fontSize:'12px'}}>
+            View payments
+           </Link>
         <img src={arrowright} alt='arrowright' className='w-[12px] h-[12px] ml-1' />
         </div>
       </div>
@@ -59,7 +64,9 @@ const Dashboard = () => {
         </div>
         <p className='font-bold' style={{color:'#4A5568', fontSize:'32px'}}>1,252</p>
         <div className='flex items-center'>
-        <p className='underline' style={{color:'#4A5568', fontSize:'12px'}}>View beneficiaries</p>
+       <Link to =""className='underline' style={{color:'#4A5568', fontSize:'12px'}} >
+        View beneficiaries
+       </Link>
         <img src={arrowright2} alt='arrowright' className='w-[12px] h-[12px] ml-1' />
         </div>
       </div>
