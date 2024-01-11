@@ -1,38 +1,80 @@
-import * as React from 'react';
+import React from 'react'
+import DataTable from 'react-data-table-component'
 
-import { CompactTable } from '@table-library/react-table-library/compact';
-import { useTheme } from '@table-library/react-table-library/theme';
-import { getTheme } from '@table-library/react-table-library/baseline';
+const Table = () => {
+    const columns = [
+        {
+            name:'PAYMENT ID',
+            selector:row => row.payid
 
-import { nodes } from '../data';
+        },
+        {
+            name:'AMOUNT',
+            selector:row => row.amount
 
-// const key = 'Compact Table';
+        },
+        {
+            name:'RECIPIENT',
+            selector:row => row.recipient
 
-const Component = () => {
-  const data = { nodes };
+        },
+        {
+            name:'PAID TO',
+            selector:row => row.paidto
 
-  const theme = useTheme(getTheme());
+        },
+        {
+            name:'DATE',
+            selector:row => row.date
 
-  const COLUMNS = [
-    { label: 'Task', renderCell: (item) => item.name },
-    {
-      label: 'Deadline',
-      renderCell: (item) =>
-        item.deadline.toLocaleDateString('en-US', {
-          year: 'numeric',
-          month: '2-digit',
-          day: '2-digit',
-        }),
-    },
-    { label: 'Type', renderCell: (item) => item.type },
-    {
-      label: 'Complete',
-      renderCell: (item) => item.isComplete.toString(),
-    },
-    { label: 'Tasks', renderCell: (item) => item.nodes?.length },
-  ];
+        },
+    ];
 
-  return <CompactTable columns={COLUMNS} data={data} theme={theme} />;
-};
+    const data =[
+        {
+            id:1,
+            payid:'BLPID000133B31',
+            amount:'NGN250,000.00',
+            recipient:'Segun Adebayo',
+            paidto:'First Bank: 0011223345',
+            date:'13:45, 11 Sep 2023'
+        },
 
-export default Component
+        {
+            id:2,
+            payid:'BLPID000133B32',
+            amount:'NGN250,000.00',
+            recipient:'Mark Chandler',
+            paidto:'Access Bank: 0011223345',
+            date:'13:45, 11 Sep 2023'
+        },
+        {
+            id:3,
+            payid:'BLPID000133B33',
+            amount:'NGN250,000.00',
+            recipient:'Lazar Nikolov',
+            paidto:'GTBank: 0011223345',
+            date:'13:45, 11 Sep 2023'
+        },
+        {
+            id:4,
+            payid:'BLPID000133B34',
+            amount:'NGN250,000.00',
+            recipient:'Javier Alaves',
+            paidto:'Access Bank: 0011223345',
+            date:'13:45, 11 Sep 2023'
+        },
+        
+    ]
+  return (
+    <div>
+        <DataTable
+        columns={columns}
+        data={data}
+        
+        />
+    </div>
+  )
+}
+
+export default Table
