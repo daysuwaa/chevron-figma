@@ -64,8 +64,8 @@ const Barchart = () => {
     ]
   return (
 
-    <div style={{   alignItems:'flex-end',borderRadius:'4px', border:'1px solid var(--Color-Gray-Gray-40, #CBD5E0)', margin:'1.2rem 1.2rem 0 1.2rem' ,height:'300px'}} className='flex-1'>
-<BarChart width={680} height={280} data={data} barCategoryGap={3} barGap={3}>
+    <div style={{   alignItems:'flex-end',borderRadius:'4px', border:'1px solid var(--Color-Gray-Gray-40, #CBD5E0)', margin:'1.2rem 1.2rem 0 1.2rem' ,height:'260px'}} className='flex-1'>
+<BarChart width={680} height={270} data={data} barCategoryGap={3} barGap={3}>
   <XAxis
     dataKey="name"
     className='font-light'
