@@ -9,7 +9,7 @@ import Users from './components/Users';
 import Analytics from './components/Analytics'
 import Settings from './components/Settings'
 import Sidebar from './components/Sidebar';
-
+import Error from './components/Error';
 function App() {
   return (
     <Router basename='/'>
@@ -26,6 +26,7 @@ function App() {
             <Route path="/chevron/users" element={<Users />} />
             <Route path="/chevron/analytics" element={<Analytics />} />
             <Route path="/chevron/settings" element={<Settings />} />
+            <Route path='/chevron/error' element={<Error/>} />
           </Routes>
         </div>
       </div>
