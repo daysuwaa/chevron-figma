@@ -9,7 +9,8 @@ import arrowright from '../assets/FiChevronRight.svg'
 import users from '../assets/FiUsers.svg';
 import payments from '../assets/FiCreditCard.svg';
 import clock from '../assets/BsClock.svg';
-// import Table from '../components/Table'
+// import Error from './componenet/Error';
+import Table from '../components/Table'
 // import circle from '../assets/Group 2.svg';
 // import { PieChart } from 'recharts';
 
@@ -21,8 +22,7 @@ const Dashboard = () => {
       <div className='flex flex-col flex-1 px-7 py-5 my-4 max-w-[37rem] h-[166px]  min-w-[250px]' style={{
         borderRadius:'4px',
          boxShadow:'0px 3px 12px 0px rgba(197, 197, 197, 0.25)',
-
-           backgroundColor: bgcolor}}
+          backgroundColor: bgcolor}}
           >
         <div className='flex justify-between '>
           <p style={{color:tcols,
@@ -40,9 +40,8 @@ const Dashboard = () => {
          fontSize:'32px'}}>
           {money}
         </p>
-
         <div className='flex items-center'>
-          <Link to ="" className='underline' style={{color: tcols, fontSize:'12px'}}>
+          <Link to ="/chevron/error" className='underline' style={{color: tcols, fontSize:'12px'}}>
             {link}
           </Link>
           <img src={arrow} alt='arrowright' className='w-[12px] h-[12px] ml-1' />
@@ -122,7 +121,10 @@ const Dashboard = () => {
 <div className='bg-white max-w-full h-[355px] mx-7 '>
 <div className='flex justify-between py-7 mx-5'>
 <p className='' style={{color:'var(--Color-Gray-Gray-70, #4A5568', fontSize:'14px', lineHeight:'24px'}}>Recent Payouts</p>
-<Link to = "" style={{color:'var(--Color-Gray-Gray-70, #4A5568', fontSize:'14px', lineHeight:'24px'}} className="underline">View all</Link>
+<Link to = "/chevron/error" style={{color:'var(--Color-Gray-Gray-70, #4A5568', fontSize:'14px', lineHeight:'24px'}} className="underline">View all</Link>
+  </div>
+  <div style={{alignItems:'flex-end',borderRadius:'4px', border:'1px solid var(--Color-Gray-Gray-40, #CBD5E0)', margin:'0rem 1.2rem 0 1.2rem' ,height:'260px'}} className='flex-1'>
+<Table/>
   </div>
 </div>
 
