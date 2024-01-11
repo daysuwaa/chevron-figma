@@ -1,37 +1,25 @@
 import React from 'react';
-import { PieChart, Pie } from 'recharts';
+import { PieChart, Pie, Legend} from 'recharts';
 
 const Piechart = () => {
   const data01 = [
-    { name: 'Group A', value: 400 },
-    { name: 'Group B', value: 300 },
+    { name: 'Credit',money:"1111", value: 620, fill: "#6FCF97"},
+    { name: 'Debit', money: "111", value: 380, fill: "#EB5757" },
   ];
 
   return (
-    <div>
-      <PieChart width={730} height={250}>
+    <div className='flex items-center justify-center'>
+      <PieChart width={300} height={300}>
         <Pie
           data={data01}
+          innerRadius={70}
           dataKey="value"
-          nameKey="Group A"
-          cx="50%"
-          cy="50%"
-          innerRadius={60}
-          outerRadius={80}
-          fill="#6FCF97" // Red color for Group A
-          label
+          nameKey="name"
+          fillKey="fill"
+          moneyKey="money"
         />
-        <Pie
-          data={data01}
-          dataKey="value"
-          nameKey="Group B"
-          cx="50%"
-          cy="50%"
-          innerRadius={60}
-          outerRadius={80}
-          fill="#EB5757" // Blue color for Group B
-          label
-        />
+        <Legend verticalAlign="bottom" height={36}/>
+       <moneyKey/>
       </PieChart>
     </div>
   );

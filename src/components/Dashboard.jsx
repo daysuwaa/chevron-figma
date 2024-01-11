@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
 import Barchat from '../components/Barchart';
-// import Piechart from '../components/Piechart';
+import Piechart from '../components/Piechart';
 import man from '../assets/image 1.png'
 import arrowdown from '../assets/FiChevronDown.svg'
 import arrowright2 from '../assets/FiChevronRight.svg'
@@ -9,7 +9,9 @@ import arrowright from '../assets/FiChevronRight.svg'
 import users from '../assets/FiUsers.svg';
 import payments from '../assets/FiCreditCard.svg';
 import clock from '../assets/BsClock.svg';
-import circle from '../assets/Group 2.svg';
+// import Table from '../components/Table'
+// import circle from '../assets/Group 2.svg';
+// import { PieChart } from 'recharts';
 
 const Dashboard = () => {
 
@@ -92,47 +94,6 @@ const Dashboard = () => {
    </div>
 {/* end of frames */}
 
-{/* graphs thingy */}
-
-{/* <div className=' grid grid-cols-2 gap-12 mx-7 pr-4 pt-5 '> */}
-  {/* first graph - barchart */}
- {/* <div className='w-[720px] h-[400px] py-6 ' style={{borderRadius:'4px', background:'#FFF', boxShadow: '0px 4px 6px 0px rgba(197, 197, 197, 0.25)'}}>
-    <div className='flex justify-between mx-5'>
-      <p className='' style={{color:'var(--Color-Gray-Gray-70, #4A5568', fontSize:'14px', lineHeight:'24px'}}>Payouts Overview</p>
-      <div style={{borderRadius:'4px', border:'1px solid var(--Color-Gray-Gray-40, #CBD5E0)', padding:'6px 12px', alignItems:'center'}}>
-        <p style={{color:'var(--Color-Gray-Gray-70, #4A5568', fontSize:'12px', lineHeight:'16px'}}>Last 1 month</p>
-      </div>
-    </div> */}
-    {/* imported the bar chart */}
-    {/* <Barchat/>
-  
-  </div> */}
-  {/* end of 1st */}
-
-
-  {/* second graph */}
-  {/* <div className='w-[352px] h-[400px] py-6 mx-[12rem] items-center flex-1' style={{borderRadius:'4px', background:'#FFF', boxShadow: '0px 4px 6px 0px rgba(197, 197, 197, 0.25)'}} >
-  <div className='mx-6'>
-  <p className='' style={{color:'var(--Color-Gray-Gray-70, #4A5568', fontSize:'14px', lineHeight:'24px'}}>Cash Overflow</p> */}
-  {/* <Piechart className='mx-auto mt-4'/> */}
-  {/* <img src={circle} alt='' className='w-[229.084px] h-[229.084px] mx-auto mt-4' style={{ justifyItems:'center'}}/> */}
-  {/* the two boxes */}
-  {/* <div className='flex mt-[1.5rem]'>
-  <div className='w-[12px] h-[12px] mt-[0.2rem] mr-[0.2rem]' style={{backgroundColor:'#6FCF97'}}></div>
-  <p style={{color:'var(--Color-Gray-Gray-70, #4A5568', fontSize:'12px'}}>Credit: <span className='font-semibold mr-3'>N1,560,230.00</span></p>
-  <div className='w-[12px] h-[12px] mt-[0.2rem] mr-[0.2rem]' style={{backgroundColor:'#EB5757'}}></div>
-  <p style={{color:'var(--Color-Gray-Gray-70, #4A5568', fontSize:'12px'}}>
-  Debit: <span className='font-semibold'>N1,560,230.00</span></p>
-  </div>
-  </div>
-</div> */}
-  {/* end of 2nd */}
-
-
- 
-{/* </div> */}
-
-
 {/* BARRSSSSSSS */}
 
 <div className="flex h-[362px] mx-7 gap-8">
@@ -147,11 +108,26 @@ const Dashboard = () => {
     </div>
 
     
-      <div className="w-[357px]  bg-white border">
-        Box 2
-      </div>
-    </div>
+    <div className="w-[357px] bg-white border">
+  <div className='py-6 mx-5'>
+  <p style={{color:'var(--Color-Gray-Gray-70, #4A5568', fontSize:'14px', lineHeight:'24px'}}>Cash overflow</p>
+    <Piechart />
+  </div>
+</div>
+ </div>
 
+
+{/* receipts payoutsss */}
+<div className='py-7'>
+<div className='bg-white max-w-full h-[355px] mx-7 '>
+<div className='flex justify-between py-7 mx-5'>
+<p className='' style={{color:'var(--Color-Gray-Gray-70, #4A5568', fontSize:'14px', lineHeight:'24px'}}>Recent Payouts</p>
+<Link to = "" style={{color:'var(--Color-Gray-Gray-70, #4A5568', fontSize:'14px', lineHeight:'24px'}} className="underline">View all</Link>
+  </div>
+</div>
+
+
+</div>
 
 
 
