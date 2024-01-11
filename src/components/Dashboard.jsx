@@ -9,10 +9,7 @@ import arrowright from '../assets/FiChevronRight.svg'
 import users from '../assets/FiUsers.svg';
 import payments from '../assets/FiCreditCard.svg';
 import clock from '../assets/BsClock.svg';
-// import Error from './componenet/Error';
 import Table from '../components/Table'
-// import circle from '../assets/Group 2.svg';
-// import { PieChart } from 'recharts';
 
 const Dashboard = () => {
 
@@ -124,6 +121,7 @@ const Dashboard = () => {
 <Link to = "/chevron/error" style={{color:'var(--Color-Gray-Gray-70, #4A5568', fontSize:'14px', lineHeight:'24px'}} className="underline">View all</Link>
   </div>
   <div style={{alignItems:'flex-end',borderRadius:'4px', border:'1px solid var(--Color-Gray-Gray-40, #CBD5E0)', margin:'0rem 1.2rem 0 1.2rem' ,height:'260px'}} className='flex-1'>
+{/* imported table */}
 <Table/>
   </div>
 </div>
