@@ -28,10 +28,8 @@ const Dashboard = () => {
              className="font-light pt-2">
               {text}
             </p>
-
           <img src={icons} alt='pay' className='w-[39px] h-[39px]'/>
         </div>
-
         <p className='font-bold pb-4' 
         style={{color:tcols,
          fontSize:'32px'}}>
@@ -74,7 +72,7 @@ const Dashboard = () => {
       {styling ("var(--Color-Base-Background-Color-5, #38A169)", 
       "Wallet Balance",
       users, 
-      "N953.20K", 
+      "N1.25m", 
       "View payments", 
       "#FFF", 
       arrowright)}
@@ -83,7 +81,7 @@ const Dashboard = () => {
       {styling ("var(--Surface-Primary, #FFF)", 
       "All Beneficiaries", 
       clock, 
-      "N953.20K", 
+      "1,252", 
       "View beneficiaries", 
       "#4A5568", 
       arrowright2)}
