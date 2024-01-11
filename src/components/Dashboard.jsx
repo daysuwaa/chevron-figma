@@ -4,7 +4,7 @@ import Barchat from '../components/Barchart';
 // import Piechart from '../components/Piechart';
 import man from '../assets/image 1.png'
 import arrowdown from '../assets/FiChevronDown.svg'
-// import arrowright2 from '../assets/FiChevronRight.svg'
+import arrowright2 from '../assets/FiChevronRight.svg'
 import arrowright from '../assets/FiChevronRight.svg'
 import users from '../assets/FiUsers.svg';
 import payments from '../assets/FiCreditCard.svg';
@@ -12,25 +12,43 @@ import clock from '../assets/BsClock.svg';
 import circle from '../assets/Group 2.svg';
 
 const Dashboard = () => {
-  const styling =(bgcolor, text, icons, money, link, tcols ) =>{
-return(
-  <div className='flex flex-col px-7 py-5 my-4 max-w-[37rem] h-[166px] flex-1 min-w-[250px]' style={{borderRadius:'4px', boxShadow:'0px 3px 12px 0px rgba(197, 197, 197, 0.25)', width:'max-width', backgroundColor: bgcolor}} >
-        
-        <div className='flex justify-between '>
-        <p style={{color:tcols, fontSize:'14px', lineHeight:'24px' }} className="font-light pt-2">{text}</p>
-        <img src={icons} alt='pay' className='w-[39px] h-[39px]'/>
-        </div>
-        <p className='font-bold pb-4' style={{color:tcols, fontSize:'32px'}}>{money}</p>
-        <div className='flex items-center'>
-        <Link to =" " className='underline' style={{color: tcols, fontSize:'12px'}}>
-            {link}
-           </Link>
-        <img src={arrowright} alt='arrowright' className='w-[12px] h-[12px] ml-1' />
-        </div>
-        </div>
-)
 
+  // the dashboard - frames
+  const styling = (bgcolor, text, icons, money, link, tcols, arrow) => {
+    return (
+      <div className='flex flex-col flex-1 px-7 py-5 my-4 max-w-[37rem] h-[166px]  min-w-[250px]' style={{
+        borderRadius:'4px',
+         boxShadow:'0px 3px 12px 0px rgba(197, 197, 197, 0.25)',
+
+           backgroundColor: bgcolor}}
+          >
+        <div className='flex justify-between '>
+          <p style={{color:tcols,
+             fontSize:'14px', 
+             lineHeight:'24px' }} 
+             className="font-light pt-2">
+              {text}
+            </p>
+
+          <img src={icons} alt='pay' className='w-[39px] h-[39px]'/>
+        </div>
+
+        <p className='font-bold pb-4' 
+        style={{color:tcols,
+         fontSize:'32px'}}>
+          {money}
+        </p>
+
+        <div className='flex items-center'>
+          <Link to ="" className='underline' style={{color: tcols, fontSize:'12px'}}>
+            {link}
+          </Link>
+          <img src={arrow} alt='arrowright' className='w-[12px] h-[12px] ml-1' />
+        </div>
+      </div>
+    );
   };
+  
   return (
     <div style={{backgroundColor:'#F6F6F6'}} className="w-full h-full overflow-auto">
       {/* nav- dashbord side */}
@@ -46,46 +64,49 @@ return(
    
     {/* framesssss */}
     <div className='flex grid-cols-3 gap-8 mx-7 flex-wrap'>
-      {styling ("#22085C", "Total Payments", payments, "N953.20K", "View payouts","#FFF" )}
-      {styling ("var(--Color-Base-Background-Color-5, #38A169)", "Wallet Balance", users, "N953.20K", "View payments", "#FFF")}
-      {styling ("var(--Surface-Primary, #FFF)", "All Beneficiaries", clock, "N953.20K", "View beneficiaries", "#4A5568")}
+      {styling ("#22085C", 
+      "Total Payments",
+      payments,
+      "N953.20K",
+      "View payouts",
+      "#FFF", 
+      arrowright )}
 
 
+      {styling ("var(--Color-Base-Background-Color-5, #38A169)", 
+      "Wallet Balance",
+      users, 
+      "N953.20K", 
+      "View payments", 
+      "#FFF", 
+      arrowright)}
 
-      {/* frame3 */}
-      {/* <div className='flex-1 flex-col px-7 py-5 my-4 max-w-[37rem] h-[166px] min-w-[250px]' style={{borderRadius:'4px', backgroundColor:' var(--Surface-Primary, #FFF)', boxShadow:'0px 3px 12px 0px rgba(197, 197, 197, 0.25)'}}>
-        <div className='flex justify-between'>
-        <p style={{color:'#4A5568', fontSize:'14px', lineHeight:'24px' }} className="font-light pt-2">All Beneficiaries</p>
-        <img src={clock} alt='pay' className='w-[39px] h-[39px]'/>
-        </div>
-        <p className='font-bold pb-4' style={{color:'#4A5568', fontSize:'32px'}}>1,252</p>
-        <div className='flex items-center'>
-       <Link to =""className='underline' style={{color:'#4A5568', fontSize:'12px'}} >
-        View beneficiaries
-       </Link>
-        <img src={arrowright2} alt='arrowright' className='w-[12px] h-[12px] ml-1' />
-        </div>
-      </div> */}
-</div>
+
+      {styling ("var(--Surface-Primary, #FFF)", 
+      "All Beneficiaries", 
+      clock, 
+      "N953.20K", 
+      "View beneficiaries", 
+      "#4A5568", 
+      arrowright2)}
+   </div>
 {/* end of frames */}
 
 {/* graphs thingy */}
 
 <div className='grid grid-cols-2 gap-12 mx-7 pr-4 pt-5'>
   {/* first graph - barchart */}
-  <div className='w-[739px] h-[400px] py-6' style={{borderRadius:'4px', background:'#FFF', boxShadow: '0px 4px 6px 0px rgba(197, 197, 197, 0.25)'}}>
+ 
+ <div className='w-[720px] h-[400px] py-6  ' style={{borderRadius:'4px', background:'#FFF', boxShadow: '0px 4px 6px 0px rgba(197, 197, 197, 0.25)'}}>
     <div className='flex justify-between mx-5'>
       <p className='' style={{color:'var(--Color-Gray-Gray-70, #4A5568', fontSize:'14px', lineHeight:'24px'}}>Payouts Overview</p>
       <div style={{borderRadius:'4px', border:'1px solid var(--Color-Gray-Gray-40, #CBD5E0)', padding:'6px 12px', alignItems:'center'}}>
         <p style={{color:'var(--Color-Gray-Gray-70, #4A5568', fontSize:'12px', lineHeight:'16px'}}>Last 1 month</p>
       </div>
     </div>
-
-    {/* the borderrrr */}
-    <div style={{   alignItems:'flex-end',borderRadius:'4px', border:'1px solid var(--Color-Gray-Gray-40, #CBD5E0)', margin:'1.2rem 1.2rem 0 1.2rem' ,height:'300px'}} className='flex-1'>
     {/* imported the bar chart */}
     <Barchat/>
-    </div>
+  
   </div>
   {/* end of 1st */}
 
