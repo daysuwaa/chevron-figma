@@ -116,7 +116,7 @@ const Dashboard = () => {
 <div className='bg-white max-w-full h-[355px] mx-7 '>
 <div className='flex justify-between py-7 mx-5'>
 <p className='' style={{color:'var(--Color-Gray-Gray-70, #4A5568', fontSize:'14px', lineHeight:'24px'}}>Recent Payouts</p>
-<Link to = "/chevron/error" style={{color:'var(--Color-Gray-Gray-70, #4A5568', fontSize:'14px', lineHeight:'24px'}} className="underline">View all</Link>
+<Link to = "/chevron/error" style={{color:'var(--Color-Gray-Gray-70, #4A5568', fontSize:'12px',  lineHeight:'24px'}} className="underline font-thin">View all</Link>
   </div>
   <div style={{alignItems:'flex-end',borderRadius:'4px', border:'1px solid var(--Color-Gray-Gray-40, #CBD5E0)', margin:'0rem 1.2rem 0 1.2rem' ,height:'260px'}} className='flex-1'>
 {/* imported table */}
