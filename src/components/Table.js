@@ -71,7 +71,6 @@ const Table = () => {
         <DataTable
         columns={columns}
         data={data}
-        
         />
     </div>
   )
