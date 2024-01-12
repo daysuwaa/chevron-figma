@@ -59,7 +59,7 @@ const Dashboard = () => {
 
    
     {/* framesssss */}
-    <div className='flex grid-cols-3 gap-8 mx-7 flex-wrap'>
+    <div className='grid grid-cols-3 gap-8 mx-7 flex-wrap'>
       {styling ("#22085C", 
       "Total Payments",
       payments,
@@ -90,7 +90,7 @@ const Dashboard = () => {
 
 {/* BARRSSSSSSS */}
 
-<div className="flex h-[362px] mx-7 gap-8">
+<div className="grid grid-cols-2 h-[362px] mx-7 gap-8">
       <div className="w-[742px]   bg-white border py-6 ">
       <div className='flex justify-between mx-5'>
       <p className='' style={{color:'var(--Color-Gray-Gray-70, #4A5568', fontSize:'14px', lineHeight:'24px'}}>Payouts Overview</p>
@@ -102,7 +102,7 @@ const Dashboard = () => {
     </div>
 
     
-    <div className="w-[357px] bg-white border">
+  <div className="w-[357px] bg-white border">
   <div className='py-6 mx-5'>
   <p style={{color:'var(--Color-Gray-Gray-70, #4A5568', fontSize:'14px', lineHeight:'24px'}}>Cash overflow</p>
     <Piechart />
