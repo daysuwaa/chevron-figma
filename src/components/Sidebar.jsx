@@ -23,7 +23,8 @@ const Sidebar = () => {
           {/* when the link is active, the bg, radius and border changes                                       if the active link is active, move 10px to the right, else, dont move*/}                                 
         <div className={`flex ${activeLink === link ? 'pl-5 ' : 'ml-[30px]'  } w-[226px] h-[44px]`} style={{ marginLeft: activeLink === link ? '10px' : '', borderRadius: activeLink === link ? '4px' : '', border: activeLink === link ? '1px solid rgba(255, 255, 255, 0.22)' : '', background: activeLink === link ? '#42257E' : '', }}>
           <img src={imgSrc} alt='icon' className='w-[18px] h-[18px] mt-3' />
-          <Link to={link}>
+          <Link to={link}>  
+                                                                          {/* if link is active */}
         <p className={` text-white tracking-wider px-3 mt-2`}style={{ fontWeight:activeLink=== link ? 'bold' :'' , fontSize:'14px', lineHeight: '24px', } }>
         {text}
       </p>
