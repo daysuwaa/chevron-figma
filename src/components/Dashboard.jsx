@@ -16,7 +16,7 @@ const Dashboard = () => {
   // the dashboard - frames
   const styling = (bgcolor, text, icons, money, link, tcols, arrow) => {
     return (
-      <div className='flex flex-col flex-1 px-7 py-5 my-4 max-w-[37rem] h-[166px]  min-w-[250px]' style={{
+      <div className='flex flex-col flex-1 px-7 py-5 my-4 max-w-full h-[166px]  min-w-[250px]' style={{
         borderRadius:'4px',
          boxShadow:'0px 3px 12px 0px rgba(197, 197, 197, 0.25)',
           backgroundColor: bgcolor}}
