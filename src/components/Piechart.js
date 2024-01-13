@@ -8,7 +8,7 @@ const Piechart = () => {
   ];
 
   return (
-    <div className='flex items-center justify-center max-w-full'>
+    <div className='flex items-center justify-center '>
       <PieChart width={300} height={300}>
         <Pie
           data={data01}
