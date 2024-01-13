@@ -59,7 +59,7 @@ const Dashboard = () => {
 
    
     {/* framesssss */}
-    <div className='grid grid-cols-3 gap-8 mx-7 flex-wrap'>
+    <div className='grid lg:grid-cols-3 grid-cols-1 gap-8 mx-7 flex-wrap'>
       {styling ("#22085C", 
       "Total Payments",
       payments,
@@ -90,19 +90,19 @@ const Dashboard = () => {
 
 {/* BARRSSSSSSS */}
 
-<div className="flex h-[362px] mx-7 gap-8">
-      <div className="w-[742px]   bg-white border py-6 ">
+<div className="grid grid-cols-2 max-w-[749px] h-[362px] mx-7 gap-8">
+      <div className="max-w-[742px]   bg-white border py-6 ">
       <div className='flex justify-between mx-5'>
       <p className='' style={{color:'var(--Color-Gray-Gray-70, #4A5568', fontSize:'14px', lineHeight:'24px'}}>Payouts Overview</p>
       <div style={{borderRadius:'4px', border:'1px solid var(--Color-Gray-Gray-40, #CBD5E0)', padding:'6px 12px', alignItems:'center'}}>
         <p style={{color:'var(--Color-Gray-Gray-70, #4A5568', fontSize:'12px', lineHeight:'16px'}}>Last 1 month</p>
       </div>
     </div>
-    <Barchat/>
+    {/* <Barchat/> */}
     </div>
 
     
-    <div className="w-[357px] bg-white border">
+    <div className="max-w-[357px] bg-white border">
   <div className='py-6 mx-5'>
   <p style={{color:'var(--Color-Gray-Gray-70, #4A5568', fontSize:'14px', lineHeight:'24px'}}>Cash overflow</p>
     <Piechart />
