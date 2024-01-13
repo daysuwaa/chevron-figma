@@ -95,7 +95,6 @@ const Dashboard = () => {
             <p>Payout Overview</p>
             <p className='flex' style={{border: '1px solid var(--Color-Gray-Gray-40, #CBD5E0)', borderRadius:'4px', padding:'6px 12px'}}>Last 1 month <img src={arrowdown} alt ='' ></img></p>
             </div>
-          
              <Barchat/>
         
           
