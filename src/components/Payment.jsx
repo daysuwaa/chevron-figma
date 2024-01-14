@@ -1,6 +1,10 @@
 import React from 'react'
 import payments from '../assets/FiCreditCard.svg';
 import { Link } from 'react-router-dom';
+import calendar from '../assets/FiCalendar.svg'
+import wallet from '../assets/IoWalletOutline.svg';
+import man from '../assets/image 1.png'
+import arrowdown from '../assets/FiChevronDown.svg'
 
 const Payment = () => {
 
@@ -46,10 +50,10 @@ const Payment = () => {
    <div style={{ backgroundColor: '#F6F6F6' }} className="w-full h-full overflow-auto">
       {/* nav- dashbord side */}
       <div className='flex px-[32px] py-[18px] justify-between h-[60px]' style={{ background: '#fff' }}>
-        <p className='font-semibold tracking-wide '>Dashboard</p>
+        <p className='font-semibold tracking-wide '>Payment</p>
         <div className='flex items-center'>
-          {/* <img src={} alt='arrow' className='w-[24px] h-[24px] mr-3' />
-          <img src={} alt='man' className='w-[14px] h-[14px]' /> */}
+          <img src={man} alt='arrow' className='w-[24px] h-[24px] mr-3' />
+          <img src={arrowdown} alt='man' className='w-[14px] h-[14px]' />
         </div>
       </div>
       {/* end of nav */}
@@ -65,17 +69,17 @@ const Payment = () => {
          "")}
 
         {styling("var(--Color-Base-Background-Color-5, #38A169)",
-          "Wallet Balance",
-        "",
-          "N1.25m",
+          "Todays Payments",
+          calendar,
+          "N98.25K",
           "View payments",
           "#FFF",
          "")}
 
         {styling("var(--Surface-Primary, #FFF)",
-          "All Beneficiaries",
-          "",
-          "1,252",
+          "Funds Balance",
+          wallet,
+          "N125.25M",
           "View beneficiaries",
           "#4A5568",
           ""
