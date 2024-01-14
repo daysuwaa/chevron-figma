@@ -7,6 +7,8 @@ import arrowdown from '../assets/FiChevronDown.svg';
 import info from '../assets/CkInfoOutline.svg';
 import gtb from '../assets/image 2.png'
 import copy from '../assets/IoCopyOutline.svg'
+import search from '../assets/CkSearch.svg'
+import filter from '../assets/FiFilter.svg'
 const Payment = () => {
   const styling = (bgcolor, text, icons, money, tcols) => {
     return (
@@ -113,10 +115,23 @@ const Payment = () => {
 
       {/* Two p tags on the extreme right */}
       <div className='flex '>
-        <div className='px-[20px] py-[12px] flex w-[320px]' style={{borderRadius: '4px',border: '1px solid var(--Color-Gray-Gray-40, #CBD5E0)'}}>
+      <div className='px-[20px] py-[6px] flex w-[320px]' style={{ borderRadius: '4px', border: '1px solid #CBD5E0' }}>
+  <img src={search} alt='searchicon' className='w-[16px]'/>
+  <input
+    type="text"
+    placeholder='Search by Payment Id'
+    className='font-light w-[320px] h-8'
+    style={{ color: '#718096', fontSize: '14px', marginLeft: '6px', backgroundColor:'#F6F6F6'  }}
+  />
+</div>
+         {/* <p className='font-light' style={{color: 'var(--Color-Gray-Gray-60, #718096)', fontSize:'14px', marginLeft:'6px'}}>Search by Payment Id</p> */}
+        
 
+        <div className='px-[20px] py-[12px] flex w-[100px] mx-5' style={{borderRadius: '4px',border: '1px solid var(--Color-Gray-Gray-40, #CBD5E0)'}} >
+        <img src={filter} alt='searchicon' className='w-[16px] h-[16px] mt-1'/>
+         <p className='font-light' style={{color: 'var(--Color-Gray-Gray-60, #718096)', fontSize:'14px', marginLeft:'6px'}}>Filter</p>
         </div>
-        <p className="text-sm">Right 2</p>
+       
       </div>
     </div>
 
