@@ -1,16 +1,16 @@
 import React from 'react'
 import payments from '../assets/FiCreditCard.svg';
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 import calendar from '../assets/FiCalendar.svg'
 import wallet from '../assets/IoWalletOutline.svg';
 import man from '../assets/image 1.png'
 import arrowdown from '../assets/FiChevronDown.svg'
-
+import info from '../assets/CkInfoOutline.svg'
 const Payment = () => {
 
 
   // dashboard
-  const styling = (bgcolor, text, icons, money, link, tcols, arrow) => {
+  const styling = (bgcolor, text, icons, money, statement, tcols, arrow) => {
     return (
       <div className='container px-7 py-5  my-4  h-[166px]' style={{
         borderRadius: '4px',
@@ -36,9 +36,9 @@ const Payment = () => {
           {money}
         </p>
         <div className='flex items-center'>
-          <Link to="/chevron/error" className='underline' style={{ color: tcols, fontSize: '12px' }}>
-            {link}
-          </Link>
+          <div>
+            <p>{statement} <img src={info} alt='info'></img></p>
+          </div>
           <img src={arrow} alt='arrowright' className='w-[12px] h-[12px] ml-1' />
         </div>
       </div>
