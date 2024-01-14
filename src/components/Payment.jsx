@@ -5,7 +5,8 @@ import wallet from '../assets/IoWalletOutline.svg';
 import man from '../assets/image 1.png';
 import arrowdown from '../assets/FiChevronDown.svg';
 import info from '../assets/CkInfoOutline.svg';
-
+import gtb from '../assets/image 2.png'
+import copy from '../assets/IoCopyOutline.svg'
 const Payment = () => {
   const styling = (bgcolor, text, icons, money, tcols) => {
     return (
@@ -92,6 +93,33 @@ const Payment = () => {
         )}
       </div>
       {/* end of frames */}
+
+        {/* lineee */}
+      <div className="w-full border-b mt-4" style={{background: 'var(--Color-Gray-Gray-40, #CBD5E0)'}}></div>
+
+       
+      {/* second side */}
+      <div className="flex justify-between p-4 mx-7">
+      {/* Two p tags on the extreme left */}
+      <div className='flex '>
+        <p className="flex mt-3 tracking-wide font-light" style={{color: 'var(--Text-Primary, #1C065A)', fontSize:'14px'}}>My account: <img src={info} alt='arrowright'className='w-[14px] h-[14px] mx-2 mt-1 '/></p>
+        
+        <button className="flex" style={{background: 'var(--Button-Background-Alternate, #3B2773)', padding:'6px 12px', borderRadius:'4px', justifyContent:'center'}}>
+          <img src={gtb} alt='gtbimage' className='w-[16px] h-[16px] mt-[6px] mr-2' ></img>
+          <p className='text-white mt-[4px] mr-2' style={{fontSize:'14px'}}>0012345678</p>
+          <img src={copy} alt='copy' className='mt-[7px]'></img>
+        </button>
+      </div>
+
+      {/* Two p tags on the extreme right */}
+      <div className='flex '>
+        <div className='px-[20px] py-[12px] flex w-[320px]' style={{borderRadius: '4px',border: '1px solid var(--Color-Gray-Gray-40, #CBD5E0)'}}>
+
+        </div>
+        <p className="text-sm">Right 2</p>
+      </div>
+    </div>
+
     </div>
   );
 };
