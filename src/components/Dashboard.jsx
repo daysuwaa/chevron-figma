@@ -88,7 +88,7 @@ const Dashboard = () => {
       </div>
       {/* end of frames */}
 
-      {/* Second row */}
+   {/* barrrssssss */}
       <div className="grid grid-cols-3 gap-4 mt-4 mx-7">
         <div className="col-span-2 bg-white p-4 text-center">
           <div className='flex justify-between font-light tracking-wide' style={{color: 'var(--Color-Gray-Gray-70, #4A5568)', fontSize:'14px', lineHeight:'24px'}}>
@@ -96,13 +96,9 @@ const Dashboard = () => {
             <p className='flex' style={{border: '1px solid var(--Color-Gray-Gray-40, #CBD5E0)', borderRadius:'4px', padding:'6px 12px'}}>Last 1 month <img src={arrowdown} alt ='' ></img></p>
             </div>
              <Barchat/>
-          </div>
-        
-        
-        
-        
+          </div> 
         <div className="col-span-1 bg-white p-4">
-          <div className=' mx'>
+          <div className=''>
             <p style={{ color: 'var(--Color-Gray-Gray-70, #4A5568', fontSize: '14px', lineHeight: '24px' }}>
               Cash overflow
             </p>
@@ -111,17 +107,6 @@ const Dashboard = () => {
         </div>
       </div>
  
- 
-{/* BARRSSSSSSS */}
-
-
-
-
-    
-
-      
-
-
 {/* receipts payoutsss */}
 <div className='py-7'>
 <div className='bg-white max-w-full h-[355px] mx-7 '>
@@ -134,20 +119,7 @@ const Dashboard = () => {
 <Table className=" text-slate-700" style={{color:"#4A5568"}}/>
   </div>
 </div>
-
-
 </div>
-
-
-
-
-
-
-
-
-
-
-
   </div>
   // end of code
   )
