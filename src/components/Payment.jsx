@@ -124,7 +124,6 @@ const Payment = () => {
     style={{ color: '#718096', fontSize: '14px', marginLeft: '6px', backgroundColor:'#F6F6F6'  }}
   />
 </div>
-         {/* <p className='font-light' style={{color: 'var(--Color-Gray-Gray-60, #718096)', fontSize:'14px', marginLeft:'6px'}}>Search by Payment Id</p> */}
         
 
         <div className='px-[20px] py-[12px] flex w-[100px] mx-5' style={{borderRadius: '4px',border: '1px solid var(--Color-Gray-Gray-40, #CBD5E0)'}} >
