@@ -58,15 +58,9 @@ const Payment = () => {
 
    const copyToClipboard = () => {
     const textToCopy = '0012345678';
-
-    // Create a temporary textarea element
     const textarea = document.createElement('textarea');
     textarea.value = textToCopy;
-
-    // Append the textarea to the body
     document.body.appendChild(textarea);
-
-    // Select the text in the textarea
     textarea.select();
   };
 
@@ -140,6 +134,9 @@ const Payment = () => {
   </div>
 </div>
 {/* end of the  straight stuff */}
+
+
+
 
 
 
