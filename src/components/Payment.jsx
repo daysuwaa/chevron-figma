@@ -142,7 +142,7 @@ const Payment = () => {
   <div className='flex'>
     <div className='px-[20px] py-[6px] flex w-[320px] ' style={{ borderRadius: '4px', border: '1px solid #CBD5E0' }}>
       <img src={search} alt='searchicon' className='w-[16px]'/>
-      <input type="text" placeholder='Search by Payment Id' className='font-light w-[320px] h-8' style={{ color: '#718096', fontSize: '14px', marginLeft: '6px', backgroundColor:'#F6F6F6'  }}/>
+      <input type="text" placeholder='Search by Payment Id' id='search' className='font-light w-[320px] h-8' style={{ color: '#718096', fontSize: '14px', marginLeft: '6px', backgroundColor:'#F6F6F6'  }}/>
     </div>
     <div className='px-[20px] py-[12px] flex w-[100px] mx-5' style={{borderRadius: '4px',border: '1px solid var(--Color-Gray-Gray-40, #CBD5E0)'}} >
       <img src={filter} alt='searchicon' className='w-[16px] h-[16px] mt-1'/>
