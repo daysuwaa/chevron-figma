@@ -56,19 +56,30 @@ const Payment = () => {
     );
   };
 
-  const copyToClipboard = () => {
-  const textToCopy = '0012345678';
-    const input = document.createElement('input');
-    input.value = textToCopy;
-    document.body.appendChild(input);
-    input.select();
-    
-    // Execute copy command
-    document.execCommand('copy');
-    
-    // Remove the temporary input element
-    document.body.removeChild(input);
-  }
+   const copyToClipboard = () => {
+    const textToCopy = '0012345678';
+
+    // Create a temporary textarea element
+    const textarea = document.createElement('textarea');
+    textarea.value = textToCopy;
+
+    // Append the textarea to the body
+    document.body.appendChild(textarea);
+
+    // Select the text in the textarea
+    textarea.select();
+
+    try {
+      // Execute the copy command
+      document.execCommand('copy');
+      console.log('Text copied to clipboard');
+    } catch (err) {
+      console.error('Unable to copy text to clipboard', err);
+    } finally {
+      // Remove the textarea from the body
+      document.body.removeChild(textarea);
+    }
+  };
 
   return (
     <div
