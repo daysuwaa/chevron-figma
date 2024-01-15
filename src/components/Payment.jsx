@@ -56,6 +56,20 @@ const Payment = () => {
     );
   };
 
+  const copyToClipboard = () => {
+  const textToCopy = '0012345678';
+    const input = document.createElement('input');
+    input.value = textToCopy;
+    document.body.appendChild(input);
+    input.select();
+    
+    // Execute copy command
+    document.execCommand('copy');
+    
+    // Remove the temporary input element
+    document.body.removeChild(input);
+  }
+
   return (
     <div
       style={{ backgroundColor: '#F6F6F6' }}
@@ -101,43 +115,37 @@ const Payment = () => {
 
        
       {/* second side */}
-      <div className="flex justify-between p-4 mx-7">
-      {/* Two p tags on the extreme left */}
-      <div className='flex '>
-        <p className="flex mt-3 tracking-wide font-light" style={{color: 'var(--Text-Primary, #1C065A)', fontSize:'14px'}}>My account: <img src={info} alt='arrowright'className='w-[14px] h-[14px] mx-2 mt-1 '/></p>
-        
-        <button className="flex" style={{background: 'var(--Button-Background-Alternate, #3B2773)', padding:'6px 12px', borderRadius:'4px', justifyContent:'center'}}>
-          <img src={gtb} alt='gtbimage' className='w-[16px] h-[16px] mt-[6px] mr-2' ></img>
-          <p className='text-white mt-[4px] mr-2' style={{fontSize:'14px'}}>0012345678</p>
-          <img src={copy} alt='copy' className='mt-[7px]'></img>
-        </button>
-      </div>
+      <div className="flex justify-between p-4 mx-7 sm:grid-cols-2 ">
+  {/* Two p tags on the extreme left */}
+  <div className='flex'>
+    <p className="flex mt-3 tracking-wide font-light" style={{color: 'var(--Text-Primary, #1C065A)', fontSize:'14px'}}>My account: <img src={info} alt='arrowright'className='w-[14px] h-[14px] mx-2 mt-1 '/></p>
 
-      
+    <button className="flex items-center" style={{ background: 'var(--Button-Background-Alternate, #3B2773)', padding: '6px 12px', borderRadius: '4px' }}>
+      <img src={gtb} alt='gtbimage' className='w-4 h-4'></img>
+      <p className='text-white ml-2 text-base' onClick={copyToClipboard}>0012345678</p>
+      <img src={copy} alt='copy' className='ml-1 w-4 h-4' ></img>
+    </button>
+  </div>
 
-      {/* Two p tags on the extreme right */}
-      <div className='flex'>
-      {/* <div className='px-[20px] py-[6px] flex w-[320px] grid-cols-1' style={{ borderRadius: '4px', border: '1px solid #CBD5E0' }}>
-     <img src={search} alt='searchicon' className='w-[16px]'/>
-  <input type="text" placeholder='Search by Payment Id' className='font-light w-[320px] h-8' style={{ color: '#718096', fontSize: '14px', marginLeft: '6px', backgroundColor:'#F6F6F6'  }}/>
-</div>
-         */}
-
-        {/* <div className='px-[20px] py-[12px] flex w-[100px] mx-5' style={{borderRadius: '4px',border: '1px solid var(--Color-Gray-Gray-40, #CBD5E0)'}} >
-        <img src={filter} alt='searchicon' className='w-[16px] h-[16px] mt-1'/>
-         <p className='font-light' style={{color: 'var(--Color-Gray-Gray-60, #718096)', fontSize:'14px', marginLeft:'6px'}}>Filter</p>
-        </div> */}
-       
-
-
-
-
-
-
-
-
-      </div>
+  {/* Two p tags on the extreme right */}
+  <div className='flex'>
+    <div className='px-[20px] py-[6px] flex w-[320px] ' style={{ borderRadius: '4px', border: '1px solid #CBD5E0' }}>
+      <img src={search} alt='searchicon' className='w-[16px]'/>
+      <input type="text" placeholder='Search by Payment Id' className='font-light w-[320px] h-8' style={{ color: '#718096', fontSize: '14px', marginLeft: '6px', backgroundColor:'#F6F6F6'  }}/>
     </div>
+    <div className='px-[20px] py-[12px] flex w-[100px] mx-5' style={{borderRadius: '4px',border: '1px solid var(--Color-Gray-Gray-40, #CBD5E0)'}} >
+      <img src={filter} alt='searchicon' className='w-[16px] h-[16px] mt-1'/>
+      <p className='font-light' style={{color: 'var(--Color-Gray-Gray-60, #718096)', fontSize:'14px', marginLeft:'6px'}}>Filter</p>
+    </div> 
+  </div>
+</div>
+{/* end of the  straight stuff */}
+
+
+
+
+
+   
 
     </div>
     // end of code
