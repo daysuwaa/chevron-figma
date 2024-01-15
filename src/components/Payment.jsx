@@ -113,26 +113,30 @@ const Payment = () => {
         </button>
       </div>
 
-      {/* Two p tags on the extreme right */}
-      <div className='flex '>
-      <div className='px-[20px] py-[6px] flex w-[320px]' style={{ borderRadius: '4px', border: '1px solid #CBD5E0' }}>
-  <img src={search} alt='searchicon' className='w-[16px]'/>
-  <input
-    type="text"
-    placeholder='Search by Payment Id'
-    className='font-light w-[320px] h-8'
-    style={{ color: '#718096', fontSize: '14px', marginLeft: '6px', backgroundColor:'#F6F6F6'  }}
-  />
-</div>
-        
 
-        <div className='px-[20px] py-[12px] flex w-[100px] mx-5' style={{borderRadius: '4px',border: '1px solid var(--Color-Gray-Gray-40, #CBD5E0)'}} >
-        <img src={filter} alt='searchicon' className='w-[16px] h-[16px] mt-1'/>
-         <p className='font-light' style={{color: 'var(--Color-Gray-Gray-60, #718096)', fontSize:'14px', marginLeft:'6px'}}>Filter</p>
-        </div>
-       
-      </div>
+
+      {/* Two p tags on the extreme right */}
+      <div className='flex flex-col md:flex-row'>
+  <div className='mb-4 md:mb-0 md:mr-4 grid-cols-1'>
+    <div className='px-4 py-2 flex w-full md:w-80' style={{ borderRadius: '4px', border: '1px solid #CBD5E0' }}>
+      <img src={search} alt='searchicon' className='w-4 h-4 mt-2' />
+      <input
+        type="text"
+        placeholder='Search by Payment Id'
+        className='font-light w-full h-8 ml-2'
+        style={{ color: '#718096', fontSize: '14px', backgroundColor: '#F6F6F6' }}
+      />
     </div>
+  </div>
+
+  <div className='w-full md:w-48'>
+    <div className='px-4 py-3 flex w-full' style={{ borderRadius: '4px', border: '1px solid var(--Color-Gray-Gray-40, #CBD5E0)' }} >
+      <img src={filter} alt='searchicon' className='w-4 h-4 mt-1' />
+      <p className='font-light ml-2' style={{ color: 'var(--Color-Gray-Gray-60, #718096)', fontSize: '14px' }}>Filter</p>
+    </div>
+  </div>
+</div>
+</div>
 
     </div>
   );
