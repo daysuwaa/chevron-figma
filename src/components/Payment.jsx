@@ -68,17 +68,6 @@ const Payment = () => {
 
     // Select the text in the textarea
     textarea.select();
-
-    try {
-      // Execute the copy command
-      document.execCommand('copy');
-      console.log('Text copied to clipboard');
-    } catch (err) {
-      console.error('Unable to copy text to clipboard', err);
-    } finally {
-      // Remove the textarea from the body
-      document.body.removeChild(textarea);
-    }
   };
 
   return (
