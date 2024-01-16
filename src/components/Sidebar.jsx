@@ -49,7 +49,7 @@ const Sidebar = () => {
       {/* Render Links */}
       <div className='pt-7'>
        {/* passed in three arguments - shown above */}
-        {renderLink("/*", "Dashboard", dashboard)}
+        {renderLink("/", "Dashboard", dashboard)}
         {renderLink("/chevron/payment", "Payments", payments)}
         {renderLink("/chevron/schedules", "Schedules", schedules)}
         {renderLink("/chevron/beneficiaries", "Beneficiaries", beneficiary)}
