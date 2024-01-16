@@ -1,4 +1,5 @@
 import React from 'react';
+import millify from "millify";
 import { Link } from 'react-router-dom';
 import Barchat from '../components/Barchart';
 import Piechart from '../components/Piechart';
@@ -12,8 +13,31 @@ import clock from '../assets/BsClock.svg';
 import Table from '../components/Table'
 
 const Dashboard = () => {
+
+  // moneyyy
+  const money1 = millify(953.2000, {
+    precision: 2,  // number of d.p
+    lowercase: true,  // Use lowercase abbreviations
+    decimalSeparator: ',',  // Custom decimal separator
+    units: ['K'],  // Custom units
+  });
+
+  const money2 = millify(98.2500, {
+    precision: 2,  // Number of decimal places
+    lowercase: true,  // Use lowercase abbreviations
+    decimalSeparator: ',',  // Custom decimal separator
+    units: ['K'],  // Custom units
+  });
+
+  const money3 = millify(125.2500, {
+    precision: 2,  // Number of decimal places
+    lowercase: true,  // Use lowercase abbreviations
+    decimalSeparator: ',',  // Custom decimal separator
+    units: ['M'],  // Custom units
+  });
+  
   // the dashboard - frames
-  const styling = (bgcolor, text, icons, money, link, tcols, arrow) => {
+  const styling = (bgcolor, text, icons, money1,money2,money3, link, tcols, arrow) => {
     return (
       <div className='container px-7 py-5  my-4  h-[166px]' style={{
         borderRadius: '4px',
@@ -36,7 +60,7 @@ const Dashboard = () => {
             color: tcols,
             fontSize: '32px'
           }}>
-          {money}
+          {money1}{money2}{money3}
         </p>
         <div className='flex items-center'>
           <Link to="/chevron/error" className='underline' style={{ color: tcols, fontSize: '12px' }}>
@@ -65,7 +89,9 @@ const Dashboard = () => {
         {styling("#22085C",
           "Total Payments",
          payments,
-          "N953.20K",
+         money1,
+         "",
+         "",
           "View payouts",
           "#FFF",
           arrowright)}
@@ -73,7 +99,9 @@ const Dashboard = () => {
         {styling("var(--Color-Base-Background-Color-5, #38A169)",
           "Wallet Balance",
           users,
-          "N1.25m",
+         "",
+         money2,
+         "",
           "View payments",
           "#FFF",
           arrowright)}
@@ -81,8 +109,10 @@ const Dashboard = () => {
         {styling("var(--Surface-Primary, #FFF)",
           "All Beneficiaries",
           clock,
-          "1,252",
-          "View beneficiaries",
+          "",
+         "",
+         money3,
+         "View beneficiaries",
           "#4A5568",
           arrowright2)}
       </div>
