@@ -5,7 +5,7 @@ const Table = () => {
     const columns = [
         {
             name:'TRANSACTION ID',
-            selector:row => row.payid
+            selector:row => row.transactionid
 
         },
         {
@@ -15,12 +15,12 @@ const Table = () => {
         },
         {
             name:'SENDER',
-            selector:row => row.recipient
+            selector:row => row.sender
 
         },
         {
             name:'PAID FROM',
-            selector:row => row.paidto
+            selector:row => row.paidfrom
 
         },
         {
@@ -33,35 +33,51 @@ const Table = () => {
     const data =[
         {
             id:1,
-            payid:'BLPID000133B31',
+            transactionid:'BLPID000133B31',
             amount:'NGN250,000.00',
-            recipient:'Segun Adebayo',
-            paidto:'First Bank: 0011223345',
+            sender:'Segun Adebayo',
+            paidfrom:'First Bank: 0011223345',
             date:'13:45, 11 Sep 2023'
         },
 
         {
             id:2,
-            payid:'BLPID000133B32',
+            transactionid:'BLPID000133B32',
             amount:'NGN250,000.00',
-            recipient:'Mark Chandler',
-            paidto:'Access Bank: 0011223345',
+            sender:'Segun Adebayo',
+            paidfrom:'Access Bank: 0011223345',
             date:'13:45, 11 Sep 2023'
         },
         {
             id:3,
-            payid:'BLPID000133B33',
+            transactionid:'BLPID000133B33',
             amount:'NGN250,000.00',
-            recipient:'Lazar Nikolov',
-            paidto:'GTBank: 0011223345',
+            sender:'Lazar Nikolov',
+            paidfrom:'GTBank: 0011223345',
             date:'13:45, 11 Sep 2023'
         },
         {
             id:4,
-            payid:'BLPID000133B34',
+            transactionid:'BLPID000133B33',
             amount:'NGN250,000.00',
-            recipient:'Javier Alaves',
-            paidto:'Access Bank: 0011223345',
+            sender:'Segun Adebayo',
+            paidfrom:'Access Bank: 0011223345',
+            date:'13:45, 11 Sep 2023'
+        },
+        {
+            id:5,
+            transactionid:'BLPID000133B33',
+            amount:'NGN250,000.00',
+            sender:'Segun Adebayo',
+            paidfrom:'Access Bank: 0011223345',
+            date:'13:45, 11 Sep 2023'
+        },
+        {
+            id:6,
+            transactionid:'BLPID000133B33',
+            amount:'NGN250,000.00',
+            sender:'Lazar Nikolov',
+            paidfrom:'Access Bank: 0011223345',
             date:'13:45, 11 Sep 2023'
         },
         

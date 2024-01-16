@@ -224,6 +224,8 @@ const Payment = () => {
         </div>
       </div>
       {/* end of the  straight stuff */}
+
+      
     </div>
     // end of code
   );
