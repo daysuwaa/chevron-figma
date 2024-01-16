@@ -14,30 +14,27 @@ import filter from "../assets/FiFilter.svg";
 const Payment = () => {
 
   const money1 = millify(953.2000, {
-    precision: 2,  // Number of decimal places
-    lowercase: true,  // Use lowercase abbreviations (e.g., 'k' instead of 'K')
+    precision: 2,  // number of d.p
+    lowercase: true,  // Use lowercase abbreviations
     decimalSeparator: ',',  // Custom decimal separator
     units: ['K'],  // Custom units
   });
 
   const money2 = millify(98.2500, {
     precision: 2,  // Number of decimal places
-    lowercase: true,  // Use lowercase abbreviations (e.g., 'k' instead of 'K')
+    lowercase: true,  // Use lowercase abbreviations
     decimalSeparator: ',',  // Custom decimal separator
     units: ['K'],  // Custom units
   });
 
   const money3 = millify(125.2500, {
     precision: 2,  // Number of decimal places
-    lowercase: true,  // Use lowercase abbreviations (e.g., 'k' instead of 'K')
+    lowercase: true,  // Use lowercase abbreviations
     decimalSeparator: ',',  // Custom decimal separator
-    units: ['m'],  // Custom units
+    units: ['M'],  // Custom units
   });
   
-   // Output: '1,23M'
   
-  
-
 
   const styling = (bgcolor, text, icons, money1, money2, money3,tcols) => {
     return (
