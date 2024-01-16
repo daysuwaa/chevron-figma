@@ -1,4 +1,5 @@
 import React from "react";
+import millify from "millify";
 import payments from "../assets/FiCreditCard.svg";
 import calendar from "../assets/FiCalendar.svg";
 import wallet from "../assets/IoWalletOutline.svg";
@@ -9,8 +10,36 @@ import gtb from "../assets/image 2.png";
 import copy from "../assets/IoCopyOutline.svg";
 import search from "../assets/CkSearch.svg";
 import filter from "../assets/FiFilter.svg";
+
 const Payment = () => {
-  const styling = (bgcolor, text, icons, money, tcols) => {
+
+  const money1 = millify(953.2000, {
+    precision: 2,  // Number of decimal places
+    lowercase: true,  // Use lowercase abbreviations (e.g., 'k' instead of 'K')
+    decimalSeparator: ',',  // Custom decimal separator
+    units: ['K'],  // Custom units
+  });
+
+  const money2 = millify(98.2500, {
+    precision: 2,  // Number of decimal places
+    lowercase: true,  // Use lowercase abbreviations (e.g., 'k' instead of 'K')
+    decimalSeparator: ',',  // Custom decimal separator
+    units: ['K'],  // Custom units
+  });
+
+  const money3 = millify(125.2500, {
+    precision: 2,  // Number of decimal places
+    lowercase: true,  // Use lowercase abbreviations (e.g., 'k' instead of 'K')
+    decimalSeparator: ',',  // Custom decimal separator
+    units: ['m'],  // Custom units
+  });
+  
+   // Output: '1,23M'
+  
+  
+
+
+  const styling = (bgcolor, text, icons, money1, money2, money3,tcols) => {
     return (
       <div
         className="container px-4 md:px-7 py-5 my-4 md:mx-4 h-[166px]"
@@ -40,7 +69,7 @@ const Payment = () => {
             fontSize: "32px",
           }}
         >
-          {money}
+          {money1} {money2} {money3}
         </p>
         <div className="flex items-center">
           <p style={{ color: tcols, fontSize: "12px" }}>
@@ -52,6 +81,8 @@ const Payment = () => {
     );
   };
 
+
+// the clipboard thingy
   const copyToClipboard = () => {
     const textToCopy = "0012345678";
     if (navigator.clipboard) return navigator.clipboard.writeText(textToCopy);
@@ -84,13 +115,21 @@ const Payment = () => {
 
       {/* framesssss */}
       <div className="grid grid-cols-1 md:grid-cols-3 mx-4 md:mx-7 gap-4">
-        {styling("#22085C", "Total Payments", payments, "N953.20K", "#FFF")}
+        {styling("#22085C", 
+        "Total Payments",
+         payments, 
+         money1,
+         "", 
+         "",
+         "#FFF")}
 
         {styling(
           "var(--Color-Base-Background-Color-5, #38A169)",
           "Wallet Balance",
           calendar,
-          "N1.25m",
+          "",
+          money2,
+          "",
           "#FFF"
         )}
 
@@ -98,7 +137,9 @@ const Payment = () => {
           "var(--Surface-Primary, #FFF)",
           "All Beneficiaries",
           wallet,
-          "1,252",
+          "",
+          "",
+          money3,
           "#4A5568"
         )}
       </div>
