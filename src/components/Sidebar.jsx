@@ -12,7 +12,6 @@ import { Link } from 'react-router-dom';
 
 const Sidebar = () => {
   const [activeLink, setActiveLink] = useState('');
-
   const handleLinkClick = (link) => {
     setActiveLink(link);
   };
@@ -50,13 +49,13 @@ const Sidebar = () => {
       <div className='pt-7'>
        {/* passed in three arguments - shown above */}
         {renderLink("/", "Dashboard", dashboard)}
-        {renderLink("/chevron/payment", "Payments", payments)}
-        {renderLink("/chevron/schedules", "Schedules", schedules)}
-        {renderLink("/chevron/beneficiaries", "Beneficiaries", beneficiary)}
-        {renderLink("/chevron/approvals", "Approvals", approvals)}
-        {renderLink("/chevron/users", "Users", users)}
-        {renderLink("/chevron/analytics", "Analytics", analytics)}
-        {renderLink("/chevron/settings", "Settings", settings)}
+        {renderLink("/payment", "Payments", payments)}
+        {renderLink("/schedules", "Schedules", schedules)}
+        {renderLink("/beneficiaries", "Beneficiaries", beneficiary)}
+        {renderLink("/approvals", "Approvals", approvals)}
+        {renderLink("/users", "Users", users)}
+        {renderLink("/analytics", "Analytics", analytics)}
+        {renderLink("/settings", "Settings", settings)}
       </div>
       {/* End of Sidebar */}
     </div>

@@ -1,5 +1,6 @@
-import React from "react";
+import React, {useState} from "react";
 import millify from "millify";
+import { Link} from 'react-router-dom';
 import payments from "../assets/FiCreditCard.svg";
 import calendar from "../assets/FiCalendar.svg";
 import wallet from "../assets/IoWalletOutline.svg";
@@ -10,6 +11,7 @@ import gtb from "../assets/image 2.png";
 import copy from "../assets/IoCopyOutline.svg";
 import search from "../assets/CkSearch.svg";
 import filter from "../assets/FiFilter.svg";
+
 
 const Payment = () => {
 
@@ -34,7 +36,7 @@ const Payment = () => {
     units: ['M'],  // Custom units
   });
   
-  
+
 
   const styling = (bgcolor, text, icons, money1, money2, money3,tcols) => {
     return (
@@ -92,6 +94,27 @@ const Payment = () => {
     document.body.removeChild(textArea);
   };
 
+  const [activeLink, setActiveLink] = useState('');
+  const handleLinkClick = (link) => {
+    setActiveLink(link);
+  };
+
+  const navigation =(link, text) => {
+    return(
+      <div className="flex" onClick={() => handleLinkClick(link)}>
+
+     <Link to={link} className={`text ${activeLink === link ? 'black' : 'grey'}`}>
+      {text}
+     </Link>
+
+      </div>
+    )
+
+  }
+
+  
+  
+  
   return (
     <div
       style={{ backgroundColor: "#F6F6F6" }}
@@ -225,7 +248,14 @@ const Payment = () => {
       </div>
       {/* end of the  straight stuff */}
 
+       
+ 
+   {navigation ("/", "Inflow")}
+   {navigation ("/payment", "Outflow")}
+
       
+    
+
     </div>
     // end of code
   );
