@@ -18,15 +18,15 @@ function App() {
         <Sidebar/>
         <div style={{flex: 1}}className='max-h-full'>
           <Routes>
-            <Route path="*" element={<Dashboard/>} />
-            <Route path="/chevron/payment" element={<Payment />} />
-            <Route path="/chevron/schedules" element={ <Schedules/>} />
-            <Route path="/chevron/beneficiaries" element={<Beneficiaries />} />
-            <Route path="/chevron/approvals" element={<Approvals />} />
-            <Route path="/chevron/users" element={<Users />} />
-            <Route path="/chevron/analytics" element={<Analytics />} />
-            <Route path="/chevron/settings" element={<Settings />} />
-            <Route path='/chevron/error' element={<Error/>} />
+            <Route path="/" element={<Dashboard/>} />
+            <Route path="/payment" element={<Payment />} />
+            <Route path="/schedules" element={ <Schedules/>} />
+            <Route path="/beneficiaries" element={<Beneficiaries />} />
+            <Route path="/approvals" element={<Approvals />} />
+            <Route path="/users" element={<Users />} />
+            <Route path="/analytics" element={<Analytics />} />
+            <Route path="/settings" element={<Settings />} />
+            <Route path='/error' element={<Error/>} />
           </Routes>
         </div>
       </div>
