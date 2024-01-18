@@ -29,7 +29,6 @@ const Schedules = () => {
         <p className='text-center text-[#718096] font-light tracking-wide text-sm'> You do not have any schedules. <br></br>
         Click the button below to generate a template for one
         </p>
-
         <div className='h-[48px] mt-4 rounded bg-white  items-center w-[251px] text-center' style={{border:' 1px solid var(--Button-Background-Alternate, #3B2773)'}}>
         <button onClick={{}} className ='text-[#1C065A] mt-2'>Get Schedule Template</button>
       </div>
