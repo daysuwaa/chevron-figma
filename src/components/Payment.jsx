@@ -249,7 +249,7 @@ const [activeTab, setActiveTab] = useState('outflow');
   
   <button style={{
     background: "var(--Button-Background-Alternate, #3B2773)",
-    padding: "0```````px 12px",
+    padding: "0px 12px",
     borderRadius: "4px",
     height:'32px',
     marginRight:'15px',
