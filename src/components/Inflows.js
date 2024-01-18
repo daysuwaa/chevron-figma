@@ -5,27 +5,27 @@ const Table = () => {
     const columns = [
         {
             name:'TRANSACTION ID',
-            selector:row => row.transactionid
+            selector:row => <div className='font-bold text-[#1C065A]'> {row.transactionid}</div>
 
         },
         {
             name:'AMOUNT',
-            selector:row => row.amount
+            selector:row => <div className='text-[#1C065A]'>{row.amount}</div>
 
         },
         {
             name:'SENDER',
-            selector:row => row.sender
+            selector:row => <div className='text-[#1C065A]'> {row.sender}</div>
 
         },
         {
             name:'PAID FROM',
-            selector:row => row.paidfrom
+            selector:row =><div className='text-[#1C065A]'> {row.paidfrom}</div>
 
         },
         {
             name:'DATE',
-            selector:row => row.date
+            selector:row =><div className='text-[#1C065A]'> {row.date}</div>
 
         },
     ];
