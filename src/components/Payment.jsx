@@ -38,7 +38,7 @@ const Payment = () => {
   const styling = (bgcolor, text, icons, money1, money2, money3, tcols) => {
     return (
       <div
-        className="container px-4 md:px-7 py-5 my-4 md:mx-4 h-[166px]"
+        className="container px-4 md:px-7 py-5 my-4 h-[166px]"
         style={{
           borderRadius: "4px",
           boxShadow: "0px 3px 12px 0px rgba(197, 197, 197, 0.25)",
@@ -112,7 +112,7 @@ const Payment = () => {
       {/* end of nav */}
 
       {/* framesssss */}
-      <div className="grid grid-cols-1 md:grid-cols-3 mx-4 md:mx-7 gap-4">
+      <div className="grid grid-cols-1 md:grid-cols-3 mx-4  gap-4">
         {styling("#22085C", "Total Payments", payments, money1, "", "", "#FFF")}
 
         {styling(
