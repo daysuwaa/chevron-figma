@@ -25,29 +25,48 @@ const Users = () => {
     {
       name: "ACTIONS",
       selector: (row) => (
-        <div
-          style={{
-            border:
-              row.status === "Active"
-                ? "1px solid #38A169"
-                : row.status === "Inactive"
-                ? "1px solid #FF5655"
-                : "none",
-            color:
-              row.status === "Active"
-                ? ["#38A169"]
-                : row.status === "Inactive"
-                ? ["#FF5655"]
-                : "none",
-            padding: "5px 16px 5px 15px",
-            justifyContent: "center",
-            borderRadius: "4px",
-            textAlign: "center",
-            width: "90px",
-            height: "30px",
-          }}
-        >
-          {row.status}
+        <div className="flex">
+          <div
+            style={{
+              border: "1px solid #3B2773",
+              color: "#3B2773",
+              padding: " 4.6px",
+              justifyContent: "center",
+              borderRadius: "4px",
+              textAlign: "center",
+              width: "70px",
+              height: "30px",
+              marginRight: "10px", // Add margin between the two action components
+            }}
+          >
+            {row.status1}
+          </div>
+
+          <div
+            style={{
+              border:
+                row.status2 === "Reactivate"
+                  ? "1px solid #38A169"
+                  : row.status2 === "Deactivate"
+                  ? "1px solid #FF5655"
+                  : "none",
+              color:
+                row.status2 === "Reactivate"
+                  ? ["#38A169"]
+                  : row.status2 === "Deactivate"
+                  ? ["#FF5655"]
+                  : "none",
+              padding: "5px 16px 5px 15px",
+              justifyContent: "center",
+              borderRadius: "4px",
+              textAlign: "center",
+              width: "80px",
+              height: "30px",
+              display: "flex",
+            }}
+          >
+            {row.status2}
+          </div>
         </div>
       ),
     },
@@ -60,7 +79,8 @@ const Users = () => {
       email: "segun.a@gmail.com",
       role: "Administrator",
       lastlogin: "13:45, 11 Sep 2023",
-      status: "Active",
+      status1: "Edit",
+      status2: "Deactivate",
     },
 
     {
@@ -69,7 +89,8 @@ const Users = () => {
       email: "chandler@gmail.com",
       role: "Accountant",
       lastlogin: "13:45, 11 Sep 2023",
-      status: "Active",
+      status1: "Edit",
+      status2: "Deactivate",
     },
     {
       id: 3,
@@ -77,7 +98,8 @@ const Users = () => {
       email: "mysterywwe@gmail.com",
       role: "Accountant",
       lastlogin: "13:45, 11 Sep 2023",
-      status: "Active",
+      status1: "Edit",
+      status2: "Deactivate",
     },
     {
       id: 4,
@@ -85,7 +107,8 @@ const Users = () => {
       email: "rowdy@gmail.com",
       role: "Auditor",
       lastlogin: "13:45, 11 Sep 2023",
-      status: "Inactive",
+      status1: "Edit",
+      status2: "Reactivate",
     },
   ];
   return (
