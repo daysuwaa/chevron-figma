@@ -1,7 +1,7 @@
 import React from 'react'
 import DataTable from 'react-data-table-component'
 
-const Table = () => {
+const Outflows = () => {
     const columns = [
         {
             name:'TRANSACTION ID',
@@ -92,4 +92,4 @@ const Table = () => {
   )
 }
 
-export default Table
+export default Outflows
