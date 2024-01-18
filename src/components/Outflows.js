@@ -24,6 +24,22 @@ const Outflows = () => {
 
         },
         {
+            name: 'STATUS',
+            selector: row => <div style={{
+                backgroundColor: row.status === 'Success' ? ['#DDFCE8'] : row.status === 'Failed' ? ['#FFE1D4'] : ['#FCF0D4'],
+                color:row.status === 'Success' ? ['#38A169'] : row.status === 'Failed' ? ['#FF5655'] : ['#F2994A'],
+                padding: '5px 16px 5px 15px',
+                justifyContent:'center',
+                borderRadius: '4px',
+                textAlign: 'center',
+                width:'92px',
+                height:'24px'
+            }}>
+                {row.status}
+            </div>,
+        },
+
+        {
             name:'DATE',
             selector:row =><div className='text-[#1C065A]'> {row.date}</div>
 
@@ -37,6 +53,7 @@ const Outflows = () => {
             amount:'NGN250,000.00',
             sender:'Segun Adebayo',
             paidfrom:'First Bank: 0011223345',
+            status:'Success',
             date:'13:45, 11 Sep 2023'
         },
 
@@ -46,6 +63,7 @@ const Outflows = () => {
             amount:'NGN250,000.00',
             sender:'Segun Adebayo',
             paidfrom:'Access Bank: 0011223345',
+            status:'Pending',
             date:'13:45, 11 Sep 2023'
         },
         {
@@ -54,6 +72,7 @@ const Outflows = () => {
             amount:'NGN250,000.00',
             sender:'Lazar Nikolov',
             paidfrom:'GTBank: 0011223345',
+            status:'Failed',
             date:'13:45, 11 Sep 2023'
         },
         {
@@ -62,6 +81,7 @@ const Outflows = () => {
             amount:'NGN250,000.00',
             sender:'Segun Adebayo',
             paidfrom:'Access Bank: 0011223345',
+            status:'Success',
             date:'13:45, 11 Sep 2023'
         },
         {
@@ -70,6 +90,7 @@ const Outflows = () => {
             amount:'NGN250,000.00',
             sender:'Segun Adebayo',
             paidfrom:'Access Bank: 0011223345',
+            status:'Success',
             date:'13:45, 11 Sep 2023'
         },
         {
@@ -78,8 +99,47 @@ const Outflows = () => {
             amount:'NGN250,000.00',
             sender:'Lazar Nikolov',
             paidfrom:'Access Bank: 0011223345',
+            status:'Success',
             date:'13:45, 11 Sep 2023'
         },
+
+        {
+            id:7,
+            transactionid:'BLPID000133B33',
+            amount:'NGN250,000.00',
+            sender:'Lazar Nikolov',
+            paidfrom:'GTBank: 0011223345',
+            status:'Failed',
+            date:'13:45, 11 Sep 2023'
+        },
+        {
+            id:8,
+            transactionid:'BLPID000133B33',
+            amount:'NGN250,000.00',
+            sender:'Lazar Nikolov',
+            paidfrom:'GTBank: 0011223345',
+            status:'Success',
+            date:'13:45, 11 Sep 2023'
+        },
+        {
+            id:9,
+            transactionid:'BLPID000133B33',
+            amount:'NGN250,000.00',
+            sender:'Lazar Nikolov',
+            paidfrom:'GTBank: 0011223345',
+            status:'Success',
+            date:'13:45, 11 Sep 2023'
+        },
+        {
+            id:10,
+            transactionid:'BLPID000133B33',
+            amount:'NGN250,000.00',
+            sender:'Javier Alaves',
+            paidfrom:'Access Bank: 0011223345',
+            status:'Pending',
+            date:'13:45, 11 Sep 2023'
+        },
+        
         
     ]
   return (
