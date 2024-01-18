@@ -1,6 +1,5 @@
 import React, {useState} from "react";
 import millify from "millify";
-// import { Link} from 'react-router-dom';
 import Inflow from '../components/Inflows';
 import Outflow from '../components/Outflows';
 import payments from "../assets/FiCreditCard.svg";
@@ -97,7 +96,7 @@ const Payment = () => {
   };
 
   // created a constant 
-const [activeTab, setActiveTab] = useState('inflow');
+const [activeTab, setActiveTab] = useState('outflow');
   
 
   return (
@@ -157,7 +156,7 @@ const [activeTab, setActiveTab] = useState('inflow');
       ></div>
 
       {/* second side */}
-      <div className="flex justify-between p-4 mx-7 sm:grid-cols-2 ">
+      <div className="flex justify-between p-4 sm:grid-cols-2 ">
         {/* Two p tags on the extreme left */}
         <div className="flex">
           <p
@@ -189,8 +188,7 @@ const [activeTab, setActiveTab] = useState('inflow');
 
         {/* Two p tags on the extreme right */}
         <div className="flex">
-          <div
-            className="px-[20px] py-[6px] flex w-[320px] rounded border border-[#CBD5E0] focus-within:outline outline-2 outline-blue-600"
+          <div className="px-[20px] mx-5 py-[6px] flex w-[320px] rounded border border-[#CBD5E0] focus-within:outline outline-2 outline-blue-600"
           >
             <img src={search} alt="searchicon" className="w-[16px]" />
             <input
@@ -207,7 +205,7 @@ const [activeTab, setActiveTab] = useState('inflow');
             />
           </div>
           <div
-            className="px-[20px] py-[12px] flex w-[100px] mx-5"
+            className="px-[20px] py-[12px] flex w-[100px] "
             style={{
               borderRadius: "4px",
               border: "1px solid var(--Color-Gray-Gray-40, #CBD5E0)",
@@ -233,23 +231,36 @@ const [activeTab, setActiveTab] = useState('inflow');
       </div>
       {/* end of the  straight stuff */}
 {/* the tab stufff */}
-      <div>
-        <button
-          className={`px-4 py-2 text-[14px] ${activeTab === 'inflow' ? 'font-bold text-[#1C065A] border-b-2 border-[#1C065A]' : 'text-gray-500'}`}
-          onClick={() => setActiveTab('inflow')}
-        >
-          Inflow
-        </button>
-        <button
-          className={`px-4 py-2 text-[14px] ${activeTab === 'outflow' ? 'font-bold text-[#1C065A] border-b-2 border-[#1C065A]' : 'text-gray-500'}`}
-          onClick={() => setActiveTab('outflow')}
-        >
-          Outflow
-        </button>
-        {activeTab === 'inflow' ? <Inflow /> : <Outflow />}
-      </div>
+<div className="flex justify-between items-center">
+  <div>
+    <button
+      className={`px-4 py-2 text-[14px] ${activeTab === 'outflow' ? 'font-bold text-[#1C065A] border-b-2 border-[#1C065A]' : 'text-gray-500'}`}
+      onClick={() => setActiveTab('outflow')}
+    >
+      Outflow
+    </button>
+    <button
+      className={`px-4 py-2 text-[14px] ${activeTab === 'inflow' ? 'font-bold text-[#1C065A] border-b-2 border-[#1C065A]' : 'text-gray-500'}`}
+      onClick={() => setActiveTab('inflow')}
+    >
+      Inflow
+    </button>
+  </div>
+  
+  <button style={{
+    background: "var(--Button-Background-Alternate, #3B2773)",
+    padding: "0px 12px",
+    borderRadius: "4px",
+    height:'32px',
+    marginRight:'15px',
+   
 
-    
+  }}>
+    <p className="text-white text-base">Export Payments</p>
+  </button>
+</div>
+
+{activeTab === 'inflow' ? <Inflow /> : <Outflow />}
 
     </div>
     // end of code
