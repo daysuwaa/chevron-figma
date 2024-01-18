@@ -235,13 +235,13 @@ const [activeTab, setActiveTab] = useState('inflow');
 {/* the tab stufff */}
       <div>
         <button
-          className={`px-4 py-2 ${activeTab === 'inflow' ? 'font-bold text-blue-500 border-b-2 border-blue-500' : 'text-gray-500'}`}
+          className={`px-4 py-2 text-[14px] ${activeTab === 'inflow' ? 'font-bold text-[#1C065A] border-b-2 border-[#1C065A]' : 'text-gray-500'}`}
           onClick={() => setActiveTab('inflow')}
         >
           Inflow
         </button>
         <button
-          className={`px-4 py-2 ${activeTab === 'outflow' ? 'font-bold text-blue-500 border-b-2 border-blue-500' : 'text-gray-500'}`}
+          className={`px-4 py-2 text-[14px] ${activeTab === 'outflow' ? 'font-bold text-blue-500 border-b-2 border-blue-500' : 'text-gray-500'}`}
           onClick={() => setActiveTab('outflow')}
         >
           Outflow
