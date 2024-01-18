@@ -1,7 +1,7 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 import millify from "millify";
-import Inflow from '../components/Inflows';
-import Outflow from '../components/Outflows';
+import Inflow from "../components/Inflows";
+import Outflow from "../components/Outflows";
 import payments from "../assets/FiCreditCard.svg";
 import calendar from "../assets/FiCalendar.svg";
 import wallet from "../assets/IoWalletOutline.svg";
@@ -13,33 +13,29 @@ import copy from "../assets/IoCopyOutline.svg";
 import search from "../assets/CkSearch.svg";
 import filter from "../assets/FiFilter.svg";
 
-
 const Payment = () => {
-
-  const money1 = millify(953.2000, {
-    precision: 2,  // number of d.p
-    lowercase: true,  // Use lowercase abbreviations
-    decimalSeparator: ',',  // Custom decimal separator
-    units: ['K'],  // Custom units
+  const money1 = millify(953.2, {
+    precision: 2, // number of d.p
+    lowercase: true, // Use lowercase abbreviations
+    decimalSeparator: ",", // Custom decimal separator
+    units: ["K"], // Custom units
   });
 
-  const money2 = millify(98.2500, {
-    precision: 2,  // Number of decimal places
-    lowercase: true,  // Use lowercase abbreviations
-    decimalSeparator: ',',  // Custom decimal separator
-    units: ['K'],  // Custom units
+  const money2 = millify(98.25, {
+    precision: 2, // Number of decimal places
+    lowercase: true, // Use lowercase abbreviations
+    decimalSeparator: ",", // Custom decimal separator
+    units: ["K"], // Custom units
   });
 
-  const money3 = millify(125.2500, {
-    precision: 2,  // Number of decimal places
-    lowercase: true,  // Use lowercase abbreviations
-    decimalSeparator: ',',  // Custom decimal separator
-    units: ['M'],  // Custom units
+  const money3 = millify(125.25, {
+    precision: 2, // Number of decimal places
+    lowercase: true, // Use lowercase abbreviations
+    decimalSeparator: ",", // Custom decimal separator
+    units: ["M"], // Custom units
   });
-  
 
-
-  const styling = (bgcolor, text, icons, money1, money2, money3,tcols) => {
+  const styling = (bgcolor, text, icons, money1, money2, money3, tcols) => {
     return (
       <div
         className="container px-4 md:px-7 py-5 my-4 md:mx-4 h-[166px]"
@@ -81,8 +77,7 @@ const Payment = () => {
     );
   };
 
-
-// the clipboard thingy
+  // the clipboard thingy
   const copyToClipboard = () => {
     const textToCopy = "0012345678";
     if (navigator.clipboard) return navigator.clipboard.writeText(textToCopy);
@@ -91,13 +86,12 @@ const Payment = () => {
     document.body.appendChild(textArea);
     textArea.value = textToCopy;
     textArea.select();
-    document.execCommand('copy');
+    document.execCommand("copy");
     document.body.removeChild(textArea);
   };
 
-  // created a constant 
-const [activeTab, setActiveTab] = useState('outflow');
-  
+  // created a constant
+  const [activeTab, setActiveTab] = useState("outflow");
 
   return (
     <div
@@ -119,13 +113,7 @@ const [activeTab, setActiveTab] = useState('outflow');
 
       {/* framesssss */}
       <div className="grid grid-cols-1 md:grid-cols-3 mx-4 md:mx-7 gap-4">
-        {styling("#22085C", 
-        "Total Payments",
-         payments, 
-         money1,
-         "", 
-         "",
-         "#FFF")}
+        {styling("#22085C", "Total Payments", payments, money1, "", "", "#FFF")}
 
         {styling(
           "var(--Color-Base-Background-Color-5, #38A169)",
@@ -188,8 +176,7 @@ const [activeTab, setActiveTab] = useState('outflow');
 
         {/* Two p tags on the extreme right */}
         <div className="flex">
-          <div className="px-[20px] mx-5 py-[6px] flex w-[320px] rounded border border-[#CBD5E0] focus-within:outline outline-2 outline-blue-600"
-          >
+          <div className="px-[20px] mx-5 py-[6px] flex w-[320px] rounded border border-[#CBD5E0] focus-within:outline outline-2 outline-blue-600">
             <img src={search} alt="searchicon" className="w-[16px]" />
             <input
               type="text"
@@ -230,38 +217,45 @@ const [activeTab, setActiveTab] = useState('outflow');
         </div>
       </div>
       {/* end of the  straight stuff */}
-{/* the tab stufff */}
-<div className="flex justify-between items-center mx-5">
-  <div>
-    <button
-      className={`px-4 py-2 text-[14px] ${activeTab === 'outflow' ? 'font-bold text-[#1C065A] border-b-2 border-[#1C065A]' : 'text-gray-500'}`}
-      onClick={() => setActiveTab('outflow')}
-    >
-      Outflow
-    </button>
-    <button
-      className={`px-4 py-2 text-[14px] ${activeTab === 'inflow' ? 'font-bold text-[#1C065A] border-b-2 border-[#1C065A]' : 'text-gray-500'}`}
-      onClick={() => setActiveTab('inflow')}
-    >
-      Inflow
-    </button>
-  </div>
-  
-  <button style={{
-    background: "var(--Button-Background-Alternate, #3B2773)",
-    padding: "0px 12px",
-    borderRadius: "4px",
-    height:'32px',
-    marginRight:'15px',
-   
+      {/* the tab stufff */}
+      <div className="flex justify-between items-center mx-5">
+        <div>
+          <button
+            className={`px-4 py-2 text-[14px] ${
+              activeTab === "outflow"
+                ? "font-bold text-[#1C065A] border-b-2 border-[#1C065A]"
+                : "text-gray-500"
+            }`}
+            onClick={() => setActiveTab("outflow")}
+          >
+            Outflow
+          </button>
+          <button
+            className={`px-4 py-2 text-[14px] ${
+              activeTab === "inflow"
+                ? "font-bold text-[#1C065A] border-b-2 border-[#1C065A]"
+                : "text-gray-500"
+            }`}
+            onClick={() => setActiveTab("inflow")}
+          >
+            Inflow
+          </button>
+        </div>
 
-  }}>
-    <p className="text-white text-base">Export Payments</p>
-  </button>
-</div>
+        <button
+          style={{
+            background: "var(--Button-Background-Alternate, #3B2773)",
+            padding: "0px 12px",
+            borderRadius: "4px",
+            height: "32px",
+            marginRight: "15px",
+          }}
+        >
+          <p className="text-white text-base">Export Payments</p>
+        </button>
+      </div>
 
-{activeTab === 'inflow' ? <Inflow /> : <Outflow />}
-
+      {activeTab === "inflow" ? <Inflow /> : <Outflow />}
     </div>
     // end of code
   );
