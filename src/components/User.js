@@ -4,26 +4,26 @@ import DataTable from "react-data-table-component";
 const Users = () => {
   const columns = [
     {
-      name: "NAME",
+      name: <div className="font-bold text-[#4A5568]">NAME</div>,
       selector: (row) => (
         <div className="font-bold text-[#1C065A]"> {row.name}</div>
       ),
     },
     {
-      name: "EMAIL ADDRESS",
+      name: <div className="font-bold text-[#4A5568]">EMAIL ADDRESS</div>,
       selector: (row) => <div className="text-[#1C065A]">{row.email}</div>,
     },
     {
-      name: "ROLE",
+      name: <div className="font-bold text-[#4A5568]"> ROLE </div>,
       selector: (row) => <div className="text-[#1C065A]"> {row.role}</div>,
     },
     {
-      name: "LAST LOGIN",
+      name: <div className="font-bold text-[#4A5568]">LAST LOGIN</div>,
       selector: (row) => <div className="text-[#1C065A]"> {row.lastlogin}</div>,
     },
 
     {
-      name: "ACTIONS",
+      name: <div className="font-bold text-[#4A5568]">ACTIONS</div>,
       selector: (row) => (
         <div className="flex">
           <div
