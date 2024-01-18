@@ -12,7 +12,7 @@ const Approvals = () => {
         className="flex px-[32px] py-[18px] justify-between h-[60px]"
         style={{ background: "#fff" }}
       >
-        <p className="font-semibold tracking-wide ">Dashboard</p>
+        <p className="font-semibold tracking-wide ">Approvals</p>
         <div className="flex items-center">
           <img src={man} alt="arrow" className="w-[24px] h-[24px] mr-3" />
           <img src={arrowdown} alt="man" className="w-[14px] h-[14px]" />
