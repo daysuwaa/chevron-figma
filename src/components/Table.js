@@ -67,7 +67,7 @@ const Table = () => {
         
     ]
   return (
-    <div>
+    <div className='mx-5'>
         <DataTable
         columns={columns}
         data={data}

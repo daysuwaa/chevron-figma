@@ -231,7 +231,7 @@ const [activeTab, setActiveTab] = useState('outflow');
       </div>
       {/* end of the  straight stuff */}
 {/* the tab stufff */}
-<div className="flex justify-between items-center">
+<div className="flex justify-between items-center mx-5">
   <div>
     <button
       className={`px-4 py-2 text-[14px] ${activeTab === 'outflow' ? 'font-bold text-[#1C065A] border-b-2 border-[#1C065A]' : 'text-gray-500'}`}
