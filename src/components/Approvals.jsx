@@ -2,7 +2,8 @@ import React from 'react'
 
 const Approvals = () => {
   return (
-    <div>Approvals</div>
+    <div>
+    Approvals</div>
   )
 }
 
