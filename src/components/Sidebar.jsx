@@ -24,7 +24,7 @@ const Sidebar = () => {
           <img src={imgSrc} alt='icon' className='w-[18px] h-[18px] mt-3' />
           <Link to={link}>  
                                                                           {/* if link is active, font weight will be bold, else normal */}
-        <p className={` text-white tracking-wider px-3 mt-2`}style={{ fontWeight:activeLink=== link ? 'bold' :'' , fontSize:'14px', lineHeight: '24px', } }>
+        <p className={` text-white tracking-wider px-3 mt-2 `} style={{ fontWeight:activeLink=== link ? 'bold' :'lighter' , fontSize:'14px', lineHeight: '24px', } }>
         {text}
       </p>
     </Link>
@@ -39,7 +39,7 @@ const Sidebar = () => {
       {/* Image and Title */}
       <div className="flex justify-center items-center space-x-2 py-6">
         <img className="w-10 h-10 rounded-sm" src={chevron} alt="logo" />
-        <p className="text-white font-semibold tracking-wider" style={{ fontSize: '16px', lineHeight: '24px' }}>Chevron Group</p>
+        <p className="text-white font-semibold tracking-wider" style={{ fontSize: '16px', lineHeight: '24px', fontWeight:'' }}>Chevron Group</p>
       </div>
       {/* End of Image */}
 
