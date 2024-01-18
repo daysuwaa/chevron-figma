@@ -1,6 +1,6 @@
 import React, {useState} from "react";
 import millify from "millify";
-import { Link} from 'react-router-dom';
+// import { Link} from 'react-router-dom';
 import Inflow from '../components/Inflows';
 import Outflow from '../components/Outflows';
 import payments from "../assets/FiCreditCard.svg";
@@ -96,27 +96,10 @@ const Payment = () => {
     document.body.removeChild(textArea);
   };
 
+  // created a constant 
+const [activeTab, setActiveTab] = useState('inflow');
   
 
-  const NavigationItem = ({ link, text, activeLink, handleLinkClick }) => (
-    <div className="flex" onClick={() => handleLinkClick(link)}>
-      <Link to={link} className={`text ${activeLink === link ? 'black' : 'grey'} border-b ${activeLink === link ? 'to-blue-950' :''} hover ${activeLink===link ? 'to-blue-700' : '' }`}>
-        {text}
-      </Link>
-    </div>
-  );
-  
-  
-    const [activeLink, setActiveLink] = useState('');
-  
-    const handleLinkClick = (link) => {
-      setActiveLink(link);
-    };
-  
-
-  
-  
-  
   return (
     <div
       style={{ backgroundColor: "#F6F6F6" }}
@@ -249,24 +232,23 @@ const Payment = () => {
         </div>
       </div>
       {/* end of the  straight stuff */}
+{/* the tab stufff */}
+      <div>
+        <button
+          className={`px-4 py-2 ${activeTab === 'inflow' ? 'font-bold text-blue-500 border-b-2 border-blue-500' : 'text-gray-500'}`}
+          onClick={() => setActiveTab('inflow')}
+        >
+          Inflow
+        </button>
+        <button
+          className={`px-4 py-2 ${activeTab === 'outflow' ? 'font-bold text-blue-500 border-b-2 border-blue-500' : 'text-gray-500'}`}
+          onClick={() => setActiveTab('outflow')}
+        >
+          Outflow
+        </button>
+        {activeTab === 'inflow' ? <Inflow /> : <Outflow />}
+      </div>
 
-       
-      <div className="flex">
-      <NavigationItem 
-       link={Inflow}
-       text="Inflow" 
-       activeLink={activeLink}
-       handleLinkClick={handleLinkClick} 
-       />
-       {Inflow}
-       
-      <NavigationItem 
-      link={Outflow}
-      text="Outflows"
-       activeLink={activeLink} 
-       handleLinkClick={handleLinkClick} />
-      {/* Add more NavigationItems as needed */}
-    </div>
     
 
     </div>
