@@ -3,6 +3,7 @@ import man from "../assets/image 1.png";
 import arrowdown from "../assets/FiChevronDown.svg";
 import search from "../assets/CkSearch.svg";
 import filter from "../assets/FiFilter.svg";
+import Approval from "../components/Approval";
 
 const Approvals = () => {
   return (
@@ -63,6 +64,8 @@ const Approvals = () => {
         className="w-full border-b mt-4"
         style={{ background: "var(--Color-Gray-Gray-40, #CBD5E0)" }}
       ></div>
+
+      <Approval></Approval>
 
       {/* end of code */}
     </div>
