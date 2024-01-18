@@ -65,7 +65,8 @@ const Approvals = () => {
         style={{ background: "var(--Color-Gray-Gray-40, #CBD5E0)" }}
       ></div>
 
-      <Approval></Approval>
+      {/* imported the file approval */}
+      <Approval />
 
       {/* end of code */}
     </div>
