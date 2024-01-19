@@ -6,7 +6,7 @@ import Security from "../components/Security";
 import SessHis from "../components/SessionHistory";
 
 const Settings = () => {
-  const [activeTab, setActiveTab] = useState("outflow");
+  const [activeTab, setActiveTab] = useState("General");
 
   return (
     <div>
