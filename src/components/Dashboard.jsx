@@ -212,7 +212,7 @@ const Dashboard = () => {
               Recent Payouts
             </p>
             <Link
-              to="/chevron/error"
+              to="/error"
               style={{
                 color: "var(--Color-Gray-Gray-70, #4A5568",
                 fontSize: "12px",
