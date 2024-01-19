@@ -18,9 +18,6 @@ const General = () => {
   const showAlert2 = () => {
     alert("Notify me via email whenever a payment schedule starts");
   };
-  //   const showAlert3 = () => {
-  //     alert("Your alert message");
-  //   };
 
   const ToggleButton = () => {
     const [isActive, setIsActive] = useState(false);
@@ -163,7 +160,7 @@ const General = () => {
               />
             </label>
 
-            <div className="px-[10px] items-center h-[40px] flex w-[566px] rounded border border-[#CBD5E0] focus-within:outline outline-2 outline-blue-600">
+            <div className="px-[0px] items-center h-[40px] flex w-[566px] rounded border border-[#CBD5E0] focus-within:outline outline-2 outline-blue-600">
               <select
                 value={timer}
                 className="outline-none w-full"

@@ -1,10 +1,38 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import info from "../assets/CkInfoOutline.svg";
 
 const Security = () => {
   const [cpassword, setCpassword] = useState("");
   const [npassword, setNpassword] = useState("");
   const [confirm, setConfirm] = useState("");
+
+  const showAlert3 = () => {
+    alert("For added security, add 2 Factor Authentication to your account");
+  };
+
+  const ToggleButton = () => {
+    const [isActive, setIsActive] = useState(false);
+
+    const toggleButton = () => {
+      setIsActive(!isActive);
+    };
+
+    return (
+      <button
+        className={`h-5 w-9 flex justify-end rounded-full ${
+          isActive ? "bg-green-500" : "bg-gray-100"
+        } focus:outline-none transition  duration-300 ease-in-out`}
+        onClick={toggleButton}
+      >
+        <span
+          className={` flex h-full w-1/2 rounded-full ${
+            isActive ? "bg-white" : "bg-gray-400"
+          }`}
+        ></span>
+      </button>
+    );
+  };
 
   return (
     <div className="flex flex-col items-center mt-11">
@@ -121,8 +149,24 @@ const Security = () => {
 
       {/* second white box */}
 
+      <div className="flex items-center mt-3 ">
+        <p className="text-[#4A5568] text-sm">
+          Activate 2 Factor Authentication
+        </p>
+        <img
+          src={info}
+          alt="info"
+          className=" ml-3 mr-[19rem] "
+          onClick={() => {
+            showAlert3();
+          }}
+        />
+        <ToggleButton className="" />
+      </div>
+
+      {/* second bo */}
       <div
-        className="bg-white w-[616px] h-[375px] mt-5 rounded"
+        className="bg-white w-[614px] h-[321px] mt-5 rounded"
         style={{
           boxShadow:
             "0px 0.073px 6.159px 0px rgba(0, 0, 0, 0.07), 0px 2.338px 17.029px 0px rgba(0, 0, 0, 0.05), 0px 9.853px 41px 0px rgba(0, 0, 0, 0.04), 0px 42px 136px 0px rgba(0, 0, 0, 0.02)",
