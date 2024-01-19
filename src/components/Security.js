@@ -10,7 +10,7 @@ const Security = () => {
     <div className="flex flex-col items-center mt-11">
       {/*1  white boxxx  */}
       <div
-        className="bg-white w-[616px] h-[375px] mt-5 rounded"
+        className="bg-white w-[616px] h-[437px] mt-5 rounded"
         style={{
           boxShadow:
             "0px 0.073px 6.159px 0px rgba(0, 0, 0, 0.07), 0px 2.338px 17.029px 0px rgba(0, 0, 0, 0.05), 0px 9.853px 41px 0px rgba(0, 0, 0, 0.04), 0px 42px 136px 0px rgba(0, 0, 0, 0.02)",
@@ -27,10 +27,12 @@ const Security = () => {
             </span>
           </p>
         </div>
+
+        {/* formsssss */}
         <div className="m-6">
           <form>
             <label className="text-[#4A5568] text-sm ">
-              User / Organization Name
+              Current Password
               <input
                 type="text"
                 value={cpassword}
@@ -38,10 +40,10 @@ const Security = () => {
                 className="mb-2"
               />
             </label>
-            <div className="px-[20px] items-center h-[40px] flex w-[566px] rounded border border-[#CBD5E0] focus-within:outline outline-2 outline-blue-600">
+            <div className="px-[10px] items-center h-[40px] flex w-[566px] rounded border border-[#CBD5E0] focus-within:outline outline-2 outline-blue-600">
               <input
                 type="text"
-                placeholder="Chevron Group"
+                placeholder="Enter existing password"
                 id="search"
                 className="font-normal w-[320px] h-8 outline-none"
                 style={{
@@ -56,7 +58,7 @@ const Security = () => {
         <div className="m-6">
           <form>
             <label className="text-[#4A5568] text-sm ">
-              User / Organization Name
+              New password
               <input
                 type="text"
                 value={npassword}
@@ -64,10 +66,10 @@ const Security = () => {
                 className="mb-2"
               />
             </label>
-            <div className="px-[20px] items-center h-[40px] flex w-[566px] rounded border border-[#CBD5E0] focus-within:outline outline-2 outline-blue-600">
+            <div className="px-[10px] items-center h-[40px] flex w-[566px] rounded border border-[#CBD5E0] focus-within:outline outline-2 outline-blue-600">
               <input
                 type="text"
-                placeholder="Chevron Group"
+                placeholder="Enter new password"
                 id="search"
                 className="font-normal w-[320px] h-8 outline-none"
                 style={{
@@ -82,7 +84,7 @@ const Security = () => {
         <div className="m-6">
           <form>
             <label className="text-[#4A5568] text-sm ">
-              User / Organization Name
+              Confirm Password
               <input
                 type="text"
                 value={confirm}
@@ -90,10 +92,10 @@ const Security = () => {
                 className="mb-2"
               />
             </label>
-            <div className="px-[20px] items-center h-[40px] flex w-[566px] rounded border border-[#CBD5E0] focus-within:outline outline-2 outline-blue-600">
+            <div className="px-[10px] items-center h-[40px] flex w-[566px] rounded border border-[#CBD5E0] focus-within:outline outline-2 outline-blue-600">
               <input
                 type="text"
-                placeholder="Chevron Group"
+                placeholder="Re-type password"
                 id="search"
                 className="font-normal w-[320px] h-8 outline-none"
                 style={{
@@ -103,6 +105,17 @@ const Security = () => {
               />
             </div>
           </form>
+          {/* button */}
+          <div
+            className="h-[32px] mt-7 rounded bg-white px-[12px] items-center w-[144px] text-center"
+            style={{
+              border: " 1px solid var(--Button-Background-Alternate, #3B2773)",
+            }}
+          >
+            <button className="text-[#1C065A] text-center items-centermt-2 text-sm">
+              Update Password
+            </button>
+          </div>
         </div>
       </div>
 

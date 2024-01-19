@@ -83,7 +83,7 @@ const General = () => {
                 className="mb-2"
               />
             </label>
-            <div className="px-[20px] items-center h-[40px] flex w-[566px] rounded border border-[#CBD5E0] focus-within:outline outline-2 outline-blue-600">
+            <div className="px-[10px] items-center h-[40px] flex w-[566px] rounded border border-[#CBD5E0] focus-within:outline outline-2 outline-blue-600">
               <input
                 type="text"
                 placeholder="Chevron Group"
@@ -109,7 +109,7 @@ const General = () => {
                 className="mb-2 "
               />
             </label>
-            <div className="px-[20px]  items-center h-[40px] flex w-[274px] rounded border border-[#CBD5E0] focus-within:outline outline-2 outline-blue-600">
+            <div className="px-[10px]  items-center h-[40px] flex w-[274px] rounded border border-[#CBD5E0] focus-within:outline outline-2 outline-blue-600">
               <input
                 type="text"
                 placeholder="info@chevrongroup.com"
@@ -133,7 +133,7 @@ const General = () => {
                 className="mb-2"
               />
             </label>
-            <div className="px-[20px] items-center h-[40px] flex w-[274px] rounded border border-[#CBD5E0] focus-within:outline outline-2 outline-blue-600">
+            <div className="px-[10px] items-center h-[40px] flex w-[274px] rounded border border-[#CBD5E0] focus-within:outline outline-2 outline-blue-600">
               <input
                 type="text"
                 placeholder="+234 908 776 1245"
@@ -163,7 +163,7 @@ const General = () => {
               />
             </label>
 
-            <div className="px-[20px] items-center h-[40px] flex w-[566px] rounded border border-[#CBD5E0] focus-within:outline outline-2 outline-blue-600">
+            <div className="px-[10px] items-center h-[40px] flex w-[566px] rounded border border-[#CBD5E0] focus-within:outline outline-2 outline-blue-600">
               <select
                 value={timer}
                 className="outline-none w-full"
