@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import info from "../assets/CkInfoOutline.svg";
+import Scan from "../assets/image 4.png";
 
 const Security = () => {
   const [cpassword, setCpassword] = useState("");
@@ -11,6 +12,7 @@ const Security = () => {
     alert("For added security, add 2 Factor Authentication to your account");
   };
 
+  // toggle button function
   const ToggleButton = () => {
     const [isActive, setIsActive] = useState(false);
 
@@ -31,6 +33,30 @@ const Security = () => {
           }`}
         ></span>
       </button>
+    );
+  };
+
+  // checkbox function
+
+  const Checkbox = () => {
+    const [isChecked, setIsChecked] = useState(true);
+
+    const handleCheckboxChange = () => {
+      setIsChecked(!isChecked);
+    };
+
+    return (
+      <label className="flex items-center mt-2 space-x-2">
+        <input
+          type="checkbox"
+          checked={isChecked}
+          onChange={handleCheckboxChange}
+          className="form-checkbox h-4 w-4 text-green-500"
+        />
+        <span className="text-[#4A5568] text-xs">
+          Also enable 2FA for approvals
+        </span>
+      </label>
     );
   };
 
@@ -171,7 +197,107 @@ const Security = () => {
           boxShadow:
             "0px 0.073px 6.159px 0px rgba(0, 0, 0, 0.07), 0px 2.338px 17.029px 0px rgba(0, 0, 0, 0.05), 0px 9.853px 41px 0px rgba(0, 0, 0, 0.04), 0px 42px 136px 0px rgba(0, 0, 0, 0.02)",
         }}
-      ></div>
+      >
+        <div className="grid grid-cols-2 m-6">
+          <div className="items-center justify-center">
+            <p className="text-[#4A5568] font-normal text-lg mb-4">
+              Enable 2FA
+            </p>
+            <div className="bg-[#E2E8F0] w-[235px] h-[181px] rounded ">
+              <img
+                src={Scan}
+                alt="code"
+                className=" items-center text-center w-[179px] h-[172px] mx-auto pr-2 pl-1 pt-5 pb-3"
+              />
+            </div>
+          </div>
+
+          {/* second grid */}
+          <div className="mt-9">
+            <p className="text-[#4A5568] text-sm font-normal">
+              In order to turn on 2FA, use your mobile Authenticator app to scan
+              the code, then enter the six-digit code provided by the app in the
+              form below.
+            </p>
+            <div className="flex mt-3">
+              <input
+                type="text"
+                id="search"
+                className="font-normal w-[40px] mx-1 h-[40px] outline-none"
+                style={{
+                  color: "#718096",
+                  fontSize: "14px",
+                  border: "1px solid var(--gray-200, #E2E8F0)",
+                }}
+              />
+              <input
+                type="text"
+                id="search"
+                className="font-normal w-[40px] mx-1 h-[40px] outline-none"
+                style={{
+                  color: "#718096",
+                  fontSize: "14px",
+                  border: "1px solid var(--gray-200, #E2E8F0)",
+                }}
+              />
+              <input
+                type="text"
+                id="search"
+                className="font-normal w-[40px] mx-1 h-[40px] outline-none"
+                style={{
+                  color: "#718096",
+                  fontSize: "14px",
+                  border: "1px solid var(--gray-200, #E2E8F0)",
+                }}
+              />
+              <input
+                type="text"
+                id="search"
+                className="font-normal w-[40px] mx-1 h-[40px] outline-none"
+                style={{
+                  color: "#718096",
+                  fontSize: "14px",
+                  border: "1px solid var(--gray-200, #E2E8F0)",
+                }}
+              />
+              <input
+                type="text"
+                id="search"
+                className="font-normal w-[40px] mx-1 h-[40px] outline-none"
+                style={{
+                  color: "#718096",
+                  fontSize: "14px",
+                  border: "1px solid var(--gray-200, #E2E8F0)",
+                }}
+              />
+              <input
+                type="text"
+                id="search"
+                className="font-normal w-[40px] mx-1 h-[40px] outline-none"
+                style={{
+                  color: "#718096",
+                  fontSize: "14px",
+                  border: "1px solid var(--gray-200, #E2E8F0)",
+                }}
+              />
+            </div>
+            <Checkbox />
+
+            {/* button */}
+            <div
+              className="h-[32px] mt-7 rounded bg-white px-[12px] items-center w-[100px] text-center"
+              style={{
+                border:
+                  " 1px solid var(--Button-Background-Alternate, #3B2773)",
+              }}
+            >
+              <button className="text-[#1C065A] text-center items-centermt-2 text-sm">
+                Enable 2FA
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   );
 };
