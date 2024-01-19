@@ -1,11 +1,49 @@
 import React, { useState } from "react";
 import chevron from "../assets/chevron logo.png";
+import info from "../assets/CkInfoOutline.svg";
 
 const General = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [number, setNumber] = useState("");
   const [timer, setTimer] = useState("");
+  const handleChange = (event) => {
+    setTimer(event.target.value);
+  };
+
+  const showAlert1 = () => {
+    alert("Log me out if I'm inactive for this long");
+  };
+
+  const showAlert2 = () => {
+    alert("Notify me via email whenever a payment schedule starts");
+  };
+  //   const showAlert3 = () => {
+  //     alert("Your alert message");
+  //   };
+
+  const ToggleButton = () => {
+    const [isActive, setIsActive] = useState(false);
+
+    const toggleButton = () => {
+      setIsActive(!isActive);
+    };
+
+    return (
+      <button
+        className={`h-5 w-9 flex justify-end rounded-full ${
+          isActive ? "bg-green-500" : "bg-gray-100"
+        } focus:outline-none transition  duration-300 ease-in-out`}
+        onClick={toggleButton}
+      >
+        <span
+          className={` flex h-full w-1/2 rounded-full ${
+            isActive ? "bg-white" : "bg-gray-400"
+          }`}
+        ></span>
+      </button>
+    );
+  };
 
   return (
     <div className="flex flex-col items-center mt-11">
@@ -110,29 +148,49 @@ const General = () => {
           </form>
         </div>
 
+        {/* timer  */}
         <div className="m-6">
           <form>
-            <label className="text-[#4A5568] text-sm ">
-              <input
-                type="text"
-                value={timer}
-                onChange={(e) => setTimer(e.target.value)}
-                className="mb-2"
+            <label className="flex text-[#4A5568] text-sm ">
+              Interactive Timer
+              <img
+                src={info}
+                alt="alert"
+                onClick={() => {
+                  showAlert1();
+                }}
+                className="w-[14px] h-[14px] ml-2  mt-1 "
               />
             </label>
+
             <div className="px-[20px] items-center h-[40px] flex w-[566px] rounded border border-[#CBD5E0] focus-within:outline outline-2 outline-blue-600">
-              <input
-                type="text"
-                placeholder="Chevron Group"
-                id="search"
-                className="font-normal w-[320px] h-8 outline-none"
-                style={{
-                  color: "#718096",
-                  fontSize: "14px",
-                }}
-              />
+              <select
+                value={timer}
+                className="outline-none w-full"
+                onChange={handleChange}
+              >
+                <option value="Ford">5 mins</option>
+                <option value="Volvo">10 mins</option>
+                <option value="Fiat">20 mins</option>
+                <option value="Fiat">1 hour</option>
+              </select>
             </div>
           </form>
+
+          <div className="flex mt-6">
+            <p className="text-[#4A5568] text-sm">Email Notifications</p>
+            <img
+              src={info}
+              alt="alert"
+              className="ml-2 mt-1 w-[14px] h-[14px]"
+              onClick={() => {
+                showAlert2();
+              }}
+            />
+            <div className="ml-auto">
+              <ToggleButton />
+            </div>
+          </div>
         </div>
 
         {/* end of forms */}
