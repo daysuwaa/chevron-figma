@@ -5,23 +5,26 @@ const Table = () => {
   const columns = [
     {
       name: "PAYMENT ID",
-      selector: (row) => row.payid,
+      selector: (row) => (
+        <div className=" font-semibold text-[#1C065A]">{row.payid}</div>
+      ),
     },
+
     {
       name: "AMOUNT",
-      selector: (row) => row.amount,
+      selector: (row) => <div className="text-[#1C065A]">{row.amount}</div>,
     },
     {
       name: "RECIPIENT",
-      selector: (row) => row.recipient,
+      selector: (row) => <div className="text-[#1C065A]">{row.recipient}</div>,
     },
     {
       name: "PAID TO",
-      selector: (row) => row.paidto,
+      selector: (row) => <div className="text-[#1C065A]">{row.paidto}</div>,
     },
     {
       name: "DATE",
-      selector: (row) => row.date,
+      selector: (row) => <div className="text-[#1C065A]">{row.date}</div>,
     },
   ];
 
