@@ -227,7 +227,6 @@ const Dashboard = () => {
             style={{
               alignItems: "flex-end",
               borderRadius: "4px",
-              border: "1px solid var(--Color-Gray-Gray-40, #CBD5E0)",
               margin: "0rem 1.2rem 0 1.2rem",
               height: "260px",
             }}

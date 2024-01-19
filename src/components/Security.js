@@ -39,7 +39,7 @@ const Security = () => {
   // checkbox function
 
   const Checkbox = () => {
-    const [isChecked, setIsChecked] = useState(true);
+    const [isChecked, setIsChecked] = useState(false);
 
     const handleCheckboxChange = () => {
       setIsChecked(!isChecked);
@@ -190,7 +190,7 @@ const Security = () => {
         <ToggleButton className="" />
       </div>
 
-      {/* second bo */}
+      {/* second box */}
       <div
         className="bg-white w-[614px] h-[321px] mt-5 rounded"
         style={{
@@ -223,7 +223,7 @@ const Security = () => {
               <input
                 type="text"
                 id="search"
-                className="font-normal w-[40px] mx-1 h-[40px] outline-none"
+                className="font-normal w-[40px] mx-1 h-[40px] text-center outline-none"
                 style={{
                   color: "#718096",
                   fontSize: "14px",
@@ -233,7 +233,7 @@ const Security = () => {
               <input
                 type="text"
                 id="search"
-                className="font-normal w-[40px] mx-1 h-[40px] outline-none"
+                className="font-normal w-[40px] mx-1 h-[40px] text-center outline-none"
                 style={{
                   color: "#718096",
                   fontSize: "14px",
@@ -243,7 +243,7 @@ const Security = () => {
               <input
                 type="text"
                 id="search"
-                className="font-normal w-[40px] mx-1 h-[40px] outline-none"
+                className="font-normal w-[40px] mx-1 h-[40px] text-center outline-none"
                 style={{
                   color: "#718096",
                   fontSize: "14px",
@@ -253,7 +253,7 @@ const Security = () => {
               <input
                 type="text"
                 id="search"
-                className="font-normal w-[40px] mx-1 h-[40px] outline-none"
+                className="font-normal w-[40px] mx-1 h-[40px] text-center outline-none"
                 style={{
                   color: "#718096",
                   fontSize: "14px",
@@ -263,7 +263,7 @@ const Security = () => {
               <input
                 type="text"
                 id="search"
-                className="font-normal w-[40px] mx-1 h-[40px] outline-none"
+                className="font-normal w-[40px] mx-1 h-[40px] text-center outline-none"
                 style={{
                   color: "#718096",
                   fontSize: "14px",
@@ -273,7 +273,7 @@ const Security = () => {
               <input
                 type="text"
                 id="search"
-                className="font-normal w-[40px] mx-1 h-[40px] outline-none"
+                className="font-normal w-[40px] mx-1 h-[40px] text-center outline-none"
                 style={{
                   color: "#718096",
                   fontSize: "14px",
