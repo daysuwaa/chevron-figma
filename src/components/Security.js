@@ -192,7 +192,7 @@ const Security = () => {
 
       {/* second box */}
       <div
-        className="bg-white w-[614px] h-[321px] mt-5 rounded"
+        className="bg-white w-[614px] h-[321px] mt-5 rounded mb-5"
         style={{
           boxShadow:
             "0px 0.073px 6.159px 0px rgba(0, 0, 0, 0.07), 0px 2.338px 17.029px 0px rgba(0, 0, 0, 0.05), 0px 9.853px 41px 0px rgba(0, 0, 0, 0.04), 0px 42px 136px 0px rgba(0, 0, 0, 0.02)",

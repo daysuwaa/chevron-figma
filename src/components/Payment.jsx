@@ -218,7 +218,7 @@ const Payment = () => {
       </div>
       {/* end of the  straight stuff */}
       {/* the tab stufff */}
-      <div className="flex justify-between items-center mx-5">
+      <div className="flex justify-between items-center mx-5 ">
         <div>
           <button
             className={`px-4 py-2 text-[14px] ${

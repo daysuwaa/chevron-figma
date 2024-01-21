@@ -48,7 +48,7 @@ const Table = () => {
     },
   ];
   return (
-    <div className="flex flex-col items-center mt-11">
+    <div className="flex flex-col items-center mt-11  ">
       <div
         className="bg-white w-[616px] h-[377px] mt-5 rounded items-center"
         style={{
