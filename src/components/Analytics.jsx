@@ -80,39 +80,43 @@ const Analytics = () => {
 
       {/* the chartssss */}
       <div className="grid grid-cols-3 gap-4 mt-4 mx-7">
-        {/* <div className="col-span-2 bg-white p-4 text-center"> */}
-        <div className="flex  font-light tracking-wide text-[#4A5568] text-sm">
-          <p>Inflows vs Outflows</p>
-          <div className=" flex ml-auto">
-            <p
-              className="flex h-[28px] items-center mx-2"
-              style={{
-                border: "1px solid var(--Color-Gray-Gray-40, #CBD5E0)",
-                borderRadius: "4px",
-                padding: "6px 12px",
-              }}
-            >
-              Last 1 year <img src={arrowdown} alt="" />
-            </p>
-            <img
-              src={icloud}
-              alt="icloud"
-              style={{
-                border: "1px solid var(--Color-Gray-Gray-40, #CBD5E0)",
-                borderRadius: "4px",
-                padding: "6px 12px",
-              }}
-            />
+        {/* Column with bar chart */}
+        <div className="col-span-2 bg-white p-4 text-center">
+          <div className="flex font-light tracking-wide text-[#4A5568] text-sm">
+            <p>Inflows vs Outflows</p>
+            <div className="flex ml-auto">
+              <p
+                className="flex h-[28px] items-center mx-2"
+                style={{
+                  border: "1px solid var(--Color-Gray-Gray-40, #CBD5E0)",
+                  borderRadius: "4px",
+                  padding: "6px 12px",
+                }}
+              >
+                Last 1 year <img src={arrowdown} alt="" />
+              </p>
+              <img
+                src={icloud}
+                alt="icloud"
+                style={{
+                  border: "1px solid var(--Color-Gray-Gray-40, #CBD5E0)",
+                  borderRadius: "4px",
+                  padding: "6px 12px",
+                }}
+              />
+            </div>
           </div>
+          <Anabar />
         </div>
-        <Anabar />
-      </div>
-      <div className="col-span-1 justify-center items-center bg-white p-5">
-        <p className="font-light tracking-wide text-[#4A5568] text-sm">
-          Schedule distribution
-        </p>
-        <div className="flex items-center justify-center">
-          <Anapie />
+
+        {/* Column with pie chart */}
+        <div className="col-span-1 justify-center items-center bg-white p-5">
+          <p className="font-light tracking-wide text-[#4A5568] text-sm">
+            Schedule distribution
+          </p>
+          <div className="flex items-center justify-center">
+            <Anapie />
+          </div>
         </div>
       </div>
 
