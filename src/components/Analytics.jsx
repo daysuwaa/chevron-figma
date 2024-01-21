@@ -121,7 +121,7 @@ const Analytics = () => {
       </div>
 
       <div className="grid grid-cols-3 gap-4 mt-4 mx-7">
-        <div className="w-[335px]">
+        <div className="w-full">
           {graphs(
             "Total Payouts",
             money1,
@@ -133,7 +133,7 @@ const Analytics = () => {
           )}
         </div>
 
-        <div className="w-[335px]">
+        <div className="w-full">
           {graphs(
             "Total Beneficiaries",
             money2,
@@ -145,7 +145,7 @@ const Analytics = () => {
           )}
         </div>
 
-        <div className="w-[335px]">
+        <div className="w-full">
           {graphs(
             "Active Schedules",
             money3,
