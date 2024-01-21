@@ -60,7 +60,6 @@ export default class Example extends PureComponent {
   render() {
     return (
       <div className="">
-        <h4>A demo of synchronized AreaCharts</h4>
         <ResponsiveContainer width="100%" height={200}>
           <AreaChart
             width={500}
@@ -86,8 +85,6 @@ export default class Example extends PureComponent {
             />
           </AreaChart>
         </ResponsiveContainer>
-
-        <p>Maybe some other content</p>
       </div>
     );
   }
