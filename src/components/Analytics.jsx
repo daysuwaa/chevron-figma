@@ -1,6 +1,6 @@
 import React from "react";
 import Anabar from "../components/Ana_bar";
-import Piechart from "../components/Piechart";
+import Anapie from "../components/Ana.pie";
 import man from "../assets/image 1.png";
 import arrowdown from "../assets/FiChevronDown.svg";
 import icloud from "../assets/IoCloudDownloadOutline.svg";
@@ -57,8 +57,9 @@ const Analytics = () => {
           </div>
           <Anabar />
         </div>
-        <div className="col-span-1 bg-white p-4">
-          <div className="">
+
+        <div className="col-span-1 justify-center items-center bg-white p-4">
+          <div className="flex-1">
             <p
               style={{
                 color: "var(--Color-Gray-Gray-70, #4A5568",
@@ -68,7 +69,7 @@ const Analytics = () => {
             >
               Cash overflow
             </p>
-            <Piechart />
+            <Anapie />
           </div>
         </div>
       </div>
