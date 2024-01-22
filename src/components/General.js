@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import chevron from "../assets/chevron logo.png";
 import info from "../assets/CkInfoOutline.svg";
+import Tooltip from "@mui/material/Tooltip";
 
 const General = () => {
   const [name, setName] = useState("");
@@ -28,14 +29,14 @@ const General = () => {
 
     return (
       <button
-        className={`h-5 w-9 flex justify-end rounded-full ${
-          isActive ? "bg-green-500" : "bg-gray-100"
-        } focus:outline-none transition  duration-300 ease-in-out`}
+        className={`h-4 w-8 flex rounded-full ${
+          isActive ? "bg-green-500 justify-end" : "bg-gray-100 justify-start"
+        } focus:outline-none transition duration-300 ease-in-out`}
         onClick={toggleButton}
       >
         <span
           className={` flex h-full w-1/2 rounded-full ${
-            isActive ? "bg-white" : "bg-gray-400"
+            isActive ? "bg-gray-100" : "bg-gray-400"
           }`}
         ></span>
       </button>
@@ -176,14 +177,19 @@ const General = () => {
 
           <div className="flex mt-6">
             <p className="text-[#4A5568] text-sm">Email Notifications</p>
-            <img
-              src={info}
-              alt="alert"
-              className="ml-2 mt-1 w-[14px] h-[14px]"
-              onClick={() => {
-                showAlert2();
-              }}
-            />
+            <Tooltip
+              title="Choose whether to receive notifications via mail"
+              placement="bottom"
+            >
+              <img
+                src={info}
+                alt="alert"
+                className="ml-2 mt-1 w-[14px] h-[14px]"
+                onClick={() => {
+                  showAlert2();
+                }}
+              />
+            </Tooltip>
             <div className="ml-auto">
               <ToggleButton />
             </div>
