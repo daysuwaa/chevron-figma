@@ -7,6 +7,7 @@ import calendar from "../assets/FiCalendar.svg";
 import wallet from "../assets/IoWalletOutline.svg";
 import man from "../assets/image 1.png";
 import arrowdown from "../assets/FiChevronDown.svg";
+import winfo from "../assets/CkInfoOutline-2.svg";
 import info from "../assets/CkInfoOutline.svg";
 import gtb from "../assets/image 2.png";
 import copy from "../assets/IoCopyOutline.svg";
@@ -35,7 +36,7 @@ const Payment = () => {
     units: ["M"], // Custom units
   });
 
-  const styling = (bgcolor, text, icons, money1, money2, money3, tcols) => {
+  const styling = (bgcolor, text, icons, money, tcols, icon) => {
     return (
       <div
         className="container px-4 md:px-7 py-5 my-4 h-[166px]"
@@ -65,13 +66,13 @@ const Payment = () => {
             fontSize: "32px",
           }}
         >
-          {money1} {money2} {money3}
+          {money}
         </p>
         <div className="flex items-center">
           <p style={{ color: tcols, fontSize: "12px" }}>
             The total amount of payments you’ve made
           </p>
-          <img src={info} alt="arrowright" className="w-[12px] h-[12px] ml-1" />
+          <img src={icon} alt="arrowright" className="w-[12px] h-[12px] ml-1" />
         </div>
       </div>
     );
@@ -113,26 +114,24 @@ const Payment = () => {
 
       {/* framesssss */}
       <div className="grid grid-cols-1 md:grid-cols-3 mx-4  gap-4">
-        {styling("#22085C", "Total Payments", payments, money1, "", "", "#FFF")}
+        {styling("#22085C", "Total Payments", payments, money1, "#FFF", winfo)}
 
         {styling(
-          "var(--Color-Base-Background-Color-5, #38A169)",
+          "var(--Color-Base-Background-Color-5, #38A169",
           "Wallet Balance",
           calendar,
-          "",
           money2,
-          "",
-          "#FFF"
+          "#FFF",
+          winfo
         )}
 
         {styling(
           "var(--Surface-Primary, #FFF)",
           "All Beneficiaries",
           wallet,
-          "",
-          "",
           money3,
-          "#4A5568"
+          "#4A5568",
+          info
         )}
       </div>
       {/* end of frames */}
@@ -248,7 +247,7 @@ const Payment = () => {
             padding: "0px 12px",
             borderRadius: "4px",
             height: "32px",
-            marginRight: "15px",
+            marginBottom: "10px",
           }}
         >
           <p className="text-white text-base">Export Payments</p>
