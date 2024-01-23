@@ -63,7 +63,7 @@ const Analytics = () => {
   };
 
   return (
-    <div>
+    <div className="h-full">
       {/* NAVBAR */}
       <div
         className="flex px-[32px] py-[18px] justify-between h-[60px]"

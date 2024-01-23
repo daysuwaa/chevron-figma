@@ -52,7 +52,7 @@ export default class Example extends PureComponent {
   render() {
     return (
       <div style={{ width: "100%" }}>
-        <ResponsiveContainer width="100%" height={200}>
+        <ResponsiveContainer width="100%" height={120}>
           <AreaChart
             width={500}
             height={200}
