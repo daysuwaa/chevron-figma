@@ -2,15 +2,12 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import info from "../assets/CkInfoOutline.svg";
 import Scan from "../assets/image 4.png";
+import Tooltip from "@mui/material/Tooltip";
 
 const Security = () => {
   const [cpassword, setCpassword] = useState("");
   const [npassword, setNpassword] = useState("");
   const [confirm, setConfirm] = useState("");
-
-  const showAlert3 = () => {
-    alert("For added security, add 2 Factor Authentication to your account");
-  };
 
   // toggle button function
   const ToggleButton = () => {
@@ -22,20 +19,19 @@ const Security = () => {
 
     return (
       <button
-        className={`h-5 w-9 flex justify-end rounded-full ${
-          isActive ? "bg-green-500" : "bg-gray-100"
-        } focus:outline-none transition  duration-300 ease-in-out`}
+        className={`h-4 w-8 flex rounded-full ${
+          isActive ? "bg-green-500 justify-end" : "bg-gray-100 justify-start"
+        } focus:outline-none transition duration-300 ease-in-out`}
         onClick={toggleButton}
       >
         <span
           className={` flex h-full w-1/2 rounded-full ${
-            isActive ? "bg-white" : "bg-gray-400"
+            isActive ? "bg-gray-100" : "bg-gray-400"
           }`}
         ></span>
       </button>
     );
   };
-
   // checkbox function
 
   const Checkbox = () => {
@@ -179,14 +175,12 @@ const Security = () => {
         <p className="text-[#4A5568] text-sm">
           Activate 2 Factor Authentication
         </p>
-        <img
-          src={info}
-          alt="info"
-          className=" ml-3 mr-[19rem] "
-          onClick={() => {
-            showAlert3();
-          }}
-        />
+        <Tooltip
+          title="Fund your wallaet by paying into Guarantee Trust Account"
+          placement="bottom"
+        >
+          <img src={info} alt="info" className=" ml-3 mr-[19rem] " />
+        </Tooltip>
         <ToggleButton className="" />
       </div>
 

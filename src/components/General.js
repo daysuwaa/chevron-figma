@@ -141,13 +141,18 @@ const General = () => {
         {/* timer  */}
         <div className="m-6">
           <form>
-            <label className="flex text-[#4A5568] text-sm ">
+            <label className="flex text-[#4A5568] text-sm mb-2">
               Interactive Timer
-              <img
-                src={info}
-                alt="alert"
-                className="w-[14px] h-[14px] ml-2  mt-1 "
-              />
+              <Tooltip
+                title="Log me out if im inactive for this long"
+                placement="bottom"
+              >
+                <img
+                  src={info}
+                  alt="alert"
+                  className="ml-2 mt-1 w-[14px] h-[14px] cursor-pointer"
+                />
+              </Tooltip>
             </label>
 
             <div className="px-[0px] items-center h-[40px] flex w-[566px] rounded border border-[#CBD5E0] focus-within:outline outline-2 outline-blue-600">
@@ -167,13 +172,13 @@ const General = () => {
           <div className="flex mt-6">
             <p className="text-[#4A5568] text-sm">Email Notifications</p>
             <Tooltip
-              title="Choose whether to receive notifications via mail"
+              title="Notify me when a payment schedule starts"
               placement="bottom"
             >
               <img
                 src={info}
                 alt="alert"
-                className="ml-2 mt-1 w-[14px] h-[14px]"
+                className="ml-2 mt-1 w-[14px] h-[14px] cursor-pointer"
               />
             </Tooltip>
             <div className="ml-auto">
