@@ -18,7 +18,6 @@ function App() {
       <div className="app flex h-screen">
         <Sidebar />
         <div className="content max-h-full overflow-y-auto" style={{ flex: 1 }}>
-          {/* Set a margin to the content area, adjust as needed */}
           <Routes>
             <Route path="/" element={<Dashboard />} />
             <Route path="/payment" element={<Payment />} />
