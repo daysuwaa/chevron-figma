@@ -38,12 +38,12 @@ const Beneficiaries = () => {
         </p>
 
         <div
-          className="h-[48px] mt-4 rounded bg-white  items-center w-[251px] text-center"
+          className="h-[48px] mt-4 rounded bg-white w-[251px] text-center flex items-center justify-center"
           style={{
             border: " 1px solid var(--Button-Background-Alternate, #3B2773)",
           }}
         >
-          <button className="text-[#1C065A] mt-2">
+          <button onClick={{}} className="text-[#1C065A]">
             Get Beneficiary Template
           </button>
         </div>

@@ -12,14 +12,6 @@ const General = () => {
     setTimer(event.target.value);
   };
 
-  const showAlert1 = () => {
-    alert("Log me out if I'm inactive for this long");
-  };
-
-  const showAlert2 = () => {
-    alert("Notify me via email whenever a payment schedule starts");
-  };
-
   const ToggleButton = () => {
     const [isActive, setIsActive] = useState(false);
 
@@ -154,9 +146,6 @@ const General = () => {
               <img
                 src={info}
                 alt="alert"
-                onClick={() => {
-                  showAlert1();
-                }}
                 className="w-[14px] h-[14px] ml-2  mt-1 "
               />
             </label>
@@ -185,9 +174,6 @@ const General = () => {
                 src={info}
                 alt="alert"
                 className="ml-2 mt-1 w-[14px] h-[14px]"
-                onClick={() => {
-                  showAlert2();
-                }}
               />
             </Tooltip>
             <div className="ml-auto">

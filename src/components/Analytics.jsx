@@ -29,7 +29,7 @@ const Analytics = () => {
 
   const graphs = (title, money, arrow, text, text2, color, graph) => {
     return (
-      <div className="col-span-2 bg-white p-4 text-center">
+      <div className="col-span-2 bg-white  mb-4 p-4 text-center">
         <div>
           <div className="flex mx-7 mt-7">
             <p className="text-[#4A5568]">{title}</p>

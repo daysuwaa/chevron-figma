@@ -13,27 +13,28 @@ import gtb from "../assets/image 2.png";
 import copy from "../assets/IoCopyOutline.svg";
 import search from "../assets/CkSearch.svg";
 import filter from "../assets/FiFilter.svg";
+import Tooltip from "@mui/material/Tooltip";
 
 const Payment = () => {
   const money1 = millify(953.2, {
-    precision: 2, // number of d.p
-    lowercase: true, // Use lowercase abbreviations
-    decimalSeparator: ",", // Custom decimal separator
-    units: ["K"], // Custom units
+    precision: 2,
+    lowercase: true,
+    decimalSeparator: ",",
+    units: ["K"],
   });
 
   const money2 = millify(98.25, {
-    precision: 2, // Number of decimal places
-    lowercase: true, // Use lowercase abbreviations
-    decimalSeparator: ",", // Custom decimal separator
-    units: ["K"], // Custom units
+    precision: 2,
+    lowercase: true,
+    decimalSeparator: ",",
+    units: ["K"],
   });
 
   const money3 = millify(125.25, {
-    precision: 2, // Number of decimal places
-    lowercase: true, // Use lowercase abbreviations
-    decimalSeparator: ",", // Custom decimal separator
-    units: ["M"], // Custom units
+    precision: 2,
+    lowercase: true,
+    decimalSeparator: ",",
+    units: ["M"],
   });
 
   const styling = (bgcolor, text, icons, money, tcols, icon) => {
@@ -72,7 +73,16 @@ const Payment = () => {
           <p style={{ color: tcols, fontSize: "12px" }}>
             The total amount of payments you’ve made
           </p>
-          <img src={icon} alt="arrowright" className="w-[12px] h-[12px] ml-1" />
+          <Tooltip
+            title="Fund your wallaet by paying into Guarantee Trust Account"
+            placement="bottom"
+          >
+            <img
+              src={icon}
+              alt="arrowright"
+              className="w-[12px] h-[12px] ml-1"
+            />
+          </Tooltip>
         </div>
       </div>
     );
