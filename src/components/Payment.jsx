@@ -161,11 +161,16 @@ const Payment = () => {
             style={{ color: "var(--Text-Primary, #1C065A)", fontSize: "14px" }}
           >
             My account:{" "}
-            <img
-              src={info}
-              alt="arrowright"
-              className="w-[14px] h-[14px] mx-2 mt-1 "
-            />
+            <Tooltip
+              title="Fund your wallet by paying into Guarantee Trust Wallet"
+              placement="bottom"
+            >
+              <img
+                src={info}
+                alt="arrowright"
+                className="w-[14px] h-[14px] mx-2 mt-1 cursor-pointer "
+              />
+            </Tooltip>
           </p>
 
           <button
@@ -177,7 +182,13 @@ const Payment = () => {
             }}
             onClick={copyToClipboard}
           >
-            <img src={gtb} alt="gtbimage" className="w-4 h-4"></img>
+            <Tooltip
+              title="Fund your wallaet by paying into Guarantee Trust Account"
+              placement="bottom"
+            >
+              <img src={gtb} alt="gtbimage" className="w-4 h-4"></img>
+            </Tooltip>
+
             <p className="text-white ml-2 text-base">0012345678</p>
             <img src={copy} alt="copy" className="ml-1 w-4 h-4"></img>
           </button>
@@ -185,13 +196,13 @@ const Payment = () => {
 
         {/* Two p tags on the extreme right */}
         <div className="flex">
-          <div className="px-[20px] mx-5 py-[6px] flex w-[320px] rounded border border-[#CBD5E0] focus-within:outline outline-2 outline-blue-600">
+          <div className="px-[20px] h-12 mx-5 py-[6px] flex w-[320px] rounded border border-[#CBD5E0] focus-within:outline outline-2 outline-blue-600">
             <img src={search} alt="searchicon" className="w-[16px]" />
             <input
               type="text"
               placeholder="Search by Payment Id"
               id="search"
-              className="font-light w-[320px] h-8 outline-none"
+              className="font-light w-[320px] items-center outline-none"
               style={{
                 color: "#718096",
                 fontSize: "14px",
@@ -201,7 +212,7 @@ const Payment = () => {
             />
           </div>
           <div
-            className="px-[20px] py-[12px] flex w-[100px] "
+            className="px-[20px] py-[12px] h-12 flex w-[100px] "
             style={{
               borderRadius: "4px",
               border: "1px solid var(--Color-Gray-Gray-40, #CBD5E0)",

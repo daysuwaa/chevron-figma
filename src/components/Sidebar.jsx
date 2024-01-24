@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import chevron from "../assets/chevron logo.png";
 import dashboard from "../assets/IoSpeedometerOutline.svg";
 import approvals from "../assets/FiCheckCircle.svg";
@@ -12,8 +12,14 @@ import { Link } from "react-router-dom";
 
 const Sidebar = () => {
   const [activeLink, setActiveLink] = useState("");
+
+  useEffect(() => {
+    setActiveLink("/");
+  }, []);
+
   const handleLinkClick = (link) => {
     setActiveLink(link);
+    localStorage.setItem("activeLink", link);
   };
 
   const renderLink = (link, text, imgSrc) => {

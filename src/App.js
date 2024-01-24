@@ -1,5 +1,5 @@
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import React from "react";
+import React, { useState } from "react";
 import Dashboard from "./components/Dashboard";
 import Payment from "./components/Payment";
 import Schedules from "./components/Schedules";
@@ -12,6 +12,8 @@ import Sidebar from "./components/Sidebar";
 import Error from "./components/Error";
 
 function App() {
+  const [activeLink, setActiveLink] = useState("true");
+
   return (
     <Router basename="/">
       {/* to make the side bar at the , yk ,side, lol */}
