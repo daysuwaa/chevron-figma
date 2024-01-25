@@ -1,9 +1,61 @@
-import React from "react";
+import React, { useState } from "react";
 import man from "../assets/image 1.png";
 import arrowdown from "../assets/FiChevronDown.svg";
 import computer from "../assets/computer.png";
+import Modal from "react-modal";
 
 const Schedules = () => {
+  const customStyles = {
+    content: {
+      top: "50%",
+      left: "50%",
+      right: "auto",
+      bottom: "auto",
+      marginRight: "-50%",
+      transform: "translate(-50%, -50%)",
+      padding: "2rem",
+    },
+  };
+
+  // Modal component
+  const CustomModal = ({ isOpen, handleClose }) => {
+    return (
+      <Modal
+        isOpen={isOpen}
+        onRequestClose={handleClose}
+        style={customStyles}
+        contentLabel="Example Modal"
+      >
+        <div className="flex justify-between items-center">
+          <h2 className="text-lg font-bold">Modal Title</h2>
+          <button onClick={handleClose} className="text-gray-600"></button>
+        </div>
+        <div className="mt-4">
+          {/* Your modal content goes here */}
+          <p>Cras mattis consectetur purus sit amet fermentum...</p>
+        </div>
+        <div className="mt-4 flex justify-end">
+          <button
+            className="bg-[#3B2774] text-white py-2 px-4 rounded"
+            onClick={handleClose}
+          >
+            Save Changes
+          </button>
+        </div>
+      </Modal>
+    );
+  };
+
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const openModal = () => {
+    setIsModalOpen(true);
+  };
+
+  const closeModal = () => {
+    setIsModalOpen(false);
+  };
+
   return (
     <div className="bg-[#F6F6F6] h-full">
       {/* navbar */}
@@ -36,15 +88,19 @@ const Schedules = () => {
           You do not have any schedules. <br></br>
           Click the button below to generate a template for one
         </p>
+
         <div
           className="h-[48px] mt-4 rounded bg-white w-[251px] text-center flex items-center justify-center"
           style={{
             border: " 1px solid var(--Button-Background-Alternate, #3B2773)",
           }}
         >
-          <button onClick={{}} className="text-[#1C065A]">
+          <button className="text-[#1C065A]" onClick={openModal}>
+            {" "}
             Get Schedule Template
           </button>
+
+          <CustomModal isOpen={isModalOpen} handleClose={closeModal} />
         </div>
       </div>
     </div>
