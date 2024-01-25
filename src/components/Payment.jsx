@@ -40,7 +40,7 @@ const Payment = () => {
   const styling = (bgcolor, text, icons, money, tcols, icon) => {
     return (
       <div
-        className="container px-4 md:px-7 py-5 my-4 h-[166px]"
+        className="container px-4 md:px-7 py-5 my-4 h-full"
         style={{
           borderRadius: "4px",
           boxShadow: "0px 3px 12px 0px rgba(197, 197, 197, 0.25)",
@@ -107,7 +107,7 @@ const Payment = () => {
   return (
     <div
       style={{ backgroundColor: "#F6F6F6" }}
-      className="w-full h-full overflow-auto"
+      className="w-full h-full overflow-auto p-2"
     >
       {/* nav- dashbord side */}
       <div
@@ -123,7 +123,7 @@ const Payment = () => {
       {/* end of nav */}
 
       {/* framesssss */}
-      <div className="grid grid-cols-1 md:grid-cols-3 mx-4  gap-4">
+      <div className="grid grid-cols-1 md:grid-cols-3 mx-4 gap-4">
         {styling("#22085C", "Total Payments", payments, money1, "#FFF", winfo)}
 
         {styling(
@@ -153,12 +153,15 @@ const Payment = () => {
       ></div>
 
       {/* second side */}
-      <div className="flex justify-between p-4 sm:grid-cols-2 ">
-        {/* Two p tags on the extreme left */}
-        <div className="flex">
+      {/* <div className="flex justify-between p-4 "> */}
+      {/* Two p tags on the extreme left */}
+      {/* <div className="flex">
           <p
             className="flex mt-3 tracking-wide font-light"
-            style={{ color: "var(--Text-Primary, #1C065A)", fontSize: "14px" }}
+            style={{
+              color: "var(--Text-Primary, #1C065A)",
+              fontSize: "14px",
+            }}
           >
             My account:{" "}
             <Tooltip
@@ -192,10 +195,10 @@ const Payment = () => {
             <p className="text-white ml-2 text-base">0012345678</p>
             <img src={copy} alt="copy" className="ml-1 w-4 h-4"></img>
           </button>
-        </div>
+        </div> */}
 
-        {/* Two p tags on the extreme right */}
-        <div className="flex">
+      {/* Two p tags on the extreme right */}
+      {/* <div className="flex">
           <div className="px-[20px] h-12 mx-5 py-[6px] flex w-[320px] rounded border border-[#CBD5E0] focus-within:outline outline-2 outline-blue-600">
             <img src={search} alt="searchicon" className="w-[16px]" />
             <input
@@ -235,13 +238,49 @@ const Payment = () => {
             </p>
           </div>
         </div>
+      </div> */}
+
+      {/* jkcdbjlabsfjlv sfboivubfiujlf */}
+
+      <div className="sm:grid sm:grid-cols-2 m-2 flex flex-col">
+        <div className="flex mb-2 sm:mb-0">
+          {" "}
+          {/* Add margin-bottom for small screens */}
+          <p className="flex tracking-wide items-center font-light p-2 text-[#1C065A]  text-sm ">
+            My account
+            <Tooltip
+              title="Fund your wallet by paying into Guarantee Trust Wallet"
+              placement="bottom"
+            >
+              <img
+                src={info}
+                alt="arrowright"
+                className="mx-[1px] w-[10px] cursor-pointer"
+              />
+            </Tooltip>
+          </p>
+          <button
+            className="flex bg-[#3B2773] w-[6.5rem] sm:w-[8.5rem] h-[2.5rem] py-[6px] px-[10px] rounded justify-center items-center text-white md:text-[13px] lg:text-[13px] sm:text-[13px] text-[10px]"
+            onClick={copyToClipboard}
+          >
+            <img src={gtb} alt="gtblogo" className="text-center pr-1 " />
+            0422822151
+            <img src={copy} alt="copy" className="ml-1 w-4 h-4"></img>
+          </button>
+        </div>
+        {/* the other one at the extreme left */}
+        <div className="flex mb-2 lg:ml-auto md:ml-auto sm:mb-0  ">
+          k;smcos
+        </div>{" "}
+        {/* Add margin-bottom for small screens */}
       </div>
+
       {/* end of the  straight stuff */}
       {/* the tab stufff */}
-      <div className="flex justify-between items-center mx-5 ">
+      <div className="flex justify-between items-center px-4 ml-auto ">
         <div>
           <button
-            className={`px-4 py-2 text-[14px] ${
+            className={` py-2 text-[14px] ${
               activeTab === "outflow"
                 ? "font-bold text-[#1C065A] border-b-2 border-[#1C065A]"
                 : "text-gray-500"

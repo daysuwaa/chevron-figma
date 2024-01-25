@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import millify from "millify";
 import { Link } from "react-router-dom";
 import Barchat from "../components/Barchart";
@@ -35,21 +35,16 @@ const Dashboard = () => {
     units: ["M"], // Custom units
   });
 
+  const [month, setMonth] = useState("");
+  const handleChange = (event) => {
+    setMonth(event.target.value);
+  };
+
   // the dashboard - frames
-  const styling = (
-    bgcolor,
-    text,
-    icons,
-    money1,
-    money2,
-    money3,
-    link,
-    tcols,
-    arrow
-  ) => {
+  const styling = (bgcolor, text, icons, money, link, tcols, arrow) => {
     return (
       <div
-        className="container px-7 py-5  my-4  h-[166px]"
+        className="container px-4 md:px-7 py-5 my-4 h-full"
         style={{
           borderRadius: "4px",
           boxShadow: "0px 3px 12px 0px rgba(197, 197, 197, 0.25)",
@@ -76,9 +71,7 @@ const Dashboard = () => {
             fontSize: "32px",
           }}
         >
-          {money1}
-          {money2}
-          {money3}
+          {money}
         </p>
         <div className="flex items-center">
           <Link
@@ -117,14 +110,12 @@ const Dashboard = () => {
       {/* end of nav */}
 
       {/* framesssss */}
-      <div className="grid grid-cols-3 mx-7 gap-4">
+      <div className="grid grid-cols-1 md:grid-cols-3 mx-7 pb-7 gap-4">
         {styling(
           "#22085C",
           "Total Payments",
           payments,
           money1,
-          "",
-          "",
           "View payouts",
           "#FFF",
           arrowright
@@ -134,9 +125,7 @@ const Dashboard = () => {
           "var(--Color-Base-Background-Color-5, #38A169)",
           "Wallet Balance",
           users,
-          "",
           money2,
-          "",
           "View payments",
           "#FFF",
           arrowright
@@ -146,8 +135,6 @@ const Dashboard = () => {
           "var(--Surface-Primary, #FFF)",
           "All Beneficiaries",
           clock,
-          "",
-          "",
           money3,
           "View beneficiaries",
           "#4A5568",
@@ -157,7 +144,7 @@ const Dashboard = () => {
       {/* end of frames */}
 
       {/* barrrssssss */}
-      <div className="grid grid-cols-3 gap-4 mt-4 mx-7">
+      <div className="grid grid-cols-3 gap-4 mx-7 my-5 ">
         <div className="col-span-2 bg-white p-4 text-center">
           <div
             className="flex justify-between font-light tracking-wide"
@@ -176,7 +163,16 @@ const Dashboard = () => {
                 padding: "6px 12px",
               }}
             >
-              Last 1 month <img src={arrowdown} alt=""></img>
+              <select
+                value={month}
+                className="outline-none w-full"
+                onChange={handleChange}
+              >
+                <option value="month1">Last 1 month</option>
+                <option value="month2">Last 2 months</option>
+                <option value="month 3">Last 5 Months</option>
+                <option value="month6">Last 1 year</option>
+              </select>
             </p>
           </div>
           <Barchat />
@@ -199,7 +195,7 @@ const Dashboard = () => {
 
       {/* receipts payoutsss */}
       <div className="py-7">
-        <div className="bg-white max-w-full h-[355px] mx-7 ">
+        <div className="bg-white max-w-full h-[355px] mx-7">
           <div className="flex justify-between py-7 mx-5">
             <p
               className=""
