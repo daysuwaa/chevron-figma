@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import man from "../assets/image 1.png";
 import arrowdown from "../assets/FiChevronDown.svg";
 import computer from "../assets/computer.png";
+import close from "../assets/IoCloseOutline.svg";
 import Modal from "react-modal";
 
 const Schedules = () => {
@@ -28,7 +29,9 @@ const Schedules = () => {
       >
         <div className="flex justify-between items-center">
           <h2 className="text-lg font-bold">Modal Title</h2>
-          <button onClick={handleClose} className="text-gray-600"></button>
+          <button onClick={handleClose} className="text-gray-600">
+            <img src={close} alt="close" />
+          </button>
         </div>
         <div className="mt-4">
           {/* Your modal content goes here */}
