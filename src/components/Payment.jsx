@@ -107,7 +107,7 @@ const Payment = () => {
   return (
     <div
       style={{ backgroundColor: "#F6F6F6" }}
-      className="w-full h-full overflow-auto p-2"
+      className="w-full h-full overflow-auto"
     >
       {/* nav- dashbord side */}
       <div
@@ -123,7 +123,7 @@ const Payment = () => {
       {/* end of nav */}
 
       {/* framesssss */}
-      <div className="grid grid-cols-1 md:grid-cols-3 mx-4 gap-4">
+      <div className="grid grid-cols-1 md:grid-cols-3 mx-7 gap-4">
         {styling("#22085C", "Total Payments", payments, money1, "#FFF", winfo)}
 
         {styling(
@@ -152,101 +152,12 @@ const Payment = () => {
         style={{ background: "var(--Color-Gray-Gray-40, #CBD5E0)" }}
       ></div>
 
-      {/* second side */}
-      {/* <div className="flex justify-between p-4 "> */}
-      {/* Two p tags on the extreme left */}
-      {/* <div className="flex">
-          <p
-            className="flex mt-3 tracking-wide font-light"
-            style={{
-              color: "var(--Text-Primary, #1C065A)",
-              fontSize: "14px",
-            }}
-          >
-            My account:{" "}
-            <Tooltip
-              title="Fund your wallet by paying into Guarantee Trust Wallet"
-              placement="bottom"
-            >
-              <img
-                src={info}
-                alt="arrowright"
-                className="w-[14px] h-[14px] mx-2 mt-1 cursor-pointer "
-              />
-            </Tooltip>
-          </p>
+      {/* the second side */}
 
-          <button
-            className="flex items-center"
-            style={{
-              background: "var(--Button-Background-Alternate, #3B2773)",
-              padding: "6px 12px",
-              borderRadius: "4px",
-            }}
-            onClick={copyToClipboard}
-          >
-            <Tooltip
-              title="Fund your wallaet by paying into Guarantee Trust Account"
-              placement="bottom"
-            >
-              <img src={gtb} alt="gtbimage" className="w-4 h-4"></img>
-            </Tooltip>
-
-            <p className="text-white ml-2 text-base">0012345678</p>
-            <img src={copy} alt="copy" className="ml-1 w-4 h-4"></img>
-          </button>
-        </div> */}
-
-      {/* Two p tags on the extreme right */}
-      {/* <div className="flex">
-          <div className="px-[20px] h-12 mx-5 py-[6px] flex w-[320px] rounded border border-[#CBD5E0] focus-within:outline outline-2 outline-blue-600">
-            <img src={search} alt="searchicon" className="w-[16px]" />
-            <input
-              type="text"
-              placeholder="Search by Payment Id"
-              id="search"
-              className="font-light w-[320px] items-center outline-none"
-              style={{
-                color: "#718096",
-                fontSize: "14px",
-                marginLeft: "6px",
-                backgroundColor: "#F6F6F6",
-              }}
-            />
-          </div>
-          <div
-            className="px-[20px] py-[12px] h-12 flex w-[100px] "
-            style={{
-              borderRadius: "4px",
-              border: "1px solid var(--Color-Gray-Gray-40, #CBD5E0)",
-            }}
-          >
-            <img
-              src={filter}
-              alt="searchicon"
-              className="w-[16px] h-[16px] mt-1"
-            />
-            <p
-              className="font-light"
-              style={{
-                color: "var(--Color-Gray-Gray-60, #718096)",
-                fontSize: "14px",
-                marginLeft: "6px",
-              }}
-            >
-              Filter
-            </p>
-          </div>
-        </div>
-      </div> */}
-
-      {/* jkcdbjlabsfjlv sfboivubfiujlf */}
-
-      <div className="sm:grid sm:grid-cols-2 m-2 flex flex-col">
-        <div className="flex mb-2 sm:mb-0">
-          {" "}
-          {/* Add margin-bottom for small screens */}
-          <p className="flex tracking-wide items-center font-light p-2 text-[#1C065A]  text-sm ">
+      <div className="sm:grid sm:grid-cols-1 md:grid-cols-2 m-5 flex flex-col">
+        {/* First component */}
+        <div className="flex mb-2">
+          <p className="flex tracking-wide items-center font-light p-2 text-[#1C065A] text-sm ">
             My account
             <Tooltip
               title="Fund your wallet by paying into Guarantee Trust Wallet"
@@ -268,16 +179,57 @@ const Payment = () => {
             <img src={copy} alt="copy" className="ml-1 w-4 h-4"></img>
           </button>
         </div>
-        {/* the other one at the extreme left */}
-        <div className="flex mb-2 lg:ml-auto md:ml-auto sm:mb-0  ">
-          k;smcos
-        </div>{" "}
-        {/* Add margin-bottom for small screens */}
+
+        {/* searchhhhh */}
+        <div className="flex mb-2 md:mb-0">
+          <div className="px-[20px] h-12 py-[6px] mr-3 flex w-full rounded border border-[#CBD5E0] focus-within:outline outline-2 outline-blue-600">
+            <img src={search} alt="searchicon" className="w-[16px]" />
+            <input
+              type="text"
+              placeholder="Search by Payment Id"
+              id="search"
+              className="font-light w-full items-center outline-none"
+              style={{
+                color: "#718096",
+                fontSize: "14px",
+                marginLeft: "6px",
+                backgroundColor: "#F6F6F6",
+              }}
+            />
+          </div>
+
+          {/* the filter */}
+          <div className="flex mb-2 mx-2 lg:ml-auto">
+            <div
+              className="px-[20px] grid-cols-2 py-[12px] h-12 flex w-[100px]"
+              style={{
+                borderRadius: "4px",
+                border: "1px solid var(--Color-Gray-Gray-40, #CBD5E0)",
+              }}
+            >
+              <img
+                src={filter}
+                alt="searchicon"
+                className="w-[16px] h-[16px] mt-1"
+              />
+              <p
+                className="font-light"
+                style={{
+                  color: "var(--Color-Gray-Gray-60, #718096)",
+                  fontSize: "14px",
+                  marginLeft: "6px",
+                }}
+              >
+                Filter
+              </p>
+            </div>
+          </div>
+        </div>
       </div>
 
       {/* end of the  straight stuff */}
       {/* the tab stufff */}
-      <div className="flex justify-between items-center px-4 ml-auto ">
+      <div className="flex justify-between items-center px-7 ml-auto ">
         <div>
           <button
             className={` py-2 text-[14px] ${
