@@ -5,7 +5,7 @@ import Barchat from "../components/Barchart";
 import Piechart from "../components/Piechart";
 import man from "../assets/image 1.png";
 import arrowdown from "../assets/FiChevronDown.svg";
-import arrowright2 from "../assets/FiChevronRight.svg";
+import arrowright2 from "../assets/FiChevronRight-2.svg";
 import arrowright from "../assets/FiChevronRight.svg";
 import users from "../assets/FiUsers.svg";
 import payments from "../assets/FiCreditCard.svg";
@@ -73,19 +73,19 @@ const Dashboard = () => {
         >
           {money}
         </p>
-        <div className="flex items-center">
+        <div className="items-center">
           <Link
             to="/chevron/error"
-            className="underline"
+            className="underline items-center flex"
             style={{ color: tcols, fontSize: "12px" }}
           >
             {link}
+            <img
+              src={arrow}
+              alt="arrowright"
+              className="w-[12px] h-[12px] ml-1"
+            />
           </Link>
-          <img
-            src={arrow}
-            alt="arrowright"
-            className="w-[12px] h-[12px] ml-1"
-          />
         </div>
       </div>
     );
