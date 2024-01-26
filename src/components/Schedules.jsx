@@ -3,6 +3,8 @@ import man from "../assets/image 1.png";
 import arrowdown from "../assets/FiChevronDown.svg";
 import computer from "../assets/computer.png";
 import close from "../assets/IoCloseOutline.svg";
+import upload from "../assets/IoCloudUploadOutline.svg";
+import excel from "../assets/image 3.png";
 import Modal from "react-modal";
 
 const Schedules = () => {
@@ -39,6 +41,8 @@ const Schedules = () => {
       padding: "2rem",
     },
   };
+
+  const Addschedule = () => {};
 
   // Modal component
   const CustomModal = ({ isOpen, handleClose }) => {
@@ -146,17 +150,17 @@ const Schedules = () => {
                 className="mb-2"
               />
             </label>
-            <div className="px-[10px] items-center h-[40px] flex w-[566px] rounded border border-[#CBD5E0] border-dashed border-focus-within:outline outline-2 outline-blue-600">
-              <input
-                type="text"
-                placeholder="Enter Schedule Name"
-                id="search"
-                className="font-normal w-[320px] h-8 outline-none"
-                style={{
-                  color: "#718096",
-                  fontSize: "14px",
-                }}
-              />
+            <div className=" mx-auto items-center text-[#4A5568] justify-center w-[566px] rounded border border-[#CBD5E0] border-dashed border-focus-within:outline outline-2 px-10">
+              <img src={upload} alt="upload" className=" mx-auto" />
+              <p className="text-center">Drag and drop your files here</p>
+              <p
+                className="w-full h-[2px] border-b"
+                style={{ background: "var(--Color-Gray-Gray-40, #CBD5E0)" }}
+              ></p>
+              <button className="bg-gray-200 mx-auto" onClick={Addschedule}>
+                Browse files
+              </button>
+              <p className="text-xs">Max File size: 200mb</p>
             </div>
           </form>
         </div>
@@ -164,9 +168,9 @@ const Schedules = () => {
         <div className="my-2 pt-7 flex justify-start">
           <button
             className="bg-[#3B2774] text-white py-2 px-4 rounded"
-            onClick={handleClose2}
+            onClick={closeModal2}
           >
-            Get Template
+            Add Schedule
           </button>
         </div>
       </Modal>
