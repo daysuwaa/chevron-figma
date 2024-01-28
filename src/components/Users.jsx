@@ -2,6 +2,7 @@ import React from "react";
 import man from "../assets/image 1.png";
 import arrowdown from "../assets/FiChevronDown.svg";
 import User from "../components/User";
+import Modal from "react-modal";
 // import Tooltip from "@mui/material/Tooltip";
 
 const Users = () => {
