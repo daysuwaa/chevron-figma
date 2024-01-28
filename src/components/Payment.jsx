@@ -242,7 +242,7 @@ const Payment = () => {
             Outflow
           </button>
           <button
-            className={`px-4 py-2 text-[14px] ${
+            className={`px-[6px] py-2 text-[14px] ${
               activeTab === "inflow"
                 ? "font-bold text-[#1C065A] border-b-2 border-[#1C065A]"
                 : "text-gray-500"
@@ -262,7 +262,9 @@ const Payment = () => {
             marginBottom: "10px",
           }}
         >
-          <p className="text-white text-base">Export Payments</p>
+          <p className="text-white text-[10px] sm:text-[14px]">
+            Export Payments
+          </p>
         </button>
       </div>
 
