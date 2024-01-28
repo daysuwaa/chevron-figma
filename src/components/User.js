@@ -152,7 +152,7 @@ const Users = () => {
               </p>
               <button
                 onClick={closeEditModal}
-                className="cursor-pointer ml-auto justify-end"
+                className="cursor-pointer justify-end"
               >
                 <img src={close} alt="close" className="cursor-pointer" />
               </button>
