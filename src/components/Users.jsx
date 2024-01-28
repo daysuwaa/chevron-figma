@@ -85,7 +85,7 @@ const Users = () => {
               <input
                 type="text"
                 value={email}
-                onChange={(e) => setName(e.target.value)}
+                onChange={(e) => setEmail(e.target.value)}
                 className="mb-2"
               />
             </label>
@@ -111,7 +111,7 @@ const Users = () => {
               <input
                 type="text"
                 value={password}
-                onChange={(e) => setEmail(e.target.value)}
+                onChange={(e) => setPassword(e.target.value)}
                 className="mb-2"
               />
             </label>
@@ -129,7 +129,7 @@ const Users = () => {
             </div>
           </form>
         </div>
-
+        {/* role */}
         <div className="my-6">
           <form>
             <label className="flex text-[#4A5568] text-sm mb-2">Role</label>
@@ -139,13 +139,20 @@ const Users = () => {
                 value={role}
                 className="outline-none w-full"
                 onChange={handleChange}
+                placeholder="Selext Role"
               >
-                <option value="Ford">Admistrator</option>
+                <option value="Ford">Administration</option>
                 <option value="Volvo">Accountant</option>
                 <option value="Fiat">Auditor</option>
               </select>
             </div>
           </form>
+          <button
+            className="bg-[#3B2774] h-[40px] w-[123px] rounded text-center text-white text-[16px] mt-9"
+            onClick={{}}
+          >
+            Create User
+          </button>
         </div>
       </Modal>
     );
