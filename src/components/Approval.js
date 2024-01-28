@@ -1,7 +1,17 @@
-import React from "react";
+import React, { useState } from "react";
 import DataTable from "react-data-table-component";
 
 const Approvals = () => {
+  const [isDeactivateModalOpen, setIsDeactivateModalOpen] = useState(false);
+  const openDeactivateModal = () => setIsDeactivateModalOpen(true);
+  const closeDeactivateModal = () => setIsDeactivateModalOpen(false);
+  const closeDeactivateModal1 = () => setIsDeactivateModalOpen(false);
+
+  // State and functions for Reactivate Modal
+  const [isReactivateModalOpen, setIsReactivateModalOpen] = useState(false);
+  const openReactivateModal = () => setIsReactivateModalOpen(true);
+  const closeReactivateModal = () => setIsReactivateModalOpen(false);
+  const closeReactivateModal1 = () => setIsDeactivateModalOpen(false);
   const columns = [
     {
       name: "SCHEDULES ID",
