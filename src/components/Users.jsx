@@ -140,11 +140,11 @@ const Users = () => {
               <div className="px-[0px] items-center h-[40px] flex w-[566px] rounded border border-[#CBD5E0] focus-within:outline outline-2 outline-blue-600">
                 <select
                   value={role}
-                  className="outline-none w-full"
+                  className="outline-none w-full "
                   onChange={handleChange}
                   placeholder="Selext Role"
                 >
-                  <option value="Ford">Administration</option>
+                  <option value="admin">Administration</option>
                   <option value="Volvo">Accountant</option>
                   <option value="Fiat">Auditor</option>
                 </select>
