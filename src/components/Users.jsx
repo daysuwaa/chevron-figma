@@ -16,6 +16,8 @@ const Users = () => {
       marginRight: "-50%",
       transform: "translate(-50%, -50%)",
       padding: "2rem",
+      // backgroundColor: "#000",
+      // opacity: "0.5",
     },
   };
   const CustomModal = ({ isOpen, handleClose }) => {
@@ -34,125 +36,127 @@ const Users = () => {
         style={customStyles}
         contentLabel="Example Modal"
       >
-        <div className="flex justify-between items-center lg:w-[35rem] md:w-[30rem] w-full">
-          <h2 className="text-md text-[#4A5568] mx-auto mb-4 font-semibold">
-            Add New User
-          </h2>
+        <div className=" bg-white bg-opacity-100 ">
+          <div className="flex justify-between items-center lg:w-[35rem] md:w-[30rem] w-full">
+            <h2 className="text-md  text-[#4A5568] mx-auto mb-4 font-semibold">
+              Add New User
+            </h2>
 
-          <button onClick={handleClose} className="text-gray-600">
-            <img src={close} alt="close" />
-          </button>
-        </div>
-        {/* lineee */}
-        <div
-          className="w-full h-[2px] border-b "
-          style={{ background: "var(--Color-Gray-Gray-40, #CBD5E0)" }}
-        ></div>
+            <button onClick={handleClose} className="text-gray-600">
+              <img src={close} alt="close" />
+            </button>
+          </div>
+          {/* lineee */}
+          <div
+            className="w-full h-[2px] border-b "
+            style={{ background: "var(--Color-Gray-Gray-40, #CBD5E0)" }}
+          ></div>
 
-        {/* the formsss */}
-        {/* #full name */}
+          {/* the formsss */}
+          {/* #full name */}
 
-        <div className="my-6">
-          <form>
-            <label className="text-[#4A5568] text-sm ">
-              Full Name
-              <input
-                type="text"
-                value={name}
-                onChange={(e) => setName(e.target.value)}
-                className="mb-2"
-              />
-            </label>
-            <div className="px-[10px] items-center h-[40px] flex w-[566px] rounded border border-[#CBD5E0] focus-within:outline outline-2 outline-blue-600">
-              <input
-                type="text"
-                placeholder="Enter Full Name"
-                id="search"
-                className="font-normal w-[320px] h-8 outline-none"
-                style={{
-                  color: "#718096",
-                  fontSize: "16px",
-                }}
-              />
-            </div>
-          </form>
-        </div>
-        {/* #2 email adress */}
-        <div className="my-6">
-          <form>
-            <label className="text-[#4A5568] text-sm ">
-              Email Address
-              <input
-                type="text"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                className="mb-2"
-              />
-            </label>
-            <div className="px-[10px] items-center h-[40px] flex w-[566px] rounded border border-[#CBD5E0] focus-within:outline outline-2 outline-blue-600">
-              <input
-                type="text"
-                placeholder="Enter Email Address"
-                id="search"
-                className="font-normal w-[320px] h-8 outline-none text-lg"
-                style={{
-                  color: "#718096",
-                  fontSize: "16px",
-                }}
-              />
-            </div>
-          </form>
-        </div>
-        {/* #3 password */}
-        <div className="my-6">
-          <form>
-            <label className="text-[#4A5568] text-sm ">
-              Password
-              <input
-                type="text"
-                value={password}
-                onChange={(e) => setPassword(e.target.value)}
-                className="mb-2"
-              />
-            </label>
-            <div className="px-[10px] items-center h-[40px] flex w-[566px] rounded border border-[#CBD5E0] focus-within:outline outline-2 outline-blue-600">
-              <input
-                type="text"
-                placeholder="Enter Password"
-                id="search"
-                className="font-normal w-[320px] h-8 outline-none"
-                style={{
-                  color: "#718096",
-                  fontSize: "16px",
-                }}
-              />
-            </div>
-          </form>
-        </div>
-        {/* role */}
-        <div className="my-6">
-          <form>
-            <label className="flex text-[#4A5568] text-sm mb-2">Role</label>
+          <div className="my-6">
+            <form>
+              <label className="text-[#4A5568] text-sm ">
+                Full Name
+                <input
+                  type="text"
+                  value={name}
+                  onChange={(e) => setName(e.target.value)}
+                  className="mb-2"
+                />
+              </label>
+              <div className="px-[10px] items-center h-[40px] flex w-[566px] rounded border border-[#CBD5E0] focus-within:outline outline-2 outline-blue-600">
+                <input
+                  type="text"
+                  placeholder="Enter Full Name"
+                  id="search"
+                  className="font-normal w-[320px] h-8 outline-none"
+                  style={{
+                    color: "#718096",
+                    fontSize: "16px",
+                  }}
+                />
+              </div>
+            </form>
+          </div>
+          {/* #2 email adress */}
+          <div className="my-6">
+            <form>
+              <label className="text-[#4A5568] text-sm ">
+                Email Address
+                <input
+                  type="text"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  className="mb-2"
+                />
+              </label>
+              <div className="px-[10px] items-center h-[40px] flex w-[566px] rounded border border-[#CBD5E0] focus-within:outline outline-2 outline-blue-600">
+                <input
+                  type="text"
+                  placeholder="Enter Email Address"
+                  id="search"
+                  className="font-normal w-[320px] h-8 outline-none text-lg"
+                  style={{
+                    color: "#718096",
+                    fontSize: "16px",
+                  }}
+                />
+              </div>
+            </form>
+          </div>
+          {/* #3 password */}
+          <div className="my-6">
+            <form>
+              <label className="text-[#4A5568] text-sm ">
+                Password
+                <input
+                  type="text"
+                  value={password}
+                  onChange={(e) => setPassword(e.target.value)}
+                  className="mb-2"
+                />
+              </label>
+              <div className="px-[10px] items-center h-[40px] flex w-[566px] rounded border border-[#CBD5E0] focus-within:outline outline-2 outline-blue-600">
+                <input
+                  type="text"
+                  placeholder="Enter Password"
+                  id="search"
+                  className="font-normal w-[320px] h-8 outline-none"
+                  style={{
+                    color: "#718096",
+                    fontSize: "16px",
+                  }}
+                />
+              </div>
+            </form>
+          </div>
+          {/* role */}
+          <div className="my-6">
+            <form>
+              <label className="flex text-[#4A5568] text-sm mb-2">Role</label>
 
-            <div className="px-[0px] items-center h-[40px] flex w-[566px] rounded border border-[#CBD5E0] focus-within:outline outline-2 outline-blue-600">
-              <select
-                value={role}
-                className="outline-none w-full"
-                onChange={handleChange}
-                placeholder="Selext Role"
-              >
-                <option value="Ford">Administration</option>
-                <option value="Volvo">Accountant</option>
-                <option value="Fiat">Auditor</option>
-              </select>
-            </div>
-          </form>
-          <button
-            className="bg-[#3B2774] h-[40px] w-[123px] rounded text-center text-white text-[16px] mt-9"
-            onClick={{}}
-          >
-            Create User
-          </button>
+              <div className="px-[0px] items-center h-[40px] flex w-[566px] rounded border border-[#CBD5E0] focus-within:outline outline-2 outline-blue-600">
+                <select
+                  value={role}
+                  className="outline-none w-full"
+                  onChange={handleChange}
+                  placeholder="Selext Role"
+                >
+                  <option value="Ford">Administration</option>
+                  <option value="Volvo">Accountant</option>
+                  <option value="Fiat">Auditor</option>
+                </select>
+              </div>
+            </form>
+            <button
+              className="bg-[#3B2774] h-[40px] w-[123px] rounded text-center text-white text-[16px] mt-9"
+              onClick={{}}
+            >
+              Create User
+            </button>
+          </div>
         </div>
       </Modal>
     );

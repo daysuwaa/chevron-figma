@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import close from "../assets/IoCloseOutline.svg";
 import DataTable from "react-data-table-component";
 
 const Users = () => {
@@ -10,12 +11,13 @@ const Users = () => {
   const [isDeactivateModalOpen, setIsDeactivateModalOpen] = useState(false);
   const openDeactivateModal = () => setIsDeactivateModalOpen(true);
   const closeDeactivateModal = () => setIsDeactivateModalOpen(false);
+  const closeDeactivateModal1 = () => setIsDeactivateModalOpen(false);
 
   // State and functions for Reactivate Modal
   const [isReactivateModalOpen, setIsReactivateModalOpen] = useState(false);
   const openReactivateModal = () => setIsReactivateModalOpen(true);
   const closeReactivateModal = () => setIsReactivateModalOpen(false);
-
+  const closeReactivateModal1 = () => setIsDeactivateModalOpen(false);
   const columns = [
     {
       name: <div className="font-bold text-[#4A5568]">NAME</div>,
@@ -53,6 +55,7 @@ const Users = () => {
               marginRight: "10px", // Add margin between the two action components
             }}
             onClick={openEditModal} // Open modal on button click
+            className="cursor-pointer"
           >
             {row.status1}
           </div>
@@ -79,7 +82,14 @@ const Users = () => {
               height: "30px",
               display: "flex",
             }}
-            onClick={openDeactivateModal} // Open modal on button click
+            onClick={() => {
+              if (row.status2 === "Deactivate") {
+                openDeactivateModal(); // Call the deactivate function
+              } else if (row.status2 === "Reactivate") {
+                openReactivateModal(); // Call the reactivate function
+              }
+            }}
+            className="cursor-pointer"
           >
             {row.status2}
           </div>
@@ -134,10 +144,24 @@ const Users = () => {
     >
       <DataTable columns={columns} data={data} />
       {isEditModalOpen && (
-        <div className="fixed top-0 left-0 w-full h-full bg-black bg-opacity-50 flex justify-center items-center">
-          <div className="bg-white p-6 rounded">
-            <p>Edit Modal Content</p>
-            <button onClick={closeEditModal}>Close Modal</button>
+        <div className="fixed top-0 left-0 w-full h-full   bg-black bg-opacity-50 flex justify-center items-center">
+          <div className="bg-white p-6 rounded lg:w-[33rem] md:w-[30rem]">
+            <div className="flex justify-center ">
+              <p className="mx-auto  text-md font-semibold mb-2 text-[#4A5568]">
+                Edit User
+              </p>
+              <button
+                onClick={closeEditModal}
+                className="cursor-pointer ml-auto justify-end"
+              >
+                <img src={close} alt="close" className="cursor-pointer" />
+              </button>
+            </div>
+            {/* lineee */}
+            <div
+              className="w-full h-[2px] border-b "
+              style={{ background: "var(--Color-Gray-Gray-40, #CBD5E0)" }}
+            ></div>
           </div>
         </div>
       )}
@@ -145,9 +169,39 @@ const Users = () => {
       {/* Deactivate Modal */}
       {isDeactivateModalOpen && (
         <div className="fixed top-0 left-0 w-full h-full bg-black bg-opacity-50 flex justify-center items-center">
-          <div className="bg-white p-6 rounded">
-            <p>Deactivate Modal Content</p>
-            <button onClick={closeDeactivateModal}>Close Modal</button>
+          <div className="bg-white p-6 rounded lg:w-[23rem] md:w-[20rem]">
+            <div className="flex justify-center ">
+              <p className=" mx-auto  text-md font-semibold mb-2 text-[#4A5568]">
+                Deactivate User
+              </p>
+              <button
+                onClick={closeDeactivateModal}
+                className="cursor-pointer justify-end"
+              >
+                <img src={close} alt="close" className="cursor-pointer" />
+              </button>
+            </div>
+            {/* lineee */}
+            <div
+              className="w-full h-[2px] border-b "
+              style={{ background: "var(--Color-Gray-Gray-40, #CBD5E0)" }}
+            ></div>
+            <div className="pt-3">
+              <p className="text-[#4A5568] text-center text-sm">
+                Are you sure you want to deactivate this user?
+              </p>
+              <p className="text-[#4A5568] text-center text-sm mx-[2rem]">
+                This action will immediately revoke all previously granted user
+                privileges.
+              </p>
+              <button
+                className="text-[#FF5655] mt-5 flex mx-auto w-[154px] h-[40px] rounded-sm  justify-center items-center"
+                style={{ border: "1px solid #FF5655", padding: "0px 16px" }}
+                onClick={closeDeactivateModal1}
+              >
+                Deactivate User
+              </button>
+            </div>
           </div>
         </div>
       )}
@@ -155,9 +209,39 @@ const Users = () => {
       {/* Reactivate Modal */}
       {isReactivateModalOpen && (
         <div className="fixed top-0 left-0 w-full h-full bg-black bg-opacity-50 flex justify-center items-center">
-          <div className="bg-white p-6 rounded">
-            <p>Reactivate Modal Content</p>
-            <button onClick={closeReactivateModal}>Close Modal</button>
+          <div className="bg-white p-6 rounded lg:w-[23rem] md:w-[20rem]">
+            <div className="flex justify-center ">
+              <p className=" mx-auto  text-md font-semibold mb-2 text-[#4A5568]">
+                Reactivate User
+              </p>
+              <button
+                onClick={closeReactivateModal}
+                className="cursor-pointer justify-end"
+              >
+                <img src={close} alt="close" className="cursor-pointer" />
+              </button>
+            </div>
+            {/* lineee */}
+            <div
+              className="w-full h-[2px] border-b "
+              style={{ background: "var(--Color-Gray-Gray-40, #CBD5E0)" }}
+            ></div>
+            <div className="pt-3">
+              <p className="text-[#4A5568] text-center text-sm">
+                Are you sure you want to Reactivate this user?
+              </p>
+              <p className="text-[#4A5568] text-center text-sm mx-[2rem]">
+                This action will immediately revoke all previously granted user
+                privileges.
+              </p>
+              <button
+                className="text-[#38A169] mt-5 flex mx-auto w-[154px] h-[40px] rounded-sm  justify-center items-center"
+                style={{ border: "1px solid #38A169", padding: "0px 16px" }}
+                onClick={closeReactivateModal1}
+              >
+                Reactivate User
+              </button>
+            </div>
           </div>
         </div>
       )}
