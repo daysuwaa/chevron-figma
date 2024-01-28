@@ -1,17 +1,18 @@
 import React, { useState } from "react";
+import close from "../assets/IoCloseOutline.svg";
 import DataTable from "react-data-table-component";
 
 const Approvals = () => {
-  const [isDeactivateModalOpen, setIsDeactivateModalOpen] = useState(false);
-  const openDeactivateModal = () => setIsDeactivateModalOpen(true);
-  const closeDeactivateModal = () => setIsDeactivateModalOpen(false);
-  const closeDeactivateModal1 = () => setIsDeactivateModalOpen(false);
+  const [isActivateModalOpen, setIsActivateModalOpen] = useState(false);
+  const openActiveModal = () => setIsActivateModalOpen(true);
+  const closeActiveModal = () => setIsActivateModalOpen(false);
+  const closeActivateModal1 = () => setIsActivateModalOpen(false);
 
   // State and functions for Reactivate Modal
-  const [isReactivateModalOpen, setIsReactivateModalOpen] = useState(false);
-  const openReactivateModal = () => setIsReactivateModalOpen(true);
-  const closeReactivateModal = () => setIsReactivateModalOpen(false);
-  const closeReactivateModal1 = () => setIsDeactivateModalOpen(false);
+  const [isInactiveModalOpen, setIsInactiveModalOpen] = useState(false);
+  const openInactiveModal = () => setIsInactiveModalOpen(true);
+  const closeInactiveModal = () => setIsInactiveModalOpen(false);
+  const closeInactiveModal1 = () => setIsInactiveModalOpen(false);
   const columns = [
     {
       name: "SCHEDULES ID",
@@ -66,6 +67,14 @@ const Approvals = () => {
             width: "90px",
             height: "30px",
           }}
+          onClick={() => {
+            if (row.status2 === "Inactive") {
+              openInactiveModal(); // Call the deactivate function
+            } else if (row.status2 === "Activate") {
+              openActiveModal(); // Call the reactivate function
+            }
+          }}
+          className="cursor-pointer"
         >
           {row.status}
         </div>
@@ -118,6 +127,44 @@ const Approvals = () => {
       style={{ border: "1px solid var(--Color-Gray-Gray-40, #CBD5E0)" }}
     >
       <DataTable columns={columns} data={data} />
+      {isInactiveModalOpen && (
+        <div className="fixed top-0 left-0 w-full h-full bg-black bg-opacity-50 flex justify-center items-center">
+          <div className="bg-white p-6 rounded lg:w-[23rem] md:w-[20rem]">
+            <div className="flex justify-center ">
+              <p className=" mx-auto  text-md font-semibold mb-2 text-[#4A5568]">
+                Deactivate User
+              </p>
+              <button
+                onClick={closeInactiveModal}
+                className="cursor-pointer justify-end"
+              >
+                <img src={close} alt="close" className="cursor-pointer" />
+              </button>
+            </div>
+            {/* lineee */}
+            <div
+              className="w-full h-[2px] border-b "
+              style={{ background: "var(--Color-Gray-Gray-40, #CBD5E0)" }}
+            ></div>
+            <div className="pt-3">
+              <p className="text-[#4A5568] text-center text-sm">
+                Are you sure you want to deactivate this user?
+              </p>
+              <p className="text-[#4A5568] text-center text-sm mx-[2rem]">
+                This action will immediately revoke all previously granted user
+                privileges.
+              </p>
+              <button
+                className="text-[#FF5655] mt-5 flex mx-auto w-[154px] h-[40px] rounded-sm  justify-center items-center"
+                style={{ border: "1px solid #FF5655", padding: "0px 16px" }}
+                onClick={closeInactiveModal1}
+              >
+                Deactivate User
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 };
