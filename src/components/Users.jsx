@@ -19,6 +19,14 @@ const Users = () => {
     },
   };
   const CustomModal = ({ isOpen, handleClose }) => {
+    const [name, setName] = useState("");
+    const [email, setEmail] = useState("");
+    const [password, setPassword] = useState("");
+    const [role, setRole] = useState("");
+    const handleChange = (event) => {
+      setRole(event.target.value);
+    };
+
     return (
       <Modal
         isOpen={isOpen}
@@ -28,7 +36,7 @@ const Users = () => {
       >
         <div className="flex justify-between items-center lg:w-[35rem] md:w-[30rem] w-full">
           <h2 className="text-md text-[#4A5568] mx-auto mb-4 font-semibold">
-            Get Schedule Template
+            Add New User
           </h2>
 
           <button onClick={handleClose} className="text-gray-600">
@@ -41,19 +49,103 @@ const Users = () => {
           style={{ background: "var(--Color-Gray-Gray-40, #CBD5E0)" }}
         ></div>
 
-        <div className="mt-4 flex">
-          <p className="text-[#4A5568] text-sm mt-4">
-            Use existing beneficiary list?
-          </p>
+        {/* the formsss */}
+        {/* #full name */}
+
+        <div className="my-6">
+          <form>
+            <label className="text-[#4A5568] text-sm ">
+              Full Name
+              <input
+                type="text"
+                value={name}
+                onChange={(e) => setName(e.target.value)}
+                className="mb-2"
+              />
+            </label>
+            <div className="px-[10px] items-center h-[40px] flex w-[566px] rounded border border-[#CBD5E0] focus-within:outline outline-2 outline-blue-600">
+              <input
+                type="text"
+                placeholder="Enter Full Name"
+                id="search"
+                className="font-normal w-[320px] h-8 outline-none"
+                style={{
+                  color: "#718096",
+                  fontSize: "16px",
+                }}
+              />
+            </div>
+          </form>
+        </div>
+        {/* #2 email adress */}
+        <div className="my-6">
+          <form>
+            <label className="text-[#4A5568] text-sm ">
+              Email Address
+              <input
+                type="text"
+                value={email}
+                onChange={(e) => setName(e.target.value)}
+                className="mb-2"
+              />
+            </label>
+            <div className="px-[10px] items-center h-[40px] flex w-[566px] rounded border border-[#CBD5E0] focus-within:outline outline-2 outline-blue-600">
+              <input
+                type="text"
+                placeholder="Enter Email Address"
+                id="search"
+                className="font-normal w-[320px] h-8 outline-none text-lg"
+                style={{
+                  color: "#718096",
+                  fontSize: "16px",
+                }}
+              />
+            </div>
+          </form>
+        </div>
+        {/* #3 password */}
+        <div className="my-6">
+          <form>
+            <label className="text-[#4A5568] text-sm ">
+              Password
+              <input
+                type="text"
+                value={password}
+                onChange={(e) => setEmail(e.target.value)}
+                className="mb-2"
+              />
+            </label>
+            <div className="px-[10px] items-center h-[40px] flex w-[566px] rounded border border-[#CBD5E0] focus-within:outline outline-2 outline-blue-600">
+              <input
+                type="text"
+                placeholder="Enter Password"
+                id="search"
+                className="font-normal w-[320px] h-8 outline-none"
+                style={{
+                  color: "#718096",
+                  fontSize: "16px",
+                }}
+              />
+            </div>
+          </form>
         </div>
 
-        <div className="my-2 pt-7 flex justify-start">
-          <button
-            className="bg-[#3B2774] text-white py-2 px-4 rounded"
-            onClick={handleClose}
-          >
-            Get Template
-          </button>
+        <div className="my-6">
+          <form>
+            <label className="flex text-[#4A5568] text-sm mb-2">Role</label>
+
+            <div className="px-[0px] items-center h-[40px] flex w-[566px] rounded border border-[#CBD5E0] focus-within:outline outline-2 outline-blue-600">
+              <select
+                value={role}
+                className="outline-none w-full"
+                onChange={handleChange}
+              >
+                <option value="Ford">Admistrator</option>
+                <option value="Volvo">Accountant</option>
+                <option value="Fiat">Auditor</option>
+              </select>
+            </div>
+          </form>
         </div>
       </Modal>
     );
