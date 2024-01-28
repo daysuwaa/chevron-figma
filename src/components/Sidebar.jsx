@@ -41,8 +41,9 @@ const Sidebar = () => {
             background: activeLink === link ? "#42257E" : "",
           }}
         >
-          <img src={imgSrc} alt="icon" className="w-[18px] h-[18px] mt-3" />
-          <Link to={link}>
+          <Link to={link} className="flex">
+            <img src={imgSrc} alt="icon" className="w-[18px] h-[18px] mt-3" />
+
             {/* if link is active, font weight will be bold, else normal */}
             <p
               className={` text-white tracking-wider px-3 mt-2 `}
