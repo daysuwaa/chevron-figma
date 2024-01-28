@@ -1,7 +1,21 @@
-import React from "react";
+import React, { useState } from "react";
 import DataTable from "react-data-table-component";
 
 const Users = () => {
+  const [isEditModalOpen, setIsEditModalOpen] = useState(false);
+  const openEditModal = () => setIsEditModalOpen(true);
+  const closeEditModal = () => setIsEditModalOpen(false);
+
+  // State and functions for Deactivate Modal
+  const [isDeactivateModalOpen, setIsDeactivateModalOpen] = useState(false);
+  const openDeactivateModal = () => setIsDeactivateModalOpen(true);
+  const closeDeactivateModal = () => setIsDeactivateModalOpen(false);
+
+  // State and functions for Reactivate Modal
+  const [isReactivateModalOpen, setIsReactivateModalOpen] = useState(false);
+  const openReactivateModal = () => setIsReactivateModalOpen(true);
+  const closeReactivateModal = () => setIsReactivateModalOpen(false);
+
   const columns = [
     {
       name: <div className="font-bold text-[#4A5568]">NAME</div>,
@@ -38,6 +52,7 @@ const Users = () => {
               height: "30px",
               marginRight: "10px", // Add margin between the two action components
             }}
+            onClick={openEditModal} // Open modal on button click
           >
             {row.status1}
           </div>
@@ -64,6 +79,7 @@ const Users = () => {
               height: "30px",
               display: "flex",
             }}
+            onClick={openDeactivateModal} // Open modal on button click
           >
             {row.status2}
           </div>
@@ -117,6 +133,34 @@ const Users = () => {
       style={{ border: "1px solid var(--Color-Gray-Gray-40, #CBD5E0)" }}
     >
       <DataTable columns={columns} data={data} />
+      {isEditModalOpen && (
+        <div className="fixed top-0 left-0 w-full h-full bg-black bg-opacity-50 flex justify-center items-center">
+          <div className="bg-white p-6 rounded">
+            <p>Edit Modal Content</p>
+            <button onClick={closeEditModal}>Close Modal</button>
+          </div>
+        </div>
+      )}
+
+      {/* Deactivate Modal */}
+      {isDeactivateModalOpen && (
+        <div className="fixed top-0 left-0 w-full h-full bg-black bg-opacity-50 flex justify-center items-center">
+          <div className="bg-white p-6 rounded">
+            <p>Deactivate Modal Content</p>
+            <button onClick={closeDeactivateModal}>Close Modal</button>
+          </div>
+        </div>
+      )}
+
+      {/* Reactivate Modal */}
+      {isReactivateModalOpen && (
+        <div className="fixed top-0 left-0 w-full h-full bg-black bg-opacity-50 flex justify-center items-center">
+          <div className="bg-white p-6 rounded">
+            <p>Reactivate Modal Content</p>
+            <button onClick={closeReactivateModal}>Close Modal</button>
+          </div>
+        </div>
+      )}
     </div>
   );
 };
