@@ -144,10 +144,10 @@ const Dashboard = () => {
       {/* end of frames */}
 
       {/* barrrssssss */}
-      <div className="grid lg:grid-cols-3  grid-cols-1 gap-4 mx-7 my-5 ">
+      <div className="grid lg:grid-cols-3 grid-cols-1 gap-4 mx-7 my-5">
         <div className="col-span-2 bg-white p-4 text-center">
           <div
-            className="lg:flex md:flex   font-light tracking-wide"
+            className="lg:flex md:flex font-light tracking-wide"
             style={{
               color: "var(--Color-Gray-Gray-70, #4A5568)",
               fontSize: "14px",
