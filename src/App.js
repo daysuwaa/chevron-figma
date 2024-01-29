@@ -4,7 +4,7 @@ import Dashboard from "./components/Dashboard/Dashboard";
 import Payment from "./components/Payment";
 import Schedules from "./components/Schedules";
 import Beneficiaries from "./components/Beneficiaries";
-import Approvals from "./components/Approvals";
+import Approvals from "./components/Approvals/Approvals";
 import Users from "./components/Users";
 import Analytics from "./components/Analytics/Analytics";
 import Settings from "./components/Settings";

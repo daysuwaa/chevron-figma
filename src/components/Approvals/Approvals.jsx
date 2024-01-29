@@ -1,13 +1,14 @@
 import React from "react";
-import man from "../assets/image 1.png";
-import arrowdown from "../assets/FiChevronDown.svg";
-import search from "../assets/CkSearch.svg";
-import filter from "../assets/FiFilter.svg";
-import Approval from "../components/Approval";
+import man from "src/assets/image 1.png";
+import arrowdown from "src/assets/FiChevronDown.svg";
+import search from "src/assets/CkSearch.svg";
+import filter from "src/assets/FiFilter.svg";
+import Approval from "./Approval";
 
 const Approvals = () => {
   return (
     <div>
+      {/* navbar */}
       <div
         className="flex px-[32px] py-[18px] justify-between h-[60px]"
         style={{ background: "#fff" }}
@@ -18,7 +19,9 @@ const Approvals = () => {
           <img src={arrowdown} alt="man" className="w-[14px] h-[14px]" />
         </div>
       </div>
+      {/* end of nav */}
 
+      {/* search thingyy */}
       <div className="flex pt-8">
         <div className="px-[20px] mx-5 py-[6px] flex w-[320px] rounded border border-[#CBD5E0] focus-within:outline outline-2 outline-blue-600">
           <img src={search} alt="searchicon" className="w-[16px]" />
