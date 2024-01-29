@@ -31,12 +31,12 @@ const Analytics = () => {
     return (
       <div className="col-span-2 bg-white mb-4 p-4 text-center">
         <div>
-          <div className="flex mx-7 mt-7">
+          <div className="sm:flex mx-1 mt-7">
             <p className="text-[#4A5568]">{title}</p>
             <img
               src={icloud}
               alt="icloud"
-              className="ml-auto"
+              className="sm:ml-auto sm:mx-0 mx-auto mt-1 sm:mt-0"
               style={{
                 border: "1px solid var(--Color-Gray-Gray-40, #CBD5E0)",
                 borderRadius: "4px",
@@ -45,19 +45,19 @@ const Analytics = () => {
             />
           </div>
           <div className="flex">
-            <h3 className="text-[#1C065A] text-2xl font-bold ml-7 mr-2">
+            <h3 className="text-[#1C065A] text-2xl font-bold mx-1 mr-2">
               N{money}
             </h3>
             <img src={arrow} alt="greenarrow" className="w-[25px] h-[25px]" />
           </div>
-          <div className="ml-7">
-            <p className=" text-[10px] " style={{ color: color }}>
-              {text}
-              <span className="text-[#718096] text-[10px] ml-1">{text2}</span>
-            </p>
-          </div>
-          {graph}
         </div>
+        <div className="text-start mt-1">
+          <p className="text-[10px] " style={{ color: color }}>
+            {text}
+            <span className="text-[#718096] text-[10px] ml-1">{text2}</span>
+          </p>
+        </div>
+        {graph}
       </div>
     );
   };
@@ -82,9 +82,9 @@ const Analytics = () => {
       <div className="grid lg:grid-cols-3 grid-cols-1 gap-4 mt-4 mx-7">
         {/* Column with bar chart */}
         <div className="col-span-1 lg:col-span-2 bg-white p-4 text-center">
-          <div className="flex font-light tracking-wide text-[#4A5568] text-sm">
+          <div className="lg:flex md:flex sm:flex font-light tracking-wide text-[#4A5568] text-sm">
             <p>Inflows vs Outflows</p>
-            <div className="flex ml-auto">
+            <div className="flex mt-2 sm:mt-0 ml-auto">
               <p
                 className="flex h-[28px] items-center mx-2"
                 style={{
