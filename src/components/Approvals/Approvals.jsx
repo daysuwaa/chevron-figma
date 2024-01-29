@@ -22,8 +22,8 @@ const Approvals = () => {
       {/* end of nav */}
 
       {/* search thingyy */}
-      <div className="flex pt-8">
-        <div className="px-[20px] mx-5 py-[6px] flex w-[320px] rounded border border-[#CBD5E0] focus-within:outline outline-2 outline-blue-600">
+      <div className="md:flex pt-8">
+        <div className="px-[20px] mx-5 py-[6px] flex md:w-[320px] rounded border border-[#CBD5E0] focus-within:outline outline-2 outline-blue-600">
           <img src={search} alt="searchicon" className="w-[16px]" />
           <input
             type="text"
@@ -39,7 +39,7 @@ const Approvals = () => {
           />
         </div>
         <div
-          className="px-[20px] py-[12px] flex w-[100px] "
+          className="px-[20px] py-[12px] mx-5 mt-3 md:mx-0 md:mt-0 flex w-[100px] "
           style={{
             borderRadius: "4px",
             border: "1px solid var(--Color-Gray-Gray-40, #CBD5E0)",
