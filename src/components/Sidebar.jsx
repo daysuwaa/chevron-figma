@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import chevron from "../assets/chevron logo.png";
 import dashboard from "../assets/IoSpeedometerOutline.svg";
 import approvals from "../assets/FiCheckCircle.svg";
@@ -8,51 +8,39 @@ import users from "../assets/FiUsers.svg";
 import beneficiary from "../assets/IoWalletOutline.svg";
 import schedules from "../assets/BsClock-2.svg";
 import settings from "../assets/BsGear.svg";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 const Sidebar = () => {
-  const [activeLink, setActiveLink] = useState("");
-
-  useEffect(() => {
-    setActiveLink("/");
-  }, []);
-
-  const handleLinkClick = (link) => {
-    setActiveLink(link);
-    localStorage.setItem("activeLink", link);
-  };
+  const locationObj = useLocation();
+  const activeLink = locationObj.pathname;
 
   const renderLink = (link, text, imgSrc) => {
+    const isActive = activeLink === link;
+    const wrapperClasses = isActive ? "pl-5 " : "ml-[30px]";
+
     return (
       <Link to={link} className="flex">
-        <div
-          className=" items-center space-x-12"
-          onClick={() => handleLinkClick(link)}
-        >
+        <div className=" items-center space-x-12">
           {/* when the link is active, the bg, radius and border changes                                       if the active link is active, move 10px to the right, else, dont move*/}
-          {/* <Link to={link} className="flex"> */}
+
           <div
-            className={`flex ${
-              activeLink === link ? "pl-5 " : "ml-[30px]"
-            } w-[226px] h-[44px]`}
+            className={`flex ${wrapperClasses} w-[226px] h-[44px]`}
             style={{
-              marginLeft: activeLink === link ? "10px" : "",
-              borderRadius: activeLink === link ? "4px" : "",
-              border:
-                activeLink === link
-                  ? "1px solid rgba(255, 255, 255, 0.22)"
-                  : "1px solid rgba(255, 255, 255, 0)",
-              background: activeLink === link ? "#42257E" : "",
+              marginLeft: isActive ? "10px" : "",
+              borderRadius: isActive ? "4px" : "",
+              border: isActive
+                ? "1px solid rgba(255, 255, 255, 0.22)"
+                : "1px solid rgba(255, 255, 255, 0)",
+              background: isActive ? "#42257E" : "",
             }}
           >
-            {/* <Link to={link} className="flex"> */}
             <img src={imgSrc} alt="icon" className="w-[18px] h-[18px] mt-3" />
 
             {/* if link is active, font weight will be bold, else normal */}
             <p
               className={` text-white tracking-wider px-3 mt-2`}
               style={{
-                fontWeight: activeLink === link ? "bold" : "lighter",
+                fontWeight: isActive ? "bold" : "lighter",
                 fontSize: "14px",
                 lineHeight: "24px",
               }}
@@ -62,9 +50,6 @@ const Sidebar = () => {
           </div>
         </div>
       </Link>
-      //   </Link>
-      // </div>
-      // </div>
     );
   };
 

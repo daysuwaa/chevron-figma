@@ -29,7 +29,7 @@ const Analytics = () => {
 
   const graphs = (title, money, arrow, text, text2, color, graph) => {
     return (
-      <div className="col-span-2 bg-white  mb-4 p-4 text-center">
+      <div className="col-span-2 bg-white mb-4 p-4 text-center">
         <div>
           <div className="flex mx-7 mt-7">
             <p className="text-[#4A5568]">{title}</p>
@@ -79,9 +79,9 @@ const Analytics = () => {
       {/* END OF NAV */}
 
       {/* the chartssss */}
-      <div className="grid grid-cols-3 gap-4 mt-4 mx-7">
+      <div className="grid lg:grid-cols-3 grid-cols-1 gap-4 mt-4 mx-7">
         {/* Column with bar chart */}
-        <div className="col-span-2 bg-white p-4 text-center">
+        <div className="col-span-1 lg:col-span-2 bg-white p-4 text-center">
           <div className="flex font-light tracking-wide text-[#4A5568] text-sm">
             <p>Inflows vs Outflows</p>
             <div className="flex ml-auto">
@@ -120,7 +120,7 @@ const Analytics = () => {
         </div>
       </div>
 
-      <div className="grid grid-cols-3 gap-4 mt-4 mx-7">
+      <div className="grid grid-cols-1 mt-6 lg:grid-cols-3 md:grid-cols-1 mx-7 gap-4">
         <div className="w-full">
           {graphs(
             "Total Payouts",
@@ -145,7 +145,7 @@ const Analytics = () => {
           )}
         </div>
 
-        <div className="w-full">
+        <div className="w-full ">
           {graphs(
             "Active Schedules",
             money3,
