@@ -144,19 +144,19 @@ const Dashboard = () => {
       {/* end of frames */}
 
       {/* barrrssssss */}
-      <div className="grid grid-cols-3 gap-4 mx-7 my-5 ">
+      <div className="lg:grid grid-cols-3  gap-4 mx-7 my-5 ">
         <div className="col-span-2 bg-white p-4 text-center">
           <div
-            className="flex justify-between font-light tracking-wide"
+            className="lg:flex md:flex   font-light tracking-wide"
             style={{
               color: "var(--Color-Gray-Gray-70, #4A5568)",
               fontSize: "14px",
               lineHeight: "24px",
             }}
           >
-            <p>Payout Overview</p>
+            <p className="">Payout Overview</p>
             <p
-              className="flex"
+              className="lg:flex lg:ml-auto md:flex md:ml-auto sm:flex sm:ml-auto"
               style={{
                 border: "1px solid var(--Color-Gray-Gray-40, #CBD5E0)",
                 borderRadius: "4px",

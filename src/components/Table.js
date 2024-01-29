@@ -64,10 +64,7 @@ const Table = () => {
     },
   ];
   return (
-    <div
-      className="mx-5 "
-      style={{ border: "1px solid var(--Color-Gray-Gray-40, #CBD5E0)" }}
-    >
+    <div style={{ border: "1px solid var(--Color-Gray-Gray-40, #CBD5E0)" }}>
       <DataTable columns={columns} data={data} />
     </div>
   );
