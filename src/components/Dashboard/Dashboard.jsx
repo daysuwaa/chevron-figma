@@ -1,16 +1,16 @@
 import React, { useState } from "react";
 import millify from "millify";
 import { Link } from "react-router-dom";
-import Barchat from "../components/Barchart";
-import Piechart from "../components/Piechart";
-import man from "../assets/image 1.png";
-import arrowdown from "../assets/FiChevronDown.svg";
-import arrowright2 from "../assets/FiChevronRight-2.svg";
-import arrowright from "../assets/FiChevronRight.svg";
-import users from "../assets/FiUsers.svg";
-import payments from "../assets/FiCreditCard.svg";
-import clock from "../assets/BsClock.svg";
-import Table from "../components/Table";
+import Barchat from "./Barchart";
+import Piechart from "./Piechart";
+import man from "src/assets/image 1.png";
+import arrowdown from "src/assets/FiChevronDown.svg";
+import arrowright2 from "src/assets/FiChevronRight-2.svg";
+import arrowright from "src/assets/FiChevronRight.svg";
+import users from "src/assets/FiUsers.svg";
+import payments from "src/assets/FiCreditCard.svg";
+import clock from "src/assets/BsClock.svg";
+import Table from "./Table";
 
 const Dashboard = () => {
   // moneyyy
@@ -145,7 +145,7 @@ const Dashboard = () => {
 
       {/* barrrssssss */}
       <div className="grid lg:grid-cols-3 grid-cols-1 gap-4 mx-7 my-5">
-        <div className="col-span-2 bg-white p-4 text-center">
+        <div className="col-span-1 lg:col-span-2 bg-white p-4 text-center">
           <div
             className="lg:flex md:flex font-light tracking-wide"
             style={{
@@ -177,17 +177,11 @@ const Dashboard = () => {
           </div>
           <Barchat />
         </div>
-        <div className="col-span-1 bg-white p-4">
-          <div className="">
-            <p
-              style={{
-                color: "var(--Color-Gray-Gray-70, #4A5568",
-                fontSize: "14px",
-                lineHeight: "24px",
-              }}
-            >
-              Cash overflow
-            </p>
+        <div className="col-span-1 justify-center items-center bg-white p-5">
+          <p className="font-light tracking-wide text-[#4A5568] text-sm">
+            Schedule distribution
+          </p>
+          <div className="flex items-center justify-center">
             <Piechart />
           </div>
         </div>
