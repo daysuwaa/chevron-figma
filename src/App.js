@@ -6,7 +6,7 @@ import Schedules from "./components/Schedules";
 import Beneficiaries from "./components/Beneficiaries";
 import Approvals from "./components/Approvals";
 import Users from "./components/Users";
-import Analytics from "./components/Analytics";
+import Analytics from "./components/Analytics/Analytics";
 import Settings from "./components/Settings";
 import Sidebar from "./components/Sidebar";
 import Error from "./components/Error";

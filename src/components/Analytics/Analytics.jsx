@@ -1,15 +1,15 @@
 import React from "react";
-import Anabar from "../components/Ana_bar";
-import Anapie from "../components/Ana.pie";
-import Anawave from "../components/Ana_wave";
-import Anawave2 from "../components/Ana_wave2";
-import Anawave3 from "../components/Ana_wave3";
+import Anabar from "./Ana_bar";
+import Anapie from "./Ana.pie";
+import Anawave from "./Ana_wave";
+import Anawave2 from "./Ana_wave2";
+import Anawave3 from "./Ana_wave3";
 import millify from "millify";
-import man from "../assets/image 1.png";
-import arrowdown from "../assets/FiChevronDown.svg";
-import icloud from "../assets/IoCloudDownloadOutline.svg";
-import redarrow from "../assets/Redarrow.svg";
-import greenarow from "../assets/Green.svg";
+import man from "src/assets/image 1.png";
+import arrowdown from "src/assets/FiChevronDown.svg";
+import icloud from "src/assets/IoCloudDownloadOutline.svg";
+import redarrow from "src/assets/Redarrow.svg";
+import greenarow from "src/assets/Green.svg";
 
 const Analytics = () => {
   const money1 = millify(953.2013, {
