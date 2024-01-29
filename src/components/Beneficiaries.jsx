@@ -43,7 +43,10 @@ const Beneficiaries = () => {
             border: " 1px solid var(--Button-Background-Alternate, #3B2773)",
           }}
         >
-          <button onClick={{}} className="text-[#1C065A]">
+          <button
+            onClick={{}}
+            className="text-[#1C065A] text-[14px] sm:text-[16px]"
+          >
             Get Beneficiary Template
           </button>
         </div>

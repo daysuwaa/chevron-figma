@@ -244,7 +244,10 @@ const Schedules = () => {
             border: " 1px solid var(--Button-Background-Alternate, #3B2773)",
           }}
         >
-          <button className="text-[#1C065A]" onClick={openModal}>
+          <button
+            className="text-[#1C065A] text-[14px] sm:text-[16px]"
+            onClick={openModal}
+          >
             {" "}
             Get Schedule Template
           </button>
