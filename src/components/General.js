@@ -41,7 +41,7 @@ const General = () => {
         <img src={chevron} alt="logo" className="w-[42px] h-[42px]" />
         <p className="mt-1 ml-2 text-[#4A5568] font-semibold">Your Avatar</p>
 
-        <div className="flex ml-[22rem]">
+        <div className="flex justify-start ml-4 md:ml-[22rem] lg:ml-[22rem]">
           <button
             className="h-[24px] mt-4 text-[#3B2773] rounded text-xs bg-white items-center w-[121px] text-center"
             style={{
@@ -55,7 +55,7 @@ const General = () => {
 
       {/* the formsss */}
       <div
-        className="bg-white w-[616px] h-[375px] mt-5 rounded"
+        className="bg-white lg:w-[616px] w-full h-full mt-5 rounded"
         style={{
           boxShadow:
             "0px 0.073px 6.159px 0px rgba(0, 0, 0, 0.07), 0px 2.338px 17.029px 0px rgba(0, 0, 0, 0.05), 0px 9.853px 41px 0px rgba(0, 0, 0, 0.04), 0px 42px 136px 0px rgba(0, 0, 0, 0.02)",
@@ -70,10 +70,10 @@ const General = () => {
                 type="text"
                 value={name}
                 onChange={(e) => setName(e.target.value)}
-                className="mb-2"
+                className="lg:mb-2 md:mb-2 sm:mb-2"
               />
             </label>
-            <div className="px-[10px] items-center h-[40px] flex w-[566px] rounded border border-[#CBD5E0] focus-within:outline outline-2 outline-blue-600">
+            <div className="px-[10px] items-center h-[40px] flex w-full lg:w-[566px] rounded border border-[#CBD5E0] focus-within:outline outline-2 outline-blue-600">
               <input
                 type="text"
                 placeholder="Chevron Group"
@@ -88,7 +88,7 @@ const General = () => {
           </form>
         </div>
         {/* email address */}
-        <div className="m-6  flex">
+        <div className="m-6  hidden md:flex lg:flex ">
           <form className="mr-3">
             <label className="text-[#4A5568] text-sm ">
               Email Address
@@ -99,7 +99,7 @@ const General = () => {
                 className="mb-2 "
               />
             </label>
-            <div className="px-[10px]  items-center h-[40px] flex w-[274px] rounded border border-[#CBD5E0] focus-within:outline outline-2 outline-blue-600">
+            <div className="px-[10px]  items-center h-[40px] flex w-full lg:w-[274px] rounded border border-[#CBD5E0] focus-within:outline outline-2 outline-blue-600">
               <input
                 type="text"
                 placeholder="info@chevrongroup.com"
@@ -123,7 +123,59 @@ const General = () => {
                 className="mb-2"
               />
             </label>
-            <div className="px-[10px] items-center h-[40px] flex w-[274px] rounded border border-[#CBD5E0] focus-within:outline outline-2 outline-blue-600">
+            <div className="px-[10px] items-center h-[40px] flex w-full lg:w-[274px] rounded border border-[#CBD5E0] focus-within:outline outline-2 outline-blue-600">
+              <input
+                type="text"
+                placeholder="+234 908 776 1245"
+                id="search"
+                className="font-normal w-[320px] h-8 outline-none"
+                style={{
+                  color: "#718096",
+                  fontSize: "14px",
+                }}
+              />
+            </div>
+          </form>
+        </div>
+        {/* small screen */}
+        <div className="m-6 lg:hidden md:hidden">
+          <form>
+            <label className="text-[#4A5568] text-sm ">
+              Email
+              <input
+                type="text"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                className="mb-2"
+              />
+            </label>
+            <div className="px-[10px] items-center h-[40px] flex w-full  rounded border border-[#CBD5E0] focus-within:outline outline-2 outline-blue-600">
+              <input
+                type="text"
+                placeholder="info@chevrongroup.com"
+                id="search"
+                className="font-normal w-[320px]  outline-none"
+                style={{
+                  color: "#718096",
+                  fontSize: "14px",
+                }}
+              />
+            </div>
+          </form>
+        </div>
+
+        <div className="m-6 lg:hidden md:hidden">
+          <form>
+            <label className="text-[#4A5568] text-sm ">
+              Telephone
+              <input
+                type="text"
+                value={number}
+                onChange={(e) => setNumber(e.target.value)}
+                className="mb-2"
+              />
+            </label>
+            <div className="px-[10px] items-center h-[40px] flex w-full  rounded border border-[#CBD5E0] focus-within:outline outline-2 outline-blue-600">
               <input
                 type="text"
                 placeholder="+234 908 776 1245"
@@ -155,7 +207,7 @@ const General = () => {
               </Tooltip>
             </label>
 
-            <div className="px-[0px] items-center h-[40px] flex w-[566px] rounded border border-[#CBD5E0] focus-within:outline outline-2 outline-blue-600">
+            <div className="px-[0px] items-center h-[40px] flex w-full lg:w-[566px] rounded border border-[#CBD5E0] focus-within:outline outline-2 outline-blue-600">
               <select
                 value={timer}
                 className="outline-none w-full"
