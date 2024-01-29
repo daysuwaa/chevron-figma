@@ -44,11 +44,15 @@ const Analytics = () => {
               }}
             />
           </div>
-          <div className="flex">
-            <h3 className="text-[#1C065A] text-2xl font-bold mx-1 mr-2">
+          <div className="flex sm:mx-1 mx-auto mt-1">
+            <h3 className="text-[#1C065A] text-2xl font-bold mx-auto ">
               N{money}
             </h3>
-            <img src={arrow} alt="greenarrow" className="w-[25px] h-[25px]" />
+            <img
+              src={arrow}
+              alt="greenarrow"
+              className="w-[25px] h-[25px] mx-auto"
+            />
           </div>
         </div>
         <div className="text-start mt-1">
