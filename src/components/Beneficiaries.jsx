@@ -28,17 +28,17 @@ const Beneficiaries = () => {
       {/* centered image with text below */}
       <div className="flex flex-col items-center mt-[8rem]">
         <img src={computer} alt="" className="mb-4" />
-        <p className="text-center text-[#1C065A] font-light tracking-wide text-xl">
+        <p className="text-center text-[#1C065A] font-light tracking-wide text-[18px] sm:text-xl">
           No Beneficiaries added
         </p>
-        <p className="text-center text-[#718096] font-light tracking-wide text-sm">
+        <p className="text-center text-[#718096] font-light tracking-wide text-sm mx-3">
           {" "}
           You do not have any Beneficiaries. <br></br>
           Click the button below to get a template for beneficiaries
         </p>
 
         <div
-          className="h-[48px] mt-4 rounded bg-white w-[251px] text-center flex items-center justify-center"
+          className="h-[48px] mt-4 rounded bg-white  sm:w-[251px] w-[200px] text-center flex items-center justify-center"
           style={{
             border: " 1px solid var(--Button-Background-Alternate, #3B2773)",
           }}

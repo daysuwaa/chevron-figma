@@ -232,14 +232,14 @@ const Schedules = () => {
         <p className="text-center text-[#1C065A] font-light tracking-wide text-xl">
           No schedules created
         </p>
-        <p className="text-center text-[#718096] font-light tracking-wide text-sm">
+        <p className="text-center text-[#718096] font-light tracking-wide text-sm mx-3">
           {" "}
           You do not have any schedules. <br></br>
           Click the button below to generate a template for one
         </p>
 
         <div
-          className="h-[48px] mt-4 rounded bg-white w-[251px] text-center flex items-center justify-center"
+          className="h-[48px] mt-4 rounded bg-white sm:w-[251px] w-[200px] text-center flex items-center justify-center"
           style={{
             border: " 1px solid var(--Button-Background-Alternate, #3B2773)",
           }}
