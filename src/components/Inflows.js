@@ -80,7 +80,7 @@ const Outflows = () => {
   ];
   return (
     <div
-      className="mx-5"
+      className="mx-5 mb-5"
       style={{ border: "1px solid var(--Color-Gray-Gray-40, #CBD5E0)" }}
     >
       <DataTable columns={columns} data={data} />
