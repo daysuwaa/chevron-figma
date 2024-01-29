@@ -41,7 +41,7 @@ const Sidebar = () => {
               border:
                 activeLink === link
                   ? "1px solid rgba(255, 255, 255, 0.22)"
-                  : "",
+                  : "1px solid rgba(255, 255, 255, 0)",
               background: activeLink === link ? "#42257E" : "",
             }}
           >
@@ -50,7 +50,7 @@ const Sidebar = () => {
 
             {/* if link is active, font weight will be bold, else normal */}
             <p
-              className={` text-white tracking-wider px-3 mt-2 `}
+              className={` text-white tracking-wider px-3 mt-2`}
               style={{
                 fontWeight: activeLink === link ? "bold" : "lighter",
                 fontSize: "14px",

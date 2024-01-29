@@ -4,7 +4,7 @@ import arrowdown from "../assets/FiChevronDown.svg";
 import computer from "../assets/computer.png";
 import close from "../assets/IoCloseOutline.svg";
 import upload from "../assets/IoCloudUploadOutline.svg";
-import excel from "../assets/image 3.png";
+// import excel from "../assets/image 3.png";
 import Modal from "react-modal";
 
 const Schedules = () => {
@@ -39,6 +39,7 @@ const Schedules = () => {
       marginRight: "-50%",
       transform: "translate(-50%, -50%)",
       padding: "2rem",
+      margin: "2rem",
     },
   };
 
@@ -53,7 +54,7 @@ const Schedules = () => {
         style={customStyles}
         contentLabel="Example Modal"
       >
-        <div className="flex justify-between items-center lg:w-[35rem] md:w-[30rem] w-full">
+        <div className="flex justify-between items-center lg:w-[35rem] md:w-[30rem] w-[20rem]">
           <h2 className="text-md text-[#4A5568] mx-auto mb-4 font-semibold">
             Get Schedule Template
           </h2>
@@ -99,6 +100,7 @@ const Schedules = () => {
         onRequestClose={handleClose2}
         style={customStyles}
         contentLabel="Example Modal"
+        className=""
       >
         <div className="flex justify-between items-center lg:w-[35rem] md:w-[30rem] w-full ">
           <h2 className="text-md text-[#4A5568] mx-auto mb-4 font-semibold">
