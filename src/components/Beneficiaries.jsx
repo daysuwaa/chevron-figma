@@ -227,7 +227,7 @@ const Beneficiaries = () => {
       </div>
 
       {/* button */}
-      <div className="flex ml-auto justify-end items-center mx-5 px-[12px] mt-8">
+      <div className="flex ml-auto justify-end items-center mx-5  mt-8">
         <button
           className="bg-[#3B2774] h-[32px] w-[153px] rounded text-center text-white text-sm gap-8"
           onClick={openModal2}
