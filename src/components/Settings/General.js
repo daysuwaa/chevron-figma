@@ -41,7 +41,7 @@ const General = () => {
         <img src={chevron} alt="logo" className="w-[42px] h-[42px]" />
         <p className="mt-1 ml-2 text-[#4A5568] font-semibold">Your Avatar</p>
 
-        <div className="flex justify-start ml-4 md:ml-[22rem] lg:ml-[22rem]">
+        <div className="flex justify-start ml-9 sm:ml-[12rem] md:ml-[12rem] lg:ml-[22rem]">
           <button
             className="h-[24px] mt-4 text-[#3B2773] rounded text-xs bg-white items-center w-[121px] text-center"
             style={{
@@ -55,23 +55,17 @@ const General = () => {
 
       {/* the formsss */}
       <div
-        className="bg-white lg:w-[616px] w-full h-full mt-5 rounded"
+        className="bg-white  mb-10 sm:mb-10  mb:mb-0 w-[295px] sm:w-[450px] md:w-[450px] lg:w-[616px] h-full mt-5 rounded "
         style={{
           boxShadow:
             "0px 0.073px 6.159px 0px rgba(0, 0, 0, 0.07), 0px 2.338px 17.029px 0px rgba(0, 0, 0, 0.05), 0px 9.853px 41px 0px rgba(0, 0, 0, 0.04), 0px 42px 136px 0px rgba(0, 0, 0, 0.02)",
         }}
       >
         {/* namee */}
-        <div className="m-6">
+        <div className="m-6 ">
           <form>
             <label className="text-[#4A5568] text-sm ">
               User / Organization Name
-              <input
-                type="text"
-                value={name}
-                onChange={(e) => setName(e.target.value)}
-                className="lg:mb-2 md:mb-2 sm:mb-2"
-              />
             </label>
             <div className="px-[10px] items-center h-[40px] flex w-full lg:w-[566px] rounded border border-[#CBD5E0] focus-within:outline outline-2 outline-blue-600">
               <input
@@ -88,7 +82,7 @@ const General = () => {
           </form>
         </div>
         {/* email address */}
-        <div className="m-6  hidden md:flex lg:flex ">
+        <div className="m-6  hidden md:hidden lg:flex ">
           <form className="mr-3">
             <label className="text-[#4A5568] text-sm ">
               Email Address
@@ -138,7 +132,7 @@ const General = () => {
           </form>
         </div>
         {/* small screen */}
-        <div className="m-6 lg:hidden md:hidden">
+        <div className="m-6 lg:hidden">
           <form>
             <label className="text-[#4A5568] text-sm ">
               Email
@@ -164,18 +158,10 @@ const General = () => {
           </form>
         </div>
 
-        <div className="m-6 lg:hidden md:hidden">
+        <div className="m-6 lg:hidden ">
           <form>
-            <label className="text-[#4A5568] text-sm ">
-              Telephone
-              <input
-                type="text"
-                value={number}
-                onChange={(e) => setNumber(e.target.value)}
-                className="mb-2"
-              />
-            </label>
-            <div className="px-[10px] items-center h-[40px] flex w-full  rounded border border-[#CBD5E0] focus-within:outline outline-2 outline-blue-600">
+            <label className="text-[#4A5568] text-sm">Telephone</label>
+            <div className="px-[10px] items-center h-[40px] mt-3 flex w-full  rounded border border-[#CBD5E0] focus-within:outline outline-2 outline-blue-600">
               <input
                 type="text"
                 placeholder="+234 908 776 1245"
