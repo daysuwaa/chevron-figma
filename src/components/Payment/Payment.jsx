@@ -123,7 +123,7 @@ const Payment = () => {
       {/* end of nav */}
 
       {/* framesssss */}
-      <div className="grid grid-cols-1 md:grid-cols-3 mx-7 gap-4">
+      <div className="grid grid-cols-1 md:grid-cols-3 mx-3 md:mx-7 gap-4">
         {styling("#22085C", "Total Payments", payments, money1, "#FFF", winfo)}
 
         {styling(
@@ -154,10 +154,10 @@ const Payment = () => {
 
       {/* the second side */}
 
-      <div className="sm:grid sm:grid-cols-1 md:grid-cols-2 m-5 flex flex-col">
+      <div className="sm:grid sm:grid-cols-1 md:grid-cols-2 md:m-5 my-5 md:my:0 flex flex-col">
         {/* First component */}
         <div className="flex my-4">
-          <p className="flex tracking-wide items-center font-light p-2 text-[#1C065A] text-sm ">
+          <p className="flex tracking-wide items-center font-light mx-3  md:mx:0  text-[#1C065A] text-sm ">
             My account
             <Tooltip
               title="Fund your wallet by paying into Guarantee Trust Wallet"
@@ -170,7 +170,7 @@ const Payment = () => {
               />
             </Tooltip>
           </p>
-          <div className="md:ml-0 flex ml-auto mx-2">
+          <div className="md:ml-0 flex ml-auto mx-3  md:mx:0 md:my:0">
             <button
               className="flex bg-[#3B2773] w-[6.5rem] sm:w-[8.5rem] h-[2.5rem] py-[6px] px-[10px] rounded justify-center items-center text-white md:text-[13px] lg:text-[13px] sm:text-[13px] text-[10px]"
               onClick={copyToClipboard}
@@ -231,7 +231,7 @@ const Payment = () => {
 
       {/* end of the  straight stuff */}
       {/* the tab stufff */}
-      <div className="flex justify-between items-center px-7 ml-auto ">
+      <div className="flex justify-between items-center px-3 md:px-7 ml-auto ">
         <div>
           <button
             className={` py-2 text-[14px] ${
