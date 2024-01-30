@@ -52,7 +52,7 @@ const Users = () => {
               textAlign: "center",
               width: "70px",
               height: "30px",
-              marginRight: "10px", // Add margin between the two action components
+              marginRight: "10px",
             }}
             onClick={openEditModal} // Open modal on button click
             className="cursor-pointer"
@@ -145,7 +145,7 @@ const Users = () => {
       <DataTable columns={columns} data={data} />
       {isEditModalOpen && (
         <div className="fixed top-0 left-0 w-full h-full   bg-black bg-opacity-50 flex justify-center items-center">
-          <div className="bg-white p-6 rounded lg:w-[33rem] md:w-[30rem]">
+          <div className="bg-white p-6 rounded  lg:w-[33rem] md:w-[30rem]">
             <div className="flex justify-center ">
               <p className="mx-auto  text-md font-semibold mb-2 text-[#4A5568]">
                 Edit User
@@ -169,7 +169,7 @@ const Users = () => {
       {/* Deactivate Modal */}
       {isDeactivateModalOpen && (
         <div className="fixed top-0 left-0 w-full h-full bg-black bg-opacity-50 flex justify-center items-center">
-          <div className="bg-white p-6 rounded lg:w-[23rem] md:w-[20rem]">
+          <div className="bg-white p-6 rounded w-[20rem] lg:w-[23rem] md:w-[20rem]">
             <div className="flex justify-center ">
               <p className=" mx-auto  text-md font-semibold mb-2 text-[#4A5568]">
                 Deactivate User
@@ -190,7 +190,7 @@ const Users = () => {
               <p className="text-[#4A5568] text-center text-sm">
                 Are you sure you want to deactivate this user?
               </p>
-              <p className="text-[#4A5568] text-center text-sm mx-[2rem]">
+              <p className="text-[#4A5568] text-center text-sm">
                 This action will immediately revoke all previously granted user
                 privileges.
               </p>
@@ -209,7 +209,7 @@ const Users = () => {
       {/* Reactivate Modal */}
       {isReactivateModalOpen && (
         <div className="fixed top-0 left-0 w-full h-full bg-black bg-opacity-50 flex justify-center items-center">
-          <div className="bg-white p-6 rounded lg:w-[23rem] md:w-[20rem]">
+          <div className="bg-white p-6 rounded w-[20rem] lg:w-[23rem] md:w-[20rem]">
             <div className="flex justify-center ">
               <p className=" mx-auto  text-md font-semibold mb-2 text-[#4A5568]">
                 Reactivate User
@@ -230,7 +230,7 @@ const Users = () => {
               <p className="text-[#4A5568] text-center text-sm">
                 Are you sure you want to Reactivate this user?
               </p>
-              <p className="text-[#4A5568] text-center text-sm mx-[2rem]">
+              <p className="text-[#4A5568] text-center text-sm">
                 This action will immediately revoke all previously granted user
                 privileges.
               </p>
