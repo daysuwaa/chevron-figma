@@ -131,7 +131,7 @@ const Approvals = () => {
       <DataTable columns={columns} data={data} />
       {isActiveModalOpen && (
         <div className="fixed top-0 left-0 w-full h-full bg-black bg-opacity-50 flex justify-center items-center">
-          <div className="bg-white p-6 rounded lg:w-[23rem] md:w-[20rem]">
+          <div className="bg-white w-[22rem] p-6 rounded lg:w-[23rem] md:w-[20rem]">
             <div className="flex justify-center ">
               <p className=" mx-auto  text-md font-semibold mb-2 text-[#4A5568]">
                 Deactivate User
@@ -153,7 +153,7 @@ const Approvals = () => {
               <p className="text-[#4A5568] text-center text-sm">
                 Are you sure you want to Deactivate this user?
               </p>
-              <p className="text-[#4A5568] text-center text-sm mx-[2rem]">
+              <p className="text-[#4A5568] text-center text-sm mx-2">
                 The payouts defined will cease to take effect immediately
               </p>
               {/* formsss */}
@@ -222,7 +222,7 @@ const Approvals = () => {
       )}
       {isInactiveModalOpen && (
         <div className="fixed top-0 left-0 w-full h-full bg-black bg-opacity-50 flex justify-center items-center">
-          <div className="bg-white p-6 rounded lg:w-[23rem] md:w-[20rem]">
+          <div className="bg-white p-6 rounded w-[22rem] lg:w-[27rem] md:w-[25rem]">
             <div className="flex justify-center ">
               <p className=" mx-auto  text-md font-semibold mb-2 text-[#4A5568]">
                 Activate Schedule
@@ -243,7 +243,7 @@ const Approvals = () => {
               <p className="text-[#4A5568] text-center text-sm">
                 Are you sure you want to Activate this user?
               </p>
-              <p className="text-[#4A5568] text-center text-sm mx-[2rem]">
+              <p className="text-[#4A5568] text-center text-sm mx-2">
                 The payouts defined in the schedule will take effect
                 immediately.
               </p>
