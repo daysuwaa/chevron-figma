@@ -26,7 +26,7 @@ const Piechart = () => {
           ))}
           <Label position="center" className="recharts-pie-label" />
         </Pie>
-        <Legend verticalAlign="bottom" height={36} align="center" />
+        {/* <Legend verticalAlign="bottom" height={36} align="center" /> */}
       </PieChart>
     </div>
   );

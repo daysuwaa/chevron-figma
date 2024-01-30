@@ -144,11 +144,10 @@ const Dashboard = () => {
       {/* end of frames */}
 
       {/* barrrssssss */}
-      {/* <div className="grid lg:grid-cols-3 grid-cols-1 gap-4 mx-7 my-5"> */}
+
       <div className="grid lg:grid-cols-3 grid-cols-1 gap-2 md:gap-4 mx-3 md:mx-7 my-5">
         {" "}
-        {/* Adjusted margin and gap for smaller screens */}
-        <div className="col-span-1 lg:col-span-2 bg-black p-4 text-center">
+        <div className="col-span-1 lg:col-span-2 bg-white p-4 text-center">
           <div
             className="lg:flex md:flex font-light tracking-wide"
             style={{
@@ -187,13 +186,33 @@ const Dashboard = () => {
           <div className="flex items-center justify-center">
             <Piechart />
           </div>
+          <div className="grid grid-cols-2">
+            <div className="flex col-span-1 items-center">
+              <p className="bg-[#6FCF97] w-[12px] h-[12px] mx-2"></p>
+              <p className="text-[#1C065A] font-light text-[12px]">
+                Credit:
+                <span className="text-[#1C065A] font-semibold text-[12px]">
+                  N1,560,230.00
+                </span>
+              </p>
+            </div>
+            <div className="flex col-span-1 items-center">
+              <p className="bg-[#EB5757] w-[12px] h-[12px] mx-2"></p>
+              <p className="text-[#1C065A] font-light text-[12px]">
+                Debit:
+                <span className="text-[#1C065A] font-semibold text-[12px]">
+                  N1,560,230.00
+                </span>
+              </p>
+            </div>
+          </div>
         </div>
       </div>
 
       {/* receipts payoutsss */}
       <div className="py-7">
         {/* <div className="bg-white max-w-full h-[355px] mx-7"> */}
-        <div className="bg-white max-w-full h-[355px]">
+        <div className="bg-white max-w-full mx-3 md:mx-7 h-[355px]">
           {" "}
           {/* Adjusted margin for smaller screens */}
           <div className="flex justify-between py-7 mx-5">
