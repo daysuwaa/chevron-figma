@@ -37,12 +37,12 @@ const Schedules = () => {
   };
   const customStyles = {
     content: {
-      top: "50%",
+      top: "40%",
       left: "50%",
       right: "auto",
       bottom: "auto",
       marginRight: "-50%",
-      transform: "translate(-50%, -50%)",
+      transform: "translate(-50%, -40%)",
       padding: "2rem",
       margin: "2rem",
     },
@@ -57,7 +57,7 @@ const Schedules = () => {
         style={customStyles}
         contentLabel="Example Modal"
       >
-        <div className="flex justify-between items-center lg:w-[35rem] md:w-[30rem] w-[20rem]">
+        <div className="flex items-center lg:w-[35rem] md:w-[30rem] w-[14rem]">
           <h2 className="text-md text-[#4A5568] mx-auto mb-4 font-semibold">
             Get Schedule Template
           </h2>
@@ -229,7 +229,7 @@ const Schedules = () => {
       </div>
 
       {/* button */}
-      <div className="flex ml-auto justify-end items-center mx-5 px-[12px] mt-8">
+      <div className="flex ml-auto justify-end items-center mx-5 md:px-[10px] mt-8">
         <button
           className="bg-[#3B2774] h-[32px] w-[153px] rounded text-center text-white text-sm gap-8"
           onClick={openModal2}
