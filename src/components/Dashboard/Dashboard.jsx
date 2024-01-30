@@ -188,7 +188,7 @@ const Dashboard = () => {
           </div>
           <div className="grid grid-cols-2">
             <div className="flex col-span-1 items-center">
-              <p className="bg-[#6FCF97] w-[12px] h-[12px] mx-2"></p>
+              <p className="bg-[#6FCF97] w-[12px] h-[12px] mr-1"></p>
               <p className="text-[#1C065A] font-light text-[12px]">
                 Credit:
                 <span className="text-[#1C065A] font-semibold text-[12px]">
@@ -197,7 +197,7 @@ const Dashboard = () => {
               </p>
             </div>
             <div className="flex col-span-1 items-center">
-              <p className="bg-[#EB5757] w-[12px] h-[12px] mx-2"></p>
+              <p className="bg-[#EB5757] w-[12px] h-[12px] mr-1"></p>
               <p className="text-[#1C065A] font-light text-[12px]">
                 Debit:
                 <span className="text-[#1C065A] font-semibold text-[12px]">
