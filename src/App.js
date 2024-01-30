@@ -13,7 +13,7 @@ import Error from "./components/Error";
 
 function App() {
   return (
-    <Router basename="/">
+    <Router basename="/" element={<Dashboard />}>
       {/* to make the side bar at the , yk ,side, lol */}
       <div className="app flex h-screen">
         <Sidebar />
