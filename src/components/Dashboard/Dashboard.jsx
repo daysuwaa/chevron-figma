@@ -94,11 +94,11 @@ const Dashboard = () => {
   return (
     <div
       style={{ backgroundColor: "#F6F6F6" }}
-      className="w-full h-full overflow-auto"
+      className="w-full h-full overflow-auto "
     >
       {/* nav- dashbord side */}
       <div
-        className="flex px-[32px] py-[18px] justify-between h-[60px]"
+        className="flex px-4 md:px-[32px] py-[18px] justify-between h-[60px]"
         style={{ background: "#fff" }}
       >
         <p className="font-semibold tracking-wide ">Dashboard</p>
@@ -110,7 +110,7 @@ const Dashboard = () => {
       {/* end of nav */}
 
       {/* framesssss */}
-      <div className="grid grid-cols-1 md:grid-cols-3 mx-7 pb-7 gap-4">
+      <div className="grid grid-cols-1 md:grid-cols-3 mx-3 md:mx-7 pb-7 gap-4">
         {styling(
           "#22085C",
           "Total Payments",
@@ -144,8 +144,11 @@ const Dashboard = () => {
       {/* end of frames */}
 
       {/* barrrssssss */}
-      <div className="grid lg:grid-cols-3 grid-cols-1 gap-4 mx-7 my-5">
-        <div className="col-span-1 lg:col-span-2 bg-white p-4 text-center">
+      {/* <div className="grid lg:grid-cols-3 grid-cols-1 gap-4 mx-7 my-5"> */}
+      <div className="grid lg:grid-cols-3 grid-cols-1 gap-2 md:gap-4 mx-3 md:mx-7 my-5">
+        {" "}
+        {/* Adjusted margin and gap for smaller screens */}
+        <div className="col-span-1 lg:col-span-2 bg-black p-4 text-center">
           <div
             className="lg:flex md:flex font-light tracking-wide"
             style={{
@@ -189,7 +192,10 @@ const Dashboard = () => {
 
       {/* receipts payoutsss */}
       <div className="py-7">
-        <div className="bg-white max-w-full h-[355px] mx-7">
+        {/* <div className="bg-white max-w-full h-[355px] mx-7"> */}
+        <div className="bg-white max-w-full h-[355px]">
+          {" "}
+          {/* Adjusted margin for smaller screens */}
           <div className="flex justify-between py-7 mx-5">
             <p
               className=""
