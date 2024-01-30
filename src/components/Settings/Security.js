@@ -60,7 +60,7 @@ const Security = () => {
     <div className="flex flex-col items-center mt-11 mb-9 ">
       {/*1  white boxxx  */}
       <div
-        className="bg-white h-[437px] mt-5 rounded w-[320px] sm:w-[450px] md:w-[450px] lg:w-[616px]"
+        className="bg-white h-[437px] mt-5 rounded w-[290px] sm:w-[450px] md:w-[450px] lg:w-[616px]"
         style={{
           boxShadow:
             "0px 0.073px 6.159px 0px rgba(0, 0, 0, 0.07), 0px 2.338px 17.029px 0px rgba(0, 0, 0, 0.05), 0px 9.853px 41px 0px rgba(0, 0, 0, 0.04), 0px 42px 136px 0px rgba(0, 0, 0, 0.02)",
@@ -161,7 +161,7 @@ const Security = () => {
 
       {/* second box */}
       <div
-        className="bg-white w-[320px] sm:w-[450px] md:w-[450px] lg:w-[616px] mt-5 rounded mb-5"
+        className="bg-white w-[290px] sm:w-[450px] md:w-[450px] lg:w-[616px] mt-5 rounded mb-5"
         style={{
           boxShadow:
             "0px 0.073px 6.159px 0px rgba(0, 0, 0, 0.07), 0px 2.338px 17.029px 0px rgba(0, 0, 0, 0.05), 0px 9.853px 41px 0px rgba(0, 0, 0, 0.04), 0px 42px 136px 0px rgba(0, 0, 0, 0.02)",
