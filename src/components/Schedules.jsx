@@ -124,8 +124,8 @@ const Schedules = () => {
           ></div>
           {/* schedule name */}
 
-          <div className="my-6">
-            <form className="w-full">
+          <div className=" my-6 w-full">
+            <form className="">
               <label className="text-[#4A5568] mr-auto text-sm ">
                 Schedule Name
               </label>
