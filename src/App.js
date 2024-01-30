@@ -13,13 +13,13 @@ import Error from "./components/Error";
 
 function App() {
   return (
-    <Router basename="/" element={<Dashboard />}>
+    <Router basename="/">
       {/* to make the side bar at the , yk ,side, lol */}
       <div className="app flex h-screen">
         <Sidebar />
         <div className="content max-h-full overflow-y-auto" style={{ flex: 1 }}>
           <Routes>
-            <Route path="/" element={<Dashboard />} />
+            <Route path="*" element={<Dashboard />} />
             <Route path="/payment" element={<Payment />} />
             <Route path="/schedules" element={<Schedules />} />
             <Route path="/beneficiaries" element={<Beneficiaries />} />
