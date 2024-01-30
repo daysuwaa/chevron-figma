@@ -1,0 +1,38 @@
+{
+  "files": {
+    "main.css": "/daysuwaa/chevron-figma/static/css/main.25246343.css",
+    "main.js": "/daysuwaa/chevron-figma/static/js/main.d0f96427.js",
+    "static/js/787.3f6d3814.chunk.js": "/daysuwaa/chevron-figma/static/js/787.3f6d3814.chunk.js",
+    "static/media/BsGear.svg": "/daysuwaa/chevron-figma/static/media/BsGear.c3ce4150d4f606e23986bdc1df9f4cd6.svg",
+    "static/media/IoSpeedometerOutline.svg": "/daysuwaa/chevron-figma/static/media/IoSpeedometerOutline.809f91e5c464daec09292eb6266917b6.svg",
+    "static/media/FiUsers.svg": "/daysuwaa/chevron-figma/static/media/FiUsers.2fe162f3f537588ec63204e9982d5a89.svg",
+    "static/media/IoWalletOutline.svg": "/daysuwaa/chevron-figma/static/media/IoWalletOutline.303a4e5ba09b770621250c0af1863c6a.svg",
+    "static/media/FiPieChart.svg": "/daysuwaa/chevron-figma/static/media/FiPieChart.c6c6a5ad95b97f59bbd62869cbc27eb5.svg",
+    "static/media/IoCloudDownloadOutline.svg": "/daysuwaa/chevron-figma/static/media/IoCloudDownloadOutline.e5379045230d15c03b139d66775ff9eb.svg",
+    "static/media/IoCloudUploadOutline.svg": "/daysuwaa/chevron-figma/static/media/IoCloudUploadOutline.fe7160771d7a6ab22872174e02582b71.svg",
+    "static/media/FiCheckCircle.svg": "/daysuwaa/chevron-figma/static/media/FiCheckCircle.1676941cfb5d0a2fc1dd5d1eb98b8208.svg",
+    "static/media/IoCopyOutline.svg": "/daysuwaa/chevron-figma/static/media/IoCopyOutline.9bf33d6aee57867d5c9b0cc6da844bbc.svg",
+    "static/media/FiCalendar.svg": "/daysuwaa/chevron-figma/static/media/FiCalendar.2211b7e0a05d2410fd2d009fc8c871a3.svg",
+    "static/media/BsClock.svg": "/daysuwaa/chevron-figma/static/media/BsClock.67f044d7413f00fe94a4d0fcdd7c0ba1.svg",
+    "static/media/CkSearch.svg": "/daysuwaa/chevron-figma/static/media/CkSearch.00dac42c09950a47471d90761be4fd98.svg",
+    "static/media/BsClock-2.svg": "/daysuwaa/chevron-figma/static/media/BsClock-2.5f02cba47c33dc32ba65fa0d5f97e81f.svg",
+    "index.html": "/daysuwaa/chevron-figma/index.html",
+    "static/media/FiCreditCard.svg": "/daysuwaa/chevron-figma/static/media/FiCreditCard.71b9cee1b6ecb2188667cc242a648f62.svg",
+    "static/media/CkInfoOutline.svg": "/daysuwaa/chevron-figma/static/media/CkInfoOutline.112790944ceb76b99a72db97a5c8420c.svg",
+    "static/media/CkInfoOutline-2.svg": "/daysuwaa/chevron-figma/static/media/CkInfoOutline-2.e9275ef732cb4b58e1d7df826abadd4b.svg",
+    "static/media/FiFilter.svg": "/daysuwaa/chevron-figma/static/media/FiFilter.72edb616e1b14ac9158056bfa8181172.svg",
+    "static/media/IoCloseOutline.svg": "/daysuwaa/chevron-figma/static/media/IoCloseOutline.65d19fe6fff22a7e5d5a81731eb11c84.svg",
+    "static/media/FiChevronRight-2.svg": "/daysuwaa/chevron-figma/static/media/FiChevronRight-2.410614390dec2bb13b79f2cd179f443a.svg",
+    "static/media/FiChevronRight.svg": "/daysuwaa/chevron-figma/static/media/FiChevronRight.4125c4e3472ba63a1cb7ac76ae418682.svg",
+    "static/media/FiChevronDown.svg": "/daysuwaa/chevron-figma/static/media/FiChevronDown.e85c1e6e0c8588b0e18a8448e63c8a12.svg",
+    "static/media/Redarrow.svg": "/daysuwaa/chevron-figma/static/media/Redarrow.f944c8fafdae489b9ff2cd2c6fc3e5df.svg",
+    "static/media/Green.svg": "/daysuwaa/chevron-figma/static/media/Green.fad54ca61feaee15eb62988aad2527b6.svg",
+    "main.25246343.css.map": "/daysuwaa/chevron-figma/static/css/main.25246343.css.map",
+    "main.d0f96427.js.map": "/daysuwaa/chevron-figma/static/js/main.d0f96427.js.map",
+    "787.3f6d3814.chunk.js.map": "/daysuwaa/chevron-figma/static/js/787.3f6d3814.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.25246343.css",
+    "static/js/main.d0f96427.js"
+  ]
+}
