@@ -41,7 +41,7 @@ const General = () => {
         <img src={chevron} alt="logo" className="w-[42px] h-[42px]" />
         <p className="mt-1 ml-2 text-[#4A5568] font-semibold">Your Avatar</p>
 
-        <div className="flex justify-start ml-9 sm:ml-[12rem] md:ml-[12rem] lg:ml-[22rem]">
+        <div className="flex justify-start ml-[4rem] sm:ml-[12rem] md:ml-[12rem] lg:ml-[22rem]">
           <button
             className="h-[24px] mt-4 text-[#3B2773] rounded text-xs bg-white items-center w-[121px] text-center"
             style={{
@@ -55,7 +55,7 @@ const General = () => {
 
       {/* the formsss */}
       <div
-        className="bg-white  mb-10 sm:mb-10  mb:mb-0 w-[295px] sm:w-[450px] md:w-[450px] lg:w-[616px] h-full mt-5 rounded "
+        className="bg-white  mb-10 sm:mb-10  mb:mb-0 w-[320px] sm:w-[450px] md:w-[450px] lg:w-[616px] h-full mt-5 rounded "
         style={{
           boxShadow:
             "0px 0.073px 6.159px 0px rgba(0, 0, 0, 0.07), 0px 2.338px 17.029px 0px rgba(0, 0, 0, 0.05), 0px 9.853px 41px 0px rgba(0, 0, 0, 0.04), 0px 42px 136px 0px rgba(0, 0, 0, 0.02)",

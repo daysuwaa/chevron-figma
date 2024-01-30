@@ -82,7 +82,7 @@ const Analytics = () => {
       {/* END OF NAV */}
 
       {/* the chartssss */}
-      <div className="grid lg:grid-cols-3 grid-cols-1 gap-4 mt-4 mx-7">
+      <div className="grid lg:grid-cols-3 grid-cols-1 gap-4 mt-4 mx-3 md:mx-7">
         {/* Column with bar chart */}
         <div className="col-span-1 lg:col-span-2 bg-white p-4 text-center">
           <div className="lg:flex md:flex sm:flex font-light tracking-wide text-[#4A5568] text-sm">
@@ -132,7 +132,7 @@ const Analytics = () => {
         </div>
       </div>
 
-      <div className="grid grid-cols-1 mt-6  lg:grid-cols-3 md:grid-cols-1 mx-7 gap-4 ">
+      <div className="grid grid-cols-1 mt-6  lg:grid-cols-3 md:grid-cols-1 mx-3 md:mx-7 gap-4 ">
         <div className="w-full">
           {graphs(
             "Total Payouts",

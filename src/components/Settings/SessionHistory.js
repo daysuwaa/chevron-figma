@@ -48,15 +48,15 @@ const Table = () => {
     },
   ];
   return (
-    <div className="flex flex-col items-center mt-11  ">
+    <div className=" items-center mt-11 mx-5 md:mx-7 ">
       <div
-        className="bg-white w-[616px] h-[377px] mt-5 rounded items-center"
+        className="bg-white h-[377px] mt-5 rounded items-center"
         style={{
           boxShadow:
             "0px 0.073px 6.159px 0px rgba(0, 0, 0, 0.07), 0px 2.338px 17.029px 0px rgba(0, 0, 0, 0.05), 0px 9.853px 41px 0px rgba(0, 0, 0, 0.04), 0px 42px 136px 0px rgba(0, 0, 0, 0.02)",
         }}
       >
-        <p className="mx-5 my-8 text-[#4A5568] text-lg font-normal ">
+        <p className="mx-5 m-5 pt-5 text-[#4A5568] text-lg font-normal ">
           Login History
         </p>
         <div
