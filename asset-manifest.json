@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/chevron-figma/static/css/main.b7dcfad2.css",
-    "main.js": "/chevron-figma/static/js/main.f3a8ecfa.js",
+    "main.css": "/chevron-figma/static/css/main.e375164f.css",
+    "main.js": "/chevron-figma/static/js/main.1eea8060.js",
     "static/js/787.3f6d3814.chunk.js": "/chevron-figma/static/js/787.3f6d3814.chunk.js",
     "static/media/BsGear.svg": "/chevron-figma/static/media/BsGear.c3ce4150d4f606e23986bdc1df9f4cd6.svg",
     "static/media/IoSpeedometerOutline.svg": "/chevron-figma/static/media/IoSpeedometerOutline.809f91e5c464daec09292eb6266917b6.svg",
@@ -27,12 +27,12 @@
     "static/media/FiChevronDown.svg": "/chevron-figma/static/media/FiChevronDown.e85c1e6e0c8588b0e18a8448e63c8a12.svg",
     "static/media/Redarrow.svg": "/chevron-figma/static/media/Redarrow.f944c8fafdae489b9ff2cd2c6fc3e5df.svg",
     "static/media/Green.svg": "/chevron-figma/static/media/Green.fad54ca61feaee15eb62988aad2527b6.svg",
-    "main.b7dcfad2.css.map": "/chevron-figma/static/css/main.b7dcfad2.css.map",
-    "main.f3a8ecfa.js.map": "/chevron-figma/static/js/main.f3a8ecfa.js.map",
+    "main.e375164f.css.map": "/chevron-figma/static/css/main.e375164f.css.map",
+    "main.1eea8060.js.map": "/chevron-figma/static/js/main.1eea8060.js.map",
     "787.3f6d3814.chunk.js.map": "/chevron-figma/static/js/787.3f6d3814.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.b7dcfad2.css",
-    "static/js/main.f3a8ecfa.js"
+    "static/css/main.e375164f.css",
+    "static/js/main.1eea8060.js"
   ]
 }
