@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Anabar from "./Ana_bar";
 import Anapie from "./Ana.pie";
 import Anawave from "./Ana_wave";
@@ -27,11 +27,16 @@ const Analytics = () => {
     precision: 3, // Number of decimal places
   });
 
+  const [month, setMonth] = useState("");
+  const handleChange = (event) => {
+    setMonth(event.target.value);
+  };
+
   const graphs = (title, money, arrow, text, text2, color, graph) => {
     return (
-      <div className="col-span-2 bg-white mb-4 p-4 text-center">
+      <div className="col-span-2 mb-4 bg-white  p-4 text-start sm:text-center">
         <div>
-          <div className="sm:flex mx-1 mt-7">
+          <div className="flex mx-1 mt-3">
             <p className="text-[#4A5568]">{title}</p>
             <img
               src={icloud}
@@ -45,14 +50,8 @@ const Analytics = () => {
             />
           </div>
           <div className="flex sm:mx-1 mx-auto mt-1">
-            <h3 className="text-[#1C065A] text-2xl font-bold mx-auto ">
-              N{money}
-            </h3>
-            <img
-              src={arrow}
-              alt="greenarrow"
-              className="w-[25px] h-[25px] mx-auto"
-            />
+            <h3 className="text-[#1C065A] text-2xl font-bold  ">N{money}</h3>
+            <img src={arrow} alt="greenarrow" className="w-[25px] h-[25px]" />
           </div>
         </div>
         <div className="text-start mt-1">
@@ -88,16 +87,25 @@ const Analytics = () => {
         <div className="col-span-1 lg:col-span-2 bg-white p-4 text-center">
           <div className="lg:flex md:flex sm:flex font-light tracking-wide text-[#4A5568] text-sm">
             <p>Inflows vs Outflows</p>
-            <div className="flex mt-2 sm:mt-0 ml-auto">
+            <div className="flex mt-2  justify-center  sm:mt-0 sm:ml-auto">
               <p
-                className="flex h-[28px] items-center mx-2"
+                className="flex h-[28px] mx-2 items-center sm:mx-2"
                 style={{
                   border: "1px solid var(--Color-Gray-Gray-40, #CBD5E0)",
                   borderRadius: "4px",
                   padding: "6px 12px",
                 }}
               >
-                Last 1 year <img src={arrowdown} alt="" />
+                <select
+                  value={month}
+                  className="outline-none w-full"
+                  onChange={handleChange}
+                >
+                  <option value="month1">Last 1 month</option>
+                  <option value="month2">Last 2 months</option>
+                  <option value="month 3">Last 5 Months</option>
+                  <option value="month6">Last 1 year</option>
+                </select>
               </p>
               <img
                 src={icloud}
@@ -124,7 +132,7 @@ const Analytics = () => {
         </div>
       </div>
 
-      <div className="grid grid-cols-1 mt-6 lg:grid-cols-3 md:grid-cols-1 mx-7 gap-4">
+      <div className="grid grid-cols-1 mt-6  lg:grid-cols-3 md:grid-cols-1 mx-7 gap-4 ">
         <div className="w-full">
           {graphs(
             "Total Payouts",
@@ -149,7 +157,7 @@ const Analytics = () => {
           )}
         </div>
 
-        <div className="w-full ">
+        <div className="w-full mb-5">
           {graphs(
             "Active Schedules",
             money3,
