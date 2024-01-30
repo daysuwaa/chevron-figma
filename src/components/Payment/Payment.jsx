@@ -1,18 +1,18 @@
 import React, { useState } from "react";
 import millify from "millify";
-import Inflow from "../components/Inflows";
-import Outflow from "../components/Outflows";
-import payments from "../assets/FiCreditCard.svg";
-import calendar from "../assets/FiCalendar.svg";
-import wallet from "../assets/IoWalletOutline.svg";
-import man from "../assets/image 1.png";
-import arrowdown from "../assets/FiChevronDown.svg";
-import winfo from "../assets/CkInfoOutline-2.svg";
-import info from "../assets/CkInfoOutline.svg";
-import gtb from "../assets/image 2.png";
-import copy from "../assets/IoCopyOutline.svg";
-import search from "../assets/CkSearch.svg";
-import filter from "../assets/FiFilter.svg";
+import Inflow from "./Inflows";
+import Outflow from "./Outflows";
+import payments from "src/assets/FiCreditCard.svg";
+import calendar from "src/assets/FiCalendar.svg";
+import wallet from "src/assets/IoWalletOutline.svg";
+import man from "src/assets/image 1.png";
+import arrowdown from "src/assets/FiChevronDown.svg";
+import winfo from "src/assets/CkInfoOutline-2.svg";
+import info from "src/assets/CkInfoOutline.svg";
+import gtb from "src/assets/image 2.png";
+import copy from "src/assets/IoCopyOutline.svg";
+import search from "src/assets/CkSearch.svg";
+import filter from "src/assets/FiFilter.svg";
 import Tooltip from "@mui/material/Tooltip";
 
 const Payment = () => {
@@ -148,7 +148,7 @@ const Payment = () => {
 
       {/* lineee */}
       <div
-        className="w-full border-b mt-4"
+        className="hidden md:block w-full border-b mt-4"
         style={{ background: "var(--Color-Gray-Gray-40, #CBD5E0)" }}
       ></div>
 
@@ -156,7 +156,7 @@ const Payment = () => {
 
       <div className="sm:grid sm:grid-cols-1 md:grid-cols-2 m-5 flex flex-col">
         {/* First component */}
-        <div className="flex mb-2">
+        <div className="flex my-4">
           <p className="flex tracking-wide items-center font-light p-2 text-[#1C065A] text-sm ">
             My account
             <Tooltip
@@ -170,14 +170,16 @@ const Payment = () => {
               />
             </Tooltip>
           </p>
-          <button
-            className="flex bg-[#3B2773] w-[6.5rem] sm:w-[8.5rem] h-[2.5rem] py-[6px] px-[10px] rounded justify-center items-center text-white md:text-[13px] lg:text-[13px] sm:text-[13px] text-[10px]"
-            onClick={copyToClipboard}
-          >
-            <img src={gtb} alt="gtblogo" className="text-center pr-1 " />
-            0422822151
-            <img src={copy} alt="copy" className="ml-1 w-4 h-4"></img>
-          </button>
+          <div className="md:ml-0 flex ml-auto mx-2">
+            <button
+              className="flex bg-[#3B2773] w-[6.5rem] sm:w-[8.5rem] h-[2.5rem] py-[6px] px-[10px] rounded justify-center items-center text-white md:text-[13px] lg:text-[13px] sm:text-[13px] text-[10px]"
+              onClick={copyToClipboard}
+            >
+              <img src={gtb} alt="gtblogo" className="text-center pr-1 " />
+              0422822151
+              <img src={copy} alt="copy" className="ml-1 w-4 h-4"></img>
+            </button>
+          </div>
         </div>
 
         {/* searchhhhh */}
@@ -201,7 +203,7 @@ const Payment = () => {
           {/* the filter */}
           <div className="flex mb-2 mx-2 lg:ml-auto">
             <div
-              className="px-[20px] grid-cols-2 py-[12px] h-12 flex w-[100px]"
+              className="px-[20px] grid-cols-2 py-[12px] h-12 flex w-[6.5rem]"
               style={{
                 borderRadius: "4px",
                 border: "1px solid var(--Color-Gray-Gray-40, #CBD5E0)",
