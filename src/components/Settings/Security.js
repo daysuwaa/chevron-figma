@@ -86,7 +86,7 @@ const Security = () => {
               <input
                 type="text"
                 placeholder="Enter existing password"
-                id="search"
+                id="ccpassword"
                 className="font-normal w-[320px] h-8 outline-none"
                 style={{
                   color: "#718096",
@@ -104,7 +104,7 @@ const Security = () => {
               <input
                 type="text"
                 placeholder="Enter new password"
-                id="search"
+                id="npassword"
                 className="font-normal w-[320px] h-8 outline-none"
                 style={{
                   color: "#718096",
@@ -122,7 +122,7 @@ const Security = () => {
               <input
                 type="text"
                 placeholder="Re-type password"
-                id="search"
+                id="c-password"
                 className="font-normal w-[320px] h-8 outline-none"
                 style={{
                   color: "#718096",
