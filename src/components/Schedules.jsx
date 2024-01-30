@@ -4,10 +4,15 @@ import arrowdown from "../assets/FiChevronDown.svg";
 import computer from "../assets/computer.png";
 import close from "../assets/IoCloseOutline.svg";
 import upload from "../assets/IoCloudUploadOutline.svg";
-// import excel from "../assets/image 3.png";
 import Modal from "react-modal";
 
 const Schedules = () => {
+  // handles the files upload
+  const handleFileUpload = (e) => {
+    const selectedFiles = e.target.files;
+    console.log(selectedFiles);
+  };
+  // for the toggle button
   const ToggleButton = () => {
     const [isActive, setIsActive] = useState(false);
 
@@ -42,8 +47,6 @@ const Schedules = () => {
       margin: "2rem",
     },
   };
-
-  const Addschedule = () => {};
 
   // Modal component
   const CustomModal = ({ isOpen, handleClose }) => {
@@ -93,87 +96,97 @@ const Schedules = () => {
   // second one
 
   const AddNewSchedule = ({ isOpen2, handleClose2 }) => {
-    const [name, setName] = useState("");
+    const [namee, setNamee] = useState("");
+
     return (
       <Modal
         isOpen={isOpen2}
         onRequestClose={handleClose2}
-        style={customStyles}
         contentLabel="Example Modal"
-        className=""
+        className=" w-[29rem] my-[4rem] mx-auto justify-center flex lg:w-[40rem] md:w-[39rem] sm:w-[30rem] bg-white border"
+        style={{
+          border: "1px solid var(--Button-Background-Alternate, #3B2773",
+        }}
       >
-        <div className="flex justify-between items-center lg:w-[35rem] md:w-[30rem] w-full ">
-          <h2 className="text-md text-[#4A5568] mx-auto mb-4 font-semibold">
-            Add New Schedule
-          </h2>
+        <div className="mt-5">
+          <div className="flex justify-between items-center ">
+            <h2 className="text-md text-[#4A5568] mx-auto mb-4 font-semibold">
+              Add New Schedule
+            </h2>
+            <button onClick={handleClose2} className="text-gray-600">
+              <img src={close} alt="close" className="" />
+            </button>
+          </div>
+          {/* lineee */}
+          <div
+            className="w-full h-[2px] border-b "
+            style={{ background: "var(--Color-Gray-Gray-40, #CBD5E0)" }}
+          ></div>
+          {/* schedule name */}
 
-          <button onClick={handleClose2} className="text-gray-600">
-            <img src={close} alt="close" />
-          </button>
-        </div>
-        {/* lineee */}
-        <div
-          className="w-full h-[2px] border-b "
-          style={{ background: "var(--Color-Gray-Gray-40, #CBD5E0)" }}
-        ></div>
-        <div className="my-6">
-          <form>
-            <label className="text-[#4A5568] text-sm ">
-              Schedule Name
-              <input
-                type="text"
-                value={name}
-                onChange={(e) => setName(e.target.value)}
-                className="mb-2"
-              />
-            </label>
-            <div className="px-[10px] items-center h-[40px] flex w-[566px] rounded border border-[#CBD5E0] focus-within:outline outline-2 outline-blue-600">
-              <input
-                type="text"
-                placeholder="Enter Schedule Name"
-                id="search"
-                className="font-normal w-[320px] h-8 outline-none"
-                style={{
-                  color: "#718096",
-                  fontSize: "14px",
-                }}
-              />
+          <div className="my-6">
+            <form className="w-full">
+              <label className="text-[#4A5568] mr-auto text-sm ">
+                Schedule Name
+              </label>
+              <div className="px-[10px] mt-2 h-[40px] border border-[#CBD5E0] focus-within:outline outline-2 outline-blue-600">
+                <input
+                  type="text"
+                  value={namee}
+                  onChange={(e) => setNamee(e.target.value)}
+                  placeholder="Enter Schedule Name"
+                  id="search"
+                  className="font-normal w-full  h-8 outline-none"
+                  style={{
+                    color: "#718096",
+                    fontSize: "14px",
+                  }}
+                />
+              </div>
+            </form>
+          </div>
+
+          <div className="my-6">
+            <div className=" mx-auto ">
+              <form lassName="">
+                <label className="text-[#4A5568] text-sm ">
+                  Upload Schedule
+                </label>
+                <div className=" mx-auto items-center text-[#4A5568] justify-center w-[400px] md:w-[500px] rounded border border-[#CBD5E0] border-dashed border-focus-within:outline outline-2 px-10">
+                  <img src={upload} alt="upload" className=" mx-auto mt-4" />
+                  <p className="text-center text-[14px]  font-light">
+                    Drag and drop your files here
+                  </p>
+                  <div className="flex items-center mt-6">
+                    <div className="flex-grow h-[1px] bg-[#718096] opacity-[0.4]"></div>
+                    <div className="mx-4">or</div>
+                    <div className="flex-grow h-[1px] bg-[#718096] opacity-[0.4]"></div>
+                  </div>
+                  <label className="bg-gray-200 flex mx-auto h-[32px] px-[12px] mt-9 text-[14px] items-center rounded-sm w-[107px] cursor-pointer">
+                    Browse files
+                    <input
+                      type="file"
+                      className="hidden"
+                      onChange={handleFileUpload}
+                      accept=".pdf, .doc, .docx"
+                    />
+                  </label>
+                  <p className="text-xs flex justify-center my-4">
+                    Max File size: 200mb
+                  </p>
+                </div>
+              </form>
             </div>
-          </form>
-        </div>
+          </div>
 
-        <div className="my-6">
-          <form>
-            <label className="text-[#4A5568] text-sm ">
-              Upload Schedule
-              <input
-                type="text"
-                onChange={(e) => setName(e.target.value)}
-                className="mb-2"
-              />
-            </label>
-            <div className=" mx-auto items-center text-[#4A5568] justify-center w-[566px] rounded border border-[#CBD5E0] border-dashed border-focus-within:outline outline-2 px-10">
-              <img src={upload} alt="upload" className=" mx-auto" />
-              <p className="text-center">Drag and drop your files here</p>
-              <p
-                className="w-full h-[2px] border-b"
-                style={{ background: "var(--Color-Gray-Gray-40, #CBD5E0)" }}
-              ></p>
-              <button className="bg-gray-200 mx-auto" onClick={Addschedule}>
-                Browse files
-              </button>
-              <p className="text-xs">Max File size: 200mb</p>
-            </div>
-          </form>
-        </div>
-
-        <div className="my-2 pt-7 flex justify-start">
-          <button
-            className="bg-[#3B2774] text-white py-2 px-4 rounded"
-            onClick={closeModal2}
-          >
-            Add Schedule
-          </button>
+          <div className="my-2 pt-7 flex justify-start">
+            <button
+              className="bg-[#3B2774] text-white py-2 px-4 rounded"
+              onClick={closeModal2}
+            >
+              Add Schedule
+            </button>
+          </div>
         </div>
       </Modal>
     );
