@@ -57,16 +57,16 @@ const Security = () => {
   };
 
   return (
-    <div className="flex flex-col items-center mt-11">
+    <div className="flex flex-col items-center mt-11  ">
       {/*1  white boxxx  */}
       <div
-        className="bg-white w-[616px] h-[437px] mt-5 rounded"
+        className="bg-white h-[437px] mt-5 rounded w-[295px] sm:w-[450px] md:w-[450px] lg:w-[616px]"
         style={{
           boxShadow:
             "0px 0.073px 6.159px 0px rgba(0, 0, 0, 0.07), 0px 2.338px 17.029px 0px rgba(0, 0, 0, 0.05), 0px 9.853px 41px 0px rgba(0, 0, 0, 0.04), 0px 42px 136px 0px rgba(0, 0, 0, 0.02)",
         }}
       >
-        <div className="m-6  ">
+        <div className="m-6 ">
           <p className="text-[#4A5568] font-semibold text-sm">
             Change Password
           </p>
@@ -81,16 +81,8 @@ const Security = () => {
         {/* formsssss */}
         <div className="m-6">
           <form>
-            <label className="text-[#4A5568] text-sm ">
-              Current Password
-              <input
-                type="text"
-                value={cpassword}
-                onChange={(e) => setCpassword(e.target.value)}
-                className="mb-2"
-              />
-            </label>
-            <div className="px-[10px] items-center h-[40px] flex w-[566px] rounded border border-[#CBD5E0] focus-within:outline outline-2 outline-blue-600">
+            <label className="text-[#4A5568] text-sm">Current Password</label>
+            <div className="px-[10px] items-center h-[40px] flex lg:w-[566px] rounded border border-[#CBD5E0] focus-within:outline outline-2 outline-blue-600">
               <input
                 type="text"
                 placeholder="Enter existing password"
@@ -107,16 +99,8 @@ const Security = () => {
 
         <div className="m-6">
           <form>
-            <label className="text-[#4A5568] text-sm ">
-              New password
-              <input
-                type="text"
-                value={npassword}
-                onChange={(e) => setNpassword(e.target.value)}
-                className="mb-2"
-              />
-            </label>
-            <div className="px-[10px] items-center h-[40px] flex w-[566px] rounded border border-[#CBD5E0] focus-within:outline outline-2 outline-blue-600">
+            <label className="text-[#4A5568] text-sm ">New password</label>
+            <div className="px-[10px] items-center h-[40px] flex lg:w-[566px] rounded border border-[#CBD5E0] focus-within:outline outline-2 outline-blue-600">
               <input
                 type="text"
                 placeholder="Enter new password"
@@ -133,16 +117,8 @@ const Security = () => {
 
         <div className="m-6">
           <form>
-            <label className="text-[#4A5568] text-sm ">
-              Confirm Password
-              <input
-                type="text"
-                value={confirm}
-                onChange={(e) => setConfirm(e.target.value)}
-                className="mb-2"
-              />
-            </label>
-            <div className="px-[10px] items-center h-[40px] flex w-[566px] rounded border border-[#CBD5E0] focus-within:outline outline-2 outline-blue-600">
+            <label className="text-[#4A5568] text-sm ">Confirm Password</label>
+            <div className="px-[10px] items-center h-[40px] flex lg:w-[566px] rounded border border-[#CBD5E0] focus-within:outline outline-2 outline-blue-600">
               <input
                 type="text"
                 placeholder="Re-type password"
@@ -169,9 +145,8 @@ const Security = () => {
         </div>
       </div>
 
-      {/* second white box */}
-
-      <div className="flex items-center mt-3 ">
+      {/* activate ... */}
+      <div className="flex items-center mt-3  ">
         <p className="text-[#4A5568] text-sm">
           Activate 2 Factor Authentication
         </p>
@@ -179,21 +154,21 @@ const Security = () => {
           title="Fund your wallaet by paying into Guarantee Trust Account"
           placement="bottom"
         >
-          <img src={info} alt="info" className=" ml-3 mr-[19rem] " />
+          <img src={info} alt="info" className=" lg:ml-3 lg:mr-[19rem] px-3 " />
         </Tooltip>
         <ToggleButton className="" />
       </div>
 
       {/* second box */}
       <div
-        className="bg-white w-[614px] h-[321px] mt-5 rounded mb-5"
+        className="bg-white w-[295px] sm:w-[450px] md:w-[450px] lg:w-[616px] mt-5 rounded mb-5"
         style={{
           boxShadow:
             "0px 0.073px 6.159px 0px rgba(0, 0, 0, 0.07), 0px 2.338px 17.029px 0px rgba(0, 0, 0, 0.05), 0px 9.853px 41px 0px rgba(0, 0, 0, 0.04), 0px 42px 136px 0px rgba(0, 0, 0, 0.02)",
         }}
       >
-        <div className="grid grid-cols-2 m-6">
-          <div className="items-center justify-center">
+        <div className="lg:grid lg:grid-cols-2 m-6 ">
+          <div className="mx-auto">
             <p className="text-[#4A5568] font-normal text-lg mb-4">
               Enable 2FA
             </p>
@@ -213,11 +188,12 @@ const Security = () => {
               the code, then enter the six-digit code provided by the app in the
               form below.
             </p>
-            <div className="flex mt-3">
+            {/* all those boxes */}
+            <div className="flex mt-3  ">
               <input
                 type="text"
                 id="search"
-                className="font-normal w-[40px] mx-1 h-[40px] text-center outline-none"
+                className="font-normal mr-1 w-[30px] h-[30px] md:w-[40px] md:h-[40px] text-center outline-none"
                 style={{
                   color: "#718096",
                   fontSize: "14px",
@@ -227,7 +203,7 @@ const Security = () => {
               <input
                 type="text"
                 id="search"
-                className="font-normal w-[40px] mx-1 h-[40px] text-center outline-none"
+                className="font-normal mx-1  w-[30px] h-[30px] md:w-[40px] md:h-[40px] text-center outline-none"
                 style={{
                   color: "#718096",
                   fontSize: "14px",
@@ -237,7 +213,7 @@ const Security = () => {
               <input
                 type="text"
                 id="search"
-                className="font-normal w-[40px] mx-1 h-[40px] text-center outline-none"
+                className="font-normal w-[30px] h-[30px] md:w-[40px] md:h-[40px] mx-1  text-center outline-none"
                 style={{
                   color: "#718096",
                   fontSize: "14px",
@@ -247,7 +223,7 @@ const Security = () => {
               <input
                 type="text"
                 id="search"
-                className="font-normal w-[40px] mx-1 h-[40px] text-center outline-none"
+                className="font-normal w-[30px] h-[30px] md:w-[40px] md:h-[40px] mx-1  text-center outline-none"
                 style={{
                   color: "#718096",
                   fontSize: "14px",
@@ -257,7 +233,7 @@ const Security = () => {
               <input
                 type="text"
                 id="search"
-                className="font-normal w-[40px] mx-1 h-[40px] text-center outline-none"
+                className="font-normal w-[30px] h-[30px] md:w-[40px] md:h-[40px] mx-1  text-center outline-none"
                 style={{
                   color: "#718096",
                   fontSize: "14px",
@@ -267,7 +243,7 @@ const Security = () => {
               <input
                 type="text"
                 id="search"
-                className="font-normal w-[40px] mx-1 h-[40px] text-center outline-none"
+                className="font-normal w-[30px] h-[30px] md:w-[40px] md:h-[40px] mx-1  text-center outline-none"
                 style={{
                   color: "#718096",
                   fontSize: "14px",
