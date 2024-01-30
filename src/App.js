@@ -5,9 +5,9 @@ import Payment from "./components/Payment/Payment";
 import Schedules from "./components/Schedules";
 import Beneficiaries from "./components/Beneficiaries";
 import Approvals from "./components/Approvals/Approvals";
-import Users from "./components/Users";
+import Users from "./components/Users/Users";
 import Analytics from "./components/Analytics/Analytics";
-import Settings from "./components/Settings";
+import Settings from "./components/Settings/Settings";
 import Sidebar from "./components/Sidebar";
 import Error from "./components/Error";
 

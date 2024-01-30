@@ -1,9 +1,9 @@
 import React, { useState } from "react";
-import man from "../assets/image 1.png";
-import arrowdown from "../assets/FiChevronDown.svg";
-import General from "../components/General";
-import Security from "../components/Security";
-import SessHis from "../components/SessionHistory";
+import man from "src/assets/image 1.png";
+import arrowdown from "src/assets/FiChevronDown.svg";
+import General from "./General";
+import Security from "./Security";
+import SessHis from "./SessionHistory";
 
 const Settings = () => {
   const [activeTab, setActiveTab] = useState("General");

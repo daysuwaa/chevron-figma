@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import info from "../assets/CkInfoOutline.svg";
-import Scan from "../assets/image 4.png";
+import info from "src/assets/CkInfoOutline.svg";
+import Scan from "src/assets/image 4.png";
 import Tooltip from "@mui/material/Tooltip";
 
 const Security = () => {

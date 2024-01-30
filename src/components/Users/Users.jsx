@@ -1,9 +1,9 @@
 import React, { useState } from "react";
-import man from "../assets/image 1.png";
-import arrowdown from "../assets/FiChevronDown.svg";
-import User from "../components/User";
+import man from "src/assets/image 1.png";
+import arrowdown from "src/assets/FiChevronDown.svg";
+import User from "./User";
 import Modal from "react-modal";
-import close from "../assets/IoCloseOutline.svg";
+import close from "src/assets/IoCloseOutline.svg";
 // import Tooltip from "@mui/material/Tooltip";
 
 const Users = () => {

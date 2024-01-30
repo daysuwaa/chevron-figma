@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import chevron from "../assets/chevron logo.png";
-import info from "../assets/CkInfoOutline.svg";
+import chevron from "src/assets/chevron logo.png";
+import info from "src/assets/CkInfoOutline.svg";
 import Tooltip from "@mui/material/Tooltip";
 
 const General = () => {

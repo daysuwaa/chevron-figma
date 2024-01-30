@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import close from "../assets/IoCloseOutline.svg";
+import close from "src/assets/IoCloseOutline.svg";
 import DataTable from "react-data-table-component";
 
 const Users = () => {
