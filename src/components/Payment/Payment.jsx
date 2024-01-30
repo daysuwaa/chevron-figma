@@ -184,7 +184,7 @@ const Payment = () => {
 
         {/* searchhhhh */}
         <div className="flex mb-2 md:mb-0">
-          <div className="px-[20px] h-12 py-[6px] mr-3 flex w-full rounded border border-[#CBD5E0] focus-within:outline outline-2 outline-blue-600">
+          <div className="px-[20px] h-12 py-[6px] mx-2 flex w-full rounded border border-[#CBD5E0] focus-within:outline outline-2 outline-blue-600">
             <img src={search} alt="searchicon" className="w-[16px]" />
             <input
               type="text"
