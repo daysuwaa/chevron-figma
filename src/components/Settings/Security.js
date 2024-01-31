@@ -80,10 +80,12 @@ const Security = () => {
         {/* formsssss */}
         <div className="m-6">
           <form>
-            <label className="text-[#4A5568] text-sm">Current Password</label>
+            <label htmlFor="ccpassword" className="text-[#4A5568] text-sm">
+              Current Password
+            </label>
             <div className="px-[10px] items-center h-[40px] flex lg:w-[566px] rounded border border-[#CBD5E0] focus-within:outline outline-2 outline-blue-600">
               <input
-                type="text"
+                type="password"
                 placeholder="Enter existing password"
                 value={cpassword}
                 onChange={(e) => setCpassword(e.target.value)}
@@ -95,10 +97,12 @@ const Security = () => {
         </div>
         <div className="m-6">
           <form>
-            <label className="text-[#4A5568] text-sm ">New password</label>
+            <label htmlFor="npassword" className="text-[#4A5568] text-sm ">
+              New password
+            </label>
             <div className="px-[10px] items-center h-[40px] flex lg:w-[566px] rounded border border-[#CBD5E0] focus-within:outline outline-2 outline-blue-600">
               <input
-                type="text"
+                type="password"
                 placeholder="Enter new password"
                 value={npassword}
                 onChange={(e) => setNpassword(e.target.value)}
@@ -110,10 +114,12 @@ const Security = () => {
         </div>
         <div className="m-6">
           <form>
-            <label className="text-[#4A5568] text-sm ">Confirm Password</label>
+            <label htmlFor="c-password" className="text-[#4A5568] text-sm ">
+              Confirm Password
+            </label>
             <div className="px-[10px] items-center h-[40px] flex lg:w-[566px] rounded border border-[#CBD5E0] focus-within:outline outline-2 outline-blue-600">
               <input
-                type="text"
+                type="password"
                 placeholder="Re-type password"
                 id="c-password"
                 value={confirm}
@@ -180,66 +186,80 @@ const Security = () => {
             </p>
             {/* all those boxes */}
             <div className="flex mt-3  ">
-              <input
-                type="text"
-                id="search"
-                className="font-normal mr-1 w-[30px] h-[30px] md:w-[40px] md:h-[40px] text-center outline-none"
-                style={{
-                  color: "#718096",
-                  fontSize: "14px",
-                  border: "1px solid var(--gray-200, #E2E8F0)",
-                }}
-              />
-              <input
-                type="text"
-                id="search"
-                className="font-normal mx-1  w-[30px] h-[30px] md:w-[40px] md:h-[40px] text-center outline-none"
-                style={{
-                  color: "#718096",
-                  fontSize: "14px",
-                  border: "1px solid var(--gray-200, #E2E8F0)",
-                }}
-              />
-              <input
-                type="text"
-                id="search"
-                className="font-normal w-[30px] h-[30px] md:w-[40px] md:h-[40px] mx-1  text-center outline-none"
-                style={{
-                  color: "#718096",
-                  fontSize: "14px",
-                  border: "1px solid var(--gray-200, #E2E8F0)",
-                }}
-              />
-              <input
-                type="text"
-                id="search"
-                className="font-normal w-[30px] h-[30px] md:w-[40px] md:h-[40px] mx-1  text-center outline-none"
-                style={{
-                  color: "#718096",
-                  fontSize: "14px",
-                  border: "1px solid var(--gray-200, #E2E8F0)",
-                }}
-              />
-              <input
-                type="text"
-                id="search"
-                className="font-normal w-[30px] h-[30px] md:w-[40px] md:h-[40px] mx-1  text-center outline-none"
-                style={{
-                  color: "#718096",
-                  fontSize: "14px",
-                  border: "1px solid var(--gray-200, #E2E8F0)",
-                }}
-              />
-              <input
-                type="text"
-                id="search"
-                className="font-normal w-[30px] h-[30px] md:w-[40px] md:h-[40px] mx-1  text-center outline-none"
-                style={{
-                  color: "#718096",
-                  fontSize: "14px",
-                  border: "1px solid var(--gray-200, #E2E8F0)",
-                }}
-              />
+              <form>
+                <input
+                  type="numbers"
+                  id="number"
+                  className="font-normal mr-1 w-[30px] h-[30px] md:w-[40px] md:h-[40px] text-center outline-none"
+                  style={{
+                    color: "#718096",
+                    fontSize: "14px",
+                    border: "1px solid var(--gray-200, #E2E8F0)",
+                  }}
+                />
+              </form>
+              <form>
+                <input
+                  type="number"
+                  id="number2"
+                  className="font-normal mx-1  w-[30px] h-[30px] md:w-[40px] md:h-[40px] text-center outline-none"
+                  style={{
+                    color: "#718096",
+                    fontSize: "14px",
+                    border: "1px solid var(--gray-200, #E2E8F0)",
+                  }}
+                />
+              </form>
+              <form>
+                <input
+                  type="number"
+                  id="number3"
+                  className="font-normal w-[30px] h-[30px] md:w-[40px] md:h-[40px] mx-1  text-center outline-none"
+                  style={{
+                    color: "#718096",
+                    fontSize: "14px",
+                    border: "1px solid var(--gray-200, #E2E8F0)",
+                  }}
+                />
+              </form>
+              <form>
+                <input
+                  type="number"
+                  id="number4"
+                  className="font-normal w-[30px] h-[30px] md:w-[40px] md:h-[40px] mx-1  text-center outline-none"
+                  style={{
+                    color: "#718096",
+                    fontSize: "14px",
+                    border: "1px solid var(--gray-200, #E2E8F0)",
+                  }}
+                />
+              </form>
+
+              <form>
+                <input
+                  type="number"
+                  id="number5"
+                  className="font-normal w-[30px] h-[30px] md:w-[40px] md:h-[40px] mx-1  text-center outline-none"
+                  style={{
+                    color: "#718096",
+                    fontSize: "14px",
+                    border: "1px solid var(--gray-200, #E2E8F0)",
+                  }}
+                />
+              </form>
+
+              <form>
+                <input
+                  type="text"
+                  id="search"
+                  className="font-normal w-[30px] h-[30px] md:w-[40px] md:h-[40px] mx-1  text-center outline-none"
+                  style={{
+                    color: "#718096",
+                    fontSize: "14px",
+                    border: "1px solid var(--gray-200, #E2E8F0)",
+                  }}
+                />
+              </form>
             </div>
             <Checkbox />
 

@@ -64,7 +64,7 @@ const General = () => {
         {/* namee */}
         <div className="m-6 ">
           <form>
-            <label htnlFor="user" className="text-[#4A5568] text-sm  ">
+            <label htmlFor="user" className="text-[#4A5568] text-sm  ">
               User / Organization Name
             </label>
             <div className="px-[10px] items-center h-[40px] flex w-full lg:w-[566px] rounded border border-[#CBD5E0] focus-within:outline outline-2  outline-blue-600">
