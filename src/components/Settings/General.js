@@ -64,14 +64,14 @@ const General = () => {
         {/* namee */}
         <div className="m-6 ">
           <form>
-            <label className="text-[#4A5568] text-sm  ">
+            <label htnlFor="user" className="text-[#4A5568] text-sm  ">
               User / Organization Name
             </label>
             <div className="px-[10px] items-center h-[40px] flex w-full lg:w-[566px] rounded border border-[#CBD5E0] focus-within:outline outline-2  outline-blue-600">
               <input
                 type="text"
                 placeholder="Chevron Group"
-                id="search"
+                id="user"
                 value={name}
                 onChange={(e) => setName(e.target.value)}
                 className="font-normal w-[320px] h-8 outline-none"
@@ -86,12 +86,14 @@ const General = () => {
         {/* email address */}
         <div className="m-6  hidden md:hidden lg:flex ">
           <form className="mr-3">
-            <label className="text-[#4A5568] text-sm ">Email Address</label>
+            <label htmlFor="mail" className="text-[#4A5568] text-sm ">
+              Email Address
+            </label>
             <div className="px-[10px]  items-center h-[40px] flex w-full lg:w-[274px] rounded border border-[#CBD5E0] focus-within:outline outline-2 outline-blue-600">
               <input
-                type="text"
+                type="email"
                 placeholder="info@chevrongroup.com"
-                id="search"
+                id="mail"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 className="font-normal w-[320px] h-8 outline-none"
@@ -104,12 +106,14 @@ const General = () => {
           </form>
           {/* telephone */}
           <form>
-            <label className="text-[#4A5568] text-sm ">Phone</label>
+            <label htmlFor="phone" className="text-[#4A5568] text-sm ">
+              Phone
+            </label>
             <div className="px-[10px] items-center h-[40px] flex w-full lg:w-[274px] rounded border border-[#CBD5E0] focus-within:outline outline-2 outline-blue-600">
               <input
-                type="text"
+                type="tel"
                 placeholder="+234 908 776 1245"
-                id="search"
+                id="phone"
                 className="font-normal w-[320px] h-8 outline-none"
                 style={{
                   color: "#718096",
@@ -122,14 +126,16 @@ const General = () => {
         {/* small screen */}
         <div className="m-6 lg:hidden">
           <form>
-            <label className="text-[#4A5568] text-sm ">Email</label>
+            <label htmlFor="email" className="text-[#4A5568] text-sm ">
+              Email
+            </label>
             <div className="px-[10px] items-center h-[40px] flex w-full  rounded border border-[#CBD5E0] focus-within:outline outline-2 outline-blue-600">
               <input
                 type="text"
                 placeholder="info@chevrongroup.com"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
-                id="search"
+                id="email"
                 className="font-normal w-[320px]  outline-none"
                 style={{
                   color: "#718096",
@@ -141,55 +147,53 @@ const General = () => {
         </div>
 
         <div className="m-6 lg:hidden ">
-          <form>
-            <label className="text-[#4A5568] text-sm">Telephone</label>
-            <div className="px-[10px] items-center h-[40px] mt-3 flex w-full  rounded border border-[#CBD5E0] focus-within:outline outline-2 outline-blue-600">
-              <input
-                type="text"
-                placeholder="+234 908 776 1245"
-                value={phone}
-                onChange={(e) => setPhone(e.target.value)}
-                id="search"
-                className="font-normal w-[320px] h-8 outline-none"
-                style={{
-                  color: "#718096",
-                  fontSize: "14px",
-                }}
-              />
-            </div>
-          </form>
+          <label htmlFor="tele" className="text-[#4A5568] text-sm">
+            Telephone
+          </label>
+          <div className="px-[10px] items-center h-[40px] mt-3 flex w-full  rounded border border-[#CBD5E0] focus-within:outline outline-2 outline-blue-600">
+            <input
+              type="tel"
+              placeholder="+234 908 776 1245"
+              value={phone}
+              onChange={(e) => setPhone(e.target.value)}
+              id="tele"
+              className="font-normal w-[320px] h-8 outline-none"
+              style={{
+                color: "#718096",
+                fontSize: "14px",
+              }}
+            />
+          </div>
         </div>
 
         {/* timer  */}
         <div className="m-6">
-          <form>
-            <label className="flex text-[#4A5568] text-sm mb-2">
-              Interactive Timer
-              <Tooltip
-                title="Log me out if im inactive for this long"
-                placement="bottom"
-              >
-                <img
-                  src={info}
-                  alt="alert"
-                  className="ml-2 mt-1 w-[14px] h-[14px] cursor-pointer"
-                />
-              </Tooltip>
-            </label>
+          <label className="flex text-[#4A5568] text-sm mb-2">
+            Interactive Timer
+            <Tooltip
+              title="Log me out if im inactive for this long"
+              placement="bottom"
+            >
+              <img
+                src={info}
+                alt="alert"
+                className="ml-2 mt-1 w-[14px] h-[14px] cursor-pointer"
+              />
+            </Tooltip>
+          </label>
 
-            <div className="px-[0px] items-center h-[40px] flex w-full lg:w-[566px] rounded border border-[#CBD5E0] focus-within:outline outline-2 outline-blue-600">
-              <select
-                value={timer}
-                className="outline-none w-full"
-                onChange={handleChange}
-              >
-                <option value="Ford">5 mins</option>
-                <option value="Volvo">10 mins</option>
-                <option value="Fiat">20 mins</option>
-                <option value="Fiat">1 hour</option>
-              </select>
-            </div>
-          </form>
+          <div className="px-[0px] items-center h-[40px] flex w-full lg:w-[566px] rounded border border-[#CBD5E0] focus-within:outline outline-2 outline-blue-600">
+            <select
+              value={timer}
+              className="outline-none w-full"
+              onChange={handleChange}
+            >
+              <option value="Ford">5 mins</option>
+              <option value="Volvo">10 mins</option>
+              <option value="Fiat">20 mins</option>
+              <option value="Fiat">1 hour</option>
+            </select>
+          </div>
 
           <div className="flex mt-6">
             <p className="text-[#4A5568] text-sm">Email Notifications</p>
