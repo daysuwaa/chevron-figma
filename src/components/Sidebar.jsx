@@ -14,15 +14,18 @@ const Sidebar = () => {
   const locationObj = useLocation();
   const activeLink = locationObj.pathname;
 
+  const Hover = () => {
+    <div className=""></div>;
+  };
   const renderLink = (link, text, imgSrc) => {
     const isActive = activeLink === link;
     const wrapperClasses = isActive ? "pl-[10px] " : "pl-[19px]";
 
     return (
       <Link to={link} className="flex">
-        <div className=" items-center space-x-12">
+        <div className=" items-center space-x-12 ">
           <div
-            className={`flex ${wrapperClasses}  w-full md:w-[226px] h-[44px]`}
+            className={`flex ${wrapperClasses}  w-full md:w-[226px] h-[44px]  `}
             style={{
               marginLeft: isActive ? "10px" : "",
               borderRadius: isActive ? "4px" : "",
@@ -35,7 +38,7 @@ const Sidebar = () => {
             <img
               src={imgSrc}
               alt="icon"
-              className="w-[18px] h-[18px] mt-3 md:mx-0"
+              className="w-[18px] h-[18px] mt-3 md:mx-0 "
             />
             <p
               className={`text-white tracking-wider px-3  mt-2 ${
