@@ -77,7 +77,7 @@ const Security = () => {
             </span>
           </p>
         </div>
-        \{/* formsssss */}
+        {/* formsssss */}
         <div className="m-6">
           <form>
             <label className="text-[#4A5568] text-sm">Current Password</label>
