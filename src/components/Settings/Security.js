@@ -67,7 +67,7 @@ const Security = () => {
         }}
       >
         <div className="m-6 ">
-          <p className="text-[#4A5568] font-semibold text-sm">
+          <p className="text-[#4A5568] font-semibold text-[18px]">
             Change Password
           </p>
           <p className="text-[#718096] font-light text-xs pt-2">
@@ -85,12 +85,10 @@ const Security = () => {
               <input
                 type="text"
                 placeholder="Enter existing password"
+                value={cpassword}
+                onChange={(e) => setCpassword(e.target.value)}
                 id="ccpassword"
-                className="font-normal w-[320px] h-8 outline-none"
-                style={{
-                  color: "#718096",
-                  fontSize: "14px",
-                }}
+                className="font-normal w-[320px] h-8 outline-none text-[#4A5568] text-[14px]"
               />
             </div>
           </form>
@@ -103,11 +101,7 @@ const Security = () => {
                 type="text"
                 placeholder="Enter new password"
                 id="npassword"
-                className="font-normal w-[320px] h-8 outline-none"
-                style={{
-                  color: "#718096",
-                  fontSize: "14px",
-                }}
+                className="font-normal w-[320px] h-8 outline-none text-[#4A5568] text-[14px] "
               />
             </div>
           </form>
@@ -120,11 +114,7 @@ const Security = () => {
                 type="text"
                 placeholder="Re-type password"
                 id="c-password"
-                className="font-normal w-[320px] h-8 outline-none"
-                style={{
-                  color: "#718096",
-                  fontSize: "14px",
-                }}
+                className="font-normal w-[320px] h-8 outline-none text-[#4A5568] text-[14px]"
               />
             </div>
           </form>
@@ -251,17 +241,16 @@ const Security = () => {
             <Checkbox />
 
             {/* button */}
-            <div
-              className="h-[32px] mt-7 rounded bg-white px-[12px] items-center w-[100px] text-center"
+
+            <button
+              className="text-[#1C065A] text-center  text-sm h-[32px] mt-7 rounded bg-white px-[12px] items-center w-[100px] "
               style={{
                 border:
                   " 1px solid var(--Button-Background-Alternate, #3B2773)",
               }}
             >
-              <button className="text-[#1C065A] text-center items-centermt-2 text-sm">
-                Enable 2FA
-              </button>
-            </div>
+              Enable 2FA
+            </button>
           </div>
         </div>
       </div>
