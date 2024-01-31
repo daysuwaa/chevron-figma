@@ -40,7 +40,7 @@ const Payment = () => {
   const styling = (bgcolor, text, icons, money, tcols, icon) => {
     return (
       <div
-        className="container px-4 md:px-7 py-5 my-4 h-full"
+        className="container px-4 md:px-5 py-5 my-4 h-full"
         style={{
           borderRadius: "4px",
           boxShadow: "0px 3px 12px 0px rgba(197, 197, 197, 0.25)",
