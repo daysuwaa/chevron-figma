@@ -14,6 +14,7 @@ import copy from "src/assets/IoCopyOutline.svg";
 import search from "src/assets/CkSearch.svg";
 import filter from "src/assets/FiFilter.svg";
 import Tooltip from "@mui/material/Tooltip";
+import toast, { Toaster } from "react-hot-toast";
 
 const Payment = () => {
   const money1 = millify(953.2, {
@@ -91,6 +92,9 @@ const Payment = () => {
   // the clipboard thingy
   const copyToClipboard = () => {
     const textToCopy = "0012345678";
+    toast("Copied to clipboard!", {
+      id: "ert",
+    });
     if (navigator.clipboard) return navigator.clipboard.writeText(textToCopy);
 
     const textArea = document.createElement("textarea");
@@ -172,13 +176,14 @@ const Payment = () => {
           </p>
           <div className="md:ml-0 flex ml-auto mx-3  md:mx:0 md:my:0">
             <button
-              className="flex bg-[#3B2773] w-[6.5rem] sm:w-[8.5rem] h-[2.5rem] py-[6px] px-[10px] rounded justify-center items-center text-white md:text-[13px] lg:text-[13px] sm:text-[13px] text-[10px]"
+              className="flex bg-[#3B2773] h-[2.5rem] py-[0.375rem] px-[0.625rem] rounded justify-center items-center text-white md:text-[13px] lg:text-[13px] sm:text-[13px] text-[10px]"
               onClick={copyToClipboard}
             >
               <img src={gtb} alt="gtblogo" className="text-center pr-1 " />
               0422822151
               <img src={copy} alt="copy" className="ml-1 w-4 h-4"></img>
             </button>
+            <Toaster />
           </div>
         </div>
 
