@@ -5,8 +5,8 @@ import Tooltip from "@mui/material/Tooltip";
 
 const General = () => {
   const [name, setName] = useState("");
+  const [phone, setPhone] = useState("");
   const [email, setEmail] = useState("");
-  const [number, setNumber] = useState("");
   const [timer, setTimer] = useState("");
   const handleChange = (event) => {
     setTimer(event.target.value);
@@ -64,14 +64,16 @@ const General = () => {
         {/* namee */}
         <div className="m-6 ">
           <form>
-            <label className="text-[#4A5568] text-sm ">
+            <label className="text-[#4A5568] text-sm  ">
               User / Organization Name
             </label>
-            <div className="px-[10px] items-center h-[40px] flex w-full lg:w-[566px] rounded border border-[#CBD5E0] focus-within:outline outline-2 outline-blue-600">
+            <div className="px-[10px] items-center h-[40px] flex w-full lg:w-[566px] rounded border border-[#CBD5E0] focus-within:outline outline-2  outline-blue-600">
               <input
                 type="text"
                 placeholder="Chevron Group"
                 id="search"
+                value={name}
+                onChange={(e) => setName(e.target.value)}
                 className="font-normal w-[320px] h-8 outline-none"
                 style={{
                   color: "#718096",
@@ -84,20 +86,14 @@ const General = () => {
         {/* email address */}
         <div className="m-6  hidden md:hidden lg:flex ">
           <form className="mr-3">
-            <label className="text-[#4A5568] text-sm ">
-              Email Address
-              <input
-                type="text"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                className="mb-2 "
-              />
-            </label>
+            <label className="text-[#4A5568] text-sm ">Email Address</label>
             <div className="px-[10px]  items-center h-[40px] flex w-full lg:w-[274px] rounded border border-[#CBD5E0] focus-within:outline outline-2 outline-blue-600">
               <input
                 type="text"
                 placeholder="info@chevrongroup.com"
                 id="search"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
                 className="font-normal w-[320px] h-8 outline-none"
                 style={{
                   color: "#718096",
@@ -108,15 +104,7 @@ const General = () => {
           </form>
           {/* telephone */}
           <form>
-            <label className="text-[#4A5568] text-sm ">
-              Phone
-              <input
-                type="text"
-                value={number}
-                onChange={(e) => setNumber(e.target.value)}
-                className="mb-2"
-              />
-            </label>
+            <label className="text-[#4A5568] text-sm ">Phone</label>
             <div className="px-[10px] items-center h-[40px] flex w-full lg:w-[274px] rounded border border-[#CBD5E0] focus-within:outline outline-2 outline-blue-600">
               <input
                 type="text"
@@ -134,19 +122,13 @@ const General = () => {
         {/* small screen */}
         <div className="m-6 lg:hidden">
           <form>
-            <label className="text-[#4A5568] text-sm ">
-              Email
-              <input
-                type="text"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                className="mb-2"
-              />
-            </label>
+            <label className="text-[#4A5568] text-sm ">Email</label>
             <div className="px-[10px] items-center h-[40px] flex w-full  rounded border border-[#CBD5E0] focus-within:outline outline-2 outline-blue-600">
               <input
                 type="text"
                 placeholder="info@chevrongroup.com"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
                 id="search"
                 className="font-normal w-[320px]  outline-none"
                 style={{
@@ -165,6 +147,8 @@ const General = () => {
               <input
                 type="text"
                 placeholder="+234 908 776 1245"
+                value={phone}
+                onChange={(e) => setPhone(e.target.value)}
                 id="search"
                 className="font-normal w-[320px] h-8 outline-none"
                 style={{
