@@ -119,16 +119,15 @@ const Security = () => {
             </div>
           </form>
           {/* button */}
-          <div
-            className="h-[32px] mt-7 rounded bg-white px-[12px] items-center w-[144px] text-center"
+
+          <button
+            className="text-[#1C065A]  items-center text-sm h-[32px] mt-7 rounded bg-white   w-[144px] text-center"
             style={{
               border: " 1px solid var(--Button-Background-Alternate, #3B2773)",
             }}
           >
-            <button className="text-[#1C065A] text-center items-centermt-2 text-sm">
-              Update Password
-            </button>
-          </div>
+            Update Password
+          </button>
         </div>
       </div>
 
@@ -243,7 +242,7 @@ const Security = () => {
             {/* button */}
 
             <button
-              className="text-[#1C065A] text-center  text-sm h-[32px] mt-7 rounded bg-white px-[12px] items-center w-[100px] "
+              className="text-[#1C065A] text-center  text-sm h-[32px] mt-7 rounded bg-white ] items-center w-[100px] "
               style={{
                 border:
                   " 1px solid var(--Button-Background-Alternate, #3B2773)",
