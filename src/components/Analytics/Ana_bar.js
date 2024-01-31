@@ -110,7 +110,7 @@ export default class Example extends PureComponent {
           <Tooltip />
           <Legend className="text-black font-thin" />
           <Bar yAxisId="left" dataKey="inflows" fill="#844CFC" />
-          <Bar yAxisId="right" dataKey="outflows" fill="#FFE1D4" />
+          <Bar yAxisId="right" dataKey="outflows" fill="#FFA1D4" />
         </BarChart>
       </ResponsiveContainer>
     );
