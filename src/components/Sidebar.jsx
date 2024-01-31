@@ -14,9 +14,6 @@ const Sidebar = () => {
   const locationObj = useLocation();
   const activeLink = locationObj.pathname;
 
-  const Hover = () => {
-    <div className=""></div>;
-  };
   const renderLink = (link, text, imgSrc) => {
     const isActive = activeLink === link;
     const wrapperClasses = isActive ? "pl-[10px] " : "pl-[19px]";
