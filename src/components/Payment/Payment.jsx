@@ -244,7 +244,7 @@ const Payment = () => {
             Outflow
           </button>
           <button
-            className={`px-[6px] py-2 text-[14px] ${
+            className={`mx-[2rem] py-2 text-[14px] ${
               activeTab === "inflow"
                 ? "font-bold text-[#1C065A] border-b-2 border-[#1C065A]"
                 : "text-gray-500"
