@@ -100,6 +100,8 @@ const Security = () => {
               <input
                 type="text"
                 placeholder="Enter new password"
+                value={npassword}
+                onChange={(e) => setNpassword(e.target.value)}
                 id="npassword"
                 className="font-normal w-[320px] h-8 outline-none text-[#4A5568] text-[14px] "
               />
@@ -114,6 +116,8 @@ const Security = () => {
                 type="text"
                 placeholder="Re-type password"
                 id="c-password"
+                value={confirm}
+                onChange={(e) => setConfirm(e.target.value)}
                 className="font-normal w-[320px] h-8 outline-none text-[#4A5568] text-[14px]"
               />
             </div>
