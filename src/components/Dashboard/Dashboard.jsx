@@ -186,8 +186,8 @@ const Dashboard = () => {
           <div className="flex items-center justify-center">
             <Piechart />
           </div>
-          <div className="grid grid-cols-2 md:grid-cols-1">
-            <div className="flex col-span-1 md:mx-auto items-center">
+          <div className="grid grid-cols-1 ">
+            <div className="flex col-span-1 mx-auto  items-center">
               <p className="bg-[#6FCF97] w-[12px] h-[12px] mr-1"></p>
               <p className="text-[#1C065A] font-light text-[12px]">
                 Credit:
@@ -196,7 +196,7 @@ const Dashboard = () => {
                 </span>
               </p>
             </div>
-            <div className="flex col-span-1 md:mx-auto items-center">
+            <div className="flex col-span-1 mx-auto items-center">
               <p className="bg-[#EB5757] w-[12px] h-[12px] mr-1"></p>
               <p className="text-[#1C065A] font-light text-[12px]">
                 Debit:
