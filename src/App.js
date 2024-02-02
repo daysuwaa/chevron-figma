@@ -2,8 +2,8 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import React from "react";
 import Dashboard from "./components/Dashboard/Dashboard";
 import Payment from "./components/Payment/Payment";
-import Schedules from "./components/Schedules";
-import Beneficiaries from "./components/Beneficiaries";
+import Schedules from "./components/Schedule/Schedules";
+import Beneficiaries from "./components/Beneficiary/Beneficiaries";
 import Approvals from "./components/Approvals/Approvals";
 import Users from "./components/Users/Users";
 import Analytics from "./components/Analytics/Analytics";
@@ -19,7 +19,7 @@ function App() {
         <Sidebar />
         <div className="content max-h-full overflow-y-auto" style={{ flex: 1 }}>
           <Routes>
-            <Route path="*" element={<Dashboard />} />
+            <Route path="/" element={<Dashboard />} />
             <Route path="/payment" element={<Payment />} />
             <Route path="/schedules" element={<Schedules />} />
             <Route path="/beneficiaries" element={<Beneficiaries />} />
@@ -28,6 +28,7 @@ function App() {
             <Route path="/analytics" element={<Analytics />} />
             <Route path="/settings" element={<Settings />} />
             <Route path="/error" element={<Error />} />
+            <Route path="*" element={<Error />} />
           </Routes>
         </div>
       </div>

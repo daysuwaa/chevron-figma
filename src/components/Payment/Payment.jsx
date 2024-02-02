@@ -15,6 +15,8 @@ import search from "src/assets/CkSearch.svg";
 import filter from "src/assets/FiFilter.svg";
 import Tooltip from "@mui/material/Tooltip";
 import toast, { Toaster } from "react-hot-toast";
+import { Link } from "react-router-dom";
+import Beneficiary from "/Users/adesuwa/Desktop/my-react-app/chevron-figma/src/components/Beneficiary/Beneficiary.js";
 
 const Payment = () => {
   const money1 = millify(953.2, {
@@ -260,19 +262,21 @@ const Payment = () => {
           </button>
         </div>
 
-        <button
-          style={{
-            background: "var(--Button-Background-Alternate, #3B2773)",
-            padding: "0px 12px",
-            borderRadius: "4px",
-            height: "32px",
-            marginBottom: "10px",
-          }}
-        >
-          <p className="text-white text-[10px] sm:text-[14px]">
-            Export Payments
-          </p>
-        </button>
+        <Link to={Beneficiary}>
+          <button
+            style={{
+              background: "var(--Button-Background-Alternate, #3B2773)",
+              padding: "0px 12px",
+              borderRadius: "4px",
+              height: "32px",
+              marginBottom: "10px",
+            }}
+          >
+            <p className="text-white text-[10px] sm:text-[14px]">
+              Export Payments
+            </p>
+          </button>
+        </Link>
       </div>
 
       {activeTab === "inflow" ? <Inflow /> : <Outflow />}
