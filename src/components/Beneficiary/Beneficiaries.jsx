@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import man from "../assets/image 1.png";
-import arrowdown from "../assets/FiChevronDown.svg";
-import computer from "../assets/computer.png";
-import close from "../assets/IoCloseOutline.svg";
-import upload from "../assets/IoCloudUploadOutline.svg";
+import arrowdown from "src/assets/FiChevronDown.svg";
+import computer from "src/assets/computer.png";
+import close from "src/assets/IoCloseOutline.svg";
+import upload from "src/assets/IoCloudUploadOutline.svg";
 import Modal from "react-modal";
 
 const Beneficiaries = () => {
