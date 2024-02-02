@@ -143,8 +143,8 @@ const Schedules = () => {
       >
         <div className="mt-5">
           <div className="flex items-center ">
-            <h2 className="text-md text-[#4A5568] md:mx-auto  mx-[5rem] mb-4 font-semibold">
-              Add New Beneficiary
+            <h2 className="text-md text-[#4A5568] mx-auto mb-4 font-semibold">
+              Add New Schedule
             </h2>
             <button onClick={handleButtonClick} className="text-gray-600">
               <img src={close} alt="close" className="mb-2" />
@@ -156,19 +156,22 @@ const Schedules = () => {
             style={{ background: "var(--Color-Gray-Gray-40, #CBD5E0)" }}
           ></div>
 
-          {/* Beneficiary name */}
+          {/* schedule name */}
           <div className=" my-6">
-            <form className="">
-              <label className="text-[#4A5568] mr-auto text-sm ">
-                Beneficiary Name
+            <form>
+              <label
+                htmlFor="schedulename"
+                className="text-[#4A5568] mr-auto text-sm "
+              >
+                Schedule Name
               </label>
-              <div className="px-[10px] mt-2 h-[40px] md:w-[550px] border border-[#CBD5E0] focus-within:outline outline-2 outline-blue-600">
+              <div className="px-[10px] mt-1 h-[40px] md:w-[550px] border border-[#CBD5E0] focus-within:outline outline-2 outline-blue-600">
                 <input
                   type="text"
                   value={namee}
                   onChange={(e) => setNamee(e.target.value)}
-                  placeholder="Enter Beneficiary Name"
-                  id="search"
+                  placeholder="Enter Schedule Name"
+                  id="schedulename"
                   className="font-normal w-full  h-8 outline-none"
                   style={{
                     color: "#718096",
@@ -181,10 +184,8 @@ const Schedules = () => {
 
           <div className="my-6">
             <div className="md:mx-auto">
-              <label className="text-[#4A5568] text-sm ">
-                Upload Beneficiary
-              </label>
-              <div className=" mx-auto items-center text-[#4A5568] justify-center w-full rounded border border-[#CBD5E0] border-dashed border-focus-within:outline outline-2 px-10">
+              <label className="text-[#4A5568] text-sm ">Upload Schedule</label>
+              <div className=" mx-auto items-center mt-1 text-[#4A5568] justify-center w-full rounded border border-[#CBD5E0] border-dashed border-focus-within:outline outline-2 px-10">
                 <img src={upload} alt="upload" className=" mx-auto mt-4" />
                 <p className="text-center text-[14px]  font-light">
                   Drag and drop your files here
@@ -198,7 +199,7 @@ const Schedules = () => {
                   Browse files
                   <input
                     type="file"
-                    className="hidden"
+                    className="hidden "
                     onChange={handleFileUpload}
                     accept=".pdf, .doc, .docx"
                   />
@@ -210,14 +211,12 @@ const Schedules = () => {
             </div>
           </div>
 
-          <div className="my-2 pt-7 flex justify-start">
-            <button
-              className="bg-[#3B2774] text-white py-2 px-4 rounded"
-              onClick={closeModal2}
-            >
-              Add Beneficiary
-            </button>
-          </div>
+          <button
+            className="bg-[#3B2774] my-2 flex justify-start text-white py-2 px-4 rounded opacity-20"
+            onClick={closeModal2}
+          >
+            Add Schedule
+          </button>
         </div>
       </Modal>
     );
