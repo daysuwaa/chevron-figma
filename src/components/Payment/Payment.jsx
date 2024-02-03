@@ -214,33 +214,7 @@ const Payment = () => {
           {/* the filter */}
 
           <div className="flex mb-2 mx-2 lg:ml-auto">
-            {/* <button onClick={() => setShowPopover(!showPopover)}
-              className="px-[20px] grid-cols-2 py-[12px] h-12 flex w-[6.5rem]"
-              style={{
-                borderRadius: "4px",
-                border: "1px solid var(--Color-Gray-Gray-40, #CBD5E0)",
-              }}
-            
-            >
-              <img
-                src={filter}
-                alt="searchicon"
-                className="w-[16px] h-[16px] mt-1"
-              />
-              <p
-                className="font-light"
-                style={{
-                  color: "var(--Color-Gray-Gray-60, #718096)",
-                  fontSize: "14px",
-                  marginLeft: "6px",
-                }}
-              >
-                Filter
-              </p>
-            </button> */}
-            {/* <Filter /> */}
             <div className="relative">
-              {/* ... other code ... */}
               <button
                 className="px-[20px] grid-cols-2 py-[12px] h-12 flex w-[6.5rem]"
                 style={{
@@ -269,7 +243,6 @@ const Payment = () => {
                 isOpen={isFilterOpen}
                 onClose={() => setFilterOpen(false)}
               />
-              {/* ... rest of your code ... */}
             </div>
             {/* end */}
           </div>
