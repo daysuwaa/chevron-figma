@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
+import { Link } from "react-router-dom";
 import millify from "millify";
 import Inflow from "./Inflows";
 import Outflow from "./Outflows";
@@ -15,10 +16,13 @@ import search from "src/assets/CkSearch.svg";
 import filter from "src/assets/FiFilter.svg";
 import Tooltip from "@mui/material/Tooltip";
 import toast, { Toaster } from "react-hot-toast";
-import { Link } from "react-router-dom";
-import Beneficiary from "/Users/adesuwa/Desktop/my-react-app/chevron-figma/src/components/Beneficiary/Beneficiary.js";
+import Filter from "./Filter";
 
 const Payment = () => {
+  const [isFilterOpen, setFilterOpen] = useState(false);
+
+  const handleFilterClick = () => setFilterOpen(!isFilterOpen);
+
   const money1 = millify(953.2, {
     precision: 2,
     lowercase: true,
@@ -208,13 +212,15 @@ const Payment = () => {
           </div>
 
           {/* the filter */}
+
           <div className="flex mb-2 mx-2 lg:ml-auto">
-            <div
+            {/* <button onClick={() => setShowPopover(!showPopover)}
               className="px-[20px] grid-cols-2 py-[12px] h-12 flex w-[6.5rem]"
               style={{
                 borderRadius: "4px",
                 border: "1px solid var(--Color-Gray-Gray-40, #CBD5E0)",
               }}
+            
             >
               <img
                 src={filter}
@@ -231,7 +237,41 @@ const Payment = () => {
               >
                 Filter
               </p>
+            </button> */}
+            {/* <Filter /> */}
+            <div className="relative">
+              {/* ... other code ... */}
+              <button
+                className="px-[20px] grid-cols-2 py-[12px] h-12 flex w-[6.5rem]"
+                style={{
+                  borderRadius: "4px",
+                  border: "1px solid var(--Color-Gray-Gray-40, #CBD5E0)",
+                }}
+                onClick={handleFilterClick}
+              >
+                <img
+                  src={filter}
+                  alt="searchicon"
+                  className="w-[16px] h-[16px] mt-1"
+                />
+                <p
+                  className="font-light"
+                  style={{
+                    color: "var(--Color-Gray-Gray-60, #718096)",
+                    fontSize: "14px",
+                    marginLeft: "6px",
+                  }}
+                >
+                  Filter
+                </p>
+              </button>
+              <Filter
+                isOpen={isFilterOpen}
+                onClose={() => setFilterOpen(false)}
+              />
+              {/* ... rest of your code ... */}
             </div>
+            {/* end */}
           </div>
         </div>
       </div>
@@ -262,21 +302,19 @@ const Payment = () => {
           </button>
         </div>
 
-        <Link to={Beneficiary}>
-          <button
-            style={{
-              background: "var(--Button-Background-Alternate, #3B2773)",
-              padding: "0px 12px",
-              borderRadius: "4px",
-              height: "32px",
-              marginBottom: "10px",
-            }}
-          >
-            <p className="text-white text-[10px] sm:text-[14px]">
-              Export Payments
-            </p>
-          </button>
-        </Link>
+        <button
+          style={{
+            background: "var(--Button-Background-Alternate, #3B2773)",
+            padding: "0px 12px",
+            borderRadius: "4px",
+            height: "32px",
+            marginBottom: "10px",
+          }}
+        >
+          <p className="text-white text-[10px] sm:text-[14px]">
+            Export Payments
+          </p>
+        </button>
       </div>
 
       {activeTab === "inflow" ? <Inflow /> : <Outflow />}
