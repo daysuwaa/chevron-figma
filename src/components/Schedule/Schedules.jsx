@@ -5,6 +5,9 @@ import computer from "src/assets/computer.png";
 import close from "src/assets/IoCloseOutline.svg";
 import upload from "src/assets/IoCloudUploadOutline.svg";
 import Modal from "react-modal";
+import Toggle from "../Stuff/ToggleButton";
+import GetSchedule from "./GetScheduleModal";
+import AddSchedule from "./AddScheduleModal";
 
 const Schedules = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -90,7 +93,7 @@ const Schedules = () => {
             Use existing Schedule list?
           </p>
           <div className="ml-auto  mt-4">
-            <ToggleButton className="justify-end" />
+            <Toggle className="justify-end" />
           </div>
         </div>
         <div className="my-2 pt-7 flex justify-start">

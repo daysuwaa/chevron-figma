@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import close from "src/assets/IoCloseOutline.svg";
 // import upload from "src/assets/IoCloudUploadOutline.svg";
 import Modal from "react-modal";
+import ToggleButton from "../Stuff/ToggleButton";
 
 const Schedules = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -15,29 +16,6 @@ const Schedules = () => {
   const [isModalOpen3, setIsModalOpen3] = useState(false);
   const openModal3 = () => setIsModalOpen3(true);
   const closeModal3 = () => setIsModalOpen3(false);
-
-  const ToggleButton = () => {
-    const [isActive, setIsActive] = useState(false);
-
-    const toggleButton = () => {
-      setIsActive(!isActive);
-    };
-
-    return (
-      <button
-        className={`h-4 w-8 flex rounded-full ${
-          isActive ? "bg-green-500 justify-end" : "bg-gray-200 justify-start"
-        } focus:outline-none transition duration-300 ease-in-out`}
-        onClick={toggleButton}
-      >
-        <span
-          className={` flex h-full w-1/2 rounded-full ${
-            isActive ? "bg-gray-100" : "bg-gray-100"
-          }`}
-        ></span>
-      </button>
-    );
-  };
 
   const CustomModal = ({
     isOpen,

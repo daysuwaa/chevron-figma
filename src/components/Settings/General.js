@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import chevron from "src/assets/chevron logo.png";
 import info from "src/assets/CkInfoOutline.svg";
 import Tooltip from "@mui/material/Tooltip";
+import ToggleButton from "../Stuff/ToggleButton";
 
 const General = () => {
   const [name, setName] = useState("");
@@ -10,29 +11,6 @@ const General = () => {
   const [timer, setTimer] = useState("");
   const handleChange = (event) => {
     setTimer(event.target.value);
-  };
-
-  const ToggleButton = () => {
-    const [isActive, setIsActive] = useState(false);
-
-    const toggleButton = () => {
-      setIsActive(!isActive);
-    };
-
-    return (
-      <button
-        className={`h-4 w-8 flex rounded-full ${
-          isActive ? "bg-green-500 justify-end" : "bg-gray-100 justify-start"
-        } focus:outline-none transition duration-300 ease-in-out`}
-        onClick={toggleButton}
-      >
-        <span
-          className={` flex h-full w-1/2 rounded-full ${
-            isActive ? "bg-gray-100" : "bg-gray-400"
-          }`}
-        ></span>
-      </button>
-    );
   };
 
   return (

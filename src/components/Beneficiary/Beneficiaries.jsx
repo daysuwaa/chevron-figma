@@ -4,6 +4,7 @@ import arrowdown from "src/assets/FiChevronDown.svg";
 import computer from "src/assets/computer.png";
 import close from "src/assets/IoCloseOutline.svg";
 import upload from "src/assets/IoCloudUploadOutline.svg";
+import ToggleButton from "../Stuff/ToggleButton";
 import Beneficiary from "./Beneficiary";
 import Modal from "react-modal";
 
@@ -13,29 +14,7 @@ const Beneficiaries = () => {
     const selectedFiles = e.target.files;
     console.log(selectedFiles);
   };
-  // for the toggle button
-  const ToggleButton = () => {
-    const [isActive, setIsActive] = useState(false);
 
-    const toggleButton = () => {
-      setIsActive(!isActive);
-    };
-
-    return (
-      <button
-        className={`h-4 w-8 flex rounded-full ${
-          isActive ? "bg-green-500 justify-end" : "bg-gray-200 justify-start"
-        } focus:outline-none transition duration-300 ease-in-out`}
-        onClick={toggleButton}
-      >
-        <span
-          className={` flex h-full w-1/2 rounded-full ${
-            isActive ? "bg-gray-100" : "bg-gray-100"
-          }`}
-        ></span>
-      </button>
-    );
-  };
   const customStyles = {
     content: {
       top: "40%",
