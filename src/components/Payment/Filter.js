@@ -86,8 +86,8 @@ const Filter = ({ isOpen, onClose }) => {
           <div className="px-[10px] items-center mt-1  rounded border border-[#CBD5E0] focus-within:outline outline-2 outline-blue-600">
             <input
               type="date"
-              value={beneficiary}
-              onChange={(e) => setBeneficiary(e.target.value)}
+              value={start}
+              onChange={(e) => setStart(e.target.value)}
               placeholder="Start date"
               id="startdate"
               className="font-normal w-[117px] h-8 outline-none"
@@ -102,8 +102,8 @@ const Filter = ({ isOpen, onClose }) => {
           <div className="px-[10px] ml-2 items-center mt-7  rounded border border-[#CBD5E0] focus-within:outline outline-2 outline-blue-600">
             <input
               type="date"
-              value={beneficiary}
-              onChange={(e) => setBeneficiary(e.target.value)}
+              value={end}
+              onChange={(e) => setEnd(e.target.value)}
               placeholder="End date"
               id="enddate"
               className="font-normal w-[117px]  h-8 outline-none"
