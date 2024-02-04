@@ -6,8 +6,6 @@ import Outflow from "./Outflows";
 import payments from "src/assets/FiCreditCard.svg";
 import calendar from "src/assets/FiCalendar.svg";
 import wallet from "src/assets/IoWalletOutline.svg";
-import man from "src/assets/image 1.png";
-import arrowdown from "src/assets/FiChevronDown.svg";
 import winfo from "src/assets/CkInfoOutline-2.svg";
 import info from "src/assets/CkInfoOutline.svg";
 import gtb from "src/assets/image 2.png";
@@ -16,6 +14,7 @@ import search from "src/assets/CkSearch.svg";
 import filter from "src/assets/FiFilter.svg";
 import Tooltip from "@mui/material/Tooltip";
 import toast, { Toaster } from "react-hot-toast";
+import Navbarr from "../Stuff/Navbar";
 import Filter from "./Filter";
 
 const Payment = () => {
@@ -119,18 +118,8 @@ const Payment = () => {
       style={{ backgroundColor: "#F6F6F6" }}
       className="w-full h-full overflow-auto"
     >
-      {/* nav- dashbord side */}
-      <div
-        className="flex px-4 md:px-[32px] py-[18px] justify-between h-[60px]"
-        style={{ background: "#fff" }}
-      >
-        <p className="font-semibold tracking-wide ">Payment</p>
-        <div className="flex items-center">
-          <img src={man} alt="arrow" className="w-[24px] h-[24px] mr-3" />
-          <img src={arrowdown} alt="man" className="w-[14px] h-[14px]" />
-        </div>
-      </div>
-      {/* end of nav */}
+      {/* navbar */}
+      <Navbarr title="Payment" />
 
       {/* framesssss */}
       <div className="grid grid-cols-1 md:grid-cols-3 mx-3 md:mx-7 gap-4">

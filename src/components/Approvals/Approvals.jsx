@@ -1,6 +1,5 @@
 import React from "react";
-import man from "src/assets/image 1.png";
-import arrowdown from "src/assets/FiChevronDown.svg";
+import Navbar from "../Stuff/Navbar";
 import search from "src/assets/CkSearch.svg";
 import filter from "src/assets/FiFilter.svg";
 import Approval from "./Approval";
@@ -9,18 +8,8 @@ const Approvals = () => {
   return (
     <div>
       {/* navbar */}
-      <div
-        className="flex px-[32px] py-[18px] justify-between h-[60px]"
-        style={{ background: "#fff" }}
-      >
-        <p className="font-semibold tracking-wide ">Approvals</p>
-        <div className="flex items-center">
-          <img src={man} alt="arrow" className="w-[24px] h-[24px] mr-3" />
-          <img src={arrowdown} alt="man" className="w-[14px] h-[14px]" />
-        </div>
-      </div>
+      <Navbar title="Approvals" />
       {/* end of nav */}
-
       {/* search thingyy */}
       <div className="md:flex pt-8">
         <div className="px-[20px] mx-5 py-[6px] flex md:w-[320px] rounded border border-[#CBD5E0] focus-within:outline outline-2 outline-blue-600">
@@ -62,15 +51,12 @@ const Approvals = () => {
           </p>
         </div>
       </div>
-
       <div
         className="w-full border-b mt-4"
         style={{ background: "var(--Color-Gray-Gray-40, #CBD5E0)" }}
       ></div>
-
       {/* imported the file approval */}
       <Approval />
-
       {/* end of code */}
     </div>
   );

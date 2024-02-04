@@ -1,6 +1,5 @@
 import React, { useState } from "react";
-import man from "src/assets/image 1.png";
-import arrowdown from "src/assets/FiChevronDown.svg";
+import Navbar from "../Stuff/Navbar";
 import General from "./General";
 import Security from "./Security";
 import SessHis from "./SessionHistory";
@@ -10,17 +9,7 @@ const Settings = () => {
 
   return (
     <div>
-      <div
-        className="flex px-4 md:px-[32px] py-[18px] justify-between h-[60px]"
-        style={{ background: "#fff" }}
-      >
-        <p className="font-semibold tracking-wide ">Settings</p>
-        <div className="flex items-center">
-          <img src={man} alt="arrow" className="w-[24px] h-[24px] mr-3" />
-          <img src={arrowdown} alt="man" className="w-[14px] h-[14px]" />
-        </div>
-      </div>
-
+      <Navbar title="Settings" />;
       <div className="flex flex-col items-center mt-4">
         <div>
           <button
@@ -61,7 +50,6 @@ const Settings = () => {
           style={{ background: "var(--Color-Gray-Gray-40, #CBD5E0)" }}
         ></div>
       </div>
-
       {/* if tab is active its on general else its on security else its on sesshis */}
       {activeTab === "General" ? (
         <General />

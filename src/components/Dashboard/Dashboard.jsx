@@ -3,8 +3,7 @@ import millify from "millify";
 import { Link } from "react-router-dom";
 import Barchat from "./Barchart";
 import Piechart from "./Piechart";
-import man from "src/assets/image 1.png";
-import arrowdown from "src/assets/FiChevronDown.svg";
+import Navbar from "../Stuff/Navbar";
 import arrowright2 from "src/assets/FiChevronRight-2.svg";
 import arrowright from "src/assets/FiChevronRight.svg";
 import users from "src/assets/FiUsers.svg";
@@ -96,19 +95,9 @@ const Dashboard = () => {
       style={{ backgroundColor: "#F6F6F6" }}
       className="w-full h-full overflow-auto "
     >
-      {/* nav- dashbord side */}
-      <div
-        className="flex px-4 md:px-[32px] py-[18px] justify-between h-[60px]"
-        style={{ background: "#fff" }}
-      >
-        <p className="font-semibold tracking-wide ">Dashboard</p>
-        <div className="flex items-center">
-          <img src={man} alt="arrow" className="w-[24px] h-[24px] mr-3" />
-          <img src={arrowdown} alt="man" className="w-[14px] h-[14px]" />
-        </div>
-      </div>
+      {/* NAV */}
+      <Navbar title="Dashboard" />
       {/* end of nav */}
-
       {/* framesssss */}
       <div className="grid grid-cols-1 md:grid-cols-3 mx-3 md:mx-7 pb-7 gap-4">
         {styling(
@@ -142,9 +131,7 @@ const Dashboard = () => {
         )}
       </div>
       {/* end of frames */}
-
-      {/* barrrssssss */}
-
+      <Navbar title="Dashboard" />;{/* barrrssssss */}
       <div className="grid lg:grid-cols-3 grid-cols-1 gap-2 md:gap-4 mx-3 md:mx-7 my-5">
         {" "}
         <div className="col-span-1 lg:col-span-2 bg-white p-4 text-center">
@@ -208,7 +195,6 @@ const Dashboard = () => {
           </div>
         </div>
       </div>
-
       {/* receipts payoutsss */}
       <div className="py-7">
         {/* <div className="bg-white max-w-full h-[355px] mx-7"> */}

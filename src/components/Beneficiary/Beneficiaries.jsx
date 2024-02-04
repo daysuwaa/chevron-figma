@@ -1,6 +1,5 @@
 import React, { useState } from "react";
-import man from "src/assets/image 1.png";
-import arrowdown from "src/assets/FiChevronDown.svg";
+import Navbar from "../Stuff/Navbar";
 import computer from "src/assets/computer.png";
 import close from "src/assets/IoCloseOutline.svg";
 import upload from "src/assets/IoCloudUploadOutline.svg";
@@ -195,17 +194,7 @@ const Beneficiaries = () => {
   return (
     <div className="bg-[#F6F6F6] h-full">
       {/* navbar */}
-      <div
-        className="flex px-[32px] py-[18px] justify-between h-[60px]"
-        style={{ background: "#fff" }}
-      >
-        <p className="font-semibold tracking-wide ">Beneficiaries</p>
-        <div className="flex items-center">
-          <img src={man} alt="arrow" className="w-[24px] h-[24px] mr-3" />
-          <img src={arrowdown} alt="man" className="w-[14px] h-[14px]" />
-        </div>
-      </div>
-
+      <Navbar title="Beneficiary" />
       {/* button */}
       <div className="flex ml-auto justify-end items-center mx-5  mt-8">
         <button
@@ -216,7 +205,6 @@ const Beneficiaries = () => {
         </button>
         <AddBeneficiary isOpen2={isModalOpen2} handleClose2={closeModal2} />
       </div>
-
       {/* centered image with text below */}
       <div className="flex flex-col items-center mt-[8rem]">
         <img src={computer} alt="" className="mb-4" />

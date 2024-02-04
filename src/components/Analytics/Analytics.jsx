@@ -5,8 +5,7 @@ import Anawave from "./Ana_wave";
 import Anawave2 from "./Ana_wave2";
 import Anawave3 from "./Ana_wave3";
 import millify from "millify";
-import man from "src/assets/image 1.png";
-import arrowdown from "src/assets/FiChevronDown.svg";
+import Navbar from "../Stuff/Navbar";
 import icloud from "src/assets/IoCloudDownloadOutline.svg";
 import redarrow from "src/assets/Redarrow.svg";
 import greenarow from "src/assets/Green.svg";
@@ -68,19 +67,8 @@ const Analytics = () => {
   return (
     <div className="h-full">
       {/* NAVBAR */}
-      <div
-        className="flex px-[32px] py-[18px] justify-between h-[60px]"
-        style={{ background: "#fff" }}
-      >
-        <p className="font-semibold tracking-wide ">Analytical</p>
-        <div className="flex items-center">
-          <img src={man} alt="arrow" className="w-[24px] h-[24px] mr-3" />
-          <img src={arrowdown} alt="man" className="w-[14px] h-[14px]" />
-        </div>
-      </div>
-
+      <Navbar title="Analytics" />
       {/* END OF NAV */}
-
       {/* the chartssss */}
       <div className="grid lg:grid-cols-3 grid-cols-1 gap-4 mt-4 mx-3 md:mx-7">
         {/* Column with bar chart */}
@@ -131,7 +119,6 @@ const Analytics = () => {
           </div>
         </div>
       </div>
-
       <div className="grid grid-cols-1 mt-6  lg:grid-cols-3 md:grid-cols-1 mx-3 md:mx-7 gap-4 ">
         <div className="w-full">
           {graphs(
@@ -169,7 +156,6 @@ const Analytics = () => {
           )}
         </div>
       </div>
-
       {/* end of code */}
     </div>
   );

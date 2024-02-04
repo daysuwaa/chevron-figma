@@ -1,6 +1,5 @@
 import React, { useState } from "react";
-import man from "src/assets/image 1.png";
-import arrowdown from "src/assets/FiChevronDown.svg";
+import Navbar from "../Stuff/Navbar";
 import computer from "src/assets/computer.png";
 import close from "src/assets/IoCloseOutline.svg";
 import upload from "src/assets/IoCloudUploadOutline.svg";
@@ -227,17 +226,8 @@ const Schedules = () => {
 
   return (
     <div className="bg-[#F6F6F6] h-full">
-      <div
-        className="flex px-[32px] py-[18px] justify-between h-[60px]"
-        style={{ background: "#fff" }}
-      >
-        <p className="font-semibold tracking-wide ">Schedules</p>
-        <div className="flex items-center">
-          <img src={man} alt="arrow" className="w-[24px] h-[24px] mr-3" />
-          <img src={arrowdown} alt="man" className="w-[14px] h-[14px]" />
-        </div>
-      </div>
-
+      {/* navbar */}
+      <Navbar title="Schedule" />
       <div className="flex ml-auto justify-end items-center mx-5 md:px-[10px] mt-8">
         <button
           className="bg-[#3B2774] h-[32px] w-[153px] rounded text-center text-white text-sm gap-8"
@@ -246,7 +236,6 @@ const Schedules = () => {
           Add New Schedule
         </button>
       </div>
-
       <div className="flex flex-col items-center mt-[8rem]">
         <img src={computer} alt="" className="mb-4" />
         <p className="text-center text-[#1C065A] font-light tracking-wide text-xl">
