@@ -16,6 +16,8 @@ const Users = () => {
       marginRight: "-50%",
       transform: "translate(-50%, -50%)",
       padding: "2rem",
+      // background: "black",
+      // opacity: "0.2",
       // backgroundColor: "#000",
       // opacity: "0.5",
     },
@@ -36,7 +38,7 @@ const Users = () => {
         style={customStyles}
         contentLabel="Example Modal"
       >
-        <div className=" bg-white bg-opacity-100 ">
+        <div className=" ">
           <div className="flex justify-between items-center lg:w-[35rem] md:w-[30rem] w-full">
             <h2 className="text-md  text-[#4A5568] mx-auto mb-4 font-semibold">
               Add New User
@@ -57,20 +59,16 @@ const Users = () => {
 
           <div className="my-6">
             <form>
-              <label className="text-[#4A5568] text-sm ">
+              <label html="fname" className="text-[#4A5568] text-sm ">
                 Full Name
-                <input
-                  type="text"
-                  value={name}
-                  onChange={(e) => setName(e.target.value)}
-                  className="mb-2"
-                />
               </label>
               <div className="px-[10px] items-center h-[40px] flex w-[566px] rounded border border-[#CBD5E0] focus-within:outline outline-2 outline-blue-600">
                 <input
                   type="text"
+                  value={name}
+                  onChange={(e) => setName(e.target.value)}
                   placeholder="Enter Full Name"
-                  id="search"
+                  id="fname"
                   className="font-normal w-[320px] h-8 outline-none"
                   style={{
                     color: "#718096",
@@ -83,20 +81,16 @@ const Users = () => {
           {/* #2 email adress */}
           <div className="my-6">
             <form>
-              <label className="text-[#4A5568] text-sm ">
+              <label htmlFor="emailll" className="text-[#4A5568] text-sm ">
                 Email Address
-                <input
-                  type="text"
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
-                  className="mb-2"
-                />
               </label>
               <div className="px-[10px] items-center h-[40px] flex w-[566px] rounded border border-[#CBD5E0] focus-within:outline outline-2 outline-blue-600">
                 <input
-                  type="text"
+                  type="email"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
                   placeholder="Enter Email Address"
-                  id="search"
+                  id="emailll"
                   className="font-normal w-[320px] h-8 outline-none text-lg"
                   style={{
                     color: "#718096",
@@ -109,20 +103,16 @@ const Users = () => {
           {/* #3 password */}
           <div className="my-6">
             <form>
-              <label className="text-[#4A5568] text-sm ">
+              <label htmlFor="password" className="text-[#4A5568] text-sm ">
                 Password
-                <input
-                  type="text"
-                  value={password}
-                  onChange={(e) => setPassword(e.target.value)}
-                  className="mb-2"
-                />
               </label>
               <div className="px-[10px] items-center h-[40px] flex w-[566px] rounded border border-[#CBD5E0] focus-within:outline outline-2 outline-blue-600">
                 <input
-                  type="text"
+                  type="password"
+                  value={password}
+                  onChange={(e) => setPassword(e.target.value)}
                   placeholder="Enter Password"
-                  id="search"
+                  id="passwordd"
                   className="font-normal w-[320px] h-8 outline-none"
                   style={{
                     color: "#718096",
