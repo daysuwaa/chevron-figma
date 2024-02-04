@@ -1,13 +1,13 @@
 import React from "react";
-import chevron from "../assets/chevron logo.png";
-import dashboard from "../assets/IoSpeedometerOutline.svg";
-import approvals from "../assets/FiCheckCircle.svg";
-import payments from "../assets/FiCreditCard.svg";
-import analytics from "../assets/FiPieChart.svg";
-import users from "../assets/FiUsers.svg";
-import beneficiary from "../assets/IoWalletOutline.svg";
-import schedules from "../assets/BsClock-2.svg";
-import settings from "../assets/BsGear.svg";
+import chevron from "src/assets/chevron logo.png";
+import dashboard from "src/assets/IoSpeedometerOutline.svg";
+import approvals from "src/assets/FiCheckCircle.svg";
+import payments from "src/assets/FiCreditCard.svg";
+import analytics from "src/assets/FiPieChart.svg";
+import users from "src/assets/FiUsers.svg";
+import beneficiary from "src/assets/IoWalletOutline.svg";
+import schedules from "src/assets/BsClock-2.svg";
+import settings from "src/assets/BsGear.svg";
 import { Link, useLocation } from "react-router-dom";
 
 const Sidebar = () => {

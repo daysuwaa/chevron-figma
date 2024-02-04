@@ -9,7 +9,7 @@ const Settings = () => {
 
   return (
     <div>
-      <Navbar title="Settings" />;
+      <Navbar title="Settings" />
       <div className="flex flex-col items-center mt-4">
         <div>
           <button

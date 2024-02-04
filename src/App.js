@@ -8,8 +8,8 @@ import Approvals from "./components/Approvals/Approvals";
 import Users from "./components/Users/Users";
 import Analytics from "./components/Analytics/Analytics";
 import Settings from "./components/Settings/Settings";
-import Sidebar from "./components/Sidebar";
-import Error from "./components/Error";
+import Sidebar from "./components/Stuff/Sidebar";
+import Error from "./components/Stuff/Error";
 
 function App() {
   return (
