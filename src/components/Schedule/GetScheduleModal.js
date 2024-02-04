@@ -1,9 +1,9 @@
 // GetScheduleModal.jsx
-import React from "react";
-import { ModalTitle } from "react-bootstrap";
+import React, { useState } from "react";
 import Modal from "react-modal";
 import close from "src/assets/IoCloseOutline.svg";
-import Toggle from "../Stuff/ToggleButton";
+import Toggle from "./Toggle";
+import Dropdown from "./Dropdown";
 
 const GetScheduleModal = ({
   isOpen,
@@ -11,6 +11,7 @@ const GetScheduleModal = ({
   modalTitle,
   handleButtonClick,
 }) => {
+  const [isActive, setIsActive] = useState(false);
   return (
     <Modal
       isOpen={isOpen}
@@ -45,20 +46,25 @@ const GetScheduleModal = ({
         </button>
       </div>
       <div
-        className="w-full h-[2px] border-b "
+        className="w-full h-[2px] border-b  "
         style={{ background: "var(--Color-Gray-Gray-40, #CBD5E0)" }}
       ></div>
-      <div className="mt-4 flex">
-        <p className="text-[#4A5568] text-sm mt-4">
-          Use existing Schedule list?
-        </p>
-        <div className="ml-auto  mt-4">
-          <Toggle className="justify-end" />
-        </div>
+      <div className="mt-4 flex items-center justify-between relative">
+        <p className="text-[#4A5568] text-sm">Use existing Schedule list?</p>
+        <Toggle />
+        {isActive && (
+          <div className="absolute top-full left-0 w-[100rem] z-10">
+            <Dropdown />
+          </div>
+        )}
       </div>
-      <div className="my-2 pt-7 flex justify-start">
+
+      <div className="my-2">
         <button
-          className="bg-[#3B2774] text-white py-2 px-4 rounded"
+          className={`bg-[#3B2774] text-white py-2 px-4 ${
+            isActive ? "pt-7 flex justify-start" : "mt-[5rem] "
+          }
+          } rounded`}
           onClick={handleButtonClick}
         >
           Get Template
