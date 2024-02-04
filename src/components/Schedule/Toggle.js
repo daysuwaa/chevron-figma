@@ -12,7 +12,7 @@ const Toggle = () => {
     <div className="ml-2 inline-block relative">
       <button
         className={`h-4 w-8 flex rounded-full ${
-          isActive ? "bg-red-500 justify-end" : "bg-gray-200 justify-start"
+          isActive ? "bg-green-500 justify-end" : "bg-gray-200 justify-start"
         } focus:outline-none transition duration-300 ease-in-out`}
         onClick={handleToggle}
       >

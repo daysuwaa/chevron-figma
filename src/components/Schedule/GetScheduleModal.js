@@ -9,7 +9,7 @@ const GetScheduleModal = ({
   isOpen,
   handleClose,
   modalTitle,
-  handleButtonClick,
+  //   handleButtonClick,
 }) => {
   const [isActive, setIsActive] = useState(false);
   return (
@@ -65,7 +65,7 @@ const GetScheduleModal = ({
             isActive ? "pt-7 flex justify-start" : "mt-[5rem] "
           }
           } rounded`}
-          onClick={handleButtonClick}
+          onClick={handleClose}
         >
           Get Template
         </button>
