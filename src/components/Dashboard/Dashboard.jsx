@@ -131,7 +131,7 @@ const Dashboard = () => {
         )}
       </div>
       {/* end of frames */}
-      <Navbar title="Dashboard" />;{/* barrrssssss */}
+
       <div className="grid lg:grid-cols-3 grid-cols-1 gap-2 md:gap-4 mx-3 md:mx-7 my-5">
         {" "}
         <div className="col-span-1 lg:col-span-2 bg-white p-4 text-center">

@@ -7,8 +7,9 @@ const AddScheduleModal = ({
   isOpen,
   handleClose,
   modalTitle,
-  handleFileUpload,
   name,
+  handleFileUpload,
+  namee,
   setName,
   handleButtonClick,
 }) => {
@@ -56,7 +57,7 @@ const AddScheduleModal = ({
               htmlFor="schedulename"
               className="text-[#4A5568] mr-auto text-sm "
             >
-              Schedule Name
+              {namee}
             </label>
             <div className="px-[10px] mt-1 h-[40px] md:w-[550px] border border-[#CBD5E0] focus-within:outline outline-2 outline-blue-600">
               <input

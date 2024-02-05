@@ -58,6 +58,8 @@ const Schedules = () => {
 
         <AddScheduleModal
           isOpen={isAddScheduleModalOpen}
+          modalTitle={"Add New Schedule"}
+          namee={"Schedule Name"}
           handleClose={closeAddScheduleModal}
         />
       </div>
