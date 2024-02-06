@@ -1,24 +1,17 @@
+// UploadSchedule.js
 import React, { useState } from "react";
 import Modal from "react-modal";
 import close from "src/assets/IoCloseOutline.svg";
-import ScheduleTable from "./Schedule-table";
 import { Link } from "react-router-dom";
-import upload from "src/assets/IoCloudUploadOutline.svg";
 
-const AddScheduleModal = ({
+const UploadSchedule = ({
   isOpen,
   handleClose,
   modalTitle,
-  name,
-  handleFileUpload,
-  namee,
-  setName,
+  sname,
+  snamee,
+  setNamee,
 }) => {
-  const [isScheduleTableOpen, setIsScheduleTableOpen] = useState(false);
-
-  const openScheduleTable = () => setIsScheduleTableOpen(true);
-  const closeScheduleTable = () => setIsScheduleTableOpen(false);
-
   return (
     <Modal
       isOpen={isOpen}
@@ -59,19 +52,19 @@ const AddScheduleModal = ({
         <div className="my-6">
           <form>
             <label
-              htmlFor="schedulename"
-              className="text-[#4A5568] mr-auto text-sm"
+              htmlFor="schedulenamee"
+              className="text-[#4A5568] mr-auto text-sm "
             >
-              {namee}
+              {snamee}
             </label>
-            <div className="px-[10px] mt-1 h-[40px] md:w-[550px] border border-[#CBD5E0] focus-within:outline outline-2 outline-blue-600">
+            <div className="px-[10px] mt-2 items-center text-center h-[40px] md:w-[550px] border border-[#CBD5E0] focus-within:outline outline-2 outline-blue-600">
               <input
                 type="text"
-                value={name}
-                onChange={(e) => setName(e.target.value)}
+                value={sname}
+                onChange={(e) => setNamee(e.target.value)}
                 placeholder="Enter Schedule Name"
-                id="schedulename"
-                className="font-normal w-full h-8 outline-none"
+                id="schedulenamee"
+                className="font-normal mt-1 w-full h-8 outline-none"
                 style={{
                   color: "#718096",
                   fontSize: "14px",
@@ -84,25 +77,18 @@ const AddScheduleModal = ({
           <div className="md:mx-auto">
             <label className="text-[#4A5568] text-sm">Upload Schedule</label>
           </div>
-          <p className="text-[12px] text-[#4A5568]">Choose a different file</p>
+          <p className="text-[12px] text-[#4A5568] underline">
+            Choose a different file
+          </p>
         </div>
         <Link to="/scheduletable">
           <button className="bg-[#3B2774] my-2 flex justify-start text-white py-2 px-4 rounded">
             Add Schedule
           </button>
         </Link>
-
-        {isScheduleTableOpen && (
-          <ScheduleTable
-            isOpen={isScheduleTableOpen}
-            modalTitle={"Add New Schedule"}
-            namee={"Schedule Name"}
-            handleClose={closeScheduleTable}
-          />
-        )}
       </div>
     </Modal>
   );
 };
 
-export default AddScheduleModal;
+export default UploadSchedule;

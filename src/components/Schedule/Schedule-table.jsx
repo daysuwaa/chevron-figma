@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-
 import search from "src/assets/CkSearch.svg";
 import filter from "src/assets/FiFilter.svg";
 import GetScheduleModal from "./GetScheduleModal";
@@ -7,12 +6,7 @@ import AddScheduleModal from "./AddScheduleModal";
 import DataTable from "react-data-table-component";
 import Navbar from "../Stuff/Navbar";
 
-const Users = () => {
-  const [isEditModalOpen, setIsEditModalOpen] = useState(false);
-  const openEditModal = () => setIsEditModalOpen(true);
-  const closeEditModal = () => setIsEditModalOpen(false);
-
-  // State and functions for Deactivate Modal
+const ScheduleTable = () => {
   const [isGetScheduleOpen, setIsGetScheduleOpen] = useState(false);
   const openGetSchedule = () => setIsGetScheduleOpen(true);
   const closeGetSchedule = () => setIsGetScheduleOpen(false);
@@ -20,6 +14,7 @@ const Users = () => {
   const [isAddScheduleModalOpen, setIsAddScheduleModalOpen] = useState(false);
   const openAddScheduleModal = () => setIsAddScheduleModalOpen(true);
   const closeAddScheduleModal = () => setIsAddScheduleModalOpen(false);
+
   const columns = [
     {
       name: <div className="font-bold text-[#4A5568]">SCHEDULE ID</div>,
@@ -57,7 +52,7 @@ const Users = () => {
               height: "30px",
               marginRight: "10px",
             }}
-            onClick={openEditModal} // Open modal on button click
+            onClick={openAddScheduleModal}
             className="cursor-pointer"
           >
             {row.status1}
@@ -103,7 +98,7 @@ const Users = () => {
   ];
   return (
     <div>
-      <Navbar title={"Schedule"} />
+      <Navbar title="Schedule" />
       <div className="lg:flex pt-8">
         <div className="px-[20px] mx-5 py-[6px] flex md:w-[320px] rounded border border-[#CBD5E0] focus-within:outline outline-2 outline-blue-600">
           <img src={search} alt="searchicon" className="w-[16px]" />
@@ -188,4 +183,4 @@ const Users = () => {
   );
 };
 
-export default Users;
+export default ScheduleTable;

@@ -1,23 +1,28 @@
+// AddScheduleModal.js
 import React, { useState } from "react";
 import Modal from "react-modal";
 import close from "src/assets/IoCloseOutline.svg";
 import ScheduleTable from "./Schedule-table";
 import { Link } from "react-router-dom";
 import upload from "src/assets/IoCloudUploadOutline.svg";
+import UploadSchedule from "./UploadSchedule";
 
 const AddScheduleModal = ({
   isOpen,
   handleClose,
   modalTitle,
   name,
-  handleFileUpload,
+
   namee,
   setName,
 }) => {
   const [isScheduleTableOpen, setIsScheduleTableOpen] = useState(false);
+  const [isUploadScheduleOpen, setIsUploadScheduleOpen] = useState(false);
 
-  const openScheduleTable = () => setIsScheduleTableOpen(true);
+  // const openScheduleTable = () => setIsScheduleTableOpen(true);
   const closeScheduleTable = () => setIsScheduleTableOpen(false);
+  const openUploadSchedule = () => setIsUploadScheduleOpen(true);
+  const closeUploadSchedule = () => setIsUploadScheduleOpen(false);
 
   return (
     <Modal
@@ -93,15 +98,18 @@ const AddScheduleModal = ({
                 <div className="mx-4">or</div>
                 <div className="flex-grow h-[1px] bg-[#718096] opacity-[0.4]"></div>
               </div>
-              <label className="bg-gray-200 flex mx-auto h-[32px] px-[12px] mt-9 text-[14px] items-center rounded-sm w-[107px] cursor-pointer">
+              <button
+                onClick={openUploadSchedule}
+                className="bg-gray-200 flex mx-auto h-[32px] px-[12px] mt-9 text-[14px] items-center rounded-sm w-[107px] cursor-pointer"
+              >
                 Browse files
-                <input
+                {/* <input
                   type="file"
                   className="hidden"
                   onChange={handleFileUpload}
                   accept=".pdf, .doc, .docx"
-                />
-              </label>
+                /> */}
+              </button>
               <p className="text-xs flex justify-center my-4">
                 Max File size: 200mb
               </p>
@@ -122,6 +130,12 @@ const AddScheduleModal = ({
             handleClose={closeScheduleTable}
           />
         )}
+        <UploadSchedule
+          snamee="Schedule Name"
+          isOpen={isUploadScheduleOpen}
+          modalTitle={"Add New Schedule"}
+          handleClose={closeUploadSchedule}
+        />
       </div>
     </Modal>
   );
