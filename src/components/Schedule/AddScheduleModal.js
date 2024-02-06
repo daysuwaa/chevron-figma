@@ -1,4 +1,3 @@
-// AddScheduleModal.js
 import React, { useState } from "react";
 import Modal from "react-modal";
 import close from "src/assets/IoCloseOutline.svg";
@@ -19,7 +18,6 @@ const AddScheduleModal = ({
   const [isScheduleTableOpen, setIsScheduleTableOpen] = useState(false);
   const [isUploadScheduleOpen, setIsUploadScheduleOpen] = useState(false);
 
-  // const openScheduleTable = () => setIsScheduleTableOpen(true);
   const closeScheduleTable = () => setIsScheduleTableOpen(false);
   const openUploadSchedule = () => setIsUploadScheduleOpen(true);
   const closeUploadSchedule = () => setIsUploadScheduleOpen(false);
@@ -36,11 +34,11 @@ const AddScheduleModal = ({
         },
         content: {
           top: "40%",
-          left: "50%",
+          left: "42%",
           right: "auto",
           bottom: "auto",
           marginRight: "-50%",
-          transform: "translate(-50%, -40%)",
+          transform: "translate(-50%, -42%)",
           padding: "2rem",
           margin: "2rem",
           backgroundColor: "#fff",
@@ -103,12 +101,6 @@ const AddScheduleModal = ({
                 className="bg-gray-200 flex mx-auto h-[32px] px-[12px] mt-9 text-[14px] items-center rounded-sm w-[107px] cursor-pointer"
               >
                 Browse files
-                {/* <input
-                  type="file"
-                  className="hidden"
-                  onChange={handleFileUpload}
-                  accept=".pdf, .doc, .docx"
-                /> */}
               </button>
               <p className="text-xs flex justify-center my-4">
                 Max File size: 200mb
