@@ -102,9 +102,9 @@ const ScheduleTable = () => {
   return (
     <div>
       <Navbar title="Schedules" />
-      <div className="lg:flex pt-8">
-        <div className="px-[20px] mx-5 py-[6px] flex md:w-[320px] rounded border border-[#CBD5E0] focus-within:outline outline-2 outline-blue-600">
-          <img src={search} alt="searchicon" className="w-[16px] h-9 " />
+      <div className="md:flex pt-8">
+        <div className="px-[20px] h-10 mx-5 flex md:w-[320px] rounded border border-[#CBD5E0] focus-within:outline outline-2 outline-blue-600">
+          <img src={search} alt="searchicon" className="w-[16px]  " />
           <input
             type="text"
             placeholder="Search by Payment Id"
@@ -119,13 +119,13 @@ const ScheduleTable = () => {
           />
         </div>
         <div
-          className="px-[20px] py-[12px] mx-5 mt-3 md:mx-5 md:mt-3 lg:mt-0 flex w-[100px] "
+          className="px-[20px] h-10 items-center mx-5 mt-3 md:mx-5 sm:mt-3 md:mt-0 lg:mt-0 flex w-[100px] "
           style={{
             borderRadius: "4px",
             border: "1px solid var(--Color-Gray-Gray-40, #CBD5E0)",
           }}
         >
-          <img src={filter} alt="searchicon" className="w-[16px] mt-1" />
+          <img src={filter} alt="searchicon" className="w-[16px] " />
           <p
             className="font-light"
             style={{
@@ -137,9 +137,10 @@ const ScheduleTable = () => {
             Filter
           </p>
         </div>
-        <div className="ml-auto sm:mt-3 mt-3 md:mt-3 lg:flex lg:mt-0 px-5  ">
+        {/* md  large */}
+        <div className=" hidden sm:hidden md:hidden lg:flex ml-auto  px-5  ">
           <button
-            className=" h-[40px] mr-2 mb-3 text-[#1C065A]  w-[200px]  text-[14px] sm:text-[16px] rounded bg-white  text-center  "
+            className="mr-2 mb-3 text-[#1C065A] h-10  w-[200px]  text-[14px] sm:text-[16px] rounded bg-white  text-center  "
             style={{
               border: " 1px solid var(--Button-Background-Alternate, #3B2773)",
             }}
@@ -147,13 +148,34 @@ const ScheduleTable = () => {
           >
             Get Schedule Template
           </button>
+
           <button
-            className="bg-[#3B2774] h-[40px] w-[153px] rounded text-center text-white text-sm gap-8"
+            className="bg-[#3B2774] w-[153px] h-10 rounded text-center text-white text-sm"
             onClick={openAddScheduleModal}
           >
             Add New Schedule
           </button>
         </div>
+
+        {/* xs screen */}
+      </div>
+      <div className="block md:block lg:hidden ml-auto pt-5 md:mt-0  px-5  ">
+        <button
+          className="mr-2 mb-3 text-[#1C065A] h-10  w-[200px]  text-[14px] sm:text-[16px] rounded bg-white  text-center  "
+          style={{
+            border: " 1px solid var(--Button-Background-Alternate, #3B2773)",
+          }}
+          onClick={openGetSchedule}
+        >
+          Get Schedule Template
+        </button>
+
+        <button
+          className="bg-[#3B2774] w-[153px] h-10 rounded text-center text-white text-sm"
+          onClick={openAddScheduleModal}
+        >
+          Add New Schedule
+        </button>
       </div>
 
       <div
