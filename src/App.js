@@ -10,6 +10,7 @@ import Analytics from "./components/Analytics/Analytics";
 import Settings from "./components/Settings/Settings";
 import Sidebar from "./components/Stuff/Sidebar";
 import Error from "./components/Stuff/Error";
+import Scheduletable from "./components/Schedule/Schedule-table";
 
 function App() {
   return (
@@ -27,7 +28,7 @@ function App() {
             <Route path="/users" element={<Users />} />
             <Route path="/analytics" element={<Analytics />} />
             <Route path="/settings" element={<Settings />} />
-            <Route path="/error" element={<Error />} />
+            <Route path="/scheduletable" element={<Scheduletable />} />
             <Route path="*" element={<Error />} />
           </Routes>
         </div>

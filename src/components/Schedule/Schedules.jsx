@@ -1,12 +1,9 @@
-// // Schedules.jsx
 import React, { useState } from "react";
 import Navbar from "../Stuff/Navbar";
 import computer from "src/assets/computer.png";
-import Modal from "react-modal";
-import close from "src/assets/IoCloseOutline.svg";
-import upload from "src/assets/IoCloudUploadOutline.svg";
 import GetScheduleModal from "./GetScheduleModal";
 import AddScheduleModal from "./AddScheduleModal";
+// import ScheduleTable from "./Schedule-table";
 
 const Schedules = () => {
   const [isGetScheduleOpen, setIsGetScheduleOpen] = useState(false);
@@ -16,6 +13,10 @@ const Schedules = () => {
   const [isAddScheduleModalOpen, setIsAddScheduleModalOpen] = useState(false);
   const openAddScheduleModal = () => setIsAddScheduleModalOpen(true);
   const closeAddScheduleModal = () => setIsAddScheduleModalOpen(false);
+
+  // const [isScheduleTableOpen, setIsScheduleTableOpen] = useState(false);
+  // const openScheduleTable = () => setIsScheduleTableOpen(true);
+  // const closeScheduleTable = () => setIsScheduleTableOpen(false);
 
   return (
     <div className="bg-[#F6F6F6] h-full">
@@ -62,6 +63,13 @@ const Schedules = () => {
           namee={"Schedule Name"}
           handleClose={closeAddScheduleModal}
         />
+
+        {/* <ScheduleTable
+          isOpen={isScheduleTableOpen}
+          modalTitle={"Add New Schedule"}
+          namee={"Schedule Name"}
+          handleClose={closeScheduleTable}
+        /> */}
       </div>
     </div>
   );
