@@ -16,7 +16,7 @@ const Schedules = () => {
 
   return (
     <div className="bg-[#F6F6F6] h-full">
-      <Navbar title="Schedule" />
+      <Navbar title="Schedules" />
 
       <div className="flex ml-auto justify-end items-center mx-5 md:px-[10px] mt-8">
         <button

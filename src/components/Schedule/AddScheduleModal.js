@@ -1,3 +1,4 @@
+// AddScheduleModal.js
 import React, { useState } from "react";
 import Modal from "react-modal";
 import close from "src/assets/IoCloseOutline.svg";
@@ -11,14 +12,15 @@ const AddScheduleModal = ({
   handleClose,
   modalTitle,
   name,
-
+  handleFileUpload,
   namee,
   setName,
 }) => {
   const [isScheduleTableOpen, setIsScheduleTableOpen] = useState(false);
-  const [isUploadScheduleOpen, setIsUploadScheduleOpen] = useState(false);
-
   const closeScheduleTable = () => setIsScheduleTableOpen(false);
+  const openScheduleTable = () => setIsScheduleTableOpen(false);
+
+  const [isUploadScheduleOpen, setIsUploadScheduleOpen] = useState(false);
   const openUploadSchedule = () => setIsUploadScheduleOpen(true);
   const closeUploadSchedule = () => setIsUploadScheduleOpen(false);
 
@@ -33,12 +35,12 @@ const AddScheduleModal = ({
           backgroundColor: "rgba(0, 0, 0, 0.5)",
         },
         content: {
-          top: "40%",
-          left: "42%",
+          top: "43%",
+          left: "50%",
           right: "auto",
           bottom: "auto",
           marginRight: "-50%",
-          transform: "translate(-50%, -42%)",
+          transform: "translate(-50%, -43%)",
           padding: "2rem",
           margin: "2rem",
           backgroundColor: "#fff",
@@ -108,11 +110,13 @@ const AddScheduleModal = ({
             </div>
           </div>
         </div>
-        <Link to="/scheduletable">
-          <button className="bg-[#3B2774] my-2 flex justify-start text-white py-2 px-4 rounded opacity-20">
-            Add Schedule
-          </button>
-        </Link>
+
+        <button
+          onClick={handleClose}
+          className="bg-[#3B2774] my-2 flex justify-start text-white py-2 px-4 rounded opacity-20"
+        >
+          Add Schedule
+        </button>
 
         {isScheduleTableOpen && (
           <ScheduleTable
@@ -123,7 +127,7 @@ const AddScheduleModal = ({
           />
         )}
         <UploadSchedule
-          snamee="Schedule Name"
+          snamee="Add New schedule"
           isOpen={isUploadScheduleOpen}
           modalTitle={"Add New Schedule"}
           handleClose={closeUploadSchedule}

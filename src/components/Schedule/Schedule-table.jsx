@@ -20,7 +20,7 @@ const ScheduleTable = () => {
     {
       name: <div className="font-bold text-[#4A5568]">SCHEDULE ID</div>,
       selector: (row) => (
-        <Link to="">
+        <Link to="/details">
           <div className=" font-semibold text-[#1C065A]">{row.scheduleid}</div>
         </Link>
       ),
@@ -101,7 +101,7 @@ const ScheduleTable = () => {
   ];
   return (
     <div>
-      <Navbar title="Schedule" />
+      <Navbar title="Schedules" />
       <div className="lg:flex pt-8">
         <div className="px-[20px] mx-5 py-[6px] flex md:w-[320px] rounded border border-[#CBD5E0] focus-within:outline outline-2 outline-blue-600">
           <img src={search} alt="searchicon" className="w-[16px] h-9 " />
