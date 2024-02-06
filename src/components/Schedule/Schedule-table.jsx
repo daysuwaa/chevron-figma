@@ -101,12 +101,12 @@ const ScheduleTable = () => {
       <Navbar title="Schedule" />
       <div className="lg:flex pt-8">
         <div className="px-[20px] mx-5 py-[6px] flex md:w-[320px] rounded border border-[#CBD5E0] focus-within:outline outline-2 outline-blue-600">
-          <img src={search} alt="searchicon" className="w-[16px]" />
+          <img src={search} alt="searchicon" className="w-[16px] h-9 " />
           <input
             type="text"
             placeholder="Search by Payment Id"
             id="search"
-            className="font-light w-[320px] h-8 outline-none"
+            className="font-light w-[320px]  outline-none"
             style={{
               color: "#718096",
               fontSize: "14px",
@@ -122,11 +122,7 @@ const ScheduleTable = () => {
             border: "1px solid var(--Color-Gray-Gray-40, #CBD5E0)",
           }}
         >
-          <img
-            src={filter}
-            alt="searchicon"
-            className="w-[16px] h-[16px] mt-1"
-          />
+          <img src={filter} alt="searchicon" className="w-[16px] mt-1" />
           <p
             className="font-light"
             style={{
@@ -140,7 +136,7 @@ const ScheduleTable = () => {
         </div>
         <div className="ml-auto sm:mt-3 mt-3 md:mt-3 lg:flex lg:mt-0 px-5  ">
           <button
-            className=" h-[40px] mr-2 text-[#1C065A]  w-[200px]  text-[14px] sm:text-[16px] rounded bg-white  text-center  "
+            className=" h-[40px] mr-2 mb-3 text-[#1C065A]  w-[200px]  text-[14px] sm:text-[16px] rounded bg-white  text-center  "
             style={{
               border: " 1px solid var(--Button-Background-Alternate, #3B2773)",
             }}
