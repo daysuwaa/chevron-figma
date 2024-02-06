@@ -156,9 +156,9 @@ const ScheduleTable = () => {
             Add New Schedule
           </button>
         </div>
-
-        {/* xs screen */}
       </div>
+      {/* xs screen */}
+
       <div className="block md:block lg:hidden ml-auto pt-5 md:mt-0  px-5  ">
         <button
           className="mr-2 mb-3 text-[#1C065A] h-10  w-[200px]  text-[14px] sm:text-[16px] rounded bg-white  text-center  "
