@@ -4,6 +4,7 @@ import filter from "src/assets/FiFilter.svg";
 import GetScheduleModal from "./GetScheduleModal";
 import AddScheduleModal from "./AddScheduleModal";
 import DataTable from "react-data-table-component";
+import { Link } from "react-router-dom";
 import Navbar from "../Stuff/Navbar";
 
 const ScheduleTable = () => {
@@ -19,7 +20,9 @@ const ScheduleTable = () => {
     {
       name: <div className="font-bold text-[#4A5568]">SCHEDULE ID</div>,
       selector: (row) => (
-        <div className=" font-semibold text-[#1C065A]">{row.scheduleid}</div>
+        <Link to="">
+          <div className=" font-semibold text-[#1C065A]">{row.scheduleid}</div>
+        </Link>
       ),
     },
     {

@@ -10,6 +10,7 @@ import Analytics from "./components/Analytics/Analytics";
 import Settings from "./components/Settings/Settings";
 import Sidebar from "./components/Stuff/Sidebar";
 import Error from "./components/Stuff/Error";
+import Details from "./components/Stuff/Details";
 import Scheduletable from "./components/Schedule/Schedule-table";
 import UploadSchedule from "./components/Schedule/UploadSchedule";
 function App() {
@@ -30,6 +31,7 @@ function App() {
             <Route path="/settings" element={<Settings />} />
             <Route path="/scheduletable" element={<Scheduletable />} />
             <Route path="/uploadschedule" element={<UploadSchedule />} />
+            <Route path="/details" element={<Details />} />
             <Route path="*" element={<Error />} />
           </Routes>
         </div>

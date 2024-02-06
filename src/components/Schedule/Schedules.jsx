@@ -14,10 +14,6 @@ const Schedules = () => {
   const openAddScheduleModal = () => setIsAddScheduleModalOpen(true);
   const closeAddScheduleModal = () => setIsAddScheduleModalOpen(false);
 
-  // const [isScheduleTableOpen, setIsScheduleTableOpen] = useState(false);
-  // const openScheduleTable = () => setIsScheduleTableOpen(true);
-  // const closeScheduleTable = () => setIsScheduleTableOpen(false);
-
   return (
     <div className="bg-[#F6F6F6] h-full">
       <Navbar title="Schedule" />
