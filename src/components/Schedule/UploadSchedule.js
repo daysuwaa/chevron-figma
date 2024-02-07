@@ -1,4 +1,3 @@
-// UploadSchedule.js
 import React, { useState } from "react";
 import Modal from "react-modal";
 import close from "src/assets/IoCloseOutline.svg";
@@ -82,7 +81,10 @@ const UploadSchedule = ({
           </p>
         </div>
         <Link to="/scheduletable">
-          <button className="bg-[#3B2774] my-2 flex justify-start text-white py-2 px-4 rounded">
+          <button
+            className="bg-[#3B2774] my-2 flex justify-start text-white py-2 px-4 rounded"
+            onClick={handleClose}
+          >
             Add Schedule
           </button>
         </Link>

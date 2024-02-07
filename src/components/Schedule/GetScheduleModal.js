@@ -1,4 +1,3 @@
-// GetScheduleModal.jsx
 import React, { useState } from "react";
 import Modal from "react-modal";
 import close from "src/assets/IoCloseOutline.svg";

@@ -3,7 +3,6 @@ import React, { useState } from "react";
 import Modal from "react-modal";
 import close from "src/assets/IoCloseOutline.svg";
 import ScheduleTable from "./Schedule-table";
-import { Link } from "react-router-dom";
 import upload from "src/assets/IoCloudUploadOutline.svg";
 import UploadSchedule from "./UploadSchedule";
 
@@ -36,7 +35,7 @@ const AddScheduleModal = ({
         },
         content: {
           top: "43%",
-          left: "50%",
+          left: "43%",
           right: "auto",
           bottom: "auto",
           marginRight: "-50%",

@@ -1,7 +1,5 @@
 import React, { useState } from "react";
 import Navbar from "../Stuff/Navbar";
-import user from "src/assets/user 1.svg";
-import copy from "src/assets/IoCopyOutline.svg";
 import toast, { Toaster } from "react-hot-toast";
 import GetScheduleModal from "./Delete_modal";
 import { Link } from "react-router-dom";
@@ -385,7 +383,6 @@ const Schedule_payments = () => {
         modalTitle={"Delete Schedule?"}
         handleClose={closeDeleteSchedule}
       />
-      {/* end of the first column */}
     </div>
   );
 };

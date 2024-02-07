@@ -3,7 +3,6 @@ import Navbar from "../Stuff/Navbar";
 import computer from "src/assets/computer.png";
 import GetScheduleModal from "./GetScheduleModal";
 import AddScheduleModal from "./AddScheduleModal";
-// import ScheduleTable from "./Schedule-table";
 
 const Schedules = () => {
   const [isGetScheduleOpen, setIsGetScheduleOpen] = useState(false);
@@ -59,13 +58,6 @@ const Schedules = () => {
           namee={"Schedule Name"}
           handleClose={closeAddScheduleModal}
         />
-
-        {/* <ScheduleTable
-          isOpen={isScheduleTableOpen}
-          modalTitle={"Add New Schedule"}
-          namee={"Schedule Name"}
-          handleClose={closeScheduleTable}
-        /> */}
       </div>
     </div>
   );
