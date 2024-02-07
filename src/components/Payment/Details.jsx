@@ -73,7 +73,7 @@ const Details = () => {
             </div>
 
             <div
-              className="w-full h-[2px] border-b my-9 "
+              className="mx-3 h-[2px] border-b my-9 "
               style={{ background: "var(--Color-Gray-Gray-40, #CBD5E0)" }}
             ></div>
             <div className="mx-7  ">
@@ -155,7 +155,7 @@ const Details = () => {
             {/* second line */}
 
             <div
-              className="w-full h-[2px] border-b my-7 "
+              className="mx-3 h-[2px] border-b my-7 "
               style={{ background: "var(--Color-Gray-Gray-40, #CBD5E0)" }}
             ></div>
             <div className="mx-3  ">
