@@ -16,7 +16,12 @@ const Details = () => {
     paymentstatus,
     amount,
     bank_details,
-    account_details
+    account_details,
+    name,
+    email,
+    total_paid,
+    monthly_salary,
+    date
   ) => {
     return (
       <div>
@@ -132,12 +137,174 @@ const Details = () => {
                 </p>
               </div>
               <button className="bg-[#3B2773] my-9 text-white h-[32px] text-[14px] rounded w-[147px]">
-                Delete Schedule
+                Delete Receipt
               </button>
             </div>
           </div>
 
-          <div className="cols-span-1">ldjsnakm</div>
+          <div className="cols-span-1">
+            <div className="flex items-center mx-5">
+              <svg
+                width="40"
+                height="40"
+                viewBox="0 0 40 40"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <g id="user 1" clip-path="url(#clip0_511_22106)">
+                  <g id="Group">
+                    <g id="Group_2">
+                      <g id="Group_3">
+                        <path
+                          id="Vector"
+                          d="M20 39.2188C30.6142 39.2188 39.2188 30.6142 39.2188 20C39.2188 9.38578 30.6142 0.78125 20 0.78125C9.38578 0.78125 0.78125 9.38578 0.78125 20C0.78125 30.6142 9.38578 39.2188 20 39.2188Z"
+                          fill="#7535FC"
+                        />
+                      </g>
+                      <g id="Group_4">
+                        <path
+                          id="Vector_2"
+                          d="M20 35.625C27.4747 35.625 33.5341 32.1272 33.5341 27.8125C33.5341 23.4978 27.4747 20 20 20C12.5253 20 6.46582 23.4978 6.46582 27.8125C6.46582 32.1272 12.5253 35.625 20 35.625Z"
+                          fill="#EDEFF1"
+                        />
+                      </g>
+                      <g id="Group_5">
+                        <path
+                          id="Vector_3"
+                          d="M20 20C24.3147 20 27.8125 16.5022 27.8125 12.1875C27.8125 7.87278 24.3147 4.375 20 4.375C15.6853 4.375 12.1875 7.87278 12.1875 12.1875C12.1875 16.5022 15.6853 20 20 20Z"
+                          fill="#EDEFF1"
+                        />
+                      </g>
+                    </g>
+                    <g id="Group_6">
+                      <path
+                        id="Vector_4"
+                        d="M20 29.375L26.3058 21.3251C24.3771 20.4733 22.2439 20 20 20C17.7561 20 15.6229 20.4733 13.6942 21.3251L20 29.375Z"
+                        fill="#D3D3D3"
+                      />
+                    </g>
+                  </g>
+                </g>
+                <defs>
+                  <clipPath id="clip0_511_22106">
+                    <rect width="40" height="40" fill="white" />
+                  </clipPath>
+                </defs>
+              </svg>
+
+              <div className="ml-4">
+                <p className="text-[#1C065A] text-[14px] font-bold">{name}</p>
+                <p className="text-[#718096] text-[12px]">{email}</p>
+              </div>
+            </div>
+            <div
+              className="w-full h-[2px] border-b my-7"
+              style={{ background: "var(--Color-Gray-Gray-40, #CBD5E0)" }}
+            ></div>
+            <div className="flex mx-5 items-center">
+              <h1 className="text-[#1C065A] text-[16px] font-[600]">
+                Recent Payment
+              </h1>
+
+              <Link
+                to="*"
+                className="underline ml-auto text-[12px] text-[#4A5568]"
+              >
+                View all
+              </Link>
+              <svg
+                width="12"
+                height="12"
+                viewBox="0 0 12 12"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <g id="FiChevronRight">
+                  <path
+                    id="Vector (Stroke)"
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M4.14645 2.64645C4.34171 2.45118 4.65829 2.45118 4.85355 2.64645L7.85355 5.64645C8.04882 5.84171 8.04882 6.15829 7.85355 6.35355L4.85355 9.35355C4.65829 9.54882 4.34171 9.54882 4.14645 9.35355C3.95118 9.15829 3.95118 8.84171 4.14645 8.64645L6.79289 6L4.14645 3.35355C3.95118 3.15829 3.95118 2.84171 4.14645 2.64645Z"
+                    fill="#4A5568"
+                  />
+                </g>
+              </svg>
+            </div>
+            <div className="flex mx-5 bg-[#EBE3FC] px-[16px] py-[12px] rounded mt-4">
+              <p className="text-[#718096] text-[14px]">Total Paid:</p>
+              <p className="ml-auto text-[#1C065A] text-[14px] font-[600]">
+                {total_paid}
+              </p>
+            </div>
+            <div className="grid-cols-2 grid-rows-6 mx-5">
+              <div className="flex mt-5">
+                <p className="text-[#1C065A] text-[14px] font-[600] ">
+                  {monthly_salary}
+                </p>
+                <p className="ml-auto text-[#718096] text-[14px] font-[300]">
+                  {date}
+                </p>
+              </div>
+              <p className="text-[#718096] text-[14px]  font-[300]">
+                Monthly Salary
+              </p>
+              <div className="flex mt-5">
+                <p className="text-[#1C065A] text-[14px] font-[600] ">
+                  {monthly_salary}
+                </p>
+                <p className="ml-auto text-[#718096] text-[14px] font-[300]">
+                  {date}
+                </p>
+              </div>
+              <p className="text-[#718096] text-[14px]  font-[300]">
+                Monthly Salary
+              </p>
+              <div className="flex mt-5">
+                <p className="text-[#1C065A] text-[14px] font-[600] ">
+                  {monthly_salary}
+                </p>
+                <p className="ml-auto text-[#718096] text-[14px] font-[300]">
+                  {date}
+                </p>
+              </div>
+              <p className="text-[#718096] text-[14px]  font-[300]">
+                Monthly Salary
+              </p>
+              <div className="flex mt-5">
+                <p className="text-[#1C065A] text-[14px] font-[600] ">
+                  {monthly_salary}
+                </p>
+                <p className="ml-auto text-[#718096] text-[14px] font-[300]">
+                  {date}
+                </p>
+              </div>
+              <p className="text-[#718096] text-[14px]  font-[300]">
+                Monthly Salary
+              </p>
+              <div className="flex mt-5">
+                <p className="text-[#1C065A] text-[14px] font-[600] ">
+                  {monthly_salary}
+                </p>
+                <p className="ml-auto text-[#718096] text-[14px] font-[300]">
+                  {date}
+                </p>
+              </div>
+              <p className="text-[#718096] text-[14px]  font-[300]">
+                Monthly Salary
+              </p>
+              <div className="flex mt-5">
+                <p className="text-[#1C065A] text-[14px] font-[600] ">
+                  {monthly_salary}
+                </p>
+                <p className="ml-auto text-[#718096] text-[14px] font-[300]">
+                  {date}
+                </p>
+              </div>
+              <p className="text-[#718096] text-[14px]  font-[300]">
+                Monthly Salary
+              </p>
+            </div>
+          </div>
         </div>
         <button>Delete Schedule</button>
         {/* end pf grid */}
@@ -159,7 +326,12 @@ const Details = () => {
         "Sucessful",
         "N650,000.00",
         " First Bank",
-        "001122345"
+        "001122345",
+        "Segun Adebayo",
+        "segun.ade@gmail.com",
+        "12,430,900.00",
+        "650,000.00",
+        "12th August, 2023."
       )}
       {/* end of the first column */}
     </div>
