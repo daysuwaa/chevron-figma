@@ -8,7 +8,7 @@ import { Link } from "react-router-dom";
 
 const Schedule_payments = () => {
   const [isDeleteScheduleOpen, setIsDeleteScheduleOpen] = useState(false);
-  const openGetSchedule = () => setIsDeleteScheduleOpen(true);
+  const openDeleteModal = () => setIsDeleteScheduleOpen(true);
   const closeDeleteSchedule = () => setIsDeleteScheduleOpen(false);
   const deets = (
     tab,
@@ -261,7 +261,7 @@ const Schedule_payments = () => {
         {/* end of grid */}
 
         <button
-          onClick={openGetSchedule}
+          onClick={openDeleteModal}
           className=" my-9 text-[#FF5655] h-[32px] text-[14px] rounded w-[147px] mx-7 "
           style={{
             border: "1px solid var(--Color-Base-Background-Color-4, #FF5655)",

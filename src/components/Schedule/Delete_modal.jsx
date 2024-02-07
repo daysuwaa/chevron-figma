@@ -2,16 +2,8 @@
 import React, { useState } from "react";
 import Modal from "react-modal";
 import close from "src/assets/IoCloseOutline.svg";
-import Toggle from "./Toggle";
-import Dropdown from "./Dropdown";
 
-const Delete_modal = ({
-  isOpen,
-  handleClose,
-  modalTitle,
-  //   handleButtonClick,
-}) => {
-  const [isActive, setIsActive] = useState(false);
+const Delete_modal = ({ isOpen, handleClose, modalTitle }) => {
   return (
     <Modal
       isOpen={isOpen}
@@ -56,7 +48,7 @@ const Delete_modal = ({
         </p>
       </div>
 
-      <div className="my-2  justify-center flex">
+      <div className="mt-5  justify-center flex">
         <button
           onClick={handleClose}
           className="  text-[#FF5655] h-[32px] text-[14px] rounded w-[147px]  "
