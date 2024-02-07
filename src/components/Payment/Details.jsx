@@ -1,5 +1,5 @@
 import React from "react";
-import Navbar from "./Navbar";
+import Navbar from "../Stuff/Navbar";
 import user from "src/assets/user 1.svg";
 import { Link } from "react-router-dom";
 
