@@ -26,7 +26,7 @@ const Details = () => {
     return (
       <div>
         <Link to="/scheduletable">
-          <div className="flex mx-7 my-5 items-center">
+          <div className="flex mx-3 md:mx-7 my-5 items-center">
             <svg
               width="14"
               height="14"
@@ -54,8 +54,8 @@ const Details = () => {
         </Link>
 
         {/* chevron salaries */}
-        <div className="grid grid-cols-3">
-          <div className="col-span-2 bg-white mx-7">
+        <div className="lg:grid grid-cols-3">
+          <div className="hidden md:block col-span-2 bg-white lg:mx-7 md:mx-3">
             <div className="flex mx-7 pt-6">
               <h5 className="text-[#1C065A] font-[500] text-[14px]">{group}</h5>
               <div className="flex ml-auto items-center ">
@@ -136,14 +136,96 @@ const Details = () => {
                   {account_details}
                 </p>
               </div>
-              <button className="bg-[#3B2773] my-9 text-white h-[32px] text-[14px] rounded w-[147px]">
+            </div>
+          </div>
+          {/* xs sm */}
+          <div className="md:hidden block col-span-2 bg-white mx-3 lg:mx-7">
+            <div className="mx-3 md:mx-7 pt-6">
+              <h5 className="text-[#1C065A] font-[500] text-[14px]">{group}</h5>
+              <p className="text-[14px] font-light text-[#4A5568]">{address}</p>
+              <div className=" items-center ">
+                <h5 className="font-light text-[14px] text-[#4A5568]">
+                  Transaction Number
+                </h5>
+                <p className="ml-auto text-[#1C065A] font-[500]">
+                  {transaction_no}
+                </p>
+              </div>
+            </div>
+            {/* second line */}
+
+            <div
+              className="w-full h-[2px] border-b my-7 "
+              style={{ background: "var(--Color-Gray-Gray-40, #CBD5E0)" }}
+            ></div>
+            <div className="mx-3  ">
+              <p className="text-[#1C065A] text-[10px] font-[500]">
+                SCHEDULE DETAILS
+              </p>
+              <div className="flex mt-5">
+                <p className="text-[#718096] text-[14px] font-light">
+                  Schedule ID
+                </p>
+                <p className="text-[#718096] text-[14px] font-light ml-auto mr-[6.2rem]">
+                  Paid On
+                </p>
+              </div>
+              <div className="flex">
+                <p className="text-[#1C065A] text-[14px] font-[500]">
+                  {schedule_id}
+                </p>
+                <p className="text-[#1C065A] text-[14px] font-[500] ml-auto ">
+                  {paidon}
+                </p>
+              </div>
+              <div className="mt-3 ">
+                <div className="flex">
+                  <p className="text-[#718096] text-[14px] font-light">
+                    Schedule Name
+                  </p>
+                  <p className="text-[#718096] text-[14px] font-light ml-auto mr-[2.9rem]">
+                    Payment Status
+                  </p>
+                </div>
+                <div className="flex">
+                  <p className="text-[#1C065A] text-[14px] font-[500]">
+                    {schedulename}
+                  </p>
+                  <p className="text-[#1C065A] text-[14px] font-[500] ml-auto mr-[5.1rem]">
+                    {paymentstatus}
+                  </p>
+                </div>
+              </div>
+              <div
+                className="w-full h-[2px] border-b my-9"
+                style={{ background: "var(--Color-Gray-Gray-40, #CBD5E0)" }}
+              ></div>
+              <p className="font-thin text-[#718096] text-[12px]">
+                Amount Paid
+              </p>
+              <p className="text-[#1C065A] text-[18px] font-semibold">
+                {amount}
+              </p>
+              <div className="flex">
+                <p className=" text-[#718096] text-[14px]">Beneficiary Bank:</p>
+                <p className="text-[#1C065A] text-[14px] ml-1">
+                  {bank_details}
+                </p>
+              </div>
+              <div className="flex">
+                <p className=" text-[#718096] text-[14px]">Account Number:</p>
+                <p className="text-[#1C065A] text-[14px] ml-1">
+                  {account_details}
+                </p>
+              </div>
+              <button className="bg-[#3B2773] my-7 text-white h-[32px] text-[14px] rounded w-[147px]">
                 Delete Receipt
               </button>
             </div>
           </div>
 
           <div className="cols-span-1">
-            <div className="flex items-center mx-5">
+            <div className="flex items-center mt-5 lg:mt-0 mx-3 md:mx-7">
               <svg
                 width="40"
                 height="40"
@@ -201,7 +283,7 @@ const Details = () => {
               className="w-full h-[2px] border-b my-7"
               style={{ background: "var(--Color-Gray-Gray-40, #CBD5E0)" }}
             ></div>
-            <div className="flex mx-5 items-center">
+            <div className="flex mx-3 md:mx-7 items-center">
               <h1 className="text-[#1C065A] text-[16px] font-[600]">
                 Recent Payment
               </h1>
@@ -230,13 +312,13 @@ const Details = () => {
                 </g>
               </svg>
             </div>
-            <div className="flex mx-5 bg-[#EBE3FC] px-[16px] py-[12px] rounded mt-4">
+            <div className="flex mx-3 md:mx-7 bg-[#EBE3FC] px-[16px] py-[12px] rounded mt-4">
               <p className="text-[#718096] text-[14px]">Total Paid:</p>
               <p className="ml-auto text-[#1C065A] text-[14px] font-[600]">
                 {total_paid}
               </p>
             </div>
-            <div className="grid-cols-2 grid-rows-6 mx-5">
+            <div className="grid-cols-2 grid-rows-6 mx-3 md:mx-7">
               <div className="flex mt-5">
                 <p className="text-[#1C065A] text-[14px] font-[600] ">
                   {monthly_salary}
@@ -306,7 +388,7 @@ const Details = () => {
             </div>
           </div>
         </div>
-        <button>Delete Schedule</button>
+
         {/* end pf grid */}
       </div>
     );

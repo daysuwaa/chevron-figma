@@ -71,8 +71,8 @@ const Schedule_payments = () => {
 
         {/* chevron salaries */}
         {/* md7 lg screen */}
-        <div className="md:grid grid-cols-3">
-          <div className="hidden md:block col-span-2 bg-white mx-3 md:mx-7">
+        <div className="lg:grid grid-cols-3">
+          <div className="hidden md:block col-span-2 bg-white lg:mx-7 md:mx-3">
             <div className="flex mx-3 md:mx-7 pt-6">
               <h5 className="text-[#1C065A] font-[500] text-[14px]">{grade}</h5>
               <div
@@ -165,8 +165,8 @@ const Schedule_payments = () => {
             </div>
           </div>
           {/* xs and sm */}
-          <div className="block md:hidden col-span-2 bg-white mx-3 md:mx-7">
-            <div className="mx-3  pt-6">
+          <div className="md:hidden block col-span-2 bg-white mx-3 lg:mx-7">
+            <div className="mx-3 md:mx-7 pt-6">
               <h5 className="text-[#1C065A] font-[500] text-[14px]">{grade}</h5>
               <p className="text-[14px] font-light text-[#4A5568]">
                 {no_of_beneficiaries}
@@ -255,7 +255,7 @@ const Schedule_payments = () => {
 
           {/* second column */}
           <div className="cols-span-1">
-            <div className="flex mx-3 md:mx-5 mt-5 md:mt-0 items-center">
+            <div className="flex mx-3 md:mx-10 lg:mx-5 items-center mt-7 lg:mt-0">
               <h1 className="text-[#1C065A] text-[16px] font-[600]">
                 Recent Payment
               </h1>
@@ -284,13 +284,13 @@ const Schedule_payments = () => {
                 </g>
               </svg>
             </div>
-            <div className="flex mx-3 md:mx-5  bg-[#EBE3FC] px-[16px] py-[12px] rounded mt-4">
+            <div className="flex mx-3  md:mx-10 lg:mx-5 bg-[#EBE3FC] px-[16px] py-[12px] rounded mt-4">
               <p className="text-[#718096] text-[14px]">Total Paid:</p>
               <p className="ml-auto text-[#1C065A] text-[14px] font-[600]">
                 {total_paid}
               </p>
             </div>
-            <div className="grid-cols-2 grid-rows-6 mx-3 md:mx-5 ">
+            <div className="grid-cols-2 grid-rows-6 mx-3  md:mx-10 lg:mx-5">
               <div className="flex mt-5">
                 <p className="text-[#1C065A] text-[14px] font-[600] ">
                   {monthly_salary}
@@ -353,7 +353,7 @@ const Schedule_payments = () => {
 
         <button
           onClick={openDeleteModal}
-          className=" my-9 text-[#FF5655] h-[32px] text-[14px] rounded w-[147px] mx-3 md:mx-7  "
+          className=" my-9 text-[#FF5655] h-[32px] text-[14px] rounded w-[147px] mx-3  md:mx-10 lg:mx-7  "
           style={{
             border: "1px solid var(--Color-Base-Background-Color-4, #FF5655)",
           }}
