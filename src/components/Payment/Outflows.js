@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import DataTable from "react-data-table-component";
 
 const Outflows = () => {
@@ -6,7 +7,9 @@ const Outflows = () => {
     {
       name: "TRANSACTION ID",
       selector: (row) => (
-        <div className="font-bold text-[#1C065A]"> {row.transactionid}</div>
+        <Link to="/details">
+          <div className="font-bold text-[#1C065A]"> {row.transactionid}</div>
+        </Link>
       ),
     },
     {
