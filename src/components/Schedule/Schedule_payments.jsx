@@ -1,11 +1,15 @@
-import React from "react";
+import React, { useState } from "react";
 import Navbar from "../Stuff/Navbar";
 import user from "src/assets/user 1.svg";
 import copy from "src/assets/IoCopyOutline.svg";
 import toast, { Toaster } from "react-hot-toast";
+import GetScheduleModal from "./Delete_modal";
 import { Link } from "react-router-dom";
 
 const Schedule_payments = () => {
+  const [isDeleteScheduleOpen, setIsDeleteScheduleOpen] = useState(false);
+  const openGetSchedule = () => setIsDeleteScheduleOpen(true);
+  const closeDeleteSchedule = () => setIsDeleteScheduleOpen(false);
   const deets = (
     tab,
     schedule_detail,
@@ -16,11 +20,6 @@ const Schedule_payments = () => {
     createdon,
     timepayable,
     lastpayment,
-    // amount,
-    // bank_details,
-    // account_details,
-    // name,
-    // email,
     total_paid,
     monthly_salary,
     date
@@ -262,6 +261,7 @@ const Schedule_payments = () => {
         {/* end of grid */}
 
         <button
+          onClick={openGetSchedule}
           className=" my-9 text-[#FF5655] h-[32px] text-[14px] rounded w-[147px] mx-7 "
           style={{
             border: "1px solid var(--Color-Base-Background-Color-4, #FF5655)",
@@ -289,6 +289,11 @@ const Schedule_payments = () => {
         "650,000.00",
         "12th August, 2023."
       )}
+      <GetScheduleModal
+        isOpen={isDeleteScheduleOpen}
+        modalTitle={"Delete Schedule?"}
+        handleClose={closeDeleteSchedule}
+      />
       {/* end of the first column */}
     </div>
   );
