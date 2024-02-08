@@ -1,8 +1,6 @@
 import React, { useState } from "react";
 import search from "src/assets/CkSearch.svg";
 import filter from "src/assets/FiFilter.svg";
-import GetBeneficiaryModal from "./GetBeneficiaryModal";
-import AddBeneficiaryModal from "./AddBeneficiaryModal";
 import DataTable from "react-data-table-component";
 import { Link } from "react-router-dom";
 import Navbar from "../Stuff/Navbar";

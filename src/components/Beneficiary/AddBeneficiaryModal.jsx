@@ -94,7 +94,7 @@ const AddBeneficiaryModal = ({
         </div>
 
         <button
-          onClick={handleClose}
+          onClick={closeUploadBeneficiary}
           className="bg-[#3B2774] my-2 flex justify-start text-white py-2 px-4 rounded opacity-20"
         >
           Add Beneficiary
