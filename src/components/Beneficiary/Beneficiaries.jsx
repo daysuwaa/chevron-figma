@@ -15,7 +15,7 @@ const Beneficiaries = () => {
 
   return (
     <div className="bg-[#F6F6F6] h-full">
-      <Navbar title="Schedules" />
+      <Navbar title="Beneficiary" />
 
       <div className="flex ml-auto justify-end items-center mx-5 md:px-[10px] mt-8">
         <button
