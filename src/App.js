@@ -15,6 +15,7 @@ import Scheduletable from "./components/Schedule/Schedule-table";
 import UploadSchedule from "./components/Schedule/UploadSchedule";
 import Schedule_payments from "./components/Schedule/Schedule_payments";
 import Beneficiarytable from "./components/Beneficiary/Beneficiary_Table";
+import BeneficiaryDetails from "./components/Beneficiary/BeneficiaryDetails";
 function App() {
   return (
     <Router basename="/">
@@ -36,6 +37,10 @@ function App() {
             <Route path="/details" element={<Details />} />
             <Route path="/schedulepayments" element={<Schedule_payments />} />
             <Route path="/beneficiarytable" element={<Beneficiarytable />} />
+            <Route
+              path="/beneficiarypayments"
+              element={<BeneficiaryDetails />}
+            />
             <Route path="*" element={<Error />} />
           </Routes>
         </div>
