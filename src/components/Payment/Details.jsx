@@ -25,7 +25,7 @@ const Details = () => {
   ) => {
     return (
       <div>
-        <Link to="/scheduletable">
+        <Link to="/payment">
           <div className="flex mx-3 md:mx-7 my-5 items-center">
             <svg
               width="14"
