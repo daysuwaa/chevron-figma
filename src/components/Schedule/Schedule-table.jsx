@@ -107,8 +107,8 @@ const ScheduleTable = () => {
           <img src={search} alt="searchicon" className="w-[16px]  " />
           <input
             type="text"
-            placeholder="Search by Payment Id"
-            id="search"
+            placeholder="Search by Schedule Id"
+            id="scsearch"
             className="font-light w-[320px]  outline-none"
             style={{
               color: "#718096",

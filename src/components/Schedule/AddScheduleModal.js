@@ -51,14 +51,14 @@ const AddScheduleModal = ({
             >
               {namee}
             </label>
-            <div className="px-[10px] mt-1 h-[40px] md:w-[550px] border border-[#CBD5E0] focus-within:outline outline-2 outline-blue-600">
+            <div className="px-[10px] items-center  flex h-[40px] md:w-[550px] border border-[#CBD5E0] focus-within:outline outline-2 outline-blue-600">
               <input
                 type="text"
                 value={name}
                 onChange={(e) => setName(e.target.value)}
                 placeholder="Enter Schedule Name"
                 id="schedulename"
-                className="font-normal w-full h-8 outline-none"
+                className="font-normal w-full outline-none"
                 style={{
                   color: "#718096",
                   fontSize: "14px",
@@ -93,10 +93,7 @@ const AddScheduleModal = ({
           </div>
         </div>
 
-        <button
-          onClick={handleClose}
-          className="bg-[#3B2774] my-2 flex justify-start text-white py-2 px-4 rounded opacity-20"
-        >
+        <button className="bg-[#3B2774] my-2 flex justify-start text-white py-2 px-4 rounded opacity-20">
           Add Schedule
         </button>
 
