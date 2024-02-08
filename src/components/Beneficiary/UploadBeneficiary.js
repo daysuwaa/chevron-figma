@@ -79,7 +79,7 @@ const UploadBeneficiary = ({
             Choose a different file
           </p>
         </div>
-        <Link to="/scheduletable">
+        <Link to="/beneficiarytable">
           <button
             className="bg-[#3B2774] my-2 flex justify-start text-white py-2 px-4 rounded"
             onClick={handleClose}
