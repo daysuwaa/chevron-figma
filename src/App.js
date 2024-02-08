@@ -13,7 +13,7 @@ import Error from "./components/Stuff/Error";
 import Details from "./components/Payment/Details";
 import Scheduletable from "./components/Schedule/Schedule-table";
 import UploadSchedule from "./components/Schedule/UploadSchedule";
-import Schedule_payments from "./components/Schedule/Schedule_payments";
+import Schedulepayments from "./components/Schedule/Schedule_payments";
 import Beneficiarytable from "./components/Beneficiary/Beneficiary_Table";
 import BeneficiaryDetails from "./components/Beneficiary/BeneficiaryDetails";
 function App() {
@@ -35,7 +35,7 @@ function App() {
             <Route path="/scheduletable" element={<Scheduletable />} />
             <Route path="/uploadschedule" element={<UploadSchedule />} />
             <Route path="/details" element={<Details />} />
-            <Route path="/schedulepayments" element={<Schedule_payments />} />
+            <Route path="/schedulepayments" element={<Schedulepayments />} />
             <Route path="/beneficiarytable" element={<Beneficiarytable />} />
             <Route
               path="/beneficiarypayments"
