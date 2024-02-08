@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import close from "src/assets/IoCloseOutline.svg";
 
 const Filter = ({ isOpen, onClose }) => {
   const [payment, setPayment] = useState("");
@@ -16,7 +15,7 @@ const Filter = ({ isOpen, onClose }) => {
       {/* payment id */}
       <div>
         <form>
-          <label htmlFor="payment" className="text-[#4A5568] text-sm ">
+          <label htmlFor="paymentt" className="text-[#4A5568] text-sm ">
             Payment Id
           </label>
           <div className="px-[10px] items-center mt-1  rounded border border-[#CBD5E0] focus-within:outline outline-2 outline-blue-600">
@@ -25,7 +24,7 @@ const Filter = ({ isOpen, onClose }) => {
               value={payment}
               onChange={(e) => setPayment(e.target.value)}
               placeholder="Enter Payment Id"
-              id="payment"
+              id="paymentt"
               className="font-normal h-8 outline-none"
               style={{
                 color: "#718096",
@@ -60,7 +59,7 @@ const Filter = ({ isOpen, onClose }) => {
       {/* beneficiary name */}
 
       <form>
-        <label htmlFor="beneficiaryname" className="text-[#4A5568] text-sm ">
+        <label htmlFor="beneficiarynamee" className="text-[#4A5568] text-sm ">
           Beneficiary
         </label>
         <div className="px-[10px] items-center mt-1 rounded border border-[#CBD5E0] focus-within:outline outline-2 outline-blue-600">
@@ -69,7 +68,7 @@ const Filter = ({ isOpen, onClose }) => {
             value={beneficiary}
             onChange={(e) => setBeneficiary(e.target.value)}
             placeholder="Enter Beneficiary Name"
-            id="beneficiaryname"
+            id="beneficiarynamee"
             className="font-normal h-8 outline-none"
             style={{
               color: "#718096",
@@ -122,7 +121,23 @@ const Filter = ({ isOpen, onClose }) => {
 
       {/* Close button */}
       <button className="absolute top-0 right-0 m-2" onClick={onClose}>
-        <img src={close} />
+        <svg
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <g id="IoCloseOutline">
+            <path
+              id="Vector (Stroke)"
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M6.21967 6.21967C6.51256 5.92678 6.98744 5.92678 7.28033 6.21967L12 10.9393L16.7197 6.21967C17.0126 5.92678 17.4874 5.92678 17.7803 6.21967C18.0732 6.51256 18.0732 6.98744 17.7803 7.28033L13.0607 12L17.7803 16.7197C18.0732 17.0126 18.0732 17.4874 17.7803 17.7803C17.4874 18.0732 17.0126 18.0732 16.7197 17.7803L12 13.0607L7.28033 17.7803C6.98744 18.0732 6.51256 18.0732 6.21967 17.7803C5.92678 17.4874 5.92678 17.0126 6.21967 16.7197L10.9393 12L6.21967 7.28033C5.92678 6.98744 5.92678 6.51256 6.21967 6.21967Z"
+              fill="#4A5568"
+            />
+          </g>
+        </svg>
       </button>
     </div>
   );
