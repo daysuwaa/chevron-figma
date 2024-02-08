@@ -7,14 +7,14 @@ import DataTable from "react-data-table-component";
 import { Link } from "react-router-dom";
 import Navbar from "../Stuff/Navbar";
 
-const ScheduleTable = () => {
-  const [isGetScheduleOpen, setIsGetScheduleOpen] = useState(false);
-  const openGetSchedule = () => setIsGetScheduleOpen(true);
-  const closeGetSchedule = () => setIsGetScheduleOpen(false);
+const BeneficiaryTable = () => {
+  const [isGetBeneficiaryOpen, setIsBeneficiaryOpen] = useState(false);
+  const openGetBeneficiary = () => setIsBeneficiaryOpen(true);
+  const closeGetBeneficiary = () => setIsBeneficiaryOpen(false);
 
-  const [isAddScheduleModalOpen, setIsAddScheduleModalOpen] = useState(false);
-  const openAddScheduleModal = () => setIsAddScheduleModalOpen(true);
-  const closeAddScheduleModal = () => setIsAddScheduleModalOpen(false);
+  const [isAddBeneficiaryOpen, setIsAddBeneficiaryModalOpen] = useState(false);
+  const openAddBeneficiaryModal = () => setIsAddBeneficiaryModalOpen(true);
+  const closeAddBeneficiaryModal = () => setIsAddBeneficiaryModalOpen(false);
 
   const columns = [
     {
@@ -72,14 +72,14 @@ const ScheduleTable = () => {
   ];
   return (
     <div>
-      <Navbar title="Schedules" />
+      <Navbar title="Beneficiary" />
       <div className="md:flex pt-8">
         <div className="px-[20px] h-10 mx-5 flex md:w-[320px] rounded border border-[#CBD5E0] focus-within:outline outline-2 outline-blue-600">
           <img src={search} alt="searchicon" className="w-[16px]  " />
           <input
             type="text"
-            placeholder="Search by Payment Id"
-            id="search"
+            placeholder="Search by Beneficiary Id"
+            id="bsearchh"
             className="font-light w-[320px]  outline-none"
             style={{
               color: "#718096",
@@ -115,7 +115,7 @@ const ScheduleTable = () => {
             style={{
               border: " 1px solid var(--Button-Background-Alternate, #3B2773)",
             }}
-            onClick={openGetSchedule}
+            onClick={openGetBeneficiary}
           >
             Get Beneficiary Template
           </button>
@@ -124,7 +124,7 @@ const ScheduleTable = () => {
             style={{
               border: " 1px solid var(--Button-Background-Alternate, #3B2773)",
             }}
-            onClick={openAddScheduleModal}
+            onClick={openAddBeneficiaryModal}
           >
             Add New Beneficiary
           </button>
@@ -138,7 +138,7 @@ const ScheduleTable = () => {
           style={{
             border: " 1px solid var(--Button-Background-Alternate, #3B2773)",
           }}
-          onClick={openGetSchedule}
+          onClick={openGetBeneficiary}
         >
           Get Beneficiary Template
         </button>
@@ -147,7 +147,7 @@ const ScheduleTable = () => {
           style={{
             border: " 1px solid var(--Button-Background-Alternate, #3B2773)",
           }}
-          onClick={openGetSchedule}
+          onClick={openAddBeneficiaryModal}
         >
           Add New Beneficiary
         </button>
@@ -161,22 +161,22 @@ const ScheduleTable = () => {
         style={{ border: "1px solid var(--Color-Gray-Gray-40, #CBD5E0)" }}
         className="mx-5"
       >
-        <DataTable columns={columns} data={data} className="" />
+        <DataTable columns={columns} data={data} />
       </div>
 
       <GetBeneficiaryModal
-        isOpen={isGetScheduleOpen}
-        modalTitle={"Get Schedule Template"}
-        handleClose={closeGetSchedule}
+        isOpen={isGetBeneficiaryOpen}
+        modalTitle={"Get BeneficiaryTemplate"}
+        handleClose={closeGetBeneficiary}
       />
       <AddBeneficiaryModal
-        isOpen={isAddScheduleModalOpen}
-        modalTitle={"Add New Schedule"}
-        namee={"Schedule Name"}
-        handleClose={closeAddScheduleModal}
+        isOpen={isAddBeneficiaryOpen}
+        modalTitle={"Add New Beneficiary"}
+        namee={"Beneficiary Name"}
+        handleClose={closeAddBeneficiaryModal}
       />
     </div>
   );
 };
 
-export default ScheduleTable;
+export default BeneficiaryTable;
