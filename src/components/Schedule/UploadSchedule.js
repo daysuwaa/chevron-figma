@@ -17,23 +17,8 @@ const UploadSchedule = ({
       onRequestClose={handleClose}
       contentLabel={modalTitle}
       shouldCloseOnOverlayClick={false}
-      style={{
-        overlay: {
-          backgroundColor: "rgba(0, 0, 0, 0.5)",
-        },
-        content: {
-          top: "40%",
-          left: "50%",
-          right: "auto",
-          bottom: "auto",
-          marginRight: "-50%",
-          transform: "translate(-50%, -40%)",
-          padding: "2rem",
-          margin: "2rem",
-          backgroundColor: "#fff",
-          border: "1px solid var(--Button-Background-Alternate, #3B2773)",
-        },
-      }}
+      className="absolute top-1/2 md:left-1/2 left-[43%] transform -translate-x-1/2 bg-white -translate-y-1/2 p-[2rem] m-[2rem]"
+      overlayClassName="fixed inset-0 bg-black bg-opacity-50"
     >
       <div className="mt-5">
         <div className="flex items-center">
