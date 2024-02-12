@@ -11,7 +11,7 @@ import gtb from "src/assets/image 2.png";
 import copy from "src/assets/IoCopyOutline.svg";
 import Tooltip from "@mui/material/Tooltip";
 import toast, { Toaster } from "react-hot-toast";
-import Navbarr from "../Stuff/Navbar";
+import Navbarr from "../Layout/Navbar";
 import Filter from "./Filter";
 
 const Payment = () => {

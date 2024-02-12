@@ -82,7 +82,7 @@ const UploadBeneficiary = ({
         <Link to="/beneficiarytable">
           <button
             className="bg-[#3B2774] my-2 flex justify-start text-white py-2 px-4 rounded"
-            onClick={handleClose}
+            // onClick={handleClose}
           >
             Add Beneficiary
           </button>

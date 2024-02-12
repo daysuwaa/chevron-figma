@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import chevron from "src/assets/chevron logo.png";
 import info from "src/assets/CkInfoOutline.svg";
 import Tooltip from "@mui/material/Tooltip";
-import ToggleButton from "../Stuff/ToggleButton";
+import ToggleButton from "../Layout/ToggleButton";
 
 const General = () => {
   const [name, setName] = useState("");

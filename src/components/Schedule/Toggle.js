@@ -1,11 +1,8 @@
-import React, { useState } from "react";
 import Dropdown from "./Dropdown";
 
-const Toggle = () => {
-  const [isActive, setIsActive] = useState(false);
-
+const Toggle = ({ isActive, setIsActive }) => {
   const handleToggle = () => {
-    setIsActive(!isActive);
+    setIsActive((prev) => !prev);
   };
 
   return (
@@ -22,12 +19,6 @@ const Toggle = () => {
           }`}
         ></span>
       </button>
-
-      {isActive && (
-        <div className="absolute top-full">
-          <Dropdown />
-        </div>
-      )}
     </div>
   );
 };

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Navbar from "../Stuff/Navbar";
+import Navbar from "../Layout/Navbar";
 import toast, { Toaster } from "react-hot-toast";
 import GetScheduleModal from "./Delete_modal";
 import { Link } from "react-router-dom";

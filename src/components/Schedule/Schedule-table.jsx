@@ -5,7 +5,7 @@ import GetScheduleModal from "./GetScheduleModal";
 import AddScheduleModal from "./AddScheduleModal";
 import DataTable from "react-data-table-component";
 import { Link } from "react-router-dom";
-import Navbar from "../Stuff/Navbar";
+import Navbar from "../Layout/Navbar";
 
 const ScheduleTable = () => {
   const [isGetScheduleOpen, setIsGetScheduleOpen] = useState(false);

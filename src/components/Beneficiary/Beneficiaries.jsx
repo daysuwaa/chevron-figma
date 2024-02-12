@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Navbar from "../Stuff/Navbar";
+import Navbar from "../Layout/Navbar";
 import computer from "src/assets/computer.png";
 import GetBeneficiaryModal from "./GetBeneficiaryModal";
 import AddBeneficiaryModal from "./AddBeneficiaryModal";

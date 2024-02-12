@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Navbar from "../Stuff/Navbar";
+import Navbar from "../Layout/Navbar";
 import General from "./General";
 import Security from "./Security";
 import SessHis from "./SessionHistory";

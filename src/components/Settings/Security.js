@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import info from "src/assets/CkInfoOutline.svg";
 import Scan from "src/assets/image 4.png";
 import Tooltip from "@mui/material/Tooltip";
-import ToggleButton from "../Stuff/ToggleButton";
+import ToggleButton from "../Layout/ToggleButton";
 
 const Security = () => {
   const [cpassword, setCpassword] = useState("");

@@ -161,20 +161,14 @@ const Approvals = () => {
               {/* #3 password */}
               <div className="my-6">
                 <form>
-                  <label className="text-[#4A5568] text-sm ">
-                    Password
-                    <input
-                      type="text"
-                      value={password}
-                      onChange={(e) => setPassword(e.target.value)}
-                      className="mb-2"
-                    />
-                  </label>
+                  <label className="text-[#4A5568] text-sm ">Password</label>
                   <div className="px-[10px] items-center h-[40px] flex w-full rounded border border-[#CBD5E0] focus-within:outline outline-2 outline-blue-600">
                     <input
-                      type="text"
+                      type="password"
+                      value={password}
+                      onChange={(e) => setPassword(e.target.value)}
                       placeholder="Enter Password"
-                      id="search"
+                      id="passpass"
                       className="font-normal w-[320px] h-8 outline-none"
                       style={{
                         color: "#718096",

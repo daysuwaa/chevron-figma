@@ -10,12 +10,16 @@ import schedules from "src/assets/BsClock-2.svg";
 import settings from "src/assets/BsGear.svg";
 import { Link, useLocation } from "react-router-dom";
 
+function startsWithSubstring(string, substring) {
+  return string.startsWith(substring);
+}
+
 const Sidebar = () => {
   const locationObj = useLocation();
   const activeLink = locationObj.pathname;
 
   const renderLink = (link, text, imgSrc) => {
-    const isActive = activeLink === link;
+    const isActive = startsWithSubstring(activeLink, link);
 
     return (
       <Link to={link} className="grid">
@@ -62,7 +66,7 @@ const Sidebar = () => {
 
       <div className="pt-7">
         {/* renndered three links as shwon above */}
-        {renderLink("/", "Dashboard", dashboard)}
+        {renderLink("/dashboard", "Dashboard", dashboard)}
         {renderLink("/payment", "Payments", payments)}
         {renderLink("/schedules", "Schedules", schedules)}
         {renderLink("/beneficiaries", "Beneficiaries", beneficiary)}

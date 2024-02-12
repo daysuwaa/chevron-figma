@@ -5,6 +5,70 @@ import close from "src/assets/IoCloseOutline.svg";
 import ScheduleTable from "./Schedule-table";
 import upload from "src/assets/IoCloudUploadOutline.svg";
 import UploadSchedule from "./UploadSchedule";
+import { Link } from "react-router-dom";
+
+const OrX = () => (
+  <div className="flex items-center mt-6">
+    <div className="flex-grow h-[1px] bg-[#718096] opacity-[0.4]"></div>
+    <div className="mx-4">or</div>
+    <div className="flex-grow h-[1px] bg-[#718096] opacity-[0.4]"></div>
+  </div>
+);
+
+const UploadDrop = ({ uploadHandler }) => (
+  <div className="mx-auto items-center mt-1 text-[#4A5568] justify-center w-full rounded border border-[#CBD5E0] border-dashed border-focus-within:outline outline-2 px-10">
+    <img src={upload} alt="upload" className="mx-auto mt-4" />
+    <p className="text-center text-[14px] font-light">
+      Drag and drop your files here
+    </p>
+    <OrX />
+    <button
+      onClick={uploadHandler}
+      className="bg-gray-200 flex mx-auto h-[32px] px-[12px] mt-9 text-[14px] items-center rounded-sm cursor-pointer"
+    >
+      Browse files
+    </button>
+    <p className="text-xs flex justify-center my-4">Max File size: 200mb</p>
+  </div>
+);
+
+const ScheduleUploader = ({ scheduleFile, setScheduleFile }) => {
+  const uploadHandler = () => {
+    const fileHolder = document.createElement("input");
+    document.body.appendChild(fileHolder);
+    fileHolder.setAttribute("type", "file");
+    fileHolder.setAttribute("accept", ".csv,.xls,.xlsx");
+    fileHolder.style.display = "none";
+
+    fileHolder.addEventListener("change", (e) => {
+      const files = e.target.files;
+      const file = files[0];
+
+      setScheduleFile(file);
+    });
+
+    fileHolder.click();
+    document.body.removeChild(fileHolder);
+  };
+
+  return (
+    <div className="my-6">
+      <div className="md:mx-auto">
+        <label className="text-[#4A5568] text-sm">Upload Schedule</label>
+        {scheduleFile ? (
+          <div>
+            <div>{scheduleFile.name}</div>
+            <button onClick={() => setScheduleFile(null)}>
+              Choose a different file
+            </button>
+          </div>
+        ) : (
+          <UploadDrop {...{ uploadHandler }} />
+        )}
+      </div>
+    </div>
+  );
+};
 
 const AddScheduleModal = ({
   isOpen,
@@ -14,12 +78,7 @@ const AddScheduleModal = ({
   namee,
   setName,
 }) => {
-  const [isScheduleTableOpen, setIsScheduleTableOpen] = useState(false);
-  const closeScheduleTable = () => setIsScheduleTableOpen(false);
-
-  const [isUploadScheduleOpen, setIsUploadScheduleOpen] = useState(false);
-  const openUploadSchedule = () => setIsUploadScheduleOpen(true);
-  const closeUploadSchedule = () => setIsUploadScheduleOpen(false);
+  const [scheduleFile, setScheduleFile] = useState(null);
 
   return (
     <Modal
@@ -67,50 +126,16 @@ const AddScheduleModal = ({
             </div>
           </form>
         </div>
-        <div className="my-6">
-          <div className="md:mx-auto">
-            <label className="text-[#4A5568] text-sm">Upload Schedule</label>
-            <div className="mx-auto items-center mt-1 text-[#4A5568] justify-center w-full rounded border border-[#CBD5E0] border-dashed border-focus-within:outline outline-2 px-10">
-              <img src={upload} alt="upload" className="mx-auto mt-4" />
-              <p className="text-center text-[14px] font-light">
-                Drag and drop your files here
-              </p>
-              <div className="flex items-center mt-6">
-                <div className="flex-grow h-[1px] bg-[#718096] opacity-[0.4]"></div>
-                <div className="mx-4">or</div>
-                <div className="flex-grow h-[1px] bg-[#718096] opacity-[0.4]"></div>
-              </div>
-              <button
-                onClick={openUploadSchedule}
-                className="bg-gray-200 flex mx-auto h-[32px] px-[12px] mt-9 text-[14px] items-center rounded-sm w-[107px] cursor-pointer"
-              >
-                Browse files
-              </button>
-              <p className="text-xs flex justify-center my-4">
-                Max File size: 200mb
-              </p>
-            </div>
-          </div>
-        </div>
+        <ScheduleUploader {...{ scheduleFile, setScheduleFile }} />
 
-        <button className="bg-[#3B2774] my-2 flex justify-start text-white py-2 px-4 rounded opacity-20">
+        <Link
+          to="/schedules/table"
+          className={`bg-[#3B2774] my-2 flex justify-start text-white py-2 px-4 max-w-fit rounded ${
+            scheduleFile ? "" : "pointer-events-none opacity-20 select-none"
+          }`}
+        >
           Add Schedule
-        </button>
-
-        {isScheduleTableOpen && (
-          <ScheduleTable
-            isOpen={isScheduleTableOpen}
-            modalTitle={"Add New Schedule"}
-            namee={"Schedule Name"}
-            handleClose={closeScheduleTable}
-          />
-        )}
-        <UploadSchedule
-          snamee="Add New schedule"
-          isOpen={isUploadScheduleOpen}
-          modalTitle={"Add New Schedule"}
-          handleClose={closeUploadSchedule}
-        />
+        </Link>
       </div>
     </Modal>
   );

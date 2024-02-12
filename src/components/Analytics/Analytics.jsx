@@ -5,7 +5,7 @@ import Anawave from "./Ana_wave";
 import Anawave2 from "./Ana_wave2";
 import Anawave3 from "./Ana_wave3";
 import millify from "millify";
-import Navbar from "../Stuff/Navbar";
+import Navbar from "../Layout/Navbar";
 import icloud from "src/assets/IoCloudDownloadOutline.svg";
 import redarrow from "src/assets/Redarrow.svg";
 import greenarow from "src/assets/Green.svg";

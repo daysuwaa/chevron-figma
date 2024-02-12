@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Navbar from "../Stuff/Navbar";
+import Navbar from "../Layout/Navbar";
 import computer from "src/assets/computer.png";
 import GetScheduleModal from "./GetScheduleModal";
 import AddScheduleModal from "./AddScheduleModal";

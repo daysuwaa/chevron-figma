@@ -3,7 +3,7 @@ import millify from "millify";
 import { Link } from "react-router-dom";
 import Barchat from "./Barchart";
 import Piechart from "./Piechart";
-import Navbar from "../Stuff/Navbar";
+import Navbar from "../Layout/Navbar";
 import arrowright2 from "src/assets/FiChevronRight-2.svg";
 import arrowright from "src/assets/FiChevronRight.svg";
 import users from "src/assets/FiUsers.svg";

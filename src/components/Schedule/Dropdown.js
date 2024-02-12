@@ -8,7 +8,7 @@ const Dropdown = () => {
   };
 
   return (
-    <div className="mt-2 absolute top-full right-[-1.2rem]">
+    <div className="mt-2">
       <label className="text-[#4A5568] text-sm mb-2">Beneficiary List</label>
       <div className="px-2 items-center h-[40px] mt-2 w-[13.2rem] md:w-[29rem] lg:w-[34.2rem] rounded border border-[#CBD5E0] focus-within:outline outline-2 outline-blue-600 mb-2">
         <select

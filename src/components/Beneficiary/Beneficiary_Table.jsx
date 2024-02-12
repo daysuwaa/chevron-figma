@@ -3,7 +3,7 @@ import GetBeneficiaryModal from "./GetBeneficiaryModal";
 import AddBeneficiaryModal from "./AddBeneficiaryModal";
 import DataTable from "react-data-table-component";
 import { Link } from "react-router-dom";
-import Navbar from "../Stuff/Navbar";
+import Navbar from "../Layout/Navbar";
 
 const BeneficiaryTable = () => {
   const [isGetBeneficiaryOpen, setIsBeneficiaryOpen] = useState(false);

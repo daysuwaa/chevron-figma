@@ -1,5 +1,5 @@
 import React from "react";
-import Navbar from "../Stuff/Navbar";
+import Navbar from "../Layout/Navbar";
 import search from "src/assets/CkSearch.svg";
 import filter from "src/assets/FiFilter.svg";
 import Approval from "./Approval";

@@ -1,7 +1,7 @@
 import React from "react";
 import DataTable from "react-data-table-component";
 import { Link } from "react-router-dom";
-import Navbar from "../Stuff/Navbar";
+import Navbar from "../Layout/Navbar";
 
 const BeneficiaryTable = () => {
   const columns = [
