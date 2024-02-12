@@ -21,7 +21,7 @@ const General = () => {
 
         <div className="flex justify-start ml-[2rem] sm:ml-[12rem] md:ml-[12rem] lg:ml-[22rem]">
           <button
-            className="h-[24px] mt-4 text-[#3B2773] rounded text-xs bg-white items-center w-[121px] text-center"
+            className="h-[24px] mt-4 text-[#3B2773] rounded text-xs bg-white items-center px-2 text-center"
             style={{
               border: "1px solid var(--Button-Background-Alternate, #3B2773)",
             }}
@@ -40,9 +40,9 @@ const General = () => {
         }}
       >
         {/* namee */}
-        <div className="m-6 ">
+        <div className="m-6">
           <form>
-            <label htmlFor="user" className="text-[#4A5568] text-sm  ">
+            <label htmlFor="user" className="text-[#4A5568] text-sm pb-2 block">
               User / Organization Name
             </label>
             <div className="px-[10px] items-center h-[40px] flex w-full lg:w-[566px] rounded border border-[#CBD5E0] focus-within:outline outline-2  outline-blue-600">
@@ -61,10 +61,14 @@ const General = () => {
             </div>
           </form>
         </div>
+
         {/* email address */}
         <div className="m-6  hidden md:hidden lg:flex ">
           <form className="mr-3">
-            <label htmlFor="mail" className="text-[#4A5568] text-sm ">
+            <label
+              htmlFor="mail"
+              className="text-[#4A5568] text-sm pb-2 block "
+            >
               Email Address
             </label>
             <div className="px-[10px]  items-center h-[40px] flex w-full lg:w-[274px] rounded border border-[#CBD5E0] focus-within:outline outline-2 outline-blue-600">
@@ -84,7 +88,10 @@ const General = () => {
           </form>
           {/* telephone */}
           <form>
-            <label htmlFor="phone" className="text-[#4A5568] text-sm ">
+            <label
+              htmlFor="phone"
+              className="text-[#4A5568] text-sm pb-2 block "
+            >
               Phone
             </label>
             <div className="px-[10px] items-center h-[40px] flex w-full lg:w-[274px] rounded border border-[#CBD5E0] focus-within:outline outline-2 outline-blue-600">
@@ -104,7 +111,10 @@ const General = () => {
         {/* small screen */}
         <div className="m-6 lg:hidden">
           <form>
-            <label htmlFor="email" className="text-[#4A5568] text-sm ">
+            <label
+              htmlFor="email"
+              className="text-[#4A5568] text-sm pb-2 block "
+            >
               Email
             </label>
             <div className="px-[10px] items-center h-[40px] flex w-full  rounded border border-[#CBD5E0] focus-within:outline outline-2 outline-blue-600">
@@ -125,7 +135,7 @@ const General = () => {
         </div>
 
         <div className="m-6 lg:hidden ">
-          <label htmlFor="tele" className="text-[#4A5568] text-sm">
+          <label htmlFor="tele" className="text-[#4A5568] text-sm pb-2 block">
             Telephone
           </label>
           <div className="px-[10px] items-center h-[40px] mt-3 flex w-full  rounded border border-[#CBD5E0] focus-within:outline outline-2 outline-blue-600">
@@ -146,7 +156,7 @@ const General = () => {
 
         {/* timer  */}
         <div className="m-6">
-          <label className="flex text-[#4A5568] text-sm mb-2">
+          <label className="flex text-[#4A5568] text-sm pb-2">
             Interactive Timer
             <Tooltip
               title="Log me out if im inactive for this long"
