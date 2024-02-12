@@ -27,7 +27,6 @@ const Sidebar = () => {
           <div
             className={`flex px-3 w-full md:w- [226px] h-[44px]  `}
             style={{
-              // marginLeft: isActive ? "10px" : "",
               borderRadius: isActive ? "4px" : "",
               border: isActive
                 ? "1px solid rgba(255, 255, 255, 0.22)"
