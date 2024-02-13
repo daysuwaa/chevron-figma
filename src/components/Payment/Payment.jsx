@@ -264,7 +264,7 @@ const Payment = () => {
             <input
               type="text"
               placeholder="Search by Payment Id"
-              id="searchy"
+              id="searchbox"
               className="font-light w-full items-center outline-none text-[#718096] text-[14px] ml-4 bg-[#F6F6F6]   "
             />
           </div>
