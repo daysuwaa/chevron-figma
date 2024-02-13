@@ -42,7 +42,12 @@ const DeactivateUserModal = ({ isActiveModalOpen, closeActiveModal }) => {
             {/* #3 password */}
             <div className="my-6">
               <form>
-                <label className="text-[#4A5568] text-sm ">Password</label>
+                <label
+                  htmlFor="passpass"
+                  className="text-[#4A5568] text-sm mb-2 block "
+                >
+                  Password
+                </label>
                 <div className="px-[10px] items-center h-[40px] flex w-full rounded border border-[#CBD5E0] focus-within:outline outline-2 outline-blue-600">
                   <input
                     type="password"
@@ -61,20 +66,19 @@ const DeactivateUserModal = ({ isActiveModalOpen, closeActiveModal }) => {
             </div>
             <div className="my-6">
               <form>
-                <label className="text-[#4A5568] text-sm ">
+                <label
+                  htmlFor="redpass"
+                  className="text-[#4A5568] text-sm mb-2 block"
+                >
                   2FA Token
-                  <input
-                    type="text"
-                    value={token}
-                    onChange={(e) => setToken(e.target.value)}
-                    className="mb-2"
-                  />
                 </label>
                 <div className="px-[10px] items-center h-[40px] flex w-full rounded border border-[#CBD5E0] focus-within:outline outline-2 outline-blue-600">
                   <input
                     type="text"
                     placeholder="Enter your 2FA Token"
-                    id="search"
+                    id="redpass"
+                    value={token}
+                    onChange={(e) => setToken(e.target.value)}
                     className="font-normal w-[320px] h-8 outline-none text-lg"
                     style={{
                       color: "#718096",
@@ -86,7 +90,7 @@ const DeactivateUserModal = ({ isActiveModalOpen, closeActiveModal }) => {
             </div>
           </div>
           <button
-            className="text-[#FF5655] mt-5 flex mx-auto w-[154px] h-[40px] rounded-sm justify-center items-center"
+            className="text-[#FF5655] mt-5 flex mx-auto w-full h-[40px] rounded-sm justify-center items-center"
             style={{ border: "1px solid #FF5655", padding: "0px 16px" }}
             onClick={closeActiveModal1}
           >

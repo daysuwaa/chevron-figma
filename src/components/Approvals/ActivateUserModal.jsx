@@ -37,20 +37,19 @@ const ActivateScheduleModal = ({ isInactiveModalOpen, closeInactiveModal }) => {
             {/* #3 password */}
             <div className="my-6">
               <form>
-                <label className="text-[#4A5568] text-sm ">
+                <label
+                  htmlFor="2fapas"
+                  className="text-[#4A5568] text-sm mb-2 block "
+                >
                   Password
-                  <input
-                    type="text"
-                    value={password}
-                    onChange={(e) => setPassword(e.target.value)}
-                    className="mb-2"
-                  />
                 </label>
                 <div className="px-[10px] items-center h-[40px] flex w-full rounded border border-[#CBD5E0] focus-within:outline outline-2 outline-blue-600">
                   <input
                     type="text"
+                    value={password}
+                    onChange={(e) => setPassword(e.target.value)}
                     placeholder="Enter Password"
-                    id="search"
+                    id="2fapas"
                     className="font-normal w-[320px] h-8 outline-none"
                     style={{
                       color: "#718096",
@@ -62,20 +61,19 @@ const ActivateScheduleModal = ({ isInactiveModalOpen, closeInactiveModal }) => {
             </div>
             <div className="my-6">
               <form>
-                <label className="text-[#4A5568] text-sm ">
+                <label
+                  htmlFor="2fa"
+                  className="text-[#4A5568] text-sm mb-2 block "
+                >
                   2FA Token
-                  <input
-                    type="text"
-                    value={token}
-                    onChange={(e) => setToken(e.target.value)}
-                    className="mb-2"
-                  />
                 </label>
                 <div className="px-[10px] items-center h-[40px] flex w-full rounded border border-[#CBD5E0] focus-within:outline outline-2 outline-blue-600">
                   <input
                     type="text"
+                    value={token}
+                    onChange={(e) => setToken(e.target.value)}
                     placeholder="Enter your 2FA Token"
-                    id="search"
+                    id="2fa"
                     className="font-normal w-[320px] h-8 outline-none text-lg"
                     style={{
                       color: "#718096",
