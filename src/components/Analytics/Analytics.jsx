@@ -84,17 +84,11 @@ const Analytics = () => {
           <div className="lg:flex md:flex sm:flex font-light tracking-wide text-[#4A5568] text-sm">
             <p>Inflows vs Outflows</p>
             <div className="flex mt-2  justify-center  sm:mt-0 sm:ml-auto">
-              <p
-                className="flex h-[28px] mx-2 items-center sm:mx-2"
-                style={{
-                  border: "1px solid var(--Color-Gray-Gray-40, #CBD5E0)",
-                  borderRadius: "4px",
-                  padding: "6px 12px",
-                }}
-              >
+              <p className="flex h-[28px] mx-2 mt-2  sm:mt-0 items-center sm:mx-2 border border-[#CBD5E0] px-3 py-1.5">
                 <select
                   value={month}
                   className="outline-none w-full"
+                  id="month"
                   onChange={handleChange}
                 >
                   <option value="month1">Last 1 month</option>
@@ -104,9 +98,9 @@ const Analytics = () => {
                 </select>
               </p>
               <svg
-                className="sm:ml-auto sm:mx-0 mx-auto mt-1 sm:mt-0 border border-[#CBD5E0] p-1 rounded"
+                className="sm:ml-auto sm:mx-0  mt-2 sm:mt-0 border border-[#CBD5E0] p-1 rounded"
                 width="40"
-                height="25"
+                height="28"
                 viewBox="0 0 14 14"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
