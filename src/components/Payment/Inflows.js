@@ -7,7 +7,7 @@ const Outflows = () => {
     {
       name: <div className="font-bold text-[#4A5568]">TRANSACTION ID</div>,
       selector: (row) => (
-        <Link to="/details">
+        <Link to="/payment/details">
           <div className="font-bold text-[#1C065A]"> {row.transactionid}</div>
         </Link>
       ),

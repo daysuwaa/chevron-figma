@@ -71,10 +71,7 @@ const Details = () => {
               </p>
             </div>
 
-            <div
-              className="mx-3 h-[2px] border-b my-9 "
-              style={{ background: "var(--Color-Gray-Gray-40, #CBD5E0)" }}
-            ></div>
+            <hr className="mx-3 h-[2px] border-b my-9 bg-[#CBD5E0]" />
             <div className="mx-7  ">
               <p className="text-[#1C065A] text-[10px] font-[500]">
                 SCHEDULE DETAILS
