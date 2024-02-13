@@ -5,7 +5,7 @@ import DataTable from "react-data-table-component";
 const Outflows = () => {
   const columns = [
     {
-      name: "TRANSACTION ID",
+      name: <div className="font-bold text-[#4A5568]">TRANSACTION ID</div>,
       selector: (row) => (
         <Link to="/details">
           <div className="font-bold text-[#1C065A]"> {row.transactionid}</div>
@@ -13,19 +13,19 @@ const Outflows = () => {
       ),
     },
     {
-      name: "AMOUNT",
+      name: <div className="font-bold text-[#4A5568]">AMOUNT</div>,
       selector: (row) => <div className="text-[#1C065A]">{row.amount}</div>,
     },
     {
-      name: "SENDER",
+      name: <div className="font-bold text-[#4A5568]">SENDER</div>,
       selector: (row) => <div className="text-[#1C065A]"> {row.sender}</div>,
     },
     {
-      name: "PAID FROM",
+      name: <div className="font-bold text-[#4A5568]">PAID FROM</div>,
       selector: (row) => <div className="text-[#1C065A]"> {row.paidfrom}</div>,
     },
     {
-      name: "DATE",
+      name: <div className="font-bold text-[#4A5568]">DATE</div>,
       selector: (row) => <div className="text-[#1C065A]"> {row.date}</div>,
     },
   ];
