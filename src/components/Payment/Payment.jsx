@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import millify from "millify";
 import Inflow from "./Inflows";
 import Outflow from "./Outflows";
-import CopyToClipboard from "./Copy";
+import CopyToClipboard from "../Utility/Copy";
 import payments from "src/assets/FiCreditCard.svg";
 import calendar from "src/assets/FiCalendar.svg";
 import wallet from "src/assets/IoWalletOutline.svg";
