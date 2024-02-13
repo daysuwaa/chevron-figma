@@ -19,7 +19,7 @@ const Beneficiaries = () => {
 
       <div className="flex ml-auto justify-end items-center mx-5 md:px-[10px] mt-8">
         <button
-          className="bg-[#3B2774] h-[32px] w-[153px] rounded text-center text-white text-sm gap-8"
+          className="bg-[#3B2774] py-1.5 px-3 rounded text-center text-white text-sm gap-8"
           onClick={openAddBeneficiaryModal}
         >
           Add New Beneficiary
@@ -37,7 +37,7 @@ const Beneficiaries = () => {
           Click the button below to generate a template for one
         </p>
         <button
-          className="h-[48px] text-[#1C065A] text-[14px] sm:text-[16px] mt-4 rounded bg-white  sm:w-[251px] w-[200px] text-center flex items-center justify-center"
+          className="py-1.5 px-3 text-[#1C065A] text-[14px] sm:text-[16px] mt-4 rounded bg-white  text-center flex items-center justify-center"
           style={{
             border: " 1px solid var(--Button-Background-Alternate, #3B2773)",
           }}

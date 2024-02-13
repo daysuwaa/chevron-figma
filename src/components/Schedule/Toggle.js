@@ -1,5 +1,3 @@
-import Dropdown from "./Dropdown";
-
 const Toggle = ({ isActive, setIsActive }) => {
   const handleToggle = () => {
     setIsActive((prev) => !prev);

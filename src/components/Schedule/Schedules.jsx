@@ -37,7 +37,7 @@ const Schedules = () => {
           Click the button below to generate a template for one
         </p>
         <button
-          className="h-[48px] px-[24px] text-[#1C065A] text-[14px] sm:text-[16px] mt-4 rounded bg-white  text-center flex items-center justify-center"
+          className="py-2 px-3 text-[#1C065A] text-[14px] sm:text-[16px] mt-4 rounded bg-white  text-center flex items-center justify-center"
           style={{
             border: " 1px solid var(--Button-Background-Alternate, #3B2773)",
           }}
