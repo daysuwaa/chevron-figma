@@ -81,6 +81,7 @@ const ScheduleTable = () => {
       status1: "Edit Schedule",
     },
     {
+      id: 3,
       scheduleid: "BLPID000133B31",
       name: "Drivers Branch Salaries",
       recipients: "83",
