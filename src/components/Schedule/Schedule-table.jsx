@@ -114,17 +114,18 @@ const ScheduleTable = () => {
           <img src={filter} alt="searchicon" className="w-[16px] " />
           <p className="font-light text-[#718096] text-[14px] ml-1.5">Filter</p>
         </div>
-        {/* md  large */}
-        <div className=" hidden sm:hidden md:hidden lg:block xl:flex ml-auto  px-5  ">
+
+        {/* xl  large */}
+        <div className="hidden sm:hidden md:hidden lg:block xl:flex ml-auto px-5">
           <button
-            className="mr-2 mb-3 border border-[#3B2773] text-[#1C065A] h-10 px-4  text-[14px] sm:text-[16px] rounded bg-white  text-center  "
+            className="mr-2 lg:mb-2 xl:mb-0 border border-[#3B2773] text-[#1C065A] py-1 px-3 text-[14px] rounded bg-white text-center flex-grow"
             onClick={openGetSchedule}
           >
             Get Schedule Template
           </button>
 
           <button
-            className="bg-[#3B2774] px-4 h-10 rounded text-center text-white text-sm"
+            className="bg-[#3B2774] px-3 py-1 rounded text-center text-white text-sm flex-grow"
             onClick={openAddScheduleModal}
           >
             Add New Schedule
@@ -135,14 +136,14 @@ const ScheduleTable = () => {
 
       <div className="block md:block lg:hidden ml-auto pt-5 md:mt-0  px-5  ">
         <button
-          className="mr-2 mb-3 border border-[#3B2773] text-[#1C065A] h-10  w-[200px]  text-[14px] sm:text-[16px] rounded bg-white  text-center  "
+          className="mr-2 mb-3 border border-[#3B2773] text-[#1C065A] px-3 py-1  text-sm rounded bg-white  text-center  "
           onClick={openGetSchedule}
         >
           Get Schedule Template
         </button>
 
         <button
-          className="bg-[#3B2774] w-[153px] h-10 rounded text-center text-white text-sm"
+          className="bg-[#3B2774] px-3 py-1 rounded text-center text-white text-sm"
           onClick={openAddScheduleModal}
         >
           Add New Schedule

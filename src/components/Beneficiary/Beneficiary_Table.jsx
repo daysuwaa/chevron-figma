@@ -18,7 +18,7 @@ const BeneficiaryTable = () => {
     {
       name: <div className="font-bold text-[#4A5568]">BENEFICIARY LIST ID</div>,
       selector: (row) => (
-        <Link to="/beneficiarypayments">
+        <Link to="/beneficiaries/payments">
           <div className=" font-semibold text-[#1C065A]">{row.scheduleid}</div>
         </Link>
       ),
@@ -97,13 +97,7 @@ const BeneficiaryTable = () => {
             type="text"
             placeholder="Search by Beneficiary Id"
             id="bsearchh"
-            className="font-light w-[320px]  outline-none"
-            style={{
-              color: "#718096",
-              fontSize: "14px",
-              marginLeft: "6px",
-              backgroundColor: "#F6F6F6",
-            }}
+            className=" font-light w-[320px]  text-[#718096] text-[14px] ml-1.5 bg-[#f6f6f6]  outline-none"
           />
         </div>
         <div
@@ -123,8 +117,8 @@ const BeneficiaryTable = () => {
             <g id="FiFilter">
               <path
                 id="Vector (Stroke)"
-                fill-rule="evenodd"
-                clip-rule="evenodd"
+                fillRule="evenodd"
+                clipRule="evenodd"
                 d="M0.728678 1.71933C0.837917 1.48389 1.07387 1.33325 1.33342 1.33325H14.6668C14.9263 1.33325 15.1623 1.48389 15.2715 1.71933C15.3807 1.95478 15.3434 2.23222 15.1758 2.4304L10.0001 8.55068V13.9999C10.0001 14.231 9.88046 14.4455 9.68391 14.567C9.48737 14.6885 9.24194 14.6995 9.03528 14.5962L6.36861 13.2629C6.14276 13.1499 6.00009 12.9191 6.00009 12.6666V8.55068L0.824377 2.4304C0.656779 2.23222 0.61944 1.95478 0.728678 1.71933ZM2.77029 2.66659L7.1758 7.8761C7.27758 7.99645 7.33342 8.14897 7.33342 8.30659V12.2546L8.66676 12.9212V8.30659C8.66676 8.14897 8.7226 7.99645 8.82438 7.8761L13.2299 2.66659H2.77029Z"
                 fill="#718096"
               />
@@ -142,22 +136,16 @@ const BeneficiaryTable = () => {
             Filter
           </p>
         </div>
-        {/* md  large */}
-        <div className=" hidden sm:hidden md:hidden lg:flex ml-auto  px-5  ">
+        {/* xl large */}
+        <div className="hidden sm:hidden md:hidden lg:block  xl:flex ml-auto px-5">
           <button
-            className="mr-2 mb-3 text-[#1C065A] px-[12px] py-[5px]   text-[14px] sm:text-[16px] rounded bg-white  text-center  "
-            style={{
-              border: " 1px solid var(--Button-Background-Alternate, #3B2773)",
-            }}
+            className="mr-2 border lg:mb-2 xl:mb-0 border-[#3B2773] text-[#1C065A] py-1 px-3 text-[14px] rounded bg-white text-center flex-grow"
             onClick={openGetBeneficiary}
           >
             Get Beneficiary Template
           </button>
           <button
-            className="mr-2 mb-3 bg-[#1C065A] px-[12px] py-[5px]    text-[14px] sm:text-[16px] rounded text-white  text-center  "
-            style={{
-              border: " 1px solid var(--Button-Background-Alternate, #3B2773)",
-            }}
+            className="bg-[#3B2774] px-4 py-2 rounded text-center text-white text-sm"
             onClick={openAddBeneficiaryModal}
           >
             Add New Beneficiary
@@ -168,16 +156,13 @@ const BeneficiaryTable = () => {
 
       <div className="block md:block lg:hidden ml-auto pt-5 md:mt-0  px-5  ">
         <button
-          className="mr-2 mb-3 text-[#1C065A]  px-[12px] py-[5px] text-[14px] rounded bg-white  text-center  "
-          style={{
-            border: " 1px solid var(--Button-Background-Alternate, #3B2773)",
-          }}
+          className="mr-2 mb-3 border border-[#3B2773] text-[#1C065A] px-3 py-1  text-sm rounded bg-white  text-center  "
           onClick={openGetBeneficiary}
         >
           Get Beneficiary Template
         </button>
         <button
-          className="mr-2 mb-3 bg-[#1C065A] px-[12px] py-[5px]   text-[14px] rounded text-white  text-center  "
+          className="mr-2 mb-3 bg-[#1C065A] px-4 py-1   text-[14px] rounded text-white  text-center  "
           style={{
             border: " 1px solid var(--Button-Background-Alternate, #3B2773)",
           }}
@@ -187,10 +172,7 @@ const BeneficiaryTable = () => {
         </button>
       </div>
 
-      <div
-        className="w-full border-b mt-4 "
-        style={{ background: "var(--Color-Gray-Gray-40, #CBD5E0)" }}
-      ></div>
+      <hr className="bg-[#CBD5E0] w-full h-0.3 my-5" />
       <div
         style={{ border: "1px solid var(--Color-Gray-Gray-40, #CBD5E0)" }}
         className="mx-5"
