@@ -33,7 +33,7 @@ const Security = () => {
   };
 
   return (
-    <div className="flex flex-col items-center mt-11 mb-9 ">
+    <div className="flex flex-col items-center mt-7 mb-9 ">
       {/*1  white boxxx  */}
       <div
         className="bg-white h-[437px] mt-5 rounded w-[290px] sm:w-[450px] md:w-[450px] lg:w-[616px]"

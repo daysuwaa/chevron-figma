@@ -13,7 +13,7 @@ const General = () => {
   };
 
   return (
-    <div className="flex flex-col items-center mt-11">
+    <div className="flex flex-col items-center mt-7">
       <div className="flex items-center">
         <img src={chevron} alt="logo" className="w-[42px] h-[42px]" />
         <p className="mt-1  text-[#4A5568] font-semibold">Your Avatar</p>
