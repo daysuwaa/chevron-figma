@@ -129,9 +129,9 @@ const Payment = () => {
 
       {/* the second side */}
 
-      <div className="sm:grid sm:grid-cols-1 md:grid-cols-2 md:m-5 my-5 md:my:0 flex flex-col">
+      <div className="sm:grid sm:grid-cols-1 md:grid-cols-2 md:m-5 my-5 md:my:0 flex flex-col items-center">
         {/* First component */}
-        <div className="flex my-4">
+        <div className="flex mb-2">
           <p className="flex tracking-wide items-center font-light mx-5  md:mx:0  text-[#1C065A] text-sm ">
             My account
             <Tooltip
@@ -151,7 +151,7 @@ const Payment = () => {
         </div>
 
         {/* searchhhhh */}
-        <div className="flex mb-2  mt-[0.7rem] md:mb-0">
+        <div className="flex mb-2   md:mb-0">
           <div className="px-[20px] h-12 py-[6px] mx-5 items-center flex w-full rounded border border-[#CBD5E0] focus-within:outline outline-2 outline-blue-600">
             <svg
               width="16"
