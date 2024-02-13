@@ -2,15 +2,13 @@ import React, { useState } from "react";
 import millify from "millify";
 import Inflow from "./Inflows";
 import Outflow from "./Outflows";
+import CopyToClipboard from "./Copy";
 import payments from "src/assets/FiCreditCard.svg";
 import calendar from "src/assets/FiCalendar.svg";
 import wallet from "src/assets/IoWalletOutline.svg";
 import winfo from "src/assets/CkInfoOutline-2.svg";
 import info from "src/assets/CkInfoOutline.svg";
-import gtb from "src/assets/image 2.png";
-import copy from "src/assets/IoCopyOutline.svg";
 import Tooltip from "@mui/material/Tooltip";
-import toast, { Toaster } from "react-hot-toast";
 import Navbarr from "../Layout/Navbar";
 import Filter from "./Filter";
 
@@ -91,22 +89,6 @@ const Payment = () => {
     );
   };
 
-  // the clipboard thingy
-  const copyToClipboard = () => {
-    const textToCopy = "0422822151";
-    toast("Copied to clipboard!", {
-      id: "ert",
-    });
-    if (navigator.clipboard) return navigator.clipboard.writeText(textToCopy);
-
-    const textArea = document.createElement("textarea");
-    document.body.appendChild(textArea);
-    textArea.value = textToCopy;
-    textArea.select();
-    document.execCommand("copy");
-    document.body.removeChild(textArea);
-  };
-
   // created a constant
   const [activeTab, setActiveTab] = useState("outflow");
 
@@ -163,17 +145,9 @@ const Payment = () => {
               />
             </Tooltip>
           </p>
-          <div className="md:ml-0 flex ml-auto mx-5  md:mx:0 md:my:0">
-            <button
-              className="flex bg-[#3B2773] h-[2.5rem] py-[0.375rem] px-[0.625rem] rounded justify-center items-center text-white md:text-[13px] lg:text-[13px] sm:text-[13px] text-[10px]"
-              onClick={copyToClipboard}
-            >
-              <img src={gtb} alt="gtblogo" className="text-center pr-1 " />
-              0422822151
-              <img src={copy} alt="copy" className="ml-1 w-4 h-4"></img>
-            </button>
-            <Toaster />
-          </div>
+
+          <CopyToClipboard />
+          {/* Integrating the CopyButton component here */}
         </div>
 
         {/* searchhhhh */}
