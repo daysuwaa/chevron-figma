@@ -4,17 +4,17 @@ import DataTable from "react-data-table-component";
 const Table = () => {
   const columns = [
     {
-      name: "USER",
+      name: <div className="font-bold text-[#4A5568]">USER</div>,
       selector: (row) => (
         <div className=" font-semibold text-[#1C065A]">{row.recipient}</div>
       ),
     },
     {
-      name: "DATE/TIME",
+      name: <div className="font-bold text-[#4A5568]">DATE/TIME</div>,
       selector: (row) => <div className="text-[#1C065A]">{row.date}</div>,
     },
     {
-      name: "IP ADDRESS",
+      name: <div className="font-bold text-[#4A5568]">IP ADDRESS</div>,
       selector: (row) => <div className="text-[#1C065A]">{row.ipaddress}</div>,
     },
   ];
@@ -48,7 +48,7 @@ const Table = () => {
     },
   ];
   return (
-    <div className="flex flex-col items-center mt-11 mb-9 ">
+    <div className="flex flex-col items-center mt-7 mb-9 ">
       <div className="mt-11 mx-5 md:mx-7  w-[290px] sm:w-[450px] md:w-[450px] lg:w-[616px]   ">
         <div
           className="bg-white h-[377px] mt-5  items-center rounded-md"
