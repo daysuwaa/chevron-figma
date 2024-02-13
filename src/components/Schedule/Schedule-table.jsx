@@ -107,33 +107,12 @@ const ScheduleTable = () => {
             type="text"
             placeholder="Search by Schedule Id"
             id="scsearch"
-            className="font-light w-[320px]  outline-none"
-            style={{
-              color: "#718096",
-              fontSize: "14px",
-              marginLeft: "6px",
-              backgroundColor: "#F6F6F6",
-            }}
+            className="font-light w-[320px]  outline-none text-[#718096] text-[14px] ml-1.5 bg-[#f6f6f6]"
           />
         </div>
-        <div
-          className="px-[20px] h-10 items-center mx-5 mt-3 md:mx-5 sm:mt-3 md:mt-0 lg:mt-0 flex w-[100px] "
-          style={{
-            borderRadius: "4px",
-            border: "1px solid var(--Color-Gray-Gray-40, #CBD5E0)",
-          }}
-        >
+        <div className="px-[20px] rounded border border-[#CBD5E0] h-10 items-center mx-5 mt-3 md:mx-5 sm:mt-3 md:mt-0 lg:mt-0 flex w-[100px] ">
           <img src={filter} alt="searchicon" className="w-[16px] " />
-          <p
-            className="font-light"
-            style={{
-              color: "var(--Color-Gray-Gray-60, #718096)",
-              fontSize: "14px",
-              marginLeft: "6px",
-            }}
-          >
-            Filter
-          </p>
+          <p className="font-light text-[#718096] text-[14px] ml-1.5">Filter</p>
         </div>
         {/* md  large */}
         <div className=" hidden sm:hidden md:hidden lg:flex ml-auto  px-5  ">
