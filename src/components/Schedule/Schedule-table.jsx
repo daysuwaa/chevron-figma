@@ -51,11 +51,8 @@ const ScheduleTable = () => {
               justifyContent: "center",
               borderRadius: "4px",
               textAlign: "center",
-              width: "100px",
-              height: "30px",
               marginRight: "10px",
             }}
-            onClick={openAddScheduleModal}
             className="cursor-pointer"
           >
             {row.status1}
@@ -140,10 +137,7 @@ const ScheduleTable = () => {
         {/* md  large */}
         <div className=" hidden sm:hidden md:hidden lg:flex ml-auto  px-5  ">
           <button
-            className="mr-2 mb-3 text-[#1C065A] h-10  w-[200px]  text-[14px] sm:text-[16px] rounded bg-white  text-center  "
-            style={{
-              border: " 1px solid var(--Button-Background-Alternate, #3B2773)",
-            }}
+            className="mr-2 mb-3 border border-[#3B2773] text-[#1C065A] h-10  w-[200px]  text-[14px] sm:text-[16px] rounded bg-white  text-center  "
             onClick={openGetSchedule}
           >
             Get Schedule Template
@@ -161,10 +155,7 @@ const ScheduleTable = () => {
 
       <div className="block md:block lg:hidden ml-auto pt-5 md:mt-0  px-5  ">
         <button
-          className="mr-2 mb-3 text-[#1C065A] h-10  w-[200px]  text-[14px] sm:text-[16px] rounded bg-white  text-center  "
-          style={{
-            border: " 1px solid var(--Button-Background-Alternate, #3B2773)",
-          }}
+          className="mr-2 mb-3 border border-[#3B2773] text-[#1C065A] h-10  w-[200px]  text-[14px] sm:text-[16px] rounded bg-white  text-center  "
           onClick={openGetSchedule}
         >
           Get Schedule Template
@@ -178,13 +169,10 @@ const ScheduleTable = () => {
         </button>
       </div>
 
-      <div
-        className="w-full border-b mt-4 "
-        style={{ background: "var(--Color-Gray-Gray-40, #CBD5E0)" }}
-      ></div>
+      <hr className="bg-[#CBD5E0] w-full h-0.3 my-5" />
       <div
         style={{ border: "1px solid var(--Color-Gray-Gray-40, #CBD5E0)" }}
-        className="mx-5"
+        className="border border-[#CBD5E0] mx-5"
       >
         <DataTable columns={columns} data={data} className="" />
       </div>
