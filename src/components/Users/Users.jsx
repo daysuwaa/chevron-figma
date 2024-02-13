@@ -18,7 +18,7 @@ const Users = () => {
         isOpen={isOpen}
         onRequestClose={handleClose}
         shouldCloseOnOverlayClick={false}
-        className="absolute top-1/2 left-[43%] md:left-1/2 w-[400px] md:w-[640px] transform -translate-x-1/2 bg-white -translate-y-1/2 p-[2rem] m-[2rem]"
+        className="absolute rounded top-1/2 left-[43%] md:left-1/2 w-[400px] md:w-[640px] transform -translate-x-1/2 bg-white -translate-y-1/2 p-[2rem] m-[2rem]"
         overlayClassName="fixed inset-0 bg-black bg-opacity-50"
       >
         <div className="flex justify-between items-center ">

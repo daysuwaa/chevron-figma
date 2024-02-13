@@ -15,7 +15,7 @@ const UploadBeneficiary = ({
       onRequestClose={handleClose}
       contentLabel={modalTitle}
       shouldCloseOnOverlayClick={false}
-      className="absolute top-1/2 md:left-1/2 left-[43%] transform -translate-x-1/2 bg-white -translate-y-1/2 p-[2rem] m-[2rem]"
+      className="absolute top-1/2 md:left-1/2 rounded left-[43%] transform -translate-x-1/2 bg-white -translate-y-1/2 p-[2rem] m-[2rem]"
       overlayClassName="fixed inset-0 bg-black bg-opacity-50"
     >
       <div className="mt-5">
