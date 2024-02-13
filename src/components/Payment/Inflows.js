@@ -83,7 +83,7 @@ const Outflows = () => {
   ];
   return (
     <div
-      className="mx-3 md:mx-7 mb-5"
+      className="mx-5 md:mx-7 mb-5"
       style={{ border: "1px solid var(--Color-Gray-Gray-40, #CBD5E0)" }}
     >
       <DataTable columns={columns} data={data} />

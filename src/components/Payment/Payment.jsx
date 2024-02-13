@@ -93,7 +93,7 @@ const Payment = () => {
 
   // the clipboard thingy
   const copyToClipboard = () => {
-    const textToCopy = "0012345678";
+    const textToCopy = "0422822151";
     toast("Copied to clipboard!", {
       id: "ert",
     });
@@ -119,7 +119,7 @@ const Payment = () => {
       <Navbarr title="Payment" />
 
       {/* framesssss */}
-      <div className="grid grid-cols-1 md:grid-cols-3 mx-3 md:mx-7 gap-4">
+      <div className="grid grid-cols-1 md:grid-cols-3 mx-5 md:mx-7 gap-4">
         {styling("#22085C", "Total Payments", payments, money1, "#FFF", winfo)}
 
         {styling(
@@ -143,17 +143,14 @@ const Payment = () => {
       {/* end of frames */}
 
       {/* lineee */}
-      <div
-        className="hidden md:block w-full border-b mt-4"
-        style={{ background: "var(--Color-Gray-Gray-40, #CBD5E0)" }}
-      ></div>
+      <hr className="bg-[#CBD5E0] w-full h-0.3 mt-9" />
 
       {/* the second side */}
 
       <div className="sm:grid sm:grid-cols-1 md:grid-cols-2 md:m-5 my-5 md:my:0 flex flex-col">
         {/* First component */}
         <div className="flex my-4">
-          <p className="flex tracking-wide items-center font-light mx-3  md:mx:0  text-[#1C065A] text-sm ">
+          <p className="flex tracking-wide items-center font-light mx-5  md:mx:0  text-[#1C065A] text-sm ">
             My account
             <Tooltip
               title="Fund your wallet by paying into Guarantee Trust Wallet"
@@ -166,7 +163,7 @@ const Payment = () => {
               />
             </Tooltip>
           </p>
-          <div className="md:ml-0 flex ml-auto mx-3  md:mx:0 md:my:0">
+          <div className="md:ml-0 flex ml-auto mx-5  md:mx:0 md:my:0">
             <button
               className="flex bg-[#3B2773] h-[2.5rem] py-[0.375rem] px-[0.625rem] rounded justify-center items-center text-white md:text-[13px] lg:text-[13px] sm:text-[13px] text-[10px]"
               onClick={copyToClipboard}
@@ -181,7 +178,7 @@ const Payment = () => {
 
         {/* searchhhhh */}
         <div className="flex mb-2  mt-[0.7rem] md:mb-0">
-          <div className="px-[20px] h-12 py-[6px] mx-2 items-center flex w-full rounded border border-[#CBD5E0] focus-within:outline outline-2 outline-blue-600">
+          <div className="px-[20px] h-12 py-[6px] mx-5 items-center flex w-full rounded border border-[#CBD5E0] focus-within:outline outline-2 outline-blue-600">
             <svg
               width="16"
               height="16"
@@ -213,7 +210,7 @@ const Payment = () => {
 
           {/* the filter */}
 
-          <div className="flex mb-2 mx-2 lg:ml-auto">
+          <div className="flex mb-2 mx-5 lg:ml-auto">
             <div className="relative ">
               <button
                 className="px-[20px] grid-cols-2 py-[12px] h-12 flex w-[6.5rem] rounded"
@@ -257,12 +254,12 @@ const Payment = () => {
 
       {/* end of the  straight stuff */}
       {/* the tab stufff */}
-      <div className="flex justify-between items-center px-3 md:px-7 ml-auto ">
+      <div className="flex justify-between items-center px-5 md:px-7 ml-auto ">
         <div>
           <button
-            className={` py-2 text-[14px] ${
+            className={` py-2 px-4 text-[14px] ${
               activeTab === "outflow"
-                ? "font-bold text-[#1C065A] border-b-2 border-[#1C065A]"
+                ? " text-[#1C065A] border-b-2 border-[#1C065A]"
                 : "text-gray-500"
             }`}
             onClick={() => setActiveTab("outflow")}
@@ -270,9 +267,9 @@ const Payment = () => {
             Outflow
           </button>
           <button
-            className={`mx-[2rem] py-2 text-[14px] ${
+            className={`mx-[2rem] px-4 py-2 text-[14px] ${
               activeTab === "inflow"
-                ? "font-bold text-[#1C065A] border-b-2 border-[#1C065A]"
+                ? " text-[#1C065A] border-b-2 border-[#1C065A]"
                 : "text-gray-500"
             }`}
             onClick={() => setActiveTab("inflow")}
@@ -281,10 +278,8 @@ const Payment = () => {
           </button>
         </div>
 
-        <button className="bg-[#3B2773] px-3 rounded h-8 mb-[10px]">
-          <p className="text-white text-[10px] sm:text-[14px]">
-            Export Payments
-          </p>
+        <button className="bg-[#3B2773] px-3 rounded h-8 mb-[10px] text-white text-[10px] sm:text-[14px]">
+          Export Payments
         </button>
       </div>
 
