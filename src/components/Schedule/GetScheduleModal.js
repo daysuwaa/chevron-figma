@@ -7,7 +7,6 @@ import Dropdown from "./Dropdown";
 const ModalHeader = ({ modalTitle, handleClose }) => (
   <div className="flex items-center lg:w-[35rem] md:w-[30rem] w-[14rem]">
     <h2 className="text-md text-[#4A5568] mx-auto mb-4 font-semibold">
-      {/* Get Schedule Template */}
       {modalTitle}
     </h2>
     <button onClick={handleClose} className="text-gray-600">
