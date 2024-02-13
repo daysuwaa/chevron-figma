@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import chevron from "src/assets/chevron logo.png";
-import info from "src/assets/CkInfoOutline.svg";
 import Tooltip from "@mui/material/Tooltip";
 import ToggleButton from "../Layout/ToggleButton";
 
@@ -45,69 +44,49 @@ const General = () => {
             <label htmlFor="user" className="text-[#4A5568] text-sm pb-2 block">
               User / Organization Name
             </label>
-            <div className="px-[10px] items-center h-[40px] flex w-full lg:w-[566px] rounded border border-[#CBD5E0] focus-within:outline outline-2  outline-blue-600">
-              <input
-                type="text"
-                placeholder="Chevron Group"
-                id="user"
-                value={name}
-                onChange={(e) => setName(e.target.value)}
-                className="font-normal w-[320px] h-8 outline-none"
-                style={{
-                  color: "#718096",
-                  fontSize: "14px",
-                }}
-              />
-            </div>
+            <input
+              type="text"
+              placeholder="Chevron Group"
+              id="user"
+              value={name}
+              onChange={(e) => setName(e.target.value)}
+              className="font-normal px-4 text-[#718096] text-[14px] items-center h-[40px] flex w-full  rounded border border-[#CBD5E0] focus-within:outline outline-2  outline-blue-600"
+            />
           </form>
         </div>
 
         {/* email address */}
-        <div className="m-6  hidden md:hidden lg:flex ">
-          <form className="mr-3">
-            <label
-              htmlFor="mail"
-              className="text-[#4A5568] text-sm pb-2 block "
-            >
+        <div className="m-6 hidden md:hidden lg:flex">
+          <form className="mr-3" style={{ width: "50%" }}>
+            <label htmlFor="mail" className="text-[#4A5568] text-sm pb-2 block">
               Email Address
             </label>
-            <div className="px-[10px]  items-center h-[40px] flex w-full lg:w-[274px] rounded border border-[#CBD5E0] focus-within:outline outline-2 outline-blue-600">
-              <input
-                type="email"
-                placeholder="info@chevrongroup.com"
-                id="mail"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                className="font-normal w-[320px] h-8 outline-none"
-                style={{
-                  color: "#718096",
-                  fontSize: "14px",
-                }}
-              />
-            </div>
+            <input
+              type="email"
+              placeholder="info@chevrongroup.com"
+              id="mail"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              className="font-normal px-4 items-center h-[40px] w-full inline-block rounded border border-[#CBD5E0] focus-within:outline outline-2 outline-blue-600 text-[#718096] text-[14px]"
+            />
           </form>
           {/* telephone */}
-          <form>
+          <form style={{ width: "50%" }}>
             <label
               htmlFor="phone"
-              className="text-[#4A5568] text-sm pb-2 block "
+              className="text-[#4A5568] text-sm pb-2 block"
             >
               Phone
             </label>
-            <div className="px-[10px] items-center h-[40px] flex w-full lg:w-[274px] rounded border border-[#CBD5E0] focus-within:outline outline-2 outline-blue-600">
-              <input
-                type="tel"
-                placeholder="+234 908 776 1245"
-                id="phone"
-                className="font-normal w-[320px] h-8 outline-none"
-                style={{
-                  color: "#718096",
-                  fontSize: "14px",
-                }}
-              />
-            </div>
+            <input
+              type="tel"
+              placeholder="+234 908 776 1245"
+              id="phone"
+              className="font-normal w-full px-4 items-center h-[40px] inline-block rounded border border-[#CBD5E0] focus-within:outline outline-2 outline-blue-600 text-[#718096] text-[14px]"
+            />
           </form>
         </div>
+
         {/* small screen */}
         <div className="m-6 lg:hidden">
           <form>
@@ -117,41 +96,31 @@ const General = () => {
             >
               Email
             </label>
-            <div className="px-[10px] items-center h-[40px] flex w-full  rounded border border-[#CBD5E0] focus-within:outline outline-2 outline-blue-600">
-              <input
-                type="text"
-                placeholder="info@chevrongroup.com"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                id="email"
-                className="font-normal w-[320px]  outline-none"
-                style={{
-                  color: "#718096",
-                  fontSize: "14px",
-                }}
-              />
-            </div>
+            <input
+              type="text"
+              placeholder="info@chevrongroup.com"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              id="email"
+              className=" px-4 items-center h-[40px] flex w-full  rounded border border-[#CBD5E0] focus-within:outline outline-2 outline-blue-600 font-normal  text-[#718096] text-[14px]"
+            />
           </form>
-        </div>
 
-        <div className="m-6 lg:hidden ">
-          <label htmlFor="tele" className="text-[#4A5568] text-sm pb-2 block">
+          <label
+            htmlFor="tele"
+            className="text-[#4A5568] text-sm mt-6 pb-2 block"
+          >
             Telephone
           </label>
-          <div className="px-[10px] items-center h-[40px] mt-3 flex w-full  rounded border border-[#CBD5E0] focus-within:outline outline-2 outline-blue-600">
-            <input
-              type="tel"
-              placeholder="+234 908 776 1245"
-              value={phone}
-              onChange={(e) => setPhone(e.target.value)}
-              id="tele"
-              className="font-normal w-[320px] h-8 outline-none"
-              style={{
-                color: "#718096",
-                fontSize: "14px",
-              }}
-            />
-          </div>
+
+          <input
+            type="tel"
+            placeholder="+234 908 776 1245"
+            value={phone}
+            onChange={(e) => setPhone(e.target.value)}
+            id="tele"
+            className=" px-4 items-center h-[40px] flex w-full  rounded border border-[#CBD5E0] focus-within:outline outline-2 outline-blue-600 font-normal  text-[#718096] text-[14px]"
+          />
         </div>
 
         {/* timer  */}
@@ -162,18 +131,36 @@ const General = () => {
               title="Log me out if im inactive for this long"
               placement="bottom"
             >
-              <img
-                src={info}
-                alt="alert"
+              <svg
                 className="ml-2 mt-1 w-[14px] h-[14px] cursor-pointer"
-              />
+                width="12"
+                height="12"
+                viewBox="0 0 12 12"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <g id="CkInfoOutline" clip-path="url(#clip0_1050_818)">
+                  <path
+                    id="Vector"
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M1 6C1 3.23858 3.23858 1 6 1C8.76142 1 11 3.23858 11 6C11 8.76142 8.76142 11 6 11C3.23858 11 1 8.76142 1 6ZM6 0C2.68629 0 0 2.68629 0 6C0 9.31371 2.68629 12 6 12C9.31371 12 12 9.31371 12 6C12 2.68629 9.31371 0 6 0ZM5.97963 4.00007C6.25577 4.00007 6.47963 3.77621 6.47963 3.50007C6.47963 3.22393 6.25577 3.00007 5.97963 3.00007C5.70349 3.00007 5.47963 3.22393 5.47963 3.50007C5.47963 3.77621 5.70349 4.00007 5.97963 4.00007ZM6.47963 5.00014V5.50014V8.50014V9.00014H5.47963V8.50014V5.50014V5.00014H6.47963Z"
+                    fill="#4A5568"
+                  />
+                </g>
+                <defs>
+                  <clipPath id="clip0_1050_818">
+                    <rect width="12" height="12" fill="white" />
+                  </clipPath>
+                </defs>
+              </svg>
             </Tooltip>
           </label>
 
-          <div className="px-[0px] items-center h-[40px] flex w-full lg:w-[566px] rounded border border-[#CBD5E0] focus-within:outline outline-2 outline-blue-600">
+          <div className="px-4 items-center h-[40px] flex w-full lg:w-[566px] rounded border border-[#CBD5E0] focus-within:outline outline-2 outline-blue-600">
             <select
               value={timer}
-              className="outline-none w-full"
+              className="outline-none w-full text-[#4A5568] text-sm"
               onChange={handleChange}
             >
               <option value="Ford">5 mins</option>
@@ -189,11 +176,29 @@ const General = () => {
               title="Notify me when a payment schedule starts"
               placement="bottom"
             >
-              <img
-                src={info}
-                alt="alert"
+              <svg
                 className="ml-2 mt-1 w-[14px] h-[14px] cursor-pointer"
-              />
+                width="12"
+                height="12"
+                viewBox="0 0 12 12"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <g id="CkInfoOutline" clip-path="url(#clip0_1050_818)">
+                  <path
+                    id="Vector"
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M1 6C1 3.23858 3.23858 1 6 1C8.76142 1 11 3.23858 11 6C11 8.76142 8.76142 11 6 11C3.23858 11 1 8.76142 1 6ZM6 0C2.68629 0 0 2.68629 0 6C0 9.31371 2.68629 12 6 12C9.31371 12 12 9.31371 12 6C12 2.68629 9.31371 0 6 0ZM5.97963 4.00007C6.25577 4.00007 6.47963 3.77621 6.47963 3.50007C6.47963 3.22393 6.25577 3.00007 5.97963 3.00007C5.70349 3.00007 5.47963 3.22393 5.47963 3.50007C5.47963 3.77621 5.70349 4.00007 5.97963 4.00007ZM6.47963 5.00014V5.50014V8.50014V9.00014H5.47963V8.50014V5.50014V5.00014H6.47963Z"
+                    fill="#4A5568"
+                  />
+                </g>
+                <defs>
+                  <clipPath id="clip0_1050_818">
+                    <rect width="12" height="12" fill="white" />
+                  </clipPath>
+                </defs>
+              </svg>
             </Tooltip>
             <div className="ml-auto">
               <ToggleButton />
