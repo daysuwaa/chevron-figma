@@ -44,7 +44,7 @@ function App() {
             <Route path="/settings" element={<Settings />} />
             <Route path="/schedules/table" element={<Scheduletable />} />
             <Route path="/uploadschedule" element={<UploadSchedule />} />
-            <Route path="/details" element={<Details />} />
+            <Route path="/payment/details" element={<Details />} />
             <Route path="/schedules/payments" element={<Schedulepayments />} />
             <Route path="/beneficiaries/table" element={<Beneficiarytable />} />
             <Route
