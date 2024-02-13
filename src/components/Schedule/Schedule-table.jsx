@@ -20,7 +20,7 @@ const ScheduleTable = () => {
     {
       name: <div className="font-bold text-[#4A5568]">SCHEDULE ID</div>,
       selector: (row) => (
-        <Link to="/schedulepayments">
+        <Link to="/schedules/payments">
           <div className=" font-semibold text-[#1C065A]">{row.scheduleid}</div>
         </Link>
       ),

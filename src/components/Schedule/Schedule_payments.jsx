@@ -39,7 +39,7 @@ const Schedule_payments = () => {
 
     return (
       <div>
-        <Link to="/scheduletable">
+        <Link to="/schedules/table">
           <div className="flex mx-3 md:mx-7 my-5 items-center">
             <svg
               width="14"
