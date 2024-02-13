@@ -17,7 +17,6 @@ import Sidebar from "./components/Layout/Sidebar";
 import Error from "./components/Layout/Error";
 import Details from "./components/Payment/Details";
 import Scheduletable from "./components/Schedule/Schedule-table";
-import UploadSchedule from "./components/Schedule/UploadSchedule";
 import Schedulepayments from "./components/Schedule/Schedule_payments";
 import Beneficiarytable from "./components/Beneficiary/Beneficiary_Table";
 import BeneficiaryDetails from "./components/Beneficiary/BeneficiaryDetails";
@@ -43,7 +42,6 @@ function App() {
             <Route path="/analytics" element={<Analytics />} />
             <Route path="/settings" element={<Settings />} />
             <Route path="/schedules/table" element={<Scheduletable />} />
-            <Route path="/uploadschedule" element={<UploadSchedule />} />
             <Route path="/payment/details" element={<Details />} />
             <Route path="/schedules/payments" element={<Schedulepayments />} />
             <Route path="/beneficiaries/table" element={<Beneficiarytable />} />
