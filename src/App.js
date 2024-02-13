@@ -19,7 +19,7 @@ import Details from "./components/Payment/Details";
 import Scheduletable from "./components/Schedule/Schedule-table";
 import Schedulepayments from "./components/Schedule/Schedule_payments";
 import Beneficiarytable from "./components/Beneficiary/Beneficiary_Table";
-import BeneficiaryDetails from "./components/Beneficiary/BeneficiaryDetails";
+import BeneficiaryPayment from "./components/Beneficiary/Beneficiarypayment";
 
 function App() {
   return (
@@ -47,7 +47,7 @@ function App() {
             <Route path="/beneficiaries/table" element={<Beneficiarytable />} />
             <Route
               path="/beneficiaries/payments"
-              element={<BeneficiaryDetails />}
+              element={<BeneficiaryPayment />}
             />
             <Route path="*" element={<Error />} />
           </Routes>

@@ -8,7 +8,7 @@ const BeneficiaryTable = () => {
     {
       name: <div className="font-bold text-[#4A5568]">BENEFICIARY NAME</div>,
       selector: (row) => (
-        <Link to="/beneficiarypayments">
+        <Link to="/beneficiaries/tables">
           <div className=" font-semibold text-[#1C065A]">
             {row.beneficiaryname}
           </div>
@@ -48,8 +48,6 @@ const BeneficiaryTable = () => {
               justifyContent: "center",
               borderRadius: "4px",
               textAlign: "center",
-              width: "100px",
-              height: "30px",
               marginRight: "10px",
             }}
             className="cursor-pointer"
@@ -139,7 +137,7 @@ const BeneficiaryTable = () => {
   return (
     <div>
       <Navbar title="Beneficiary" />
-      <Link to="/beneficiarytable">
+      <Link to="/beneficiaries/table">
         <div className="flex mx-3 md:mx-7 my-5 items-center">
           <svg
             width="14"
@@ -167,7 +165,7 @@ const BeneficiaryTable = () => {
         </div>
       </Link>
       <div className="md:flex pt-8">
-        <div className="px-[20px] h-10 mx-5 flex md:w-[320px] rounded border border-[#CBD5E0] focus-within:outline outline-2 outline-blue-600">
+        <div className="px-[20px] items-center h-10 mx-5 flex md:w-[320px] rounded border border-[#CBD5E0] focus-within:outline outline-2 outline-blue-600">
           <svg
             width="16"
             height="16"
@@ -203,7 +201,7 @@ const BeneficiaryTable = () => {
           />
         </div>
         <div
-          className="px-[20px] h-10 items-center mx-5 mt-3 md:mx-5 sm:mt-3 md:mt-0 lg:mt-0 flex w-[100px] "
+          className="px-[20px]  h-10 items-center mx-5 mt-3 md:mx-5 sm:mt-3 md:mt-0 lg:mt-0 flex w-[100px] "
           style={{
             borderRadius: "4px",
             border: "1px solid var(--Color-Gray-Gray-40, #CBD5E0)",
@@ -219,31 +217,19 @@ const BeneficiaryTable = () => {
             <g id="FiFilter">
               <path
                 id="Vector (Stroke)"
-                fill-rule="evenodd"
-                clip-rule="evenodd"
+                fillRule="evenodd"
+                clipRule="evenodd"
                 d="M0.728678 1.71933C0.837917 1.48389 1.07387 1.33325 1.33342 1.33325H14.6668C14.9263 1.33325 15.1623 1.48389 15.2715 1.71933C15.3807 1.95478 15.3434 2.23222 15.1758 2.4304L10.0001 8.55068V13.9999C10.0001 14.231 9.88046 14.4455 9.68391 14.567C9.48737 14.6885 9.24194 14.6995 9.03528 14.5962L6.36861 13.2629C6.14276 13.1499 6.00009 12.9191 6.00009 12.6666V8.55068L0.824377 2.4304C0.656779 2.23222 0.61944 1.95478 0.728678 1.71933ZM2.77029 2.66659L7.1758 7.8761C7.27758 7.99645 7.33342 8.14897 7.33342 8.30659V12.2546L8.66676 12.9212V8.30659C8.66676 8.14897 8.7226 7.99645 8.82438 7.8761L13.2299 2.66659H2.77029Z"
                 fill="#718096"
               />
             </g>
           </svg>
 
-          <p
-            className="font-light"
-            style={{
-              color: "var(--Color-Gray-Gray-60, #718096)",
-              fontSize: "14px",
-              marginLeft: "6px",
-            }}
-          >
-            Filter
-          </p>
+          <p className="font-light text-[ #718096] text-sm ml-1.5">Filter</p>
         </div>
       </div>
 
-      <div
-        className="w-full border-b mt-4 "
-        style={{ background: "var(--Color-Gray-Gray-40, #CBD5E0)" }}
-      ></div>
+      <hr className="w-full border-b mt-4 bg-[#CBD5E0]" />
       <div
         style={{ border: "1px solid var(--Color-Gray-Gray-40, #CBD5E0)" }}
         className="mx-5"

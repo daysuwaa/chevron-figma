@@ -77,9 +77,7 @@ const BeneficiaryUploader = ({ BeneficiaryFile, setBeneficiaryFile }) => {
   return (
     <div className="my-5">
       <div className="md:mx-auto">
-        <label className="text-[#4A5568] text-sm pb-2 block">
-          Upload Beneficiary
-        </label>
+        <p className="text-[#4A5568] text-sm pb-2 block">Upload Beneficiary</p>
         {BeneficiaryFile ? (
           <div>
             <div className="flex items-center">
