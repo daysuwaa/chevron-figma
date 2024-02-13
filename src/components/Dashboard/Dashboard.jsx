@@ -99,7 +99,7 @@ const Dashboard = () => {
       <Navbar title="Dashboard" />
       {/* end of nav */}
       {/* framesssss */}
-      <div className="grid grid-cols-1 md:grid-cols-3 mx-3 md:mx-7 pb-7 gap-4">
+      <div className="grid grid-cols-1 md:grid-cols-3 mx-5 md:mx-7 pb-7 gap-4">
         {styling(
           "#22085C",
           "Total Payments",
@@ -132,27 +132,13 @@ const Dashboard = () => {
       </div>
       {/* end of frames */}
 
-      <div className="grid lg:grid-cols-3 grid-cols-1 gap-2 md:gap-4 mx-3 md:mx-7 my-5">
-        {" "}
+      <div className="grid lg:grid-cols-3 grid-cols-1 gap-2 md:gap-4 mx-5 md:mx-7 my-5">
         <div className="col-span-1 lg:col-span-2 bg-white p-4 text-center">
-          <div
-            className="lg:flex md:flex font-light tracking-wide"
-            style={{
-              color: "var(--Color-Gray-Gray-70, #4A5568)",
-              fontSize: "14px",
-              lineHeight: "24px",
-            }}
-          >
+          <div className="lg:flex md:flex font-light items-center tracking-wide text-[#4A5568] text-[14px] leading-[24px]">
             <p className="">Payout Overview</p>
-            <p
-              className="lg:flex lg:ml-auto md:flex md:ml-auto sm:flex sm:ml-auto"
-              style={{
-                border: "1px solid var(--Color-Gray-Gray-40, #CBD5E0)",
-                borderRadius: "4px",
-                padding: "6px 12px",
-              }}
-            >
+            <p className="lg:flex lg:ml-auto md:flex md:ml-auto sm:flex sm:ml-auto mt-2 sm:mt-0  border border-[#CBD5E0] rounded px-3 py-1.5">
               <select
+                id="lastMonth"
                 value={month}
                 className="outline-none w-full"
                 onChange={handleChange}
@@ -166,7 +152,7 @@ const Dashboard = () => {
           </div>
           <Barchat />
         </div>
-        <div className="col-span-1 justify-center items-center bg-white p-5">
+        <div className="col-span-1 my-5 sm:my-0 justify-center items-center bg-white p-5">
           <p className="font-light tracking-wide text-[#4A5568] text-sm">
             Schedule distribution
           </p>
@@ -196,49 +182,48 @@ const Dashboard = () => {
         </div>
       </div>
       {/* receipts payoutsss */}
-      <div className="py-7">
-        {/* <div className="bg-white max-w-full h-[355px] mx-7"> */}
-        <div className="bg-white max-w-full mx-3 md:mx-7 h-[355px]">
-          {" "}
-          {/* Adjusted margin for smaller screens */}
-          <div className="flex justify-between py-7 mx-5">
-            <p
-              className=""
-              style={{
-                color: "var(--Color-Gray-Gray-70, #4A5568",
-                fontSize: "14px",
-                lineHeight: "24px",
-              }}
-            >
-              Recent Payouts
-            </p>
-            <Link
-              to="/error"
-              style={{
-                color: "var(--Color-Gray-Gray-70, #4A5568",
-                fontSize: "12px",
-                lineHeight: "24px",
-              }}
-              className="underline font-thin"
-            >
-              View all
-            </Link>
-          </div>
-          <div
+
+      {/* <div className="bg-white max-w-full h-[355px] mx-7"> */}
+      <div className="bg-white max-w-full mx-5 md:mx-7 h-[355px]">
+        {/* Adjusted margin for smaller screens */}
+        <div className="flex justify-between py-7 mx-5">
+          <p
+            className=""
             style={{
-              alignItems: "flex-end",
-              borderRadius: "4px",
-              margin: "0rem 1.2rem 0 1.2rem",
-              height: "260px",
+              color: "var(--Color-Gray-Gray-70, #4A5568",
+              fontSize: "14px",
+              lineHeight: "24px",
             }}
-            className="flex-1"
           >
-            {/* imported table */}
-            <Table className=" text-slate-700" style={{ color: "#4A5568" }} />
-          </div>
+            Recent Payouts
+          </p>
+          <Link
+            to="/error"
+            style={{
+              color: "var(--Color-Gray-Gray-70, #4A5568",
+              fontSize: "12px",
+              lineHeight: "24px",
+            }}
+            className="underline font-thin"
+          >
+            View all
+          </Link>
+        </div>
+        <div
+          style={{
+            alignItems: "flex-end",
+            borderRadius: "4px",
+            margin: "0rem 1.2rem 0 1.2rem",
+            height: "260px",
+          }}
+          className="flex-1"
+        >
+          {/* imported table */}
+          <Table className=" text-slate-700" style={{ color: "#4A5568" }} />
         </div>
       </div>
     </div>
+
     // end of code
   );
 };
