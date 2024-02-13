@@ -34,8 +34,8 @@ const Approvals = () => {
 
           <input
             type="text"
-            placeholder="Search by Payment Id"
-            id="search"
+            placeholder="Search by Approval Id"
+            id="searchypay"
             className="font-light w-[320px] h-8 outline-none"
             style={{
               color: "#718096",

@@ -132,9 +132,6 @@ const Approvals = () => {
         />
       </>
       <div>
-        {/* Button to open the modal */}
-
-        {/* Render the modal */}
         <ActivateScheduleModal
           isInactiveModalOpen={isInactiveModalOpen}
           closeInactiveModal={closeInactiveModal}
