@@ -18,7 +18,7 @@ const Users = () => {
         isOpen={isOpen}
         onRequestClose={handleClose}
         shouldCloseOnOverlayClick={false}
-        className="absolute rounded top-1/2 left-[43%] md:left-1/2 w-[400px] md:w-[640px] transform -translate-x-1/2 bg-white -translate-y-1/2 p-[2rem] m-[2rem]"
+        className="absolute rounded top-1/2 left-[43%] md:left-1/2 w-[350px] md:w-[640px] transform -translate-x-1/2 bg-white -translate-y-1/2 p-[2rem] m-[2rem]"
         overlayClassName="fixed inset-0 bg-black bg-opacity-50"
       >
         <div className="flex justify-between items-center ">
@@ -54,7 +54,7 @@ const Users = () => {
 
         <div className="my-6">
           <form>
-            <label html="fname" className="text-[#4A5568] text-sm ">
+            <label html="full-name" className="text-[#4A5568] text-sm ">
               Full Name
             </label>
             <div className="px-[10px] items-center h-[40px] mt-2 flex rounded border border-[#CBD5E0] focus-within:outline outline-2 outline-blue-600">
@@ -63,7 +63,7 @@ const Users = () => {
                 value={name}
                 onChange={(e) => setName(e.target.value)}
                 placeholder="Enter Full Name"
-                id="fname"
+                id="full-name"
                 className="font-normal w-[320px]  outline-none text-[#718096] text-[16px]"
               />
             </div>
@@ -72,7 +72,7 @@ const Users = () => {
         {/* #2 email adress */}
         <div className="my-6">
           <form>
-            <label htmlFor="emailll" className="text-[#4A5568] text-sm ">
+            <label htmlFor="email-add" className="text-[#4A5568] text-sm ">
               Email Address
             </label>
             <div className="px-[10px] items-center h-[40px] mt-2 flex  rounded border border-[#CBD5E0] focus-within:outline outline-2 outline-blue-600">
@@ -81,7 +81,7 @@ const Users = () => {
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 placeholder="Enter Email Address"
-                id="emailll"
+                id="email-add"
                 className="font-normal w-[320px] text-[#718096] text-[16px] outline-none text-lg"
               />
             </div>
@@ -90,7 +90,7 @@ const Users = () => {
         {/* #3 password */}
         <div className="my-6">
           <form>
-            <label htmlFor="password" className="text-[#4A5568] text-sm ">
+            <label htmlFor="password-add" className="text-[#4A5568] text-sm ">
               Password
             </label>
             <div className="px-[10px] items-center h-[40px] mt-2 flex  rounded border border-[#CBD5E0] focus-within:outline outline-2 outline-blue-600">
@@ -99,7 +99,7 @@ const Users = () => {
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
                 placeholder="Enter Password"
-                id="passwordd"
+                id="password-add"
                 className="font-normal w-[320px]  outline-none text-[#718096] text-[16px]"
               />
             </div>
@@ -108,10 +108,13 @@ const Users = () => {
         {/* role */}
         <div className="my-6">
           <form>
-            <label className="flex text-[#4A5568] text-sm">Role</label>
+            <label className="flex text-[#4A5568] text-sm" htmlFor="rolee">
+              Role
+            </label>
 
             <div className="px-[0px] items-center h-[40px] flex mt-2  rounded border border-[#CBD5E0] focus-within:outline outline-2 outline-blue-600">
               <select
+                id="rolee"
                 value={role}
                 className="outline-none w-full "
                 onChange={handleChange}
