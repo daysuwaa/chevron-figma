@@ -3,6 +3,7 @@ import React from "react";
 const DeactivateUserModal = ({
   isDeactivateModalOpen,
   closeDeactivateModal,
+  deactivateUser, // to deactivate the userrr!
 }) => {
   return (
     isDeactivateModalOpen && (
@@ -51,7 +52,10 @@ const DeactivateUserModal = ({
             <button
               className="text-[#FF5655] mt-5 flex mx-auto w-[154px] h-[40px] rounded-sm  justify-center items-center"
               style={{ border: "1px solid #FF5655", padding: "0px 16px" }}
-              onClick={closeDeactivateModal}
+              onClick={() => {
+                deactivateUser(); // Call the function to deactivate the user
+                closeDeactivateModal(); // Close the modal
+              }}
             >
               Deactivate User
             </button>
