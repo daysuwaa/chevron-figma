@@ -1,6 +1,13 @@
-import React from "react";
+import React, { useState } from "react";
 
 const EditUserModal = ({ isEditModalOpen, closeEditModal }) => {
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [role, setRole] = useState("");
+  const handleChange = (event) => {
+    setRole(event.target.value);
+  };
   return (
     isEditModalOpen && (
       <div className="fixed top-0 left-0 w-full h-full bg-black bg-opacity-50 flex justify-center items-center">
@@ -33,7 +40,82 @@ const EditUserModal = ({ isEditModalOpen, closeEditModal }) => {
             </button>
           </div>
           {/* lineee */}
-          <hr className="h-[2px] border-b bg-[#CBD5E0]"></hr>
+          <hr className="h-[2px] border-b mt-1 bg-[#CBD5E0]"></hr>
+          <div className="my-6">
+            <form>
+              <label html="firstname" className="text-[#4A5568] text-sm ">
+                Full Name
+              </label>
+              <div className="px-[10px] items-center h-[40px] mt-2 flex rounded border border-[#CBD5E0] focus-within:outline outline-2 outline-blue-600">
+                <input
+                  type="text"
+                  value={name}
+                  onChange={(e) => setName(e.target.value)}
+                  placeholder="Babawale John"
+                  id="firstname"
+                  className="font-normal w-full   outline-none text-[#718096] text-[16px]"
+                />
+              </div>
+            </form>
+          </div>
+          {/* #2 email adress */}
+          <div className="my-6">
+            <form>
+              <label htmlFor="emailaddress" className="text-[#4A5568] text-sm ">
+                Email Address
+              </label>
+              <div className="px-[10px] items-center h-[40px] mt-2 flex  rounded border border-[#CBD5E0] focus-within:outline outline-2 outline-blue-600">
+                <input
+                  type="email"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  placeholder="jbabawalae@chevronco.com"
+                  id="emailaddress"
+                  className="font-normal w-full text-[#4A5568] text-[16px] outline-none"
+                />
+              </div>
+            </form>
+          </div>
+          {/* #3 password */}
+          <div className="my-6">
+            <form>
+              <label htmlFor="passworduser" className="text-[#4A5568] text-sm ">
+                Password
+              </label>
+              <div className="px-[10px] items-center h-[40px] mt-2 flex  rounded border border-[#CBD5E0] focus-within:outline outline-2 outline-blue-600">
+                <input
+                  type="password"
+                  value={password}
+                  onChange={(e) => setPassword(e.target.value)}
+                  placeholder="****************"
+                  id="passworduser"
+                  className="font-normal w-full outline-none text-[#718096] text-[16px]"
+                />
+              </div>
+            </form>
+          </div>
+          {/* role */}
+          <div className="my-6">
+            <form>
+              <label className="flex text-[#4A5568] text-sm">Role</label>
+
+              <div className="px-[0px] items-center h-[40px] flex mt-2  rounded border border-[#CBD5E0] focus-within:outline outline-2 outline-blue-600">
+                <select
+                  value={role}
+                  className="outline-none w-full "
+                  onChange={handleChange}
+                  placeholder="Selext Role"
+                >
+                  <option value="admin">Auditor</option>
+                  <option value="Volvo">Accountant</option>
+                  <option value="Fiat">Auditor</option>
+                </select>
+              </div>
+            </form>
+            <button className="bg-[#3B2774] h-[40px] w-[123px] rounded text-center text-white text-[16px] mt-9">
+              Edit User
+            </button>
+          </div>
         </div>
       </div>
     )

@@ -10,7 +10,7 @@ import Payment from "./components/Payment/Payment";
 import Schedules from "./components/Schedule/Schedules";
 import Beneficiaries from "./components/Beneficiary/Beneficiaries";
 import Approvals from "./components/Approvals/Approvals";
-import Users from "./components/Users/Users";
+import Users from "./components/Users/AddUser";
 import Analytics from "./components/Analytics/Analytics";
 import Settings from "./components/Settings/Settings";
 import Sidebar from "./components/Layout/Sidebar";

@@ -75,11 +75,13 @@ const Users = () => {
             style={{
               border: "1px solid #3B2773",
               color: "#3B2773",
-              padding: "5px 15px",
-              justifyContent: "center",
+              padding: "0px 8px",
+              alignItems: "center",
+              display: "flex",
               borderRadius: "4px",
               textAlign: "center",
               marginRight: "10px",
+              flexShrink: "0",
             }}
             onClick={openEditModal} // Open modal on button click
             className="cursor-pointer"
@@ -108,6 +110,7 @@ const Users = () => {
               borderRadius: "4px",
               textAlign: "center",
               display: "flex",
+              flexShrink: "0",
             }}
             onClick={() => {
               if (row.status2 === "Deactivate") {
