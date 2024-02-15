@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Navbar from "../Layout/Navbar";
 import User from "./User";
 import Modal from "react-modal";
+// import DeactivateUserModal from "./DeactivateUser"; // Import the DeactivateUserModal
 
 const Users = () => {
   const CustomModal = ({ isOpen, handleClose }) => {
@@ -123,10 +124,7 @@ const Users = () => {
               </select>
             </div>
           </form>
-          <button
-            className="bg-[#3B2774] h-[40px] w-[123px] rounded text-center text-white text-[16px] mt-9"
-            onClick={{}}
-          >
+          <button className="bg-[#3B2774] h-[40px] w-[123px] rounded text-center text-white text-[16px] mt-9">
             Create User
           </button>
         </div>

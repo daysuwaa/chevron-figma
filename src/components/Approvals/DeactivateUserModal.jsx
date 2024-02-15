@@ -1,7 +1,18 @@
 import React, { useState } from "react";
 import close from "src/assets/IoCloseOutline.svg";
 
-const DeactivateUserModal = ({ isActiveModalOpen, closeActiveModal }) => {
+// const DeactivateUserModal = ({ isActiveModalOpen, closeActiveModal }) => {
+//   const [password, setPassword] = useState("");
+//   const [token, setToken] = useState("");
+
+//   const closeActiveModal1 = () => {
+//     closeActiveModal();
+//   };
+const DeactivateUserModal = ({
+  isActiveModalOpen,
+  closeActiveModal,
+  isUserActive, // New prop to determine user state
+}) => {
   const [password, setPassword] = useState("");
   const [token, setToken] = useState("");
 
@@ -9,13 +20,22 @@ const DeactivateUserModal = ({ isActiveModalOpen, closeActiveModal }) => {
     closeActiveModal();
   };
 
+  const deactivateOrReactivateUser = () => {
+    // Logic to deactivate/reactivate user
+    // You can implement this based on your application's backend
+    // For now, let's just console.log to demonstrate the change
+    console.log(isUserActive ? "User Deactivated" : "User Reactivated");
+    closeActiveModal1(); // Close the modal
+  };
   return (
     isActiveModalOpen && (
       <div className="fixed top-0 left-0 w-full h-full bg-black bg-opacity-50 flex justify-center items-center">
         <div className="bg-white w-[22rem] p-6 rounded lg:w-[23rem] md:w-[20rem]">
           <div className="flex justify-center ">
             <p className="mx-auto text-md font-semibold mb-2 text-[#4A5568]">
-              Deactivate User
+              {/* Deactivate User */}
+
+              {isUserActive ? "Deactivate User" : "Reactivate User"}
             </p>
             <button
               onClick={closeActiveModal}
@@ -89,12 +109,26 @@ const DeactivateUserModal = ({ isActiveModalOpen, closeActiveModal }) => {
               </form>
             </div>
           </div>
-          <button
+          {/* <button
             className="text-[#FF5655] mt-5 flex mx-auto w-full h-[40px] rounded-sm justify-center items-center"
             style={{ border: "1px solid #FF5655", padding: "0px 16px" }}
             onClick={closeActiveModal1}
           >
             Deactivate User
+          </button> */}
+
+          <button
+            className={`${
+              isUserActive ? "text-[#FF5655]" : "text-[#3B2774]"
+            } mt-5 flex mx-auto w-full h-[40px] rounded-sm justify-center items-center`}
+            style={{
+              border: "1px solid",
+              borderColor: isUserActive ? "#FF5655" : "#3B2774",
+              padding: "0px 16px",
+            }}
+            onClick={deactivateOrReactivateUser}
+          >
+            {isUserActive ? "Deactivate User" : "Reactivate User"}
           </button>
         </div>
       </div>
