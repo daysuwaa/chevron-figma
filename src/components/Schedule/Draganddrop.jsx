@@ -18,7 +18,7 @@ const UploadDrop = ({ handleDrop }) => {
     setDragging(true);
     e.dataTransfer.dropEffect = "copy";
 
-    // it Checks if the dragged files contain an Excel file
+    // it Check if the dragged files contain an Excel file
     const hasExcelFile = Array.from(e.dataTransfer.items).some((item) => {
       return (
         item.kind === "file" &&
@@ -145,6 +145,7 @@ const ScheduleUploader = ({ scheduleFile, setScheduleFile }) => {
 
 const Draganddrop = () => {
   const [scheduleFile, setScheduleFile] = useState(null);
+
   return (
     <div>
       <ScheduleUploader
