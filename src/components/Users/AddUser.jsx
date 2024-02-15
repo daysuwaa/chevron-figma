@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import Navbar from "../Layout/Navbar";
 import User from "./User";
 import Modal from "react-modal";
-// import DeactivateUserModal from "./DeactivateUser"; // Import the DeactivateUserModal
 
 const Users = () => {
   const CustomModal = ({ isOpen, handleClose }) => {
