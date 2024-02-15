@@ -22,7 +22,7 @@ const Users = () => {
         overlayClassName="fixed inset-0 bg-black bg-opacity-50"
       >
         <div className="flex justify-between items-center ">
-          <h2 className="text-md  text-[#4A5568] mx-auto mb-4 font-semibold">
+          <h2 className="text-md  text-[#4A5568] mx-auto mb-2 font-semibold">
             Add New User
           </h2>
 
@@ -47,7 +47,7 @@ const Users = () => {
           </button>
         </div>
         {/* lineee */}
-        <div className="w-full h-[2px] border-b bg-[#CBD5E0] "></div>
+        <hr className=" h-[2px] border-b bg-[#CBD5E0] "></hr>
 
         {/* the formsss */}
         {/* #full name */}
