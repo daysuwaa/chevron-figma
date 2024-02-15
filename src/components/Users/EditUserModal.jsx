@@ -11,7 +11,7 @@ const EditUserModal = ({ isEditModalOpen, closeEditModal }) => {
   return (
     isEditModalOpen && (
       <div className="fixed top-0 ring left-0 w-full h-full bg-black bg-opacity-50 flex justify-center items-center">
-        <div className="bg-white p-6 ring rounded w-[20rem] lg:w-[43rem] md:w-[30rem]">
+        <div className="bg-white p-6 rounded w-[20rem] lg:w-[43rem] md:w-[30rem]">
           <div className="flex justify-center">
             <p className="mx-auto text-md font-semibold  text-[#4A5568]">
               Edit User
