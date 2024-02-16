@@ -125,7 +125,7 @@ const Payment = () => {
       {/* end of frames */}
 
       {/* lineee */}
-      <hr className="bg-[#CBD5E0] w-full h-0.3 mt-9" />
+      <hr className="bg-[#CBD5E0]  h-0.3 mt-9" />
 
       {/* the second side */}
 
