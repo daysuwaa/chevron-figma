@@ -1,23 +1,17 @@
-import React from "react";
+import React, { useState } from "react";
 import Modal from "react-modal";
 import close from "src/assets/IoCloseOutline.svg";
 import Draganddrop from "./Draganddrop_ben";
 
-const AddBeneficiaryModal = ({
-  isOpen,
-  handleClose,
-  modalTitle,
-  name,
-  namee,
-  setName,
-}) => {
+const AddBeneficiaryModal = ({ isOpen, handleClose, modalTitle }) => {
+  const [beneficiaryname, setBeneficiaryname] = useState("");
   return (
     <Modal
       isOpen={isOpen}
       onRequestClose={handleClose}
       contentLabel={modalTitle}
       shouldCloseOnOverlayClick={false}
-      className="absolute rounded top-1/2 md:left-1/2 left-[43%] transform -translate-x-1/2 bg-white -translate-y-1/2 p-[2rem] m-[2rem]"
+      className="absolute rounded top-1/2 md:left-1/2 left-[45%] transform -translate-x-1/2 bg-white -translate-y-1/2 p-[2rem] m-[2rem]"
       overlayClassName="fixed inset-0 bg-black bg-opacity-50"
     >
       <div className="mt-5">
@@ -39,13 +33,13 @@ const AddBeneficiaryModal = ({
               htmlFor="benname"
               className="text-[#4A5568] mr-auto text-sm pb-2 block"
             >
-              {namee}
+              Beneficiary Name
             </label>
             <div className="px-[10px] items-center  flex h-[40px] md:w-[550px] border border-[#CBD5E0] focus-within:outline outline-2 outline-blue-600">
               <input
                 type="text"
-                value={name}
-                onChange={(e) => setName(e.target.value)}
+                value={beneficiaryname}
+                onChange={(e) => setBeneficiaryname(e.target.value)}
                 placeholder="Enter Beneficiary Name"
                 id="benname"
                 className="font-normal w-full outline-none"

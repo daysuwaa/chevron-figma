@@ -12,6 +12,7 @@ const Beneficiaries = () => {
   const [isAddBeneficiaryOpen, setIsAddBeneficiaryModal] = useState(false);
   const openAddBeneficiaryModal = () => setIsAddBeneficiaryModal(true);
   const closeAddBeneficiaryModal = () => setIsAddBeneficiaryModal(false);
+  const [beneficiaryname, setBeneficiaryname] = useState("");
 
   return (
     <div className="bg-[#F6F6F6] h-full">
@@ -55,8 +56,9 @@ const Beneficiaries = () => {
         <AddBeneficiaryModal
           isOpen={isAddBeneficiaryOpen}
           modalTitle={"Add New Beneficiary"}
-          namee={"Beneficiary Name"}
           handleClose={closeAddBeneficiaryModal}
+          beneficiaryname={beneficiaryname}
+          setBeneficiaryename={setBeneficiaryname}
         />
       </div>
     </div>

@@ -12,6 +12,7 @@ const Schedules = () => {
   const [isAddScheduleModalOpen, setIsAddScheduleModalOpen] = useState(false);
   const openAddScheduleModal = () => setIsAddScheduleModalOpen(true);
   const closeAddScheduleModal = () => setIsAddScheduleModalOpen(false);
+  const [scheduleename, setScheduleename] = useState("");
 
   return (
     <div className="bg-[#F6F6F6] h-full">
@@ -55,8 +56,9 @@ const Schedules = () => {
         <AddScheduleModal
           isOpen={isAddScheduleModalOpen}
           modalTitle={"Add New Schedule"}
-          namee={"Schedule Name"}
           handleClose={closeAddScheduleModal}
+          scheduleename={scheduleename}
+          setscheduleename={setScheduleename}
         />
       </div>
     </div>
