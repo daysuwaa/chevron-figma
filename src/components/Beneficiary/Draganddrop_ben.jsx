@@ -153,7 +153,7 @@ const Draganddrop = () => {
         setBeneficiaryFile={setBeneficiaryFile}
       />
       <Link
-        to="/beneficiarys/table"
+        to="/beneficiaries/table"
         className={`bg-[#3B2774] my-2 flex justify-start text-white py-2 px-4 max-w-fit rounded ${
           beneficiaryFile ? "" : "pointer-events-none opacity-20 select-none"
         }`}

@@ -49,6 +49,7 @@ const BeneficiaryTable = () => {
               borderRadius: "4px",
               textAlign: "center",
               marginRight: "10px",
+              flexShrink: "0",
             }}
             className="cursor-pointer"
           >
