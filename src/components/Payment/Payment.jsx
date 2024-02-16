@@ -125,14 +125,14 @@ const Payment = () => {
       {/* end of frames */}
 
       {/* lineee */}
-      <hr className="bg-[#CBD5E0]  h-0.3 mt-9" />
+      <hr className="bg-[#CBD5E0] md:mx-7 mx-5 h-0.3 mt-9" />
 
       {/* the second side */}
 
       <div className=" sm:grid sm:grid-cols-1 md:grid-cols-2 md:m-5 my-5 md:my:0 flex flex-col sm:items-center">
         {/* First component */}
         <div className="flex">
-          <p className="flex tracking-wide mr-auto lg:mr-0  items-center font-light mx-5  md:mx:0  text-[#1C065A] text-sm ">
+          <p className="flex tracking-wide mr-auto lg:mr-0 items-center   font-light mx-5  md:mx:0  text-[#1C065A] text-sm mb-3 ">
             My account
             <Tooltip
               title="Fund your wallet by paying into Guarantee Trust Wallet"
