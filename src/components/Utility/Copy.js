@@ -26,7 +26,7 @@ const CopyToClipboard = () => {
         onClick={() => handleCopyToClipboard("0422822151")}
       >
         <img src={gtb} alt="gtblogo" className="text-center pr-1" />
-        0422822151
+        04228221512
         <svg
           className="ml-1"
           width="12"
