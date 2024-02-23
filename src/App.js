@@ -24,7 +24,6 @@ import BeneficiaryPayment from "./components/Beneficiary/Beneficiarypayment";
 function App() {
   return (
     <Router basename="/">
-      {/* to make the side bar at the , yk ,side, lol */}
       <div className="app flex h-screen">
         <Sidebar />
         <div className="content max-h-full overflow-y-auto" style={{ flex: 1 }}>
